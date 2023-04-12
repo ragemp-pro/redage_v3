@@ -1,0 +1,116 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="linq2db.MySql" Version="3.3.0" />
+    <PackageReference Include="MySqlBackup.NET" Version="2.3.4" />
+    <PackageReference Include="MySqlConnector" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Otp.NET" Version="1.2.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.2.79" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Localization\Localization.csproj" />
+    <ProjectReference Include="..\NeptuneEvoSDK\NeptuneEvoSDK.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="client.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Database\Config\Config.tt">
+      <LastGenOutput>Config.generated.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="Database\Server\ServerStruct.tt">
+      <LastGenOutput>ServerStruct.generated.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Database\WebSite\WebSiteStruct.tt">
+      <LastGenOutput>WebSiteStruct.generated.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="Bootstrapper">
+      <HintPath>Bootstrapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETCore.App" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Database\Config\Config.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Config.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Database\Server\ServerStruct.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ServerStruct.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Database\WebSite\WebSiteStruct.generated.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WebSiteStruct.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Database\WebSite\WebSiteStruct.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebSiteStruct.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Character\Friend\Models\" />
+    <Folder Include="PedSystem\Hunting\Models" />
+    <Folder Include="Players\Disconnect\" />
+    <Folder Include="Players\Phone\BlackList\Models" />
+  </ItemGroup>
+  
+<PropertyGroup> 
+    <TargetFramework>netcoreapp3.1</TargetFramework> 
+    <CopyLocalLockFileAssemblies>True</CopyLocalLockFileAssemblies> 
+    <Version>1.0.0.0</Version> 
+    <Copyright>NSM Research Lab.</Copyright> 
+    <Platforms>AnyCPU;x64</Platforms> 
+  </PropertyGroup> 
+  <PropertyGroup> 
+    <ServerGarbageCollection>false</ServerGarbageCollection> 
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection> 
+  </PropertyGroup> 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'"> 
+    <Optimize>false</Optimize> 
+    <PlatformTarget>x64</PlatformTarget> 
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks> 
+  </PropertyGroup> 
+   
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> 
+    <Optimize>false</Optimize> 
+    <WarningLevel>5</WarningLevel> 
+  </PropertyGroup> 
+   
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> 
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks> 
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies> 
+    <WarningLevel>5</WarningLevel> 
+  </PropertyGroup> 
+   
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'"> 
+    <PlatformTarget>x64</PlatformTarget> 
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup> 
+
+</Project>

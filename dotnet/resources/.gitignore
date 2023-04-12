@@ -263,8 +263,3 @@ Properties/launchSettings.json
 __pycache__/
 *.pyc
 .DS_Store
-
-NeptuneEvo/NeptuneEvo.csproj
-
-NeptuneEvo/Properties/launchSettings.json
-NeptuneEvo/NeptuneEvo.csproj

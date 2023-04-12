@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "NeptuneEvo": {
+      "commandName": "Executable",
+      "executablePath": "D:\\RAGEMP\\RedAgeServer\\ragemp-server.exe",
+      "workingDirectory": "D:\\RAGEMP\\RedAgeServer",
+      "environmentVariables": {
+        "Ключ": "Значение"
+      },
+      "sqlDebugging": false,
+      "nativeDebugging": false
+    }
+  }
+}
