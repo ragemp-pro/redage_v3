@@ -1,0 +1,202 @@
+@import @/views/assets/css/main.sass
+
+.event
+    position: absolute    
+    display: flex
+    flex-direction: column
+    align-items: center
+    @include fluid("padding-top", 82)
+    height: 100%
+    width: 100%
+    
+    & .m 
+        position: relative
+        width: 100%
+
+        
+
+    &::before
+        content: ""
+        position: absolute
+        @include fluid("right", -164)
+        top: 0
+        bottom: 0
+        margin: auto
+        background: url('../images/rightSummerTree.png') no-repeat
+        background-size: contain
+        @include fluid("width", 874)
+        @include fluid("height", 1080)
+
+
+    &::after
+        content: ""
+        position: absolute
+        @include fluid("left", -164)
+        top: 0
+        bottom: 0
+        margin: auto
+        background: url('../images/leftSummerTree.png') no-repeat
+        background-size: contain
+        @include fluid("width", 874)
+        @include fluid("height", 1080)
+
+    .event__bottom
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        bottom: 0
+        margin: auto
+        background: url('../images/water.png') no-repeat
+        background-size: cover
+        @include fluid("width", 1920)
+        @include fluid("height", 200)
+        z-index: 5
+    &-snow
+        position: absolute       
+        left: 0
+        right: 0
+        top: 0
+        margin: auto
+        background: url('../images/snow.png') no-repeat
+        background-size: cover
+        @include fluid("width", 1920)
+        @include fluid("height", 1080)
+
+    &-logo
+        display: flex
+        background: url('../images/summerLogo.png') no-repeat
+        @include fluid("width", 464)
+        @include fluid("height", 280)
+        background-size: contain
+        background-position: center
+        margin: auto
+        z-index: 1
+        position: relative
+        @include fluid("margin-bottom", 23)
+        
+    &-main
+        background: rgba(27, 30, 40, 0.9)
+        box-shadow: 0px 4px 60px rgba(65, 120, 255, 0.6)
+        @include fluid("border-radius", 6)
+        @include fluid("width", 617)
+        @include fluid("height", 717)
+        z-index: 0
+
+
+
+
+    .btn
+        @include fluid("width", 125)
+        @include fluid("height", 43)
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: bold
+        @include fluid("font-size", 14)
+        transition: ease all .2s
+        z-index: 10000
+        &.green
+            background: #3f5bff
+            box-shadow: 0px 0px 20px rgba(65, 120, 255, 0.4)
+            &:hover 
+                background: #3f5bff
+                box-shadow: 0px 0px 25px rgba(65, 120, 255, 0.4)
+    &-list
+        display: flex
+        width: 100%
+        @include fluid("max-width", 480)
+        @include fluid("padding-top", 25)
+        @include fluid("max-height", 356)
+        overflow-y: auto
+        overflow-x: hidden
+        flex-direction: column
+        margin: 0 auto
+        position: relative
+        z-index: 1
+                    
+        &::-webkit-scrollbar 
+            @include fluid("width", 3)   
+        
+        /* Track */
+        &::-webkit-scrollbar-track 
+
+            background: #131924
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb 
+            background: #a4c033
+            
+
+
+        &:after
+            @include fluid("min-height", 1)
+            content: ""
+            width: 100%
+            display: flex
+
+        li 
+            display: flex
+            justify-content: space-evenly
+            width: 100%
+            align-items: center
+            @include fluid("min-height", 60)
+            @include fluid("width", 470)
+            @include fluid("margin-bottom", 37)
+            @include fluid("padding-bottom", 40)
+            &:last-child
+                margin-bottom: 0
+            .event-list-box
+                justify-content: center
+                display: flex
+                flex-direction: column
+                .title
+                    font-weight: bold
+                    @include fluid("font-size", 12)
+                    @include fluid("width", 180)
+                .descr
+                    font-weight: bold
+                    @include fluid("font-size", 9)
+                    @include fluid("width", 180)
+                    color: #C1C1C1
+    .event__main_title
+        @include fluid("font-size", 12)
+        text-align: center
+        @include fluid("margin-bottom", 30)
+        @include fluid("padding-left", 10)
+        @include fluid("padding-right", 10)
+        height: max-content
+
+    &-icon-sun
+        background: url('../images/sun.png') no-repeat
+        @include fluid("width", 81)
+        @include fluid("height", 81)
+        background-size: cover
+
+    &-icon-gift
+        background: url('../images/gift_summer.png') no-repeat
+        @include fluid("width", 60)
+        @include fluid("height", 60)
+        background-size: cover
+        align-items: center
+        justify-content: center
+        display: flex
+
+    &-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("margin-bottom", 31)
+        @include fluid("width", 386)
+        margin: 0 auto
+        @include fluid("padding-top", 25)
+        font-weight: bold
+
+        .yellow
+            color: #3f5bff
+
+
+        span
+            @include fluid("margin-right", 5)
+    .event-list
+        padding-top: 0

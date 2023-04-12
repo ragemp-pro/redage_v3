@@ -1,0 +1,218 @@
+@import @/views/assets/css/main.sass
+
+#ticket
+    z-index: 1000
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: rgba(1,22,39,0.8)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    font-family: 'TTNorms-Regular'
+    color: white
+    font-weight: 500
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 21)
+    @include fluid("padding-top", 60)
+    @include fluid("padding-bottom", 80)
+    @include fluid("padding-left", 734)
+    @include fluid("padding-right", 734)
+    .ticket__title
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 28)
+        @include fluid("margin-top", 10)
+        font-weight: bold
+    .ticket__subtitle
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 21)
+        @include fluid("margin-top", 20)
+        font-weight: bold
+    .ticket__number
+        @include fluid("margin-top", 96)
+        @include fluid("margin-bottom", 20)
+        @include fluid("width", 378)
+        @include fluid("height", 236)
+        background: url('./images/number.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("font-size", 72)
+        @include fluid("line-height", 85)
+        letter-spacing: 0.05em
+        color: #000000
+        font-weight: bold
+    .ticket__small_image
+        @include fluid("margin-right", 20)
+        @include fluid("width", 50)
+        @include fluid("height", 50)
+        background: url('./images/none.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+    .ticket__line
+        width: 100%
+        @include fluid("height", 2)
+        @include fluid("margin-left", 5)
+        @include fluid("margin-right", 5)
+        background: rgba(253,255,252,0.2)
+        @include fluid("margin-bottom", 5)
+    .ticket__input
+        background: rgba(253, 255, 252, 0.05)
+        border: 1px solid rgba(253, 255, 252, 0.7)
+        box-sizing: border-box
+        @include fluid("height", 40)
+        @include fluid("width", 408)
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        font-family: inherit
+        font-size: inherit
+        color: white
+        @include fluid("margin-top", 20)
+    .box-between
+        @include fluid("margin-top", 20)
+        letter-spacing: 0.05em
+        display: flex
+        justify-content: space-between
+        width: 100%
+        align-items: flex-end
+    .box-flex
+        display: flex
+        align-items: center
+        width: 100%
+    .ticket__name
+        white-space: nowrap
+    .gray
+        white-space: nowrap
+        color: rgba(253,255,252,0.6)
+    .sound__input-block
+        @include fluid("margin-top", 40)
+        display: flex
+        align-items: center
+        white-space: nowrap
+    .rangeslider
+        @include fluid("height", 4)
+        @include fluid("border-radius", 11)
+        box-shadow: unset
+        background: rgba(255,255,255,0.4)
+    
+        .rangeslider__fill
+            background: white
+            box-shadow: unset
+            @include fluid("border-radius", 11)
+        .rangeslider__handle 
+            border: none
+            background: white
+            @include fluid("top", 2)
+            @include fluid("width", 10)
+            @include fluid("height", 10)
+
+
+        
+    .sound__input__value
+        display: flex
+        justify-content: space-between
+        width: 100%
+        @include fluid("margin-top", 3)
+
+    .switch-box
+        .switch input 
+            display: none
+
+        .switch
+            position: relative
+            display: inline-block
+            background: #131517
+            border: 1px solid rgba(255, 255, 255, 0.2)
+            @include fluid("border-radius", 19)
+            @include fluid("width", 60)
+            @include fluid("height", 28)
+            @include fluid("margin-right", 10)
+            .slider
+                position: absolute
+                cursor: pointer
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                background-color: rgba(255,255,255,0.4)
+                -webkit-transition: .4s
+                transition: .4s
+                
+                &::before
+                    position: absolute
+                    content: ""
+                    @include fluid("width", 28)
+                    @include fluid("height", 28)
+                    left: 0
+                    bottom: 0
+                    -webkit-transition: .4s
+                    transition: .4s
+                    background: #FFFFFF
+                    border: 2px solid rgba(134, 134, 134, 0.5)
+                    box-sizing: border-box
+                    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+            input:checked + .slider:before  
+                @include fluid("height", 28)
+                @include fluid("left", 32)
+                background: #2BB6A8
+                border: 2px solid rgba(22, 69, 64, 0.5)
+                box-sizing: border-box
+                box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+
+            .slider.round
+                @include fluid("border-radius", 34)
+
+                &::before
+                    border-radius: 50%
+    .ticket_bottom_buttons
+        z-index: 1
+        margin-top: auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("font-size", 18)
+        white-space: nowrap 
+        @include fluid("margin-right", 15)
+        &.center
+            .ticket_bottom_button
+                margin-left: 0
+                @include fluid("margin-right", 12)
+        &.esc
+            position: absolute
+            @include fluid("right", 60)
+        .ticket_bottom_button
+            color: black
+            background: #FDFFFC
+            border-radius: 6px
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            @include fluid("padding-top", 10)
+            @include fluid("padding-bottom", 10)
+            @include fluid("margin-left", 12)
+        &.ml-20
+            @include fluid("margin-left", 20)
+    .box-column
+        .ticket__subtitle
+            margin: 0
+    .box-flex
+        justify-content: center
+        @include fluid("margin-top", 16)
+    .ticket__buttons
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        bottom: 2%
+        left: 50%
+        transform: translate(-50%, -50%)

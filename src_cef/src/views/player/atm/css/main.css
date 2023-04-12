@@ -1,0 +1,449 @@
+.rd-body-inventory-u {
+
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.module_atm.page {
+
+    display: flex;
+    max-width: 830px;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    max-height: 625px;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.module_atm .banner:after {
+    background: url('./../images/atm-banner.svg');
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    top: 0;
+    max-height: 228px;
+    max-width: 830px;
+    z-index: 0;
+}
+.module_atm .banner {
+
+    height: 228px;
+    width: 100%;
+
+}
+.module_atm .title {
+
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 9px;
+    color: #1D1A21;
+    display: flex;
+    align-items: center;
+
+}
+
+.module_atm .head p {
+
+    color:  #969696;
+    max-width: 364px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 30px;
+
+}
+
+.module_atm .title div {
+
+    margin-right: 16px;
+
+}
+.module_atm .title .bold {
+
+    font-weight: bold;
+    color: #E79B4E;
+
+}
+
+.module_atm .title .logo {
+    background: url('./../images/atm-logo.svg');
+    width: 38px;
+    height: 38px;
+    display: flex;
+}
+
+.module_atm .head {
+
+    position: relative;
+    z-index: 1;
+    padding-top: 27px;
+    padding-left: 27px;
+    padding-right: 40px;
+    padding-bottom: 27px;
+
+}
+
+
+.module_atm .head .prevButton {
+    background: #E79B4E;
+    border-radius: 2px;
+    max-width: 167px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
+.module_atm .head .prevButton::after {
+
+    position: absolute;
+    background: #855D34;
+    border-radius: 6px;
+    content: "";
+    height: 100%;
+    width: 100%;
+    bottom: -3px;
+    z-index: -2;
+
+}
+
+.module_atm .head .prevButton::before {
+
+    background: #E79B4E;
+    border-radius: 2px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+.module_atm .cont {
+    background: url('./../images/background.svg');
+    max-height: 397px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 43px;
+    padding-right: 43px;
+}
+
+.module_atm .info_atm {
+    background:rgba(106, 51, 51, 0.8);
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    height: 100%;
+    margin-bottom: 16px;
+    max-height: 134px;
+    max-width: 744px;
+    width: 100%;
+}
+.module_atm .info_atm .info_head {
+
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 16px;
+
+}
+
+.module_atm .info_atm .info_val {
+
+    font-weight: bold;
+    font-size: 16px;
+    color:#FF8484;
+    height: 22px;
+
+}
+
+.module_atm .info_atm li {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width:200px;
+}
+
+.module_atm .info_atm .ib {
+
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    width: 100px;
+
+}
+
+.module_atm .info_atm .bank-card {
+    background: url('./../images/bank-card.svg');
+}
+.module_atm .info_atm .bank-user {
+    background: url('./../images/bank-user.svg');
+}
+.module_atm .info_atm .bank-fill {
+    background: url('./../images/bank-fill.svg');
+}
+
+
+.module_atm .ic-user-shared-fill {
+    background: url('./../images/user-shared-fill.svg');
+}
+.module_atm .ic-user-received-fill {
+    background: url('./../images/user-received-fill.svg');
+}
+.module_atm .ic-home-fill {
+    background: url('./../images/home-fill.svg');
+}
+.module_atm .ic-store-fill {
+    background: url('./../images/store-fill.svg');
+}
+.module_atm .ic-article-fill {
+    background: url('./../images/article-fill.svg');
+}
+
+
+
+
+.module_atm .m1 {
+
+    background: url('./../images/m1.svg');
+    height: 118px;
+    width: 130px;
+
+}
+.module_atm .m2 {
+    background: url('./../images/m2.svg');
+    height: 175px;
+    width: 149px;
+}
+
+.module_atm .inp_atm .after.dollar:before {
+    background: url('./../images/dollar.svg');
+    width: 15px;
+    height: 19px;
+}
+
+.module_atm .inp_atm .after.card:before {
+    background: url('./../images/card.svg');
+    width: 19px;
+    height: 17px;
+}
+.module_atm .inp_atm .after::before {
+    content: "";
+    position: absolute;
+}
+
+.module_atm .inp_atm .after {
+
+    width: 37px;
+    height: 100%;
+    display: flex;
+    left:15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+.module_atm .info_atm_main li {
+    background:rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    max-width: 136px;
+    width: 100%;
+    max-height: 136px;
+    height: 100%;
+    display: flex;
+    transition: all ease .3s;
+    font-weight: 500;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    color:#fff;
+    padding: 15px;
+    text-align: center;
+    padding-top: 34px;
+}
+.module_atm .info_atm_main {
+
+    display: flex;
+    justify-content: space-between;
+    max-height: 136px;
+    margin-bottom: 16px;
+    height: 100%;
+
+}
+.module_atm .info_atm_main .atm_ic {
+
+    width: 45px;
+    height: 45px;
+
+}
+.module_atm .inp_ic {
+
+    width: 54px;
+    height: 54px;
+    background-size: 100%;
+
+}
+.module_atm .info_atm_main li:hover {
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.module_atm .info_atm_button li:hover {
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.module_atm .info_atm_button li {
+
+    height: 52px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    transition: all ease .3s;
+    background:rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    color:#fff;
+    font-weight: bold;
+    width: 100%;
+
+}
+
+.module_atm .info_atm_button {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.module_atm .inp_atm {
+
+    max-width: 416px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+}
+.module_atm .head_vertical .inp_ic {
+    margin-right: 18px;
+}
+.module_atm .head_column {
+    flex-direction: column;
+}
+.module_atm .head_vertical .yellow {
+    color: #F9B616;
+}
+.module_atm .head_vertical .small {
+    font-weight: bold;
+    color: #DCB7B7;
+    font-size: 14px;
+}
+.module_atm .head_vertical {
+    justify-content: start !important; 
+    padding-left: 14px;
+}
+.module_atm .head_inp {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px 2px 0px 0px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97px;
+    border-top: #FF5959 2px solid;
+  }
+
+.module_atm .inp_atm input {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    width: 100%;
+    height: 39px;
+    padding-left: 14px;
+    font-family: UniNeue;
+    color: #DCB7B7;
+    padding-left: 53px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 0px 0px 2px 2px;
+  }
+  .module_atm .inp_atm input::-webkit-outer-spin-button,
+  .module_atm .inp_atm input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  .module_atm .inp_atm input::placeholder {
+    color: #DCB7B7;
+  }
+  
+
+
+  .module_atm .mdatm .info_atm_button li {
+
+    width: 100%;
+    max-width: 100%;
+
+}
+.module_atm .mdatm .info_atm_button li:nth-child(1) {
+
+    margin-right: 16px;
+
+}
+.module_atm .bf_img {
+
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-bottom: 16px;
+
+}
+.module_atm .bf_img span {
+    display: flex;
+}
+
+.atm_step {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.module_atm .mdatm {
+
+    max-width: 416px;
+    width: 100%;
+    margin-bottom: 16px;
+    position: relative;
+
+}

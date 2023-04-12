@@ -1,0 +1,285 @@
+@import @/views/assets/css/main.sass
+
+#sound__settings
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-weight: bold
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 24)
+    color: #FFFFFF
+    font-family: 'TTNorms-Regular'
+    @include fluid("padding-left", 100)
+    @include fluid("padding-right", 100) 
+    .main__button_square
+        @include fluid("width", 62)
+        @include fluid("height", 62)
+        @include fluid("margin-left", 20)
+        @include fluid("border-radius", 2)
+        background-color: white
+        color: black
+    .settings__header
+        @include fluid("height", 58)
+        display: flex
+        align-items: center
+        @include fluid("margin-bottom", 61)
+        .settings__icon
+            @include fluid("margin-right", 13) 
+            @include fluid("width", 50)
+            @include fluid("height", 50)
+            background-image: url(../../img/settings.svg)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+        .settings__header_title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+        .settings__header_subtitle
+                color: rgba(255,255,255,0.7)
+                @include fluid("margin-top", 14)
+                text-decoration: underline
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 19)
+                font-family: 'TTNorms-Regular'
+                font-weight: 300
+                &:hover
+                    color: rgba(255,255,255,0.4)
+    .settings__nav
+        @include fluid("width", 300)
+        display: flex
+        flex-direction: column
+        @include fluid("height", 750)
+        .settings__title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+            color: white
+            @include fluid("margin-top", 30)
+            @include fluid("margin-bottom", 20)
+            font-weight: bold
+            font-family: 'TTNorms-Bold'
+            &:first-child
+                margin-top: 0
+        .settings__subtitle
+            font-weight: bold
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)  
+            color: rgba(255,255,255,0.5)
+            @include fluid("margin-bottom", 10)
+            &.hover, &.active
+                color: white
+    .settings__background
+        @include fluid("width", 730)
+        @include fluid("height", 750)
+        display: flex
+        flex-direction: column
+        box-sizing: border-box
+
+        .settings__box
+            @include fluid("height", 75)
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            &.settings__title
+                @include fluid("font-size", 28)
+                color: white
+
+            .settings__button
+                @include fluid("width", 250)
+                @include fluid("height", 50)
+                @include fluid("border", 1, "solid #3A3E4E")
+                box-sizing: border-box
+                @include fluid("border-radius", 6)
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("font-size", 20)
+                @include fluid("line-height", 27)
+                cursor: pointer
+                transition: all 0.4s ease
+
+                &:hover
+                    transition: all 0.4s ease
+                    background: #3A3E4E
+                
+
+        .sound__scroll
+            width: 100%
+            @include fluid("height", 600)
+            overflow-x: hidden
+            overflow-y: auto
+            &::-webkit-scrollbar 
+                @include fluid("width", 4)
+            /* Track */
+            &::-webkit-scrollbar-track 
+                background: #131924 
+                @include fluid("border-radius", 10)
+            /* Handle */
+            &::-webkit-scrollbar-thumb 
+                background: white
+            @include fluid("border-radius", 10)
+            @include fluid("padding-right", 86) 
+
+            .sound__header
+                @include fluid("font-size", 24)
+                @include fluid("line-height", 32)
+                align-self: flex-start
+                @include fluid("margin-top", 20)
+                @include fluid("margin-bottom", 20)
+                color: #C1C1C1
+
+                &:first-child
+                    margin-top: 0
+                    
+
+            .list__element
+                display: flex
+                background: rgba(255,255,255,0.05)
+                @include fluid("width", 200)
+                justify-content: space-between
+
+                .list__title
+                    display: flex
+                    align-items: center
+                    font-weight: 500
+                    @include fluid("font-size", 14)
+
+                .list__element__right, .list__element__left
+                    @include fluid("width", 30)
+                    @include fluid("height", 50)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    background: rgba(255,255,255,0.05)
+                    transition: background .1s linear, border .1s linear
+
+                    &:hover
+                        background: rgba(255,255,255,0.3)
+                    
+                .list__element__left:before, .list__element__right:before 
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.18988 1.00033L2 7.95055L9.18988 14.9008' stroke='white' stroke-width='2'/%3e%3c/svg%3e ")
+                    content: ""
+                    @include fluid("width", 10)
+                    @include fluid("height", 16)
+                    background-repeat: no-repeat
+                    background-size: 100%
+                    
+                .list__element__right:before
+                    transform: rotateY(180deg)
+
+            .sound__element
+                width: 100%
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include fluid("margin-bottom", 40)
+                
+
+                &:last-child
+                    margin-bottom: 0
+                .sound__description
+                    display: flex
+                    flex-direction: column
+
+                    .sound__title
+                        @include fluid("font-size", 18)
+                        @include fluid("line-height", 21)
+                        @include fluid("margin-bottom", 9)
+                        letter-spacing: 0.05em
+
+                .sound__text_small
+                    @include fluid("font-size", 12)
+                    @include fluid("line-height", 16)
+                    color: rgba(255,255,255,0.5)
+                    letter-spacing: 0.05em
+                    font-family: 'TTNorms-Regular'
+                    font-style: normal
+                    font-weight: normal
+                    @include fluid("max-width", 340)
+                .sound__input-block
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    @include fluid("width", 240)
+
+                    .rangeslider
+                        @include fluid("height", 4)
+                        @include fluid("border-radius", 11)
+                        box-shadow: unset
+                        background: rgba(255,255,255,0.4)
+                    
+                        .rangeslider__fill
+                            background: white
+                            box-shadow: unset
+                            @include fluid("border-radius", 11)
+                        .rangeslider__handle 
+                            border: none
+                            background: white
+                            @include fluid("top", 2)
+                            @include fluid("width", 10)
+                            @include fluid("height", 10)
+
+
+                        
+                    .sound__input__value
+                        display: flex
+                        justify-content: space-between
+                        width: 100%
+                        @include fluid("margin-top", 3)
+
+.switch-box
+    .switch input 
+        display: none
+
+    .switch
+        position: relative
+        display: inline-block
+        background: #131517
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        @include fluid("border-radius", 19)
+        @include fluid("width", 60)
+        @include fluid("height", 28)
+        .slider
+            position: absolute
+            cursor: pointer
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: rgba(255,255,255,0.4)
+            -webkit-transition: .4s
+            transition: .4s
+            
+            &::before
+                position: absolute
+                content: ""
+                @include fluid("width", 28)
+                @include fluid("height", 28)
+                left: 0
+                bottom: 0
+                -webkit-transition: .4s
+                transition: .4s
+                background: #FFFFFF
+                border: 2px solid rgba(134, 134, 134, 0.5)
+                box-sizing: border-box
+                box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+        input:checked + .slider:before  
+            @include fluid("height", 28)
+            @include fluid("left", 32)
+            background: #2BB6A8
+            border: 2px solid rgba(22, 69, 64, 0.5)
+            box-sizing: border-box
+            box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+
+        .slider.round
+            @include fluid("border-radius", 34)
+
+            &::before
+                border-radius: 50%
+        
+
+
+

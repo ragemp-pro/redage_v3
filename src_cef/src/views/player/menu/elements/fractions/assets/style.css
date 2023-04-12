@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'fractionsicon';
+  src:  url('fonts/fractionsicon.eot?6c7jtk');
+  src:  url('fonts/fractionsicon.eot?6c7jtk#iefix') format('embedded-opentype'),
+    url('fonts/fractionsicon.ttf?6c7jtk') format('truetype'),
+    url('fonts/fractionsicon.woff?6c7jtk') format('woff'),
+    url('fonts/fractionsicon.svg?6c7jtk#fractionsicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="fractionsicon-"], [class*=" fractionsicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fractionsicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fractionsicon-best:before {
+  content: "\e900";
+}
+.fractionsicon-check:before {
+  content: "\e901";
+}
+.fractionsicon-complaints:before {
+  content: "\e902";
+}
+.fractionsicon-copy:before {
+  content: "\e903";
+}
+.fractionsicon-crime:before {
+  content: "\e904";
+}
+.fractionsicon-crown:before {
+  content: "\e905";
+}
+.fractionsicon-decline:before {
+  content: "\e906";
+}
+.fractionsicon-dots:before {
+  content: "\e907";
+}
+.fractionsicon-exit:before {
+  content: "\e908";
+}
+.fractionsicon-fired:before {
+  content: "\e909";
+}
+.fractionsicon-form:before {
+  content: "\e90a";
+}
+.fractionsicon-fractions:before {
+  content: "\e90b";
+}
+.fractionsicon-gov:before {
+  content: "\e90c";
+}
+.fractionsicon-loop:before {
+  content: "\e90d";
+}
+.fractionsicon-map:before {
+  content: "\e90e";
+}
+.fractionsicon-members:before {
+  content: "\e90f";
+}
+.fractionsicon-neutral:before {
+  content: "\e910";
+}
+.fractionsicon-news:before {
+  content: "\e911";
+}
+.fractionsicon-parking:before {
+  content: "\e912";
+}
+.fractionsicon-person:before {
+  content: "\e913";
+}
+.fractionsicon-plus:before {
+  content: "\e914";
+}
+.fractionsicon-question:before {
+  content: "\e915";
+}
+.fractionsicon-rank:before {
+  content: "\e916";
+}
+.fractionsicon-settings:before {
+  content: "\e917";
+}
+.fractionsicon-squads:before {
+  content: "\e918";
+}
+.fractionsicon-stats:before {
+  content: "\e919";
+}
+.fractionsicon-stock:before {
+  content: "\e91a";
+}
+.fractionsicon-tasks:before {
+  content: "\e91b";
+}
+.fractionsicon-time:before {
+  content: "\e91c";
+}
+.fractionsicon-upgrade:before {
+  content: "\e91d";
+}
+.fractionsicon-warning:before {
+  content: "\e91e";
+}
+.fractionsicon-wifi:before {
+  content: "\e91f";
+}

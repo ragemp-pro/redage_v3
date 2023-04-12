@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('./icomoon.ttf?lj0ml4') format('truetype'),
+    url('./icomoon.woff?lj0ml4') format('woff'),
+    url('./icomoon.svg?lj0ml4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-p-radio:before {
+  content: "\e412";
+}
+.icon-door:before {
+  content: "\e433";
+}
+.icon-bullets:before {
+  content: "\e434";
+}
+.icon-microphone:before {
+  content: "\e435";
+}
+.icon-bank:before {
+  content: "\e436";
+}
+.icon-money:before {
+  content: "\e437";
+}
+.icon-engine:before {
+  content: "\e438";
+}
+.icon-gas:before {
+  content: "\e439";
+}
+.icon-close:before {
+  content: "\e43a";
+}
+.icon-arrow:before {
+  content: "\e43b";
+}
+.icon-send:before {
+  content: "\e43c";
+}
+.icon-flatarrow:before {
+  content: "\e43d";
+}
+.icon-twoarrow:before {
+  content: "\e43e";
+}
+.icon-connect-good:before {
+  content: "\e43f";
+}
+.icon-connect-medium:before {
+  content: "\e440";
+}
+.icon-power-null:before {
+  content: "\e441";
+}
+.icon-power-full:before {
+  content: "\e442";
+}
+.icon-power-medium:before {
+  content: "\e443";
+}
+.icon-phone-home:before {
+  content: "\e444";
+}
+.icon-exit:before {
+  content: "\e445";
+}
+.icon-dollar:before {
+  content: "\e446";
+}
+.icon-star:before {
+  content: "\e447";
+}
+.icon-helmet:before {
+  content: "\e448";
+}
+.icon-helmet-table:before {
+  content: "\e449";
+}
+.icon-success:before {
+  content: "\e44a";
+}
+.icon-questions:before {
+  content: "\e44b";
+}
+.icon-information:before {
+  content: "\e44c";
+}
+.icon-error:before {
+  content: "\e44d";
+}
+.icon-alert:before {
+  content: "\e44e";
+}
+.icon-update:before {
+  content: "\e44f";
+}
+.icon-ar-refresh:before {
+  content: "\e450";
+}
+.icon-ar-close:before {
+  content: "\e451";
+}
+.icon-p-bonus:before {
+  content: "\e452";
+}
+.icon-p-rent:before {
+  content: "\e453";
+}
+.icon-p-car:before {
+  content: "\e454";
+}
+.icon-p-fraction:before {
+  content: "\e455";
+}
+.icon-p-biz:before {
+  content: "\e456";
+}
+.icon-p-add:before {
+  content: "\e457";
+}
+.icon-p-sim:before {
+  content: "\e458";
+}
+.icon-p-call-accept:before {
+  content: "\e459";
+}
+.icon-p-call-cancel:before {
+  content: "\e45a";
+}
+.icon-p-gps:before {
+  content: "\e45b";
+}
+.icon-p-contacts:before {
+  content: "\e45c";
+}
+.icon-p-gift:before {
+  content: "\e45d";
+}
+.icon-p-lock:before {
+  content: "\e45e";
+}
+.icon-p-bank:before {
+  content: "\e45f";
+}
+.icon-p-hotel:before {
+  content: "\e460";
+}
+.icon-bullet-2:before {
+  content: "\e461";
+}
+.icon-p-house:before {
+  content: "\edf2";
+}
+.icon-p-tent:before {
+  content: "\e900";
+}

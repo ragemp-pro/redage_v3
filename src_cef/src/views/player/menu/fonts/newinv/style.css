@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'inventoryicons';
+  src:  url('./inventoryicons.eot?5en7p4');
+  src:  url('./inventoryicons.eot?5en7p4#iefix') format('embedded-opentype'),
+    url('./inventoryicons.ttf?5en7p4') format('truetype'),
+    url('./inventoryicons.woff?5en7p4') format('woff'),
+    url('./inventoryicons.svg?5en7p4#inventoryicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="inventoryicons-"], [class*=" inventoryicons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'inventoryicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inventoryicons-back:before {
+  content: "\e90e";
+}
+.inventoryicons-forum:before {
+  content: "\e90f";
+}
+.inventoryicons-news:before {
+  content: "\e910";
+}
+.inventoryicons-online:before {
+  content: "\e911";
+}
+.inventoryicons-settings:before {
+  content: "\e912";
+}
+.inventoryicons-smoking:before {
+  content: "\e913";
+}
+.inventoryicons-open-padlock:before {
+  content: "\e914";
+}
+.inventoryicons-restaurant:before {
+  content: "\e915";
+}
+.inventoryicons-padlock:before {
+  content: "\e916";
+}
+.inventoryicons-soft-drink:before {
+  content: "\e917";
+}
+.inventoryicons-shop-cart:before {
+  content: "\e918";
+}
+.inventoryicons-rifle:before {
+  content: "\e919";
+}
+.inventoryicons-shipment:before {
+  content: "\e91a";
+}
+.inventoryicons-fashion:before {
+  content: "\e91b";
+}
+.inventoryicons-delivery-box:before {
+  content: "\e900";
+}
+.inventoryicons-box:before {
+  content: "\e901";
+}
+.inventoryicons-drop:before {
+  content: "\e902";
+}
+.inventoryicons-near:before {
+  content: "\e903";
+}
+.inventoryicons-open-box:before {
+  content: "\e904";
+}
+.inventoryicons-razdel:before {
+  content: "\e905";
+}
+.inventoryicons-top:before {
+  content: "\e906";
+}
+.inventoryicons-user:before {
+  content: "\e907";
+}
+.inventoryicons-folder:before {
+  content: "\e908";
+}
+.inventoryicons-maintenance:before {
+  content: "\e909";
+}
+.inventoryicons-hand:before {
+  content: "\e90a";
+}
+.inventoryicons-backpack:before {
+  content: "\e90b";
+}
+.inventoryicons-bottom:before {
+  content: "\e90c";
+}
+.inventoryicons-car:before {
+  content: "\e90d";
+}

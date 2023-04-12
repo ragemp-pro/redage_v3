@@ -1,0 +1,90 @@
+@import @/views/assets/css/main.sass
+
+.box-sortlist
+    .box-input
+        @include fluid("height", 65)
+        .sort-input
+            width: 100%
+            @include fluid("padding", 10)
+            border: none
+            background: none
+            @include fluid("border", 1, "solid rgba(0, 0, 0, .1)")
+            color: #fff
+            background: rgba(0,0,0,0.1)
+            margin-bottom: 0px
+    .box-header
+        @include fluid("height", 45)
+        color: #ababab
+        display: flex
+        @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, .12)")
+
+        .desc
+            display: flex
+            align-items: center
+            height: fit-content
+            cursor: pointer
+            @include fluid("margin-top", 18)
+            
+            &.active
+                color: #fff
+
+                .triangle 
+                    opacity: 0.6
+        
+        .triangle
+            opacity: 0.15
+            @include fluid("margin-left", 6)
+            &.up
+                @include fluid("border-left", 5, "solid transparent")
+                @include fluid("border-right", 5, "solid transparent")
+                @include fluid("border-bottom", 8, "solid rgba(255, 255, 255, 1)")
+            &.down
+                @include fluid("border-left", 5, "solid transparent")
+                @include fluid("border-right", 5, "solid transparent")
+                @include fluid("border-top", 8, "solid rgba(255, 255, 255, 1)")
+            &.left
+                @include fluid("border-top", 5, "solid transparent")
+                @include fluid("border-bottom", 5, "solid transparent")
+                @include fluid("border-right", 8, "solid rgba(255, 255, 255, 1)")
+            &.right
+                @include fluid("border-top", 5, "solid transparent")
+                @include fluid("border-bottom", 5, "solid transparent")
+                @include fluid("border-left", 8, "solid rgba(255, 255, 255, 1)")
+
+    .listScrollBar
+        width: 100%
+        @include fluid("height", 320)
+        overflow: hidden
+        overflow-y: scroll
+        cursor: auto
+        @include fluid("font-size", 13)
+        font-weight: 400
+
+        .box-item
+            @include fluid("height", 48)
+            @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, .12)")
+            display: flex
+            align-items: center
+
+            .gray
+                color: #ababab
+
+            .box-button
+                display: flex
+                .button
+                    @include fluid("width", 30)
+                    @include fluid("height", 30)
+                    @include fluid("margin-left", 10)
+                    background: rgba(255, 255, 255, 0.1)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    color: white
+                    cursor: pointer
+                    transition: background 0.25s linear, color 0.25s linear
+
+                    &:first-child
+                        margin-left: 0
+                    &:hover                                    
+                        background: white
+                        color: black

@@ -1,0 +1,178 @@
+@import @/views/assets/css/main.sass
+
+#popup__newhud_upgrade
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.27) 0%, rgba(1, 22, 39, 0.74) 100%)
+    z-index: 100    
+    @include fluid("font-size", 16)
+    @include fluid("line-height", 19)
+    font-family: 'TTNorms-Regular'
+    font-weight: 500
+    box-sizing: border-box
+    color: white
+    .popup__newhud_box
+        display: flex
+        flex-direction: column
+        background: rgba(30, 38, 47, 0.8)
+        @include fluid("border-radius", 8)
+        @include fluid("padding", 24)
+        @include fluid("width", 782)
+        @include fluid("height", 480)
+    .popup__newhud_esc
+        position: absolute
+        @include fluid("left", 50)
+        @include fluid("top", 42)
+        display: flex
+        align-items: center
+        font-family: 'Montserrat-Medium'
+        @include fluid("font-size", 20)
+        line-height: 100%
+        .popup__newhud_escbutton
+            @include fluid("width", 56)
+            @include fluid("height", 28)
+            background: #FFFFFF
+            @include fluid("border-radius", 3)
+            color: #1E262F
+            font-weight: 600
+            @include fluid("margin-right", 16)
+
+    .popup__newhud_title
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 28)
+        font-family: 'TTNorms-Medium'
+        font-weight: 500
+        @include fluid("line-height", 28)
+        display: flex
+        align-items: center
+        .popup__newhud_icon
+            @include fluid("margin-right", 10)
+            color:#869199
+    .popup__newhud_line
+        width: 100%
+        @include fluid("height", 1)
+        background: rgba(253,255,252,0.2)
+        @include fluid("width", 450)
+        @include fluid("margin-top", 15)
+        @include fluid("margin-bottom", 12)
+    .popup__newhud_text
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 25)
+        @include fluid("letter-spacing", 1)
+        @include fluid("width", 450)
+        text-align: left
+        font-weight: normal
+        color: #A6B1BA
+        @include fluid("margin-top", 24)
+
+    .popup__newhud__many__buttons
+        display: flex
+        justify-content: space-between
+        @include fluid("width", 564)
+        @include fluid("margin-top", 15)
+        .popup__newhud_button
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("border-radius", 4)
+            @include fluid("width", 166)
+            @include fluid("height", 40)
+            background: rgba(255,255,255,0.2)
+            cursor: pointer
+            &:hover
+                background: white
+                color: black
+    .popup__newhud_grid
+        display: grid
+        grid-template-rows: repeat(2, 1fr)
+        grid-template-columns: repeat(3, 1fr)
+        width: 100%
+        height: 100%
+        @include fluid("gap", 20)
+        @include fluid("margin-top", 20)
+        overflow-y: auto
+        @include fluid("padding-right", 10)
+        &::-webkit-scrollbar 
+            width: resize(4)
+            height: resize(4)
+            margin-right: resize(10)
+            border-radius: resize(25)
+                
+        &::-webkit-scrollbar-track 
+            border-radius: resize(25)
+            background: #39384E
+            border-radius: 100px
+
+
+        &::-webkit-scrollbar-thumb 
+            border-radius: resize(25)
+            background: white
+            border-radius: 100px
+        .popup__grid_element
+            @include fluid("width", 224)
+            @include fluid("height", 156)
+            display: flex
+            flex-direction: column
+            @include fluid("padding", 8)
+            background: #1E262F
+            .popup__grid_image
+                @include fluid("border-radius", 8)
+                @include fluid("width", 208)
+                @include fluid("height", 98)
+                display: flex
+                justify-content: flex-start
+                align-items: flex-end
+                @include fluid("padding", 12)
+                @include fluid("font-size", 14)
+                line-height: 100%
+                font-weight: 500
+                font-family: 'TTNorms-Medium'
+                background-image: url('./upgrade.png')
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                @include fluid("margin-bottom", 13)
+                position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 0
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.88%, #000000 100%)
+                    @include fluid("border-radius", 8)
+                    width: 100%
+                    height: 100%
+                    z-index: 1
+                div
+                    z-index: 5
+            .gray
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 20)
+                color: #A6B1BA
+            .popup__grid_button
+                background: rgba(255, 255, 255, 0.15)
+                @include fluid("border-radius", 4)
+                @include fluid("width", 92)
+                @include fluid("height", 24)
+                @include fluid("font-size", 12)
+                @include fluid("line-height", 14)
+                font-weight: 500
+                font-family: 'TTNorms-Medium'
+                display: flex
+                align-items: center
+                justify-content: center
+                &:hover
+                    background: #259A70
+    .box-between
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%

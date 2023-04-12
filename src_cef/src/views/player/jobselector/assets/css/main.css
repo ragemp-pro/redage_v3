@@ -1,0 +1,236 @@
+.joblist {
+    font-family: 'UniNeue';
+    color:#fff;
+}
+
+@media  (max-width: 1300px)  {
+    .joblist .adaptive {zoom: 80%}
+}
+
+@media (min-width: 1301px) and (max-width: 1400px) {
+    .joblist .adaptive {zoom: 80%}
+}
+
+@media (min-width: 1401px) and (max-width: 1650px) {
+    .joblist .adaptive {zoom: 100%}
+}
+
+@media (min-width: 1651px) and (max-width: 2560px) {
+    .joblist .adaptive {zoom: 100%}
+}
+
+.joblist .boxtop {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.joblist .box {
+    width: 494px;
+    height: 678px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.joblist .header {
+    width: 100%;
+    height: 54px;
+    display: flex;
+}
+
+.joblist .workbox {
+    width: 103%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.joblist .boxes2column {
+    margin-left: 10px;
+}
+
+.joblist .arrow {
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: url('../images/arrow.svg');
+    margin-top: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.joblist .arrow:hover {
+    transform: scale(1.1);
+    -webkit-transition: all 1s ease;
+}
+
+.joblist .txtheader {
+    font-size: 18px;
+    line-height: 54px;
+}
+
+.joblist .workboxes {
+    position:relative;
+    width: 242px;
+    height: 135px;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: 3px;
+}
+
+.joblist .block {
+    opacity: 0.3;
+    position: absolute;
+}
+
+.joblist .blocktxt {
+    opacity: 0.3;
+}
+
+.joblist .electro {
+    background-image: url('../images/electro.svg');
+}
+
+.joblist .taxi {
+    background-image: url('../images/taxi.svg');
+}
+
+.joblist .kosilka {
+    background-image: url('../images/kosilka.svg');
+}
+
+.joblist .inkos {
+    background-image: url('../images/inca.svg');
+}
+
+.joblist .inkoslvl {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 56px;
+    height: 22px;
+    margin-top: 57px;
+    opacity:0;
+
+}
+
+.joblist .workboxes:hover .inkoslvl{
+    opacity:1;
+    transition: 1s;
+}
+
+.joblist .textlvl {
+    font-size: 10px;
+    position: absolute;
+    width: 56px;
+    height: 22px;
+    margin-left: 16px;
+    margin-top: 4px;
+}
+
+.joblist .textlvl2 {
+    font-size: 10px;
+    position: absolute;
+    width: 56px;
+    height: 22px;
+    margin-left: 33px;
+    margin-top: 4px;
+}
+
+.joblist .inkoslvl:hover {
+    display:block;
+}
+
+.joblist .pochta {
+    background-image: url('../images/pochta.svg');
+}
+
+.joblist .bus {
+    background-image: url('../images/bus.svg');
+}
+
+.joblist .truck {
+    background-image: url('../images/truck.svg');
+}
+
+.joblist .mechanic {
+    background-image: url('../images/mechanic.svg');
+}
+
+.joblist .textboxwork {
+    font-size: 15px;
+    margin-left: 11px;
+}
+
+.joblist .workimg {
+    margin-left: 152px;
+    margin-top: -4px;
+    position: absolute;
+}
+
+.joblist .worktextopen {
+    font-size: 10px;
+    margin-left: 183px;
+    margin-top: -31px;
+}
+
+.joblist .worktoptxt{
+    height: 25px;
+    margin-top: 8px;
+    margin-left: 9px;
+}
+
+.joblist .buttongetsettled {
+    width: auto;
+    height: 30px;
+    background:  #588941;
+    margin-top: 72px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.joblist .buttongetsettledred {
+    width: auto;
+    height: 30px;
+    background: #A54742;
+    margin-top: 72px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.joblist .buttongetsettled:hover {
+    background: #75BD53;
+}
+
+.joblist .buttongetsettledred:hover {
+    background: #D44D47;
+}
+
+.joblist .buttongetsettledred:focus {
+    outline: none;
+}
+
+.joblist .buttongetsettledred:active {
+    background: #D44D47;
+}
+
+.joblist .buttongetsettled:focus {
+    outline: none;
+}
+
+.joblist .buttongetsettled:active {
+    background: #75BD53;
+}
+
+.joblist .buttontxtgetsettled {
+    font-size: 15px;
+}
+
+.jobstatus {
+    margin-top: 17px;
+}

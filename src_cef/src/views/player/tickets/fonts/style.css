@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'houseicon';
+  src:  url('./houseicon.eot?rfrh09');
+  src:  url('./houseicon.eot?rfrh09#iefix') format('embedded-opentype'),
+    url('./houseicon.ttf?rfrh09') format('truetype'),
+    url('./houseicon.woff?rfrh09') format('woff'),
+    url('./houseicon.svg?rfrh09#houseicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="houseicon-"], [class*=" houseicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'houseicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.houseicon-check:before {
+  content: "\e90b";
+}
+.houseicon-car-top:before {
+  content: "\e900";
+}
+.houseicon-time:before {
+  content: "\e902";
+}
+.houseicon-star:before {
+  content: "\e903";
+}
+.houseicon-garage:before {
+  content: "\e904";
+}
+.houseicon-bike-top:before {
+  content: "\e905";
+}
+.houseicon-safe:before {
+  content: "\e906";
+}
+.houseicon-medkit:before {
+  content: "\e907";
+}
+.houseicon-bike:before {
+  content: "\e908";
+}
+.houseicon-car:before {
+  content: "\e909";
+}
+.houseicon-house:before {
+  content: "\e90a";
+}
+.houseicon-ban:before {
+  content: "\e901";
+}

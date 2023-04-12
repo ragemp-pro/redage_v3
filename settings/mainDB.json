@@ -1,0 +1,8 @@
+{
+  "OtherList": [],
+  "Name": "MainDB",
+  "Server": "127.0.0.1",
+  "DataBase": "ra3_main",
+  "User": "root",
+  "Password": "root"
+}

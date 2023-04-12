@@ -1,0 +1,160 @@
+@import @/views/assets/css/main.sass
+
+#newyearstats
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: white
+    font-family: "UniNeue"
+    font-style: normal
+    font-weight: bold
+    z-index: 1
+
+    .newyearstats__main
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        height: 100%
+        @include fluid("font-size", 22)
+        @include fluid("line-height", 30)
+        background-image: url('images/background1.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        z-index: -999
+        @include fluid("padding-top", 578)
+
+        &.year_2020
+            background-image: url('images/background3.png')
+    
+        .newyearstats__button-block
+            @include fluid("height", 88)
+            @include fluid("width", 401)
+            @include fluid("margin-bottom", 67)
+            position: relative
+            cursor: pointer
+            transition: height 1s
+            z-index: 1
+
+            &:hover
+                @include fluid("height", 80)
+            .newyearstats__button
+                width: 100%
+                @include fluid("height", 80)
+                position: absolute
+                left: 0
+                top: 0
+                background: linear-gradient(180deg, #FA596B 0%, #DE2C40 100%)
+                box-shadow: 0px 0px 60px #E23347, inset 0px -1px 0px rgba(255, 255, 255, 0.7)
+                @include fluid("border-radius", 6)
+                display: flex
+                align-items: center
+                justify-content: center
+                text-transform: uppercase
+                cursor: pointer
+            .newyearstats__subbutton
+                width: 100%
+                height: 100%
+                @include fluid("border-radius", 12)  
+                background: #74262F
+                position: absolute
+                z-index: -1
+                cursor: pointer
+            
+        .newyearstats__lines
+            @include fluid("height", 137)
+            @include fluid("width", 68)
+            background: url('images/lines.png')
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+
+    
+    .newyearstats__stats
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        height: 100%
+        @include fluid("font-size", 36)
+        @include fluid("line-height", 49)
+        background-image: url('images/background2.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        z-index: -999
+
+        .newyearstats__logo
+            @include fluid("width", 952)
+            @include fluid("height", 188)
+            background: url('images/logo.png')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            @include fluid("margin-bottom", 27)
+            @include fluid("margin-top", 72)
+        .box-flex
+            .newyearstats-img
+                @include fluid("width", 166)
+                @include fluid("height", 193)
+                @include fluid("font-size", 36)
+                @include fluid("line-height", 49)
+                background: url('images/time.png')
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center
+            .newyearstats__time
+                display: flex
+                flex-direction: column
+                @include fluid("margin-left", 30)
+                .newyearstats__subtitle
+                    @include fluid("font-size", 48)
+                    @include fluid("line-height", 65)
+                .newyearstats__title
+                    font-weight: 800
+                    text-transform: uppercase
+                    @include fluid("font-size", 96)
+                    @include fluid("line-height", 130)
+        
+        .newyearstats__info
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            @include fluid("width", 1330)
+            @include fluid("height", 363)
+            @include fluid("margin-top", 2)
+            @include fluid("row-gap", 103)
+            @include fluid("column-gap", 47)
+
+            .newyearstats__info-element
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 100%
+                height: 100%
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center
+                @include fluid("width", 412)
+                @include fluid("height", 179)
+                @include fluid("padding-top", 36)
+                &.first
+                    background: url('images/first.png')
+                &.second
+                    background: url('images/second.png')
+                &.third
+                    background: url('images/third.png')
+                &.fourth
+                    background: url('images/fourth.png')
+                &.five
+                    background: url('images/five.png')
+                &.six
+                    background: url('images/six.png')
+                &.settings
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center

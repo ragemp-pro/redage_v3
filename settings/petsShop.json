@@ -1,0 +1,67 @@
+﻿{
+  "0": {
+    "Price": 15000,
+    "isDonate": false,
+    "Ped": 1462895032
+  },
+  "1": {
+    "Price": 7000,
+    "isDonate": true,
+    "Ped": 2506301981
+  },
+  "2": {
+    "Price": 8000,
+    "isDonate": true,
+    "Ped": 1318032802
+  },
+  "3": {
+    "Price": 150000,
+    "isDonate": false,
+    "Ped": 1125994524
+  },
+  "4": {
+    "Price": 150000,
+    "isDonate": false,
+    "Ped": 1832265812
+  },
+  "5": {
+    "Price": 250000,
+    "isDonate": false,
+    "Ped": 882848737
+  },
+  "6": {
+    "Price": 500000,
+    "isDonate": false,
+    "Ped": 1126154828
+  },
+  "7": {
+    "Price": 2500,
+    "isDonate": true,
+    "Ped": 2910340283
+  },
+  "8": {
+    "Price": 200000,
+    "isDonate": false,
+    "Ped": 2971380566
+  },
+  "9": {
+    "Price": 300000,
+    "isDonate": false,
+    "Ped": 3462393972
+  },
+  "10": {
+    "Price": 1000000,
+    "isDonate": false,
+    "Ped": 307287994
+  },
+  "11": {
+    "Price": 15000,
+    "isDonate": true,
+    "Ped": 3877461608
+  },
+  "12": {
+    "Price": 250000,
+    "isDonate": false,
+    "Ped": 1682622302
+  }
+}

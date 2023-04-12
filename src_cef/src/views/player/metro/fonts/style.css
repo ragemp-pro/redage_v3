@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'metroicons';
+  src:  url('metroicons.eot?khpl3t');
+  src:  url('metroicons.eot?khpl3t#iefix') format('embedded-opentype'),
+    url('metroicons.ttf?khpl3t') format('truetype'),
+    url('metroicons.woff?khpl3t') format('woff'),
+    url('metroicons.svg?khpl3t#metroicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="metroicons-"], [class*=" metroicons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'metroicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.metroicons-znak:before {
+  content: "\e900";
+}
+.metroicons-ticket:before {
+  content: "\e901";
+}
+.metroicons-station:before {
+  content: "\e902";
+}
+.metroicons-diamond:before {
+  content: "\e903";
+}
+.metroicons-right:before {
+  content: "\e926";
+}
+.metroicons-left:before {
+  content: "\e925";
+}
+.metroicons-done:before {
+  content: "\e90a";
+}
+.metroicons-star:before {
+  content: "\e91b";
+}
+.metroicons-time:before {
+  content: "\e91c";
+}

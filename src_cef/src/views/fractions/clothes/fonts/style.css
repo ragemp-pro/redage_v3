@@ -1,0 +1,235 @@
+@font-face {
+  font-family: 'newbarbershopicons';
+  src:  url('./newbarbershopicons.eot?omhceb');
+  src:  url('./newbarbershopicons.eot?omhceb#iefix') format('embedded-opentype'),
+    url('./newbarbershopicons.ttf?omhceb') format('truetype'),
+    url('./newbarbershopicons.woff?omhceb') format('woff'),
+    url('./newbarbershopicons.svg?omhceb#newbarbershopicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="newbarbershopicons-"], [class*=" newbarbershopicons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'newbarbershopicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.newbarbershopicons-updown:before {
+  content: "\e900";
+}
+.newbarbershopicons-leftright:before {
+  content: "\e902";
+}
+.newbarbershopicons-palette:before {
+  content: "\e903";
+}
+.newbarbershopicons-makeup:before {
+  content: "\e904";
+}
+.newbarbershopicons-lips:before {
+  content: "\e905";
+}
+.newbarbershopicons-eyes:before {
+  content: "\e906";
+}
+.newbarbershopicons-body:before {
+  content: "\e907";
+}
+.newbarbershopicons-eyebrows:before {
+  content: "\e908";
+}
+.newbarbershopicons-beard:before {
+  content: "\e909";
+}
+.newbarbershopicons-hair:before {
+  content: "\e90a";
+}
+.newbarbershopicons-stackshare-use:before {
+  content: "\e90b";
+}
+.newbarbershopicons-emotion-use:before {
+  content: "\e90c";
+}
+.newbarbershopicons-shirt-line:before {
+  content: "\e90d";
+}
+.newbarbershopicons-emotion:before {
+  content: "\e90e";
+}
+.newbarbershopicons-stackshare:before {
+  content: "\e90f";
+}
+.newbarbershopicons-shirt-line-use:before {
+  content: "\e910";
+}
+.newbarbershopicons-paint-brush:before {
+  content: "\e911";
+}
+.newbarbershopicons-paint-brush-use:before {
+  content: "\e912";
+}
+.newbarbershopicons-shuffle:before {
+  content: "\e913";
+}
+.newbarbershopicons-file-chart:before {
+  content: "\e914";
+}
+.newbarbershopicons-left-arr:before {
+  content: "\e915";
+}
+.newbarbershopicons-right-arr:before {
+  content: "\e916";
+}
+.newbarbershopicons-top-arr:before {
+  content: "\e917";
+}
+.newbarbershopicons-bottom-arr:before {
+  content: "\e918";
+}
+.newbarbershopicons-ban:before {
+  content: "\e901";
+}
+
+@font-face {
+  font-family: 'shop';
+  src:  url('./shop.eot?kmgl7t');
+  src:  url('./shop.eot?kmgl7t#iefix') format('embedded-opentype'),
+    url('./shop.ttf?kmgl7t') format('truetype'),
+    url('./shop.woff?kmgl7t') format('woff'),
+    url('./shop.svg?kmgl7t#shop') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ic-"], [class*=" ic-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'shop' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-uniE900:before {
+  content: "\e900";
+}
+.ic-uniE901:before {
+  content: "\e901";
+}
+.ic-uniE902:before {
+  content: "\e902";
+}
+.ic-uniE903:before {
+  content: "\e903";
+}
+.ic-uniE904:before {
+  content: "\e904";
+}
+.ic-uniE905:before {
+  content: "\e905";
+}
+.ic-uniE906:before {
+  content: "\e906";
+}
+.ic-uniE907:before {
+  content: "\e907";
+}
+.ic-uniE908:before {
+  content: "\e908";
+}
+.ic-uniE909:before {
+  content: "\e909";
+}
+.ic-store-paw:before {
+  content: "\e90a";
+}
+.ic-store-mask:before {
+  content: "\e90b";
+}
+.ic-st-t-leg2:before {
+  content: "\e90c";
+}
+.ic-st-t-muscles:before {
+  content: "\e90d";
+}
+.ic-st-t-muscler:before {
+  content: "\e90e";
+}
+.ic-st-t-head:before {
+  content: "\e90f";
+}
+.ic-st-t-leg1:before {
+  content: "\e910";
+}
+.ic-st-b-binoculars:before {
+  content: "\e911";
+}
+.ic-st-b-blush:before {
+  content: "\e912";
+}
+.ic-st-b-eyebrow:before {
+  content: "\e913";
+}
+.ic-st-b-eyeshadow:before {
+  content: "\e915";
+}
+.ic-st-b-hair:before {
+  content: "\e916";
+}
+.ic-st-b-lipstick:before {
+  content: "\e917";
+}
+.ic-st-b-torso:before {
+  content: "\e918";
+}
+.ic-st-b-beard:before {
+  content: "\e919";
+}
+.ic-st-c-coat:before {
+  content: "\e91a";
+}
+.ic-st-c-glasses:before {
+  content: "\e91b";
+}
+.ic-st-c-glove:before {
+  content: "\e91c";
+}
+.ic-st-c-hat:before {
+  content: "\e91d";
+}
+.ic-st-c-necklace:before {
+  content: "\e91e";
+}
+.ic-st-c-pants:before {
+  content: "\e91f";
+}
+.ic-st-c-shirt:before {
+  content: "\e920";
+}
+.ic-st-c-shoe:before {
+  content: "\e921";
+}
+.ic-st-c-watch:before {
+  content: "\e922";
+}
+.ic-st-c-ears:before {
+  content: "\e923";
+}

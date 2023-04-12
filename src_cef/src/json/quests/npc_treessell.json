@@ -1,0 +1,10 @@
+{
+    "0": {
+        "buttons":[
+            {"name": "Продать.", "type": "perform"},
+            {"name": "Неинтересно."}
+        ],
+        "text":"Привет, скупаю ресурсы.",
+        "sound": "cloud/npc/treessell/tressel.ogg"
+    }
+}

@@ -1,0 +1,240 @@
+@import '../../../assets/css/main.sass'
+
+
+#help 
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: "UniNeue"
+    font-style: normal
+    font-weight: bold
+    -moz-user-select: none
+    -khtml-user-select: none
+    user-select: none 
+
+
+    .help-card 
+        display: flex
+        @include fluid("width", 1000)
+        overflow: hidden
+        background: rgba(27, 30, 40, 0.95)
+        @include fluid("border-radius", 6)
+        @include fluid("height", 750)
+        background-size: 100%
+        background-repeat: no-repeat
+        position: relative
+        color: #fff
+
+        .button
+            display: flex
+            justify-content: center
+            width: 100%
+            margin-top: auto
+            &.alignleft 
+                justify-content: start
+            .btn
+                display: flex
+                justify-content: center
+                align-items: center
+                @include fluid("border-width", 1)
+                border-style: solid
+                border-color: #FF5151
+                @include fluid("border-radius", 6)
+
+                font-weight: bold
+                @include fluid("font-size", 14)
+                @include fluid("width", 220)
+                @include fluid("height", 38)
+                transition: ease all .2s
+                
+                &:hover 
+                    background: #FF5151
+
+        .icon
+            background-size: cover
+            display: flex
+            &.shieldUser
+                @include fluid("width", 24)
+                @include fluid("margin-right", 16)
+                @include fluid("height", 24)
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.783 2.826L12 1L20.217 2.826C20.4391 2.87536 20.6377 2.99897 20.78 3.1764C20.9224 3.35384 21 3.57452 21 3.802V13.789C20.9999 14.7767 20.756 15.7492 20.2899 16.62C19.8238 17.4908 19.1499 18.2331 18.328 18.781L12 23L5.672 18.781C4.85027 18.2332 4.17646 17.4911 3.71035 16.6205C3.24424 15.7498 3.00024 14.7776 3 13.79V3.802C3.00004 3.57452 3.07764 3.35384 3.21999 3.1764C3.36234 2.99897 3.56094 2.87536 3.783 2.826ZM12 11C12.663 11 13.2989 10.7366 13.7678 10.2678C14.2366 9.79893 14.5 9.16304 14.5 8.5C14.5 7.83696 14.2366 7.20107 13.7678 6.73223C13.2989 6.26339 12.663 6 12 6C11.337 6 10.7011 6.26339 10.2322 6.73223C9.76339 7.20107 9.5 7.83696 9.5 8.5C9.5 9.16304 9.76339 9.79893 10.2322 10.2678C10.7011 10.7366 11.337 11 12 11ZM7.527 16H16.473C16.3518 14.8984 15.8283 13.8803 15.0029 13.1407C14.1775 12.4012 13.1082 11.9922 12 11.9922C10.8918 11.9922 9.82248 12.4012 8.99708 13.1407C8.17168 13.8803 7.64822 14.8984 7.527 16Z' fill='white'/%3E%3C/svg%3E%0A")
+                display: flex
+
+            &.arrow
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.99992 10.5L0.937744 0L13.0621 1.05994e-06L6.99992 10.5Z' fill='white'/%3E%3C/svg%3E%0A")
+                @include fluid("width", 14)
+                @include fluid("height", 11)
+                transition: ease all .2s
+
+            &.arrow.active 
+                transform: rotate(180deg)
+
+            &.map
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 5L9 2L15 5L21.303 2.299C21.3791 2.26638 21.4621 2.25317 21.5445 2.26054C21.627 2.26792 21.7063 2.29565 21.7754 2.34124C21.8445 2.38684 21.9012 2.44888 21.9404 2.5218C21.9796 2.59471 22.0001 2.67622 22 2.759V19L15 22L9 19L2.697 21.701C2.62091 21.7336 2.53792 21.7468 2.45547 21.7395C2.37301 21.7321 2.29368 21.7044 2.22459 21.6588C2.1555 21.6132 2.09881 21.5511 2.05961 21.4782C2.02041 21.4053 1.99993 21.3238 2 21.241V5ZM6 11V13H8V11H6ZM10 11V13H12V11H10ZM16 10.94L14.763 9.702L13.702 10.762L14.939 12L13.702 13.237L14.762 14.298L16 13.061L17.237 14.298L18.298 13.238L17.061 12L18.298 10.763L17.238 9.702L16 10.939V10.94Z' fill='white'/%3E%3C/svg%3E%0A")
+                @include fluid("width", 24)
+                @include fluid("height", 24)
+                @include fluid("margin-left", 15)
+                
+        .nav
+            background: #13161D
+            display: flex
+            @include fluid("padding-top", 36)
+            @include fluid("padding-bottom", 36)
+            flex-direction: column
+            align-items: start
+            @include fluid("width", 450)
+            
+            .header
+                font-weight: bold
+                margin: 0 auto
+                @include fluid("padding-left", 26)
+                @include fluid("padding-right", 26)
+                @include fluid("margin-bottom", 23)
+                @include fluid("width", 257)
+                @include fluid("font-size", 24)
+                display: flex
+                justify-content: space-between
+                .close
+                    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4416 6.34492L12.3533 9.07659C10.0302 10.7029 8.28619 13.0274 7.37449 15.7126C6.46279 18.3977 6.43092 21.3036 7.28351 24.0081C8.1361 26.7127 9.82874 29.0749 12.1155 30.7517C14.4023 32.4286 17.1642 33.3327 19.9999 33.3327C22.8356 33.3327 25.5975 32.4286 27.8843 30.7517C30.1711 29.0749 31.8637 26.7127 32.7163 24.0081C33.5689 21.3036 33.5371 18.3977 32.6254 15.7126C31.7137 13.0274 29.9696 10.7029 27.6466 9.07659L29.5583 6.34492C31.7548 7.88063 33.5481 9.92401 34.7857 12.3014C36.0233 14.6787 36.6685 17.3197 36.6666 19.9999C36.6666 29.2049 29.2049 36.6666 19.9999 36.6666C10.7949 36.6666 3.33326 29.2049 3.33326 19.9999C3.33133 17.3197 3.97657 14.6787 5.21414 12.3014C6.45171 9.92401 8.24501 7.88063 10.4416 6.34492ZM18.3333 19.9999V3.33325H21.6666V19.9999H18.3333Z' fill='%23595E6C'/%3E%3C/svg%3E%0A")
+                    display: flex
+                    background-size: 100%
+                    @include fluid("width", 40)
+                    @include fluid("height", 40)
+
+                    &:hover
+                        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4416 6.34492L12.3533 9.07659C10.0302 10.7029 8.28619 13.0274 7.37449 15.7126C6.46279 18.3977 6.43092 21.3036 7.28351 24.0081C8.1361 26.7127 9.82874 29.0749 12.1155 30.7517C14.4023 32.4286 17.1642 33.3327 19.9999 33.3327C22.8356 33.3327 25.5975 32.4286 27.8843 30.7517C30.1711 29.0749 31.8637 26.7127 32.7163 24.0081C33.5689 21.3036 33.5371 18.3977 32.6254 15.7126C31.7137 13.0274 29.9696 10.7029 27.6466 9.07659L29.5583 6.34492C31.7548 7.88063 33.5481 9.92401 34.7857 12.3014C36.0233 14.6787 36.6685 17.3197 36.6666 19.9999C36.6666 29.2049 29.2049 36.6666 19.9999 36.6666C10.7949 36.6666 3.33326 29.2049 3.33326 19.9999C3.33133 17.3197 3.97657 14.6787 5.21414 12.3014C6.45171 9.92401 8.24501 7.88063 10.4416 6.34492ZM18.3333 19.9999V3.33325H21.6666V19.9999H18.3333Z' fill='white'/%3E%3C/svg%3E%0A")
+
+
+            .navigation 
+                @include fluid("padding-left", 26)
+                @include fluid("height", 554)
+                margin: 0 auto
+                overflow-y: auto
+                overflow-x: hidden
+                display: flex
+                flex-direction: column
+                align-items: start  
+
+
+                &::-webkit-scrollbar 
+                        @include fluid("width", 4)   
+
+                /* Track */
+                &::-webkit-scrollbar-track 
+                    background: #12141C
+                    @include fluid("border-radius", 10)
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb 
+                    background: #FFFFFF
+                    @include fluid("border-radius", 10)
+
+
+                li.list
+                    width: 100%
+                    font-weight: bold
+                    @include fluid("font-size", 16)
+                    @include fluid("margin-right", 25)
+                    @include fluid("margin-bottom", 27)
+                    @include fluid("padding-right", 20)
+                    display: flex
+                    flex-direction: column
+                    height: auto
+                    min-height: fit-content
+                    align-items: center
+
+
+                    .items
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        width: 100%
+                        @include fluid("padding-left", 40)
+                        font-weight: bold
+                        @include fluid("font-size", 16)
+                        @include fluid("line-height", 16)
+                        min-height: fit-content
+
+                        li 
+                            display: flex
+                            color: #595E6C
+                            transition: ease all .2s
+                            @include fluid("padding-top", 2)
+                            @include fluid("padding-bottom", 2)
+                            &:hover 
+                                color: #6f7ca1
+                            &.active
+                                color: #6f7ca1
+                    .title 
+                        display: flex
+                        justify-content: space-between
+                        width: 100%
+                        align-items: center
+                        .flex
+                            display: flex
+
+
+        .scroll
+            width: 100%
+            .content 
+                width: 100%
+                @include fluid("height", 750)
+                overflow-x: hidden
+                overflow-y: auto
+
+                &::-webkit-scrollbar 
+                        @include fluid("width", 4)   
+
+                /* Track */
+                &::-webkit-scrollbar-track 
+                    background: #12141C
+                    @include fluid("border-radius", 10)
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb 
+                    background: #FFFFFF
+                    @include fluid("border-radius", 10)
+
+                .accordionContent 
+                    display: flex
+                    flex-direction: column
+                    
+                    li
+                        & .list 
+                            height: auto
+                            min-height: fit-content
+                            transition: ease all .2s
+                            @include fluid("height", 42)
+                            @include fluid("margin-bottom", 6)
+                            display: flex
+                            align-items: center
+                            transition: ease all .2s
+                            @include fluid("padding-left", 39)
+                            @include fluid("padding-right", 39)
+                            justify-content: space-between
+                            background: #13161E
+                            font-weight: bold
+                            @include fluid("font-size", 14)
+
+                            &:hover
+                                background: #151924
+                    .text
+                        @include fluid("padding-bottom", 31)
+                        @include fluid("padding-left", 39)
+                        @include fluid("padding-right", 55)
+                        p 
+                            font-weight: 500
+                            @include fluid("font-size", 16)
+                            @include fluid("line-height", 20)
+                            @include fluid("margin-bottom", 24)
+
+                    .contentImg
+                        @include fluid("border-radius", 6)
+                        @include fluid("margin-bottom", 17)
+                        @include fluid("width", 590)
+                        @include fluid("height", 322)
+
+

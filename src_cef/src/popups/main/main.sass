@@ -1,0 +1,132 @@
+@import @/views/assets/css/main.sass
+#mainpopup
+    z-index: 100000
+    position: fixed
+    left: 0
+    top: 0
+    display: flex
+    user-select: none
+    font-family: "TTNorms-Regular"
+    width: 100%
+    height: 100%
+    background: rgba(1,22,39,0.9)
+    display: flex
+    align-items: center
+    justify-content: center
+    color: white
+    &.kick
+        background: radial-gradient(50% 50% at 50% 50%, #312901 0%, #080809 100%)
+    &.ban
+        background: radial-gradient(50% 50% at 50% 50%, #4D0000 0%, #080809 100%)
+    &.restart
+        background: radial-gradient(50% 50% at 50% 50%, #001E3A 0%, #080809 100%)
+    .mainpopup__main
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        @include fluid("width", 452)
+        @include fluid("height", 452)
+        @include fluid("padding-top", 55)
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+
+    .mainpopup__back 
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        z-index: -1
+        @include fluid("font-size", 452)
+        opacity: 0.1
+    .mainpopup__smallback
+        @include fluid("font-size", 120)
+        @include fluid("margin-bottom", 45)
+        
+    .popup__title
+        @include fluid("font-size", 44)
+        @include fluid("line-height", 30)
+        letter-spacing: 1px
+        text-transform: uppercase
+        @include fluid("margin-bottom", 36)
+        font-family: "TTNorms-Bold"
+        font-weight: bold
+        color: #FF9F1C
+        white-space: nowrap
+        &.kick
+            color: #FF9F1C
+        &.ban
+            color: #FF1C1C
+        &.restart
+            color: #2F80ED
+    .popup__subtitle
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 25)
+        @include fluid("width", 380)
+        font-weight: 500
+        @include fluid("margin-bottom", 30)
+        text-align: center
+    .popup__input
+        @include fluid("width", 380)
+        @include fluid("height", 41)
+        background: rgba(253, 255, 252, 0.05)
+        text-align: center
+        font-family: inherit
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 21)
+        border: 1px solid rgba(253, 255, 252, 0.05)
+        @include fluid("margin-bottom", 10)
+        color: #DFDFDF
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 10000000000000 
+        &:focus
+            border: 1px solid rgba(253, 255, 252, 0.7)
+    .box-between
+        display: flex
+        justify-content: space-between
+        @include fluid("width", 380)
+    .popup__button
+        background: rgba(253, 255, 252, 0.1)
+        border: 1px solid rgba(253, 255, 252, 0.7)
+        box-sizing: border-box
+        border-radius: 4px
+        @include fluid("width", 142)
+        @include fluid("height", 40)
+        color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: 500
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        z-index: 10000000000000 
+        &.orange
+            background: #FF9F1C
+        &.big
+            @include fluid("width", 221)
+        &:hover
+            opacity: 0.9
+        &.red
+            background: #E71D36
+            border: 1px solid transparent
+        &.kick
+            background: rgba(231, 29, 54, 0.1)
+            border: 1px solid rgba(231, 29, 54, 0.7)
+            &:hover
+                background: rgba(231, 29, 54, 1)
+                border: 1px solid transparent
+        &.ban
+            background: rgba(231, 29, 54, 0.1)
+            border: 1px solid rgba(231, 29, 54, 0.7)
+            &:hover
+                background: rgba(231, 29, 54, 1)
+                border: 1px solid transparent
+        &.restart
+            background: rgba(47, 128, 237, 0.1)
+            border: 1px solid rgba(47, 128, 237, 0.7)
+            &:hover
+                background: rgba(47, 128, 237, 1)
+                border: 1px solid transparent

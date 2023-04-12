@@ -1,0 +1,34 @@
+.docs .license{
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -350px;
+    background-image: url('../images/lic.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 20px;
+    font-weight: 400;
+}
+.docs .license #firstname{
+    margin-left: 300px;
+    margin-top: 95px;
+}
+.docs .license #lastname{
+    margin-left: 344px;
+    margin-top: 24px;
+}
+.docs .license #date{
+    margin-left: 415px;
+    margin-top: 21px;
+}
+.docs .license #gender{
+    margin-left: 300px;
+    margin-top: 21px;
+}
+.docs .license #lics{
+    margin-left: 9%;
+    margin-top: 74px;
+    font-size: 14pt;
+}

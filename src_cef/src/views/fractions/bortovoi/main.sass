@@ -1,0 +1,691 @@
+@import @/views/assets/css/main.sass
+@import './assets/fonts/SFPro/stylesheet.css'
+#policecomputer
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.27) 0%, rgba(1, 22, 39, 0.74) 100%)
+    z-index: 100    
+    @include fluid("font-size", 16)
+    @include fluid("line-height", 19)
+    font-family: 'TTNorms-Regular'
+    font-weight: 500
+    box-sizing: border-box
+    color: white
+    @include fluid("padding-top", 42)
+    @include fluid("padding-bottom", 42)
+    @include fluid("padding-right", 49)
+    @include fluid("padding-left", 49)
+    .whitecolor
+        color: white
+    .policecomputer__planshet
+        font-family: 'SF Pro Display Medium'
+        font-weight: 500
+        filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.18)) drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.145262)) drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.118705)) drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.0977185)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0790933)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0567624))
+        @include fluid("width", 1284)
+        @include fluid("height", 928)
+        background-image: url('./assets/images/ipad.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        @include fluid("padding-top", 48)
+        @include fluid("padding-bottom", 47)
+        @include fluid("padding-left", 44)
+        @include fluid("padding-right", 47)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+    .policecomputer__head
+        width: 100%
+        z-index: 10
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 16)
+        font-weight: 500
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 14)
+        @include fluid("height", 23)
+        box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1)
+        background: white
+        color: #1E262F
+        @include fluid("border-top-left-radius", 16)
+        @include fluid("border-top-right-radius", 16)
+        .policecomputer__head_img
+            color: black
+            background-image: url('./assets/images/right.svg')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("width", 98.48)
+            @include fluid("height", 14)
+    .policecomputer__nav
+        z-index: 0
+        @include fluid("width", 320)
+        @include fluid("height", 809)
+        display: flex
+        flex-direction: column
+        background: #FFFFFF
+        @include fluid("border-bottom-left-radius", 16)
+        font-family: 'SF Pro Display Medium'
+        .policecomputer__nav_logo
+            background-image: url('./assets/images/logo_police.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("width", 226)
+            @include fluid("height", 56)
+            align-self: center
+            @include fluid("margin-top", 24)
+            @include fluid("margin-bottom", 24)
+        .line
+            width: 100%
+            @include fluid("height", 1)
+            background: #C6D1DA
+    .policecomputer__nav_element
+        display: flex
+        align-items: center
+        @include fluid("height", 36)
+        @include fluid("border-left", 4, "solid transparent")
+        @include fluid("padding-left", 24)
+        color: #869199
+        font-weight: 500
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 32)
+        @include fluid("margin-bottom", 14)
+        cursor: pointer
+        z-index: 10000
+        [class^="bortovoiicon-"]
+            @include fluid("font-size", 20)
+            @include fluid("margin-right", 12)
+        &.active
+            @include fluid("border-left", 4, "solid #1E262F")
+            color: #1E262F
+    .mt-24
+        @include fluid("margin-top", 24)
+    .mt-auto
+        margin-top: auto
+    .policecomputer__name
+        color: #1E262F
+        font-weight: 600
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 32)
+        font-family: 'SF Pro Display Medium'
+        @include fluid("margin-left", 28)
+    .policecomputer__rank
+        @include fluid("margin-top", 6)
+        color: #869199
+        font-weight: 600
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 20)
+        font-family: 'SF Pro Display Bold'
+        @include fluid("margin-left", 28)
+    .policecomputer__flag
+        @include fluid("width", 320)
+        @include fluid("height", 132)
+        background-image: url('./assets/images/flag.png')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("margin-top", 32)
+        @include fluid("border-bottom-left-radius", 16)
+
+    .policecomputer__main
+        display: flex
+        flex-direction: column
+        width: 100%
+        @include fluid("height", 809)
+        background: #1E262F
+        @include fluid("border-bottom-right-radius", 16)
+        @include fluid("padding", 40)
+        .policecomputer__title
+            font-weight: bold
+            @include fluid("font-size", 28)
+            @include fluid("line-height", 28)
+            font-family: 'RF Dewi Extended'
+        .policecomputer__button
+            @include fluid("width", 190)
+            @include fluid("height", 36)
+            background: #FFFFFF
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("border-radius", 6)
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 28)
+            font-family: 'SF Pro Display Medium'
+            color: #1E262F
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                background: #bebdbd
+            &.delete
+                background: #DA2640
+                color: white
+                &:hover
+                    transition: all 0.5s ease
+                    opacity: 0.8
+            &.small
+                background: #3D444B
+                @include fluid("width", 124)
+                @include fluid("height", 28)
+                @include fluid("border-radius", 6)
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 18)
+                font-family: 'SF Pro Display Regular'
+                color: white
+                transition: all 0.5s ease
+                &:hover
+                    background: white
+                    color: black
+                    transition: all 0.5s ease
+            &.large
+                @include fluid("width", 299)
+                background: #3D444B
+                color: white
+                transition: all 0.5s ease
+                &:hover
+                    background: white
+                    color: black
+                    transition: all 0.5s ease
+                
+    .policecomputer__selectors
+        display: flex
+        align-items: center
+        width: 100%
+        @include fluid("height", 20)
+        @include fluid("border-bottom", 2, "solid #475667")
+        @include fluid("padding-bottom", 8)
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 20)
+        font-family: 'SF Pro Display Regular'
+        @include fluid("margin-top", 24)
+        color: #869199
+        .policecomputer__selector
+            @include fluid("margin-right", 20)
+            @include fluid("padding-bottom", 8)
+            &.active
+                @include fluid("border-bottom", 2, "solid white")
+                color: white
+    .policecomputer__textarea
+        @include fluid("width", 546)
+        @include fluid("height", 120)
+        background: #293139
+        @include fluid("border-radius", 4)
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 28)
+        color: #A6B1BA
+        resize: none
+        outline: none
+        border: none
+        @include fluid("padding-top", 12)
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 16)
+        @include fluid("padding-bottom", 12)
+        font-family: 'SF Pro Display Regular'
+    .mt-45
+        @include fluid("margin-top", 45)
+    .policecomputer__input
+        @include fluid("width", 794)
+        @include fluid("min-height", 40)
+        display: flex
+        align-items: center
+        @include fluid("padding-left", 16)
+        @include fluid("padding-top", 12)
+        @include fluid("padding-bottom", 12)
+        background: #293139
+        @include fluid("border-radius", 6)
+        @include fluid("margin-top", 24)
+        .bortovoiicon-loop
+            @include fluid("font-size", 12)
+            color: white
+            @include fluid("margin-right", 5)
+        input
+            width: 100%
+            height: 100%
+            color: #A6B1BA
+            @include fluid("padding-left", 5)
+            font-family: 'SF Pro Display Regular'
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)
+            background: transparent
+        &.small
+            @include fluid("width", 546)
+            @include fluid("border-radius", 4)
+            @include fluid("height", 52)
+            input
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 28)  
+    .policecomputer__back
+        color: #869199
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 16)
+        font-family: 'SF Pro Display Regular'
+        &:hover
+            opacity: 0.7
+    .policecomputer__descr
+        @include fluid("width", 600)
+        font-style: normal
+        font-weight: normal
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 24)
+        color: #A6B1BA
+        @include fluid("margin-top", 16)
+        @include fluid("margin-bottom", 32)
+        font-family: 'SF Pro Display Regular'
+    .bortovoiicon-info
+        @include fluid("margin-right", 10)
+        @include fluid("font-size", 16)
+    .policecomputer__bold
+        font-weight: 600
+        @include fluid("font-size", 16)
+        font-family: 'SF Pro Display Semi Bold'
+    .policecomputer__block_info
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 28)
+        font-family: 'SF Pro Display Regular'
+        background: #293139
+        @include fluid("border-radius", 4)
+        @include fluid("width", 794)
+        @include fluid("padding", 16)
+        @include fluid("margin-top", 8)
+    .policecomputer__font_20
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+        font-family: 'SF Pro Display Medium'
+    .policecomputer__font_18
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 24)
+        font-family: 'SF Pro Display Regular'
+        color: #869199
+        cursor: pointer
+        &:hover
+            opacity: 0.7
+    .policecomputer__search
+        @include fluid("margin-top", 20)
+        @include fluid("margin-bottom", 16)
+        color: #A6B1BA
+        font-family: 'SF Pro Display Regular'
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 24)
+    .bortovoie__tablet_element
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: #FFFFFF
+        font-family: 'SF Pro Display Medium'
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 28)
+        @include fluid("padding-bottom", 13)
+        @include fluid("padding-top", 13)
+        @include fluid("border-bottom", 1, "solid #475667")
+        &.noborder
+            @include fluid("border-bottom", 1, "solid transparent")
+        &.title
+            @include fluid("border-bottom", 1, "solid transparent")
+            font-family: 'SF Pro Display Regular'
+            color: #869199
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 20)
+        .name
+            @include fluid("width", 170)
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+            &.gray
+                color: #869199
+        .passport
+            @include fluid("width", 100)
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+        .number
+            @include fluid("width", 120)
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+        .status
+            @include fluid("width", 120)
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+        .button
+            @include fluid("width", 190)
+        .descr
+            @include fluid("width", 260)
+        .info
+            @include fluid("width", 150)
+            .underline
+                position: relative
+                color: #A6B1BA
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    @include fluid("bottom", -3)
+                    @include fluid("height", 1)
+                    width: 100%
+                    background: #A6B1BA
+            &.hover
+                &:hover
+                    opacity: 0.7
+        .comment
+            @include fluid("width", 317)
+            @include fluid("max-width", 317)
+    .wanted
+        color: #FB4F69
+    .policecomputer__tablet
+        width: 100%
+        @include fluid("height", 543)
+        display: flex
+        flex-direction: column
+        overflow-y: auto
+        overflow-x: hidden
+        &::-webkit-scrollbar 
+            width: resize(4)
+            height: resize(4)
+            margin-right: resize(10)
+            border-radius: resize(25)
+                
+        &::-webkit-scrollbar-track 
+            border-radius: resize(25)
+            background: #39384E
+            border-radius: 100px
+
+
+        &::-webkit-scrollbar-thumb 
+            border-radius: resize(25)
+            background: white
+    .policecomputer__database_element
+        @include fluid("width", 182)
+        @include fluid("height", 220)
+        background: #3D444B
+        @include fluid("border-radius", 6)
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("padding", 8)
+        .policecomputer__database_image
+            @include fluid("min-width", 166)
+            @include fluid("height", 102)
+            background-image: url('./assets/images/person.png')
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("border-radius", 4)
+        .policecomputer__database_number
+            @include fluid("margin-top", 10)
+            color: #a6b1ba
+            @include fluid("font-size", 10)
+            @include fluid("line-height", 16)
+            font-family: 'SF Pro Display Regular'
+        .policecomputer__database_name
+            @include fluid("margin-top", 2)
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 20)
+            font-family: 'SF Pro Display Medium'
+            @include fluid("margin-bottom", 30)
+        .policecomputer__database_info
+            color: #869199
+            font-family: 'SF Pro Display Regular'
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 20)
+            .white
+                color: white
+    .policecomputer__person_image
+        @include fluid("min-width", 116)
+        @include fluid("height", 116)
+        @include fluid("border", 2, "solid #A6B1BA")
+        background-image: url('./assets/images/person.png')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("border-radius", 4)
+        @include fluid("margin-right", 40)
+        &.car
+            @include fluid("min-width", 236)
+            @include fluid("width", 236)
+        &.map
+            @include fluid("width", 299)
+            @include fluid("height", 168)
+    .mtmb-40
+        @include fluid("margin-top", 40)
+        @include fluid("margin-bottom", 40)
+    .mtmb-3620
+        @include fluid("margin-top", 36)
+        @include fluid("margin-bottom", 20)
+    .mb-12
+        @include fluid("margin-bottom", 12)
+    .policecomputer__info_title
+        color: #869199
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 20)
+        font-family: 'SF Pro Display Regular'
+        @include fluid("margin-bottom", 6)
+    .white
+        color: white
+    .policecomputer__info_subtitle
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 20)
+        font-weight: 500
+        font-family: 'SF Pro Display Medium'
+        width: fit-content
+        .gray
+            color: #869199
+    .w-max
+        width: max-content
+    .policecomputer__info_grid
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        @include fluid("grid-gap", 24)
+        @include fluid("column-gap", 40)
+        &.small
+            grid-template-columns: repeat(2, 1fr)
+        &.database
+            @include fluid("grid-gap", 24)
+            @include fluid("column-gap", 22)
+            grid-template-rows: repeat(5, 1fr)
+            width: 100%
+            @include fluid("height", 606)
+            @include fluid("padding-right", 12)
+            overflow-y: auto
+            overflow-x: hidden
+            &::-webkit-scrollbar 
+                width: resize(4)
+                height: resize(4)
+                margin-right: resize(10)
+                border-radius: resize(25)
+                    
+            &::-webkit-scrollbar-track 
+                border-radius: resize(25)
+                background: #39384E
+                border-radius: 100px
+
+
+            &::-webkit-scrollbar-thumb 
+                border-radius: resize(25)
+                background: white
+    .policecomputer__input_descr
+        color: #869199
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 20)
+        font-family: 'SF Pro Display Regular'
+        @include fluid("margin-top", 28)
+        @include fluid("margin-bottom", 8)
+        @include fluid("max-width", 546)
+        .white
+            color: white
+            @include fluid("margin-left", 8)
+            @include fluid("margin-right", 8)
+    .bortovoiicon-star
+        color: #60686D
+        &.active
+            color: white
+    .m-0
+        margin: 0
+    .mt-4
+        @include fluid("margin-top", 4)
+    .mt-20
+        @include fluid("margin-top", 20)
+    .mr-16
+        @include fluid("margin-right", 16)
+    .mr-20
+        @include fluid("margin-right", 20)
+    .mr-10
+        @include fluid("margin-right", 10)
+    .mr-5
+        @include fluid("margin-right", 5)
+    .mr-4
+        @include fluid("margin-right", 4)
+    .fz-20
+        @include fluid("font-size", 20)
+    .policecomputer__button_circle
+        @include fluid("width", 20)
+        @include fluid("height", 20)
+        border-radius: 50%
+        @include fluid("font-size", 10)
+        background: rgba(244, 245, 245, 0.2)
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all 0.5s ease
+        &.hover
+            &:hover
+                color: black
+                transition: all 0.5s ease
+                background: white
+    .policecomputer__comments_element
+        width: 100%
+        height: auto
+        background: #293139
+        @include fluid("border-radius", 8)
+        @include fluid("padding", 16)
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 20)
+        font-family: 'SF Pro Display Medium'
+        @include fluid("margin-bottom", 24)
+        &:last-child
+            margin-bottom: 0
+        .gray
+            color: #869199
+        .policecomputer__comments_comment
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 24)
+            font-family: 'SF Pro Display Regular'
+            @include fluid("margin-top", 16)
+    .policecomputer__comments
+        @include fluid("margin-top", 20)
+        @include fluid("height", 430)
+        @include fluid("max-height", 430)
+        width: 100%
+        display: flex
+        flex-direction: column
+        overflow-y: auto
+        overflow-x: hidden
+        @include fluid("padding-right", 12)
+        &.big
+            @include fluid("height", 664)
+            @include fluid("max-height", 664)
+        &::-webkit-scrollbar 
+            width: resize(4)
+            height: resize(4)
+            margin-right: resize(10)
+            border-radius: resize(25)
+                
+        &::-webkit-scrollbar-track 
+            border-radius: resize(25)
+            background: #39384E
+            border-radius: 100px
+
+
+        &::-webkit-scrollbar-thumb 
+            border-radius: resize(25)
+            background: white
+    .policecomputer__center
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #869199
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 20)
+        font-family: 'SF Pro Display Regular'
+    .policecomputer__button_search
+        color: #869199
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 20)
+        font-family: 'SF Pro Display Regular'
+        display: flex
+        align-items: center
+        .bortovoiicon-Vector
+            @include fluid("margin-right", 4)
+            @include fluid("font-size", 14)
+    .box-flex
+        display: flex
+        align-items: center
+    .box-center
+        display: flex
+        align-items: center
+        justify-content: center
+    .box-between
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+    .box-column
+        display: flex
+        flex-direction: column
+    .wh-100
+        width: 100%
+        height: 100% 
+        max-width: 100% !important
+        text-align: center
+    .w-100
+        width: 100%
+    .policecomputer__licenses
+        @include fluid("padding-top", 32)
+        [class^="inv-lic-"]
+            @include fluid("font-size", 35)
+            color: #475667
+            @include fluid("margin-right", 40)
+            &.active
+                color: white
+    .mt-auto
+        margin-top: auto
+    .newbuttons_button
+        @include fluid("padding-left", 7)
+        @include fluid("padding-right", 7)
+        @include fluid("padding-top", 4)
+        @include fluid("padding-bottom", 4)
+        @include fluid("margin-right", 16)
+        background: #FFFFFF
+        height: fit-content
+        @include fluid("border-radius", 3)
+        color: #1E262F
+        font-weight: 600
+        @include fluid("font-size", 20)
+        font-family: 'TTNorms-Medium'
+    
+    .mt-12
+        @include fluid("margin-top", 12)
+
+    .black
+        color: black
+        @include fluid("margin-left", 8)
+    .f-regular
+        font-family: 'SF Pro Display Regular'

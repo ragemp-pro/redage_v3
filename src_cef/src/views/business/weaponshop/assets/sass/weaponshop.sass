@@ -1,0 +1,385 @@
+@import ../../../../assets/css/main
+ 
+#weaponshop 
+    position: absolute 
+    width: 100% 
+    height: 100% 
+    display: flex 
+    flex-direction: column 
+    align-items: center 
+    justify-content: center 
+    @include fluid("padding-top", 45)    
+    @include fluid("padding-bottom", 45) 
+    @include fluid("padding-left", 144) 
+    @include fluid("padding-right", 144) 
+    color: white 
+    font-family: "UniNeue" 
+    font-style: normal 
+    font-weight: bold 
+ 
+    .box-btn
+        width: 100%
+        display: flex
+        justify-content: space-between
+        @include fluid("min-height", 50) 
+        @include fluid("height", 50) 
+    .box-ch  
+        display: flex 
+        flex-direction: column
+        align-items: flex-end 
+        background: rgba(1,22,39,0.8)
+        @include fluid("width", 1000) 
+ 
+        .btn 
+            @include fluid("min-height", 50) 
+            @include fluid("height", 50) 
+            font-weight: 500 
+            @include fluid("font-size", 16) 
+            align-items: center 
+            display: flex 
+            justify-content: center 
+            transition: background 0.2s ease 
+            width: 100%
+
+            &.min 
+                width: 25%
+                @include fluid("margin-left", 10) 
+                
+            .item-img
+                @include fluid("font-size", 24) 
+
+            &.red  
+                @include fluid("border", 1, "solid white") 
+            &.red:hover 
+                background: white
+                color: black
+            &.blue
+                background: #276DAE 
+            &.blue:hover:not(.disabled) 
+                background: #184269 
+            &.white
+                background: white
+                color: black
+            &.white:hover:not(.disabled) 
+                background: #e4e3e3
+                color: black
+            &.disabled
+                background: #2a2d35
+                border-color: #2a2d35
+                color: #656565
+         
+        li.main-small 
+            @include fluid("width", 318) 
+            @include fluid("height", 50) 
+            @include fluid("padding-left", 15) 
+            @include fluid("padding-right", 15)
+            text-align: center
+            background: rgba(255,255,255,0.05)
+            align-items: center 
+            display: flex 
+            justify-content: center 
+            transition: background 0.2s ease 
+            @include fluid("margin-right", 15) 
+
+        li.main-icon
+            @include fluid("width", 50) 
+            @include fluid("height", 50) 
+            background: rgba(255,255,255,0.05)
+            align-items: center 
+            display: flex 
+            justify-content: center 
+            transition: background 0.2s ease 
+            @include fluid("margin-right", 15) 
+
+            .iconData
+                @include fluid("font-size", 30) 
+    
+        ul.main li:last-child 
+            margin-right: 0px 
+ 
+        ul.main 
+            display: flex 
+            @include fluid("padding-left", 30) 
+            @include fluid("padding-bottom", 10) 
+            @include fluid("padding-right", 30) 
+            width: 100% 
+            li 
+                font-weight: bold 
+                @include fluid("font-size", 16) 
+ 
+                &:hover:not(.active)  
+                    background: #333844 
+                &.active 
+                    background: white 
+                    color: black
+             
+        ul.items 
+            display: flex 
+            @include fluid("width", 640) 
+            flex-wrap: wrap 
+         
+            @include fluid("height", 404) 
+            overflow-y: auto
+            @include fluid("margin-right", 10) 
+
+            .disabled 
+                display: none
+
+            .item-img img 
+                 @include fluid("max-width", 145) 
+
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: #131924
+
+            &::-webkit-scrollbar-thumb
+                background: white
+
+            li:nth-child(3n) 
+                @include fluid("margin-right", 0) 
+ 
+            li:nth-last-child(-n+3) 
+                @include fluid("margin-bottom", 0) 
+            li 
+                @include fluid("width", 197) 
+                @include fluid("margin-right", 15) 
+                @include fluid("margin-bottom", 10) 
+                @include fluid("height", 197) 
+                align-items: center 
+                justify-content: center 
+                display: flex 
+ 
+                &.empty 
+                    background: rgba(16, 18, 22, 0.2) 
+                    color: #656565 
+                    @include fluid("font-size", 24) 
+                    font-weight: bold 
+                &.item 
+                    background: rgba(255,255,255,0.05)
+                    @include fluid("padding", 15) 
+                    color: #949494
+                    position: relative
+                    transition: ease background 0.2s
+                    &.active   
+                        background: white
+                        color: black
+
+                    .box
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        height: 100%
+                        width: 100%
+
+                    .item-img 
+                        display: flex
+                        align-items: center
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        justify-content: center
+                        @include fluid("font-size", 60)
+                    
+                    .price 
+                        text-align: end
+                        width: 100%
+                        @include fluid("font-size", 24) 
+
+                        span
+                            color: #27AE60
+
+                    .item-title 
+                        width: 100%
+                        display: flex
+                        justify-content: space-between
+
+                        i
+                            @include fluid("font-size", 11) 
+
+                        & div:nth-child(1) 
+                            font-weight: bold
+                            @include fluid("font-size", 16) 
+                        & div:nth-child(2) 
+                            display: flex
+                            align-items: center
+                            @include fluid("font-size", 14) 
+
+                            span 
+                              @include fluid("margin-left", 3) 
+                    
+ 
+ 
+ 
+        .title  
+            @include fluid("font-size", 18) 
+            font-weight: bold 
+ 
+        .box-info  
+            background: rgba(1,22,39,0.8)
+            @include fluid("padding-left", 30) 
+            @include fluid("padding-top", 20) 
+            @include fluid("padding-bottom", 20) 
+            @include fluid("padding-right", 30) 
+            width: 100% 
+            align-items: center 
+            position: relative 
+            display: flex 
+            @include fluid("margin-bottom", 6)
+ 
+            .title  
+                @include fluid("font-size", 36) 
+                @include fluid("margin-bottom", 5) 
+ 
+            .btn  
+                @include fluid("width", 180) 
+ 
+            p  
+                font-weight: 500
+                @include fluid("font-size", 16) 
+                color: #C1C1C1 
+                @include fluid("padding-right", 50) 
+        .input 
+            background: #171921  
+            border: none 
+            font-weight: 500 
+            width: 100%
+            @include fluid("font-size", 14) 
+            color: #C1C1C1 
+            transition: all ease 0.2s 
+            height: 100%
+            text-align: center 
+             
+            &:placeholder  
+                color: #C1C1C1 
+             
+            &:focus  
+                color: #fff 
+        .box-column
+            direction: flex
+            flex-direction: column
+            width: 100%
+            height: 100%
+        .item-info  
+            @include fluid("margin-bottom", 15) 
+            display: flex 
+             
+            width: 100% 
+            @include fluid("margin-top", 15) 
+            @include fluid("padding-right", 30) 
+            @include fluid("padding-left", 30) 
+             
+            .l 
+                @include fluid("width", 180) 
+                @include fluid("height", 259) 
+                display: flex 
+                 
+ 
+                .info  
+                    display: flex 
+                    flex-direction: column 
+                    width: 100% 
+                    justify-content: space-between 
+                    .price  
+                        @include fluid("font-size", 24) 
+                        font-weight: bold 
+                        color: #FFFFFF 
+                        text-align: center 
+                        @include fluid("margin-bottom", 17) 
+ 
+                        & span 
+                            color: #27AE60 
+            .c 
+                @include fluid("width", 300) 
+                flex-direction: column 
+                display: flex 
+                justify-content: space-between 
+
+                .inputblock 
+                    display: flex
+                    align-items: center
+                    @include fluid("height", 50) 
+                    @include fluid("min-height", 50) 
+                    @include fluid("margin-bottom", 10) 
+                    .butammo 
+                        background: #434A5B
+                        @include fluid("width", 83) 
+                        transition: background ease 0.2s
+                        height: 100%
+                        @include fluid("font-size", 13) 
+                        display: flex
+                        align-items: center
+                        justify-content: center
+
+                        &:hover 
+                            background: #454E68
+                .btn 
+                    font-weight: bold
+
+                .specification
+                    .contein
+                        display: flex
+                        flex-direction: column
+                        @include fluid("margin-bottom", 5) 
+                        span 
+                            @include fluid("margin-bottom", 5) 
+                            @include fluid("font-size", 16) 
+                        ul
+                            display: flex
+                            @include fluid("height", 6) 
+                        li
+                            @include fluid("width", 58) 
+                           
+                            @include fluid("margin-right", 4) 
+                            @include fluid("height", 6) 
+                            background: #434A5B
+                            transition: all ease 0.4s
+                            &.active
+                                background: white
+                                color: black
+                .title.x2 
+                    font-weight: bold 
+                    @include fluid("font-size", 21) 
+                    justify-content: space-between 
+                    display: flex 
+                    @include fluid("margin-bottom", 5) 
+                 
+                .title.x3
+                    @include fluid("margin-bottom", 5) 
+                    @include fluid("min-height", 44) 
+                    margin-top: auto
+                    display: flex
+                    justify-content: space-between
+                    & div
+                        display: flex
+                        flex-direction: column
+
+                    & div:nth-child(2) span
+                        text-align: right
+
+                    & div:nth-child(2) span:nth-child(1)
+                        color: #fff
+                        @include fluid("font-size", 18) 
+
+                        b
+                            color: #27AE60
+
+                    & div span
+                        color: #C1C1C1
+                        @include fluid("font-size", 12) 
+                p  
+                    color: #C1C1C1 
+                    @include fluid("font-size", 14) 
+                    @include fluid("margin-bottom", 7) 
+                    font-weight: 500
+                    @include fluid("line-height", 17) 
+
+                .input  
+                    font-family: UniNeue
+                    @include fluid("padding-right", 20) 
+                    @include fluid("padding-left", 20) 
+               
+ 

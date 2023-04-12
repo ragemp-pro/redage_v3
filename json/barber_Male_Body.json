@@ -1,0 +1,19 @@
+﻿{
+	"0": {"Id":0,"Variation":0,"Name":"Классическая","TName":"","Price":600,"Donate":0},
+	"1": {"Id":1,"Variation":1,"Name":"Стрелка","TName":"","Price":600,"Donate":0},
+	"2": {"Id":2,"Variation":2,"Name":"Скат","TName":"","Price":600,"Donate":0},
+	"3": {"Id":3,"Variation":3,"Name":"Гриб","TName":"","Price":600,"Donate":0},
+	"4": {"Id":4,"Variation":4,"Name":"Густая шерсть","TName":"","Price":600,"Donate":0},
+	"5": {"Id":5,"Variation":5,"Name":"Горилла","TName":"","Price":600,"Donate":0},
+	"6": {"Id":6,"Variation":6,"Name":"Дагестанская","TName":"","Price":600,"Donate":0},
+	"7": {"Id":7,"Variation":7,"Name":"Лифчик","TName":"","Price":600,"Donate":0},
+	"8": {"Id":8,"Variation":8,"Name":"Флэш","TName":"","Price":600,"Donate":0},
+	"9": {"Id":9,"Variation":9,"Name":"Шазам","TName":"","Price":600,"Donate":0},
+	"10": {"Id":10,"Variation":10,"Name":"Сердце","TName":"","Price":600,"Donate":0},
+	"11": {"Id":11,"Variation":11,"Name":"Усы","TName":"","Price":600,"Donate":0},
+	"12": {"Id":12,"Variation":12,"Name":"Смайлик","TName":"","Price":600,"Donate":0},
+	"13": {"Id":13,"Variation":13,"Name":"Череп","TName":"","Price":600,"Donate":0},
+	"14": {"Id":14,"Variation":14,"Name":"Полоса на животе","TName":"","Price":600,"Donate":0},
+	"15": {"Id":15,"Variation":15,"Name":"Кустики","TName":"","Price":600,"Donate":0},
+	"16": {"Id":16,"Variation":16,"Name":"Бритая","TName":"","Price":600,"Donate":0}
+}

@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'hud__icon';
+  src:  url('./hud__icon.eot?zafyn0');
+  src:  url('./hud__icon.eot?zafyn0#iefix') format('embedded-opentype'),
+    url('./hud__icon.ttf?zafyn0') format('truetype'),
+    url('./hud__icon.woff?zafyn0') format('woff'),
+    url('./hud__icon.svg?zafyn0#hud__icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="hud__icon-"], [class*=" hud__icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hud__icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hud__icon-send:before {
+  content: "\e900";
+}
+.hud__icon-chat:before {
+  content: "\e901";
+}
+.hud__icon-engine:before {
+  content: "\e902";
+}
+.hud__icon-closedoor:before {
+  content: "\e903";
+}
+.hud__icon-left:before {
+  content: "\e904";
+}
+.hud__icon-right:before {
+  content: "\e905";
+}
+.hud__icon-cruisecontrol:before {
+  content: "\e906";
+}
+.hud__icon-autopilot:before {
+  content: "\e907";
+}
+.hud__icon-belt:before {
+  content: "\e908";
+}
+.hud__icon-phone:before {
+  content: "\e909";
+}
+.hud__icon-micon:before {
+  content: "\e90a";
+}
+.hud__icon-micoff:before {
+  content: "\e90b";
+}
+.hud__icon-micmute:before {
+  content: "\e90c";
+}
+.hud__icon-money3:before {
+  content: "\e91e";
+}
+.hud__icon-money:before {
+  content: "\e90d";
+}
+.hud__icon-money2:before {
+  content: "\e91f";
+}
+.hud__icon-bank:before {
+  content: "\e90e";
+}
+.hud__icon-hint:before {
+  content: "\e90f";
+}
+.hud__icon-clock:before {
+  content: "\e910";
+}
+.hud__icon-lights:before {
+  content: "\e911";
+}
+.hud__icon-info:before {
+  content: "\e912";
+}
+.hud__icon-error:before {
+  content: "\e913";
+}
+.hud__icon-success:before {
+  content: "\e914";
+}
+.hud__icon-warning:before {
+  content: "\e915";
+}
+.hud__icon-Anim:before {
+  content: "\e916";
+}
+.hud__icon-Binder:before {
+  content: "\e917";
+}
+.hud__icon-donate:before {
+  content: "\e920";
+}
+.hud__icon-donate2:before {
+  content: "\e918";
+}
+.hud__icon-donate3:before {
+  content: "\e921";
+}
+.hud__icon-inventory:before {
+  content: "\e919";
+}
+.hud__icon-cuff:before {
+  content: "\e91a";
+}
+.hud__icon-tolead:before {
+  content: "\e91b";
+}
+.hud__icon-Payday:before {
+  content: "\e91c";
+}
+.hud__icon-call:before {
+  content: "\e91d";
+}
+.hud__icon-bonus:before {
+  content: "\e922";
+}
+.hud__icon-skull:before {
+  content: "\e923";
+}
+.hud__icon-user:before {
+  content: "\e924";
+}
+.hud__icon-users:before {
+  content: "\e925";
+}
+.hud__icon-star:before {
+  content: "\e926";
+}
+.hud__icon-attacker:before {
+  content: "\e927";
+}
+.hud__icon-shield:before {
+  content: "\e928";
+}
+.hud__icon-walkie-talkie:before {
+  content: "\e929";
+}

@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'gamemenu';
+  src:  url('./gamemenu.eot?hjzzxc');
+  src:  url('./gamemenu.eot?hjzzxc#iefix') format('embedded-opentype'),
+    url('./gamemenu.ttf?hjzzxc') format('truetype'),
+    url('./gamemenu.woff?hjzzxc') format('woff'),
+    url('./gamemenu.svg?hjzzxc#gamemenu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="gamemenu-"], [class*=" gamemenu-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gamemenu' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gamemenu-friends:before {
+  content: "\e900";
+}
+.gamemenu-help:before {
+  content: "\e901";
+}
+.gamemenu-event:before {
+  content: "\e902";
+}
+.gamemenu-news:before {
+  content: "\e903";
+}
+.gamemenu-stats:before {
+  content: "\e904";
+}
+.gamemenu-settings:before {
+  content: "\e905";
+}
+.gamemenu-gift:before {
+  content: "\e906";
+}
+.gamemenu-quest:before {
+  content: "\e907";
+}
+.gamemenu-inventory:before {
+  content: "\e908";
+}
+.gamemenu-loop:before {
+  content: "\e90d";
+}

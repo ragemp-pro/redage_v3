@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'autoshop';
+  src:  url('./autoshop.eot?12rry8');
+  src:  url('./autoshop.eot?12rry8#iefix') format('embedded-opentype'),
+    url('./autoshop.ttf?12rry8') format('truetype'),
+    url('./autoshop.woff?12rry8') format('woff'),
+    url('./autoshop.svg?12rry8#autoshop') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="autoshop-"], [class*=" autoshop-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'autoshop' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.autoshop-invslots:before {
+  content: "\e900";
+}
+.autoshop-mouse:before {
+  content: "\e901";
+}
+.autoshop-money:before {
+  content: "\e902";
+}
+.autoshop-seat:before {
+  content: "\e903";
+}
+.autoshop-boost:before {
+  content: "\e904";
+}
+.autoshop-racing:before {
+  content: "\e905";
+}
+.autoshop-speed:before {
+  content: "\e906";
+}

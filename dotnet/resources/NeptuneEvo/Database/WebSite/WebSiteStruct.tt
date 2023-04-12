@@ -1,0 +1,28 @@
+﻿<#@ template language="C#" debug="True" hostSpecific="True"                       #>
+<#@ output extension=".generated.cs" encoding="UTF-8"                                              #>
+<#@ include file="$(LinqToDBT4MySqlTemplatesPath)LinqToDB.MySql.Tools.ttinclude" once="true" #>
+<#@ include file="$(LinqToDBT4MySqlTemplatesPath)PluralizationService.ttinclude" once="true" #>
+<# //@ include file="$(ProjectDir)LinqToDB.Templates\LinqToDB.MySql.Tools.ttinclude" #>
+<# //@ include file="$(ProjectDir)LinqToDB.Templates\PluralizationService.ttinclude" #>
+<#
+	NamespaceName = "Database";
+	DataContextName = "WebSiteBD";
+	PluralizeClassNames = true;
+
+	// Enables loading of tables and views information
+	GetSchemaOptions.GetTables             = true;
+	// Enables loading of functions and procedures information
+	GetSchemaOptions.GetProcedures         = false;
+
+	GenerateAssociations          = false;
+	// Enables generation of back side of association. Applies to both table mapping members and extension
+	// associations
+	GenerateBackReferences        = false;
+	// Enables generation of associations as extension methods for related table mapping classes
+	GenerateAssociationExtensions = false;
+	
+	LoadMySqlMetadata("145.239.90.140", "website", "redage_dev", "Do5Hy1Cu4");
+
+	//LoadMySqlMetadata("127.0.0.1", "server1", "root", "");
+	GenerateModel();
+#>

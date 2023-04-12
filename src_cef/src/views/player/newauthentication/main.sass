@@ -1,0 +1,909 @@
+@import @/views/assets/css/main.sass
+@import url("https://use.typekit.net/iul4xbb.css")
+
+.newauthentication__popup
+    color: rgba(243,243,243,1.0)
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 10000
+    background: rgba(1,22,39,0.8)
+    backdrop-filter: blur(20px)
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    .newauthentication__popup_title
+        @include fluid("font-size", 46)
+        @include fluid("line-height", 62)
+        @include fluid("margin-bottom", 10)
+        font-weight: bold
+    .newauthentication__popup_subtitle
+        @include fluid("font-size", 32)
+        @include fluid("line-height", 46)
+        opacity: 0.7
+    .newauthentication__popup_iconmail
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        opacity: 0.1
+        @include fluid("font-size", 220)
+            
+#newauthentication
+    font-family: "TTNorms-Regular"
+    width: 100%
+    height: 100%
+    position: relative    
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    color: rgba(243,243,243,1.0)
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0) 0%, rgba(1, 22, 39, 0.85) 100%)
+    @include fluid("font-size", 18)
+    .newauthentication__popup
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 10000
+        background: rgba(1,22,39,0.8)
+        backdrop-filter: blur(20px)
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        .newauthentication__popup_title
+            @include fluid("font-size", 46)
+            @include fluid("line-height", 62)
+            @include fluid("margin-bottom", 10)
+            font-weight: bold
+        .newauthentication__popup_subtitle
+            @include fluid("font-size", 32)
+            @include fluid("line-height", 46)
+            opacity: 0.7
+        .newauthentication__popup_iconmail
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0.1
+            @include fluid("font-size", 220)
+    .auth__small_text
+        @include fluid("font-size", 12)
+        @include fluid("margin-top", 16)
+        opacity: 0.75
+    .box-center
+        display: flex
+        align-items: center
+        justify-content: center
+    .header
+        width: 100%
+        @include fluid("height", 40)
+        @include fluid("margin-top", 30)
+        color: #A3A4A5
+        position: relative
+        z-index: 1
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .box-flex
+            display: flex
+            align-items: center
+        .header__money
+            @include fluid("width", 250)
+            @include fluid("height", 26)
+            display: flex
+            align-items: center
+            justify-content: center
+            font-weight: 500
+            @include fluid("font-size", 18)
+            color: white
+            font-family: "TTNorms-Medium"
+            .header__money_redbucks
+                @include fluid("width", 34)
+                @include fluid("height", 34)
+                @include fluid("margin-left", 10)
+                background-image: url('images/redbucks.png')
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+        .header__logo
+            @include fluid("width", 250)
+            @include fluid("height", 26)
+            background-image: url('images/logo.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+        .header-key
+            @include fluid("width", 40)
+            @include fluid("height", 40) 
+            box-sizing: border-box
+            @include fluid("border-radius", 5)
+            @include fluid("margin-right", 60) 
+            cursor: pointer
+            color: white
+            border: 1px solid rgba(253,255,252,0.6)
+            font-family: "TTNorms-Bold"
+            @include fluid("border-radius", 6)  
+            &.active
+                background: white
+                color: black
+            &:last-child
+                margin-right: 0
+                @include fluid("margin-left", 60)
+                
+
+        .header__element
+            display: flex
+            align-items: center
+            @include fluid("height", 40) 
+            font-family: 'Montserrat-Medium'
+            @include fluid("margin-left", 24) 
+            @include fluid("margin-right", 24) 
+            color: rgba(255,255,255,0.6)
+            cursor: pointer
+            &.active
+                border-bottom: 2px solid #E71D36
+                color: rgba(255,255,255,1.0)
+    
+    .main
+        width: 100%
+        height: 100%
+        @include fluid("padding-top", 100) 
+        @include fluid("padding-right", 50)
+        display: flex
+        justify-content: flex-end
+        position: relative
+        color: #CCCCCC
+        .main__box
+            @include fluid("width", 376)
+            display: flex
+            justify-content: space-between
+            z-index: 0
+            .main__forms
+                @include fluid("width", 350)
+                display: flex
+                flex-direction: column
+    .main__buttons_box
+        display: flex
+        justify-content: space-between
+        &.main__buttons_registration
+            justify-content: space-between
+        .main__input
+            @include fluid("width", 260)
+    .main__button
+        background: rgba(253,255,252,0.1)
+        @include fluid("height", 70)
+        @include fluid("border-radius", 5)
+        display: flex
+        text-transform: uppercase
+        cursor: pointer
+        color: white
+        @include fluid("margin-right", 25)
+        &:last-child
+            margin-right: 0
+        &.main_button_size_large
+            @include fluid("width", 254)
+            align-self: center
+        &.main_button_size_small
+            @include fluid("width", 70)
+            display: flex
+            flex-direction: column
+        b
+            @include fluid("font-size", 42)
+        &.main__button_restore
+            width: 100%
+            @include fluid("margin-top", 15)
+        &.main__button_mail
+            @include fluid("width", 354)
+            align-self: center
+            font-weight: 600
+            @include fluid("font-size", 22)
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("margin-top", 40)
+            transition: all 0.5s ease
+            z-index: 10000
+            &:hover
+                opacity: 0.9
+                transition: all 0.5s ease
+                background: white
+                color: black
+
+        .main__button_right
+            height: 100%
+            @include fluid("width", 90)
+        .main__button_square
+            @include fluid("width", 34)
+            @include fluid("height", 34)
+            @include fluid("border-radius", 2)
+            background-color: white
+            color: black
+        .main__button_left
+            height: 100%
+            width: 100%
+            box-sizing: border-box
+            @include fluid("border-right", 2, "solid #7E7E7E")
+            font-weight: 600
+            @include fluid("font-size", 22)
+            &.none
+                border: none
+        .main__button_top
+            box-sizing: border-box
+            width: 100%
+            height: 50%
+            @include fluid("border-bottom", 2, "solid #7E7E7E")
+        .main__button_bottom
+            height: 45%
+            width: 100%
+            .main__button_rectangle
+                @include fluid("width", 36)
+                @include fluid("height", 36)
+                @include fluid("border-radius", 2)
+                background-color: white
+                color: black
+    .main__scroll
+        @include fluid("width", 6)
+        @include fluid("height", 156)
+        background: rgba(253,255,252,0.15)
+        box-sizing: border-box
+        &.big
+            height: auto
+    
+    .news
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("padding-top", 100)
+        overflow-x: auto
+        @include fluid("height", 946)
+        ::-webkit-scrollbar 
+            width: resize(4)
+            margin-right: resize(10)
+            border-radius: resize(25)
+            opacity: 0
+        ::-webkit-scrollbar-track 
+            border-radius: resize(25)
+            background: rgba(57,56,78,0)
+            border-radius: 100px
+            opacity: 0
+        ::-webkit-scrollbar-thumb 
+            border-radius: resize(25)
+            background: rgba(255,64,64,0)
+            border-radius: 100px
+        .news-box
+            @include fluid("width", 600)
+            display: flex
+            flex-direction: column
+            align-items: center
+            @include fluid("margin-bottom", 20)
+            height: inherit
+            &:hover, &.active
+                .news-box__text_background
+                    opacity: 1
+                    @include fluid("margin-top", 216)
+                    height: auto
+                    transition: all 1s
+                
+            .news-box__header-img
+                background-image: url('./images/background.png')
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                @include fluid("width", 600)
+                @include fluid("height", 220)
+                text-transform: uppercase
+                @include fluid("font-size", 20)
+                display: flex
+                @include fluid("padding-left", 30)
+                @include fluid("padding-bottom", 15)
+                @include fluid("border-radius", 5)
+                align-items: flex-end
+                position: absolute
+                z-index: 1
+            
+            .news-box__text_background
+                @include fluid("font-size", 16)
+                @include fluid("width", 580) 
+                @include fluid("padding-top", 15)
+                @include fluid("padding-right", 30)
+                @include fluid("padding-bottom", 15)
+                @include fluid("padding-left", 30)
+                @include fluid("line-height", 25)
+                z-index: 0
+                font-weight: 300
+                box-sizing: border-box
+                opacity: 1
+                height: auto
+                @include fluid("border-left", 1, "solid #FDFFFC")
+                @include fluid("border-right", 1, "solid #FDFFFC")
+                @include fluid("border-bottom", 1, "solid #FDFFFC")
+                border-radius: 6px
+
+                .subtitle
+                    @include fluid("font-size", 14)
+                    color: #A7A7A7
+                    font-weight: 600
+                .news-box__element
+                    display: flex
+                    @include fluid("margin-bottom", 10)
+                    &:first-child
+                        @include fluid("margin-bottom", 0)
+                    .news-box__square
+                        @include fluid("max-width", 14) 
+                        @include fluid("height", 14) 
+                        box-sizing: border-box
+                        @include fluid("border", 3, "solid rgba(183,42,43,0.5)")
+                        background-color: #E3393A
+                        @include fluid("border-radius", 3)
+                    .news-box__text
+                        font-weight: 100
+                        font-style: normal
+                .box-flex
+                    display: flex
+                .square_box
+                    @include fluid("padding-top", 5)
+                    @include fluid("min-width", 28) 
+                    
+
+    .newauthentification__characters
+        display: flex
+        align-items: flex-start
+        @include fluid("padding-top", 60)
+        justify-content: space-between
+        height: 100%
+        width: 100%
+        @include fluid("padding-right", 80)
+        @include fluid("padding-left", 80)
+        .auth__characters
+            @include fluid("margin-left", 40)
+            .auth__characters_header
+                display: flex
+                align-items: center
+                @include fluid("font-size", 24)
+                @include fluid("line-height", 28)
+                text-transform: uppercase
+                color: #FDFFFC
+                @include fluid("margin-bottom", 56)
+
+                span
+                    @include fluid("margin-right", 20)
+            .auth__characters_hover
+                @include fluid("margin-top", -80)
+                z-index: 0
+                display: flex
+                align-items: center
+                justify-content: space-around
+                @include fluid("width", 300)
+                @include fluid("min-height", 80)
+                border-radius: 6px
+                opacity: 0
+                &.column
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                .box-between
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    width: 100%
+                    @include fluid("margin-bottom", 16)
+                    @include fluid("margin-top", 16)
+                .auth__characters_button
+                    position: relative
+                    @include fluid("width", 142)
+                    @include fluid("height", 42)
+                    border: 1px solid rgba(253,255,252,0.4)
+                    @include fluid("padding-right", 14)
+                    @include fluid("padding-left", 14)
+                    display: flex
+                    align-items: center
+                    @include fluid("font-size", 14)
+                    border-radius: 6px
+                    box-sizing: border-box
+                    &:hover, &.active
+                        background: rgba(253, 255, 252, 0.1)
+                        border: 1px solid rgba(253, 255, 252, 0)
+                    .box
+                        @include fluid("min-width", 30)
+                        @include fluid("min-height", 30)
+                        @include fluid("margin-right", 10)
+                        border-radius: 6px
+                        box-sizing: border-box
+                        background: white
+                        color: black
+                        &.red
+                            color: white
+                            background: #E71D36
+                .auth__characters_input
+                    @include fluid("height", 42)
+            .auth__characters_block
+                position: relative
+                @include fluid("width", 300)
+                @include fluid("height", 80)
+                @include fluid("margin-bottom", 16)
+                &:last-child
+                    @include fluid("margin-bottom", 0)
+                &:hover, &.active
+                    .auth__characters_character
+                        border: 1px solid rgba(253,255,252,0)
+                        background: rgba(253,255,252,0.1)
+                    
+                &.active
+                    height: auto
+                    .auth__characters_hover
+                        opacity: 1
+                        transition: all 1s
+                        @include fluid("margin-top", 0)
+            .auth__characters_character
+                display: flex
+                justify-content: space-between
+                align-items: center
+                border: 1px solid rgba(253,255,252,0.4)
+                box-sizing: border-box
+                border-radius: 6px
+                @include fluid("width", 300)
+                @include fluid("height", 80)
+                @include fluid("padding-left", 30)
+                @include fluid("padding-right", 30)
+                z-index: 1
+                &:last-child
+                    margin-bottom: 0
+                b
+                    @include fluid("font-size", 24)
+                    @include fluid("line-height", 28)
+                .auth__characters_circle
+                    @include fluid("width", 60)
+                    @include fluid("height", 60)
+                    position: relative
+                    @include fluid("font-size", 10)
+                    .auth__characters_circle_text
+                    .auth__characters_circle_text
+                        position: absolute
+                        display: flex
+                        align-items: center
+                        flex-direction: column
+                        justify-content: center
+                        left: 50%
+                        top: 50%
+                        transform: translate(-50%, -50%)
+                        
+        .auth__center
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: flex-end
+            @include fluid("padding-bottom", 56)
+            .auth__buttons
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include fluid("width", 400)
+            .auth__spawn_elements
+                display: flex
+                justify-content: center
+                @include fluid("margin-bottom", 45)
+                @include fluid("width", 690)
+                .auth__spawn_element
+                    @include fluid("border-radius", 4)
+                    box-sizing: border-box
+                    @include fluid("width", 200)
+                    @include fluid("height", 200)
+                    @include fluid("border", 3, "solid rgba(253,255,252,0.4)")
+                    @include fluid("padding-left", 24)
+                    @include fluid("padding-right", 29)
+                    @include fluid("padding-bottom", 22)
+                    @include fluid("padding-top", 18)
+                    @include fluid("font-size", 20)
+                    @include fluid("margin-bottom", 15)
+                    @include fluid("margin-right", 45)
+                    position: relative
+                    &:last-child
+                        margin-right: 0
+                        
+                    span
+                        position: absolute
+                        @include fluid("right", 30)
+                        @include fluid("bottom", 23)
+                        @include fluid("font-size", 50)
+                    &.use
+                        &:hover, &.active
+                            background: rgba(253,255,252,0.1)
+                            @include fluid("border", 3, "solid rgba(253,255,252,0)")
+
+                    &.nouse
+                        opacity: 0.65
+        .main__button_square
+            @include fluid("width", 34)
+            @include fluid("height", 34)
+            @include fluid("border-radius", 2)
+            background-color: white
+            color: black
+            font-weight: bold
+            &.large
+                width: auto
+                height: auto
+                @include fluid("padding-left", 9)
+                @include fluid("padding-right", 9)
+                @include fluid("padding-bottom", 7)        
+                @include fluid("padding-top", 7) 
+        .auth__stats
+            @include fluid("width", 440)
+            display: flex
+            flex-direction: column
+            align-items: center
+            @include fluid("padding-top", 84) 
+            .auth__stat
+                @include fluid("width", 386)
+                display: flex
+                justify-content: space-between
+                @include fluid("margin-bottom", 13)
+                .gray
+                    color: #FDFFFC
+                    opacity: 0.8
+        .auth__donate_element
+            box-sizing: border-box
+            @include fluid("width", 440)
+            @include fluid("height", 68)
+            @include fluid("border", 1, "solid rgba(253,255,252,0.4)")
+            @include fluid("padding-left", 27)
+            @include fluid("padding-right", 27)
+            @include fluid("font-size", 16)
+            border-radius: 6px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: relative
+            @include fluid("margin-top", 15)
+            .absolute
+                @include fluid("font-size", 40)
+                position: absolute
+                left: 16%
+                top: 50%
+                transform: translate(-50%, -50%)
+                opacity: 0.1
+            .box-flex
+                align-items: center
+                .auth-dollar
+                    @include fluid("font-size", 24)
+                    color: #E71D36
+                    @include fluid("margin-left", 10)
+            .line
+                background: white
+                @include fluid("width", 2)
+                @include fluid("height", 46)
+                @include fluid("margin-left", 32)
+                @include fluid("margin-right", 32)
+    .auth__characters_input
+        @include fluid("width", 300)
+        @include fluid("height", 45)
+        width: 100%
+        @include fluid("margin-bottom", 15)
+        @include fluid("border-radius", 5)
+        @include fluid("padding", 23)
+        @include fluid("border", 2, "solid rgba(253,255,252,0.5)")
+        background: transparent
+        display: flex
+        align-items: center
+        box-sizing: border-box
+        border-radius: 6px
+        box-sizing: border-box
+        font-family: "TTNorms-Regular"
+        @include fluid("font-size", 18)
+        color: rgba(253,255,252,0.5)
+        &.main__input_error
+            @include fluid("border", 2, "solid #BE2020")
+        .main__input_text
+            background-color: rgba(32,32,32,0.0)
+            font-family: inherit
+            @include fluid("font-size", 18)
+            color: white
+            caret-color: #808080
+        .main__input_text::-webkit-input-placeholder 
+            color:#CCCCCC
+        &:hover, &:focus
+            color: white
+            background: rgba(253,255,252,0.1)
+            box-sizing: border-box
+            @include fluid("border", 2, "solid rgb(27, 43, 56)" ) 
+    .auth__customization
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        @include fluid("width", 530)
+        @include fluid("margin-bottom", 50)
+        .auth__customization_leftside
+            @include fluid("min-width", 190)
+        .auth__customization_characteristics
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            .auth__scroll
+                @include fluid("width", 14)
+                @include fluid("height", 33)
+                background: url(./images/scroll.png)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+            .auth__customization_header
+                @include fluid("font-size", 24)
+                @include fluid("margin-bottom", 40)
+                letter-spacing: 0.01em
+                color: #FDFFFC
+                font-family: "TTNorms-Bold"
+            ::-webkit-scrollbar 
+                width: resize(4)
+                margin-right: resize(10)
+                border-radius: resize(25)
+                opacity: 0
+            ::-webkit-scrollbar-track 
+                border-radius: resize(25)
+                background: rgba(57,56,78,0)
+                border-radius: 100px
+                opacity: 0
+            ::-webkit-scrollbar-thumb 
+                border-radius: resize(25)
+                background: rgba(255,64,64,0)
+                border-radius: 100px
+            .auth__customization_elements
+                display: flex
+                flex-direction: column
+                overflow-y: scroll
+                align-items: center
+                @include fluid("height", 336)
+                
+                .auth__customization_element
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    @include fluid("padding-left", 20)
+                    @include fluid("padding-right", 20)
+                    @include fluid("min-width", 434)
+                    @include fluid("min-height", 38)
+                    @include fluid("margin-bottom", 16)
+
+                    &:last-child
+                        margin-bottom: 0
+                    &:hover, &.active
+                        color: black
+                        background: white
+                        
+                        .auth__customization_icon
+                            @include fluid("font-size", 20)
+                            color: black
+                    .auth__customization_icon
+                        @include fluid("font-size", 20)
+                        color: white
+                    .box-flex
+                        align-items: center
+                    &.column
+                        flex-direction: column
+                        align-items: flex-start
+                        height: auto
+                        @include fluid("min-height", 52)
+                        &:hover
+                            color: white
+                            background: transparent
+                    .auth__customization_range
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        @include fluid("width", 100)
+                        @include fluid("height", 4)
+                        .slider
+                            background: #E71D36
+                            @include fluid("width", 12)
+                            @include fluid("height", 12)  
+                            border-radius: 50%   
+                            
+                        .rangeslider
+                            @include fluid("height", 4)
+                            background: rgba(255,255,255,0.2)
+                            
+                        .rangeslider__fill
+                            background: #E71D36
+
+                        .rangeslider__handle 
+                            border: none
+                            background: #E71D36
+                            @include fluid("top", 2)
+                            @include fluid("width", 12)
+                            @include fluid("height", 12)
+
+                    .auth__customization_colors
+                        display: grid
+                        @include fluid("width", 290)
+                        grid-template-columns: repeat(10, 1fr)
+                        grid-template-rows: repeat(1, 1fr)
+                        @include fluid("grid-gap", 10)
+                        @include fluid("margin-top", 10)
+                        .auth__customization_color
+                            background: #B07947
+                            @include fluid("width", 20)
+                            @include fluid("height", 20) 
+                            &.active, &:hover
+                                box-sizing: border-box
+                                @include fluid("border", 2, "solid #FFFFFF")
+                    .auth__customization_text
+                        @include fluid("font-size", 16)
+                        @include fluid("margin-left", 16)
+                        @include fluid("margin-right", 16)
+
+    .auth__customization_categories
+        @include fluid("padding-top", 69)
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        height: fit-content
+        .auth__customization_categorie
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("width", 60)
+            @include fluid("height", 60) 
+            border: 1px solid rgba(253,255,252,0.4)
+            box-sizing: border-box
+            color: rgba(253,255,252,0.4)
+            @include fluid("font-size", 32)
+            border-radius: 6px
+            box-sizing: border-box
+            @include fluid("margin-bottom", 16)
+            &:last-child
+                margin-bottom: 0
+            &:hover, &.active
+                background: rgba(253,255,252,0.1)
+                border: 1px solid rgba(253,255,252,0.1)
+                color: white
+            
+            &.random
+                margin-bottom: 0
+                @include fluid("margin-top", 46)
+    .auth__customization_image
+        @include fluid("width", 304)
+        @include fluid("height", 124)
+        background-image: url('images/back.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("margin-bottom", 16)
+        position: relative
+        .auth__customization_father
+            z-index: 2
+            @include fluid("width", 124)
+            @include fluid("height", 124)
+            background-image: url('images/father.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            bottom: 0
+            @include fluid("left", 67)
+        .auth__customization_mother
+            z-index: 1
+            @include fluid("width", 124)
+            @include fluid("height", 124)
+            background-image: url('images/mother.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            bottom: 0
+            @include fluid("right", 67)
+    .auth__square_range
+        @include fluid("width", 134)
+        @include fluid("height", 134)
+        background-image: url('images/setka.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("margin-bottom", 16)
+        @include fluid("margin-top", 96)
+        align-self: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        .top
+            position: absolute
+            top: -12%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            text-align: center
+        .bottom
+            position: absolute
+            bottom: -28%
+            left: 50%
+            transform: translate(-50%, -50%) 
+            width: 100%
+            text-align: center
+        .left
+            position: absolute
+            bottom: 50%
+            left: -64%
+            transform: rotateZ(-90deg)
+            width: 100%
+            text-align: center
+        .right
+            position: absolute
+            bottom: 50%
+            right: -64%
+            transform: rotateZ(90deg)
+            width: 100%
+            text-align: center            
+        .slider
+            position: absolute
+            left: 0
+            top: 0
+            background: #E71D36
+            @include fluid("width", 14)
+            @include fluid("height", 14)  
+            border-radius: 50%  
+
+    .auth__long_range
+        @include fluid("width", 134)
+        @include fluid("height", 28)
+        background-image: url('images/setka_small.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("margin-bottom", 26)
+        @include fluid("margin-top", 26)
+        position: relative
+        align-items: center
+        display: flex
+        .left
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translate(-50%, -50%) 
+        .right
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translate(-50%, -50%) 
+        .slider
+            position: absolute
+            left: 0
+            top: 0
+            background: #E71D36
+            @include fluid("width", 14)
+            @include fluid("height", 14)  
+            border-radius: 50%  
+    .auth__customisation_center
+        display: flex
+        align-items: center
+        flex-direction: column
+    .auth__sliders
+        @include fluid("width", 346)
+        @include fluid("padding-top", 16)
+        @include fluid("padding-bottom", 16)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+    .auth__box-arrows
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("min-width", 210)
+        @include fluid("max-width", 210)
+        text-align: center
+    .margin-top-20
+        @include fluid("margin-top", 20)
+    .auth__slider_text
+        @include fluid("width", 120)
+        &.slider-left
+            text-align: left
+        &.slider-right
+            text-align: right

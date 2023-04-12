@@ -1,0 +1,12 @@
+﻿{
+	"0": {"Id":0,"Variation":0,"TName":"CLO_BIM_PRW_0_","Textures":[0]},
+	"1": {"Id":1,"Variation":1,"TName":"CLO_BIM_PRW_1_","Textures":[0]},
+	"2": {"Id":2,"Variation":2,"TName":"CLO_BIM_PRW_2_","Textures":[0]},
+	"3": {"Id":3,"Variation":3,"TName":"CLO_BIM_PRW_3_","Textures":[0]},
+	"4": {"Id":4,"Variation":4,"TName":"CLO_BIM_PRW_4_","Textures":[0]},
+	"5": {"Id":5,"Variation":5,"TName":"CLO_BIM_PRW_5_","Textures":[0]},
+	"6": {"Id":6,"Variation":6,"TName":"CLO_BIM_PRW_6_","Textures":[0]},
+	"7": {"Id":7,"Variation":7,"TName":"CLO_BIM_PRW_7_","Textures":[0,1,2,3]},
+	"8": {"Id":8,"Variation":8,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10,11]},
+	"9": {"Id":9,"Variation":10,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10]}
+}

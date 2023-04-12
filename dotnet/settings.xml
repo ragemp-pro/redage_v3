@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <acl_enabled>true</acl_enabled>
+  <log_console>true</log_console>
+  <log_chat>true</log_chat>
+
+  <resource src="NeptuneEvo" />
+</config>

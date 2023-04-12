@@ -1,0 +1,196 @@
+@import @/views/assets/css/main.sass
+
+#inputcolorsettings
+	font-style: normal 
+	font-weight: bold 
+	color: #FFFFFF 
+	width: 100%
+	background: rgba(255, 255, 255, 0.12)
+	@include fluid("border-radius", 6) 
+	@include fluid("margin-top", 25) 
+	.panel-row 
+		position: relative 
+		@include fluid("margin-left", 18) 
+		@include fluid("margin-right", 23) 
+		&:first-child 
+			@include fluid("margin-top", 10) 
+			@include fluid("margin-bottom", 6) 
+		&:after 
+			content: "" 
+			display: table 
+			clear: both 
+	&.big 
+		.panel-row 
+			@include fluid("margin-right", 18) 
+	.panel-header 
+		background: rgba(255, 255, 255, 0.12)
+		border-radius: 6px 6px 0px 0px 
+		display: flex 
+		align-items: center 
+		justify-content: center 
+		@include fluid("margin-bottom", 12) 
+		@include fluid("height", 47) 
+		color: white 
+	.swatch 
+		display: inline-block 
+		@include fluid("width", 28) 
+		@include fluid("height", 28) 
+		background: #ccc 
+		@include fluid("border", 1, "solid rgba(255, 255, 255, 0.2)")
+		box-sizing: border-box 
+		@include fluid("border-radius", 4, " undefined")
+		cursor: pointer 
+	.default-swatches 
+		@include fluid("width", 193) 
+		@include fluid("height", 61) 
+		display: grid 
+		grid-template-columns: repeat(6, 1fr) 
+		grid-template-rows: repeat(2, 1fr) 
+		&.big1 
+			@include fluid("width", 348) 
+			@include fluid("height", 560) 
+			grid-template-columns: repeat(10, 1fr) 
+			grid-template-rows: repeat(16, 1fr) 
+		&.big2 
+			@include fluid("width", 348) 
+			@include fluid("height", 64) 
+			grid-template-columns: repeat(10, 1fr) 
+			grid-template-rows: repeat(2, 1fr) 
+		.swatch 
+			&:nth-child(6n + 1) 
+				margin-left: 0 
+	.color-cursor 
+		border-radius: 100% 
+		background: #ccc 
+		position: absolute 
+		pointer-events: none 
+		z-index: 2 
+		@include fluid("border", 2, "solid rgba(255, 255, 255, 0.2)") 
+		box-sizing: border-box 
+		transition: all .2s ease 
+		&.dragging 
+			transition: none 
+	.color-cursor#spectrum-cursor 
+		@include fluid("width", 30) 
+		@include fluid("height", 30) 
+		@include fluid("margin-left", -15) 
+		@include fluid("margin-top", -15) 
+		top: 0 
+		left: 0 
+	.color-cursor#hue-cursor 
+		top: 0 
+		left: 50% 
+		@include fluid("height", 20) 
+		@include fluid("width", 20) 
+		@include fluid("margin-top", -10) 
+		@include fluid("margin-left", -10) 
+		pointer-events: none 
+	.spectrum-map 
+		position: relative 
+		@include fluid("width", 258) 
+		@include fluid("height", 193) 
+		overflow: hidden 
+		@include fluid("border", 1, "solid rgba(23, 25, 33, 0.4)")
+		box-sizing: border-box 
+		@include fluid("border-radius", 6, " undefined")
+	#spectrum-canvas 
+		position: absolute 
+		width: 100% 
+		height: 100% 
+		top: 0 
+		left: 0 
+		right: 0 
+		bottom: 0 
+		background: #ccc 
+	.hue-map 
+		position: absolute 
+		top: 0 
+		bottom: 0 
+		@include fluid("right", 24) 
+		@include fluid("width", 12) 
+	#hue-canvas 
+		@include fluid("border-radius", 8) 
+		position: absolute 
+		top: 0 
+		right: 0 
+		bottom: 0 
+		left: 0 
+		width: 100% 
+		height: 100% 
+		background: #ccc 
+	.color-button 
+		background: #2A3137 
+		border: 0 
+		@include fluid("border-radius", 4) 
+		color: #8B949A 
+		font-size: 1rem 
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) 
+		outline: none 
+		cursor: pointer 
+		@include fluid("padding", 4) 
+		&:active 
+			background: #262c31 
+		&.preview 
+			position: absolute 
+			right: 0 
+			top: 0 
+			@include fluid("width", 61) 
+			@include fluid("height", 61) 
+			display: block 
+			background: #ccc 
+			@include fluid("border", 1, "solid rgba(255, 255, 255, 0.2)")
+			box-sizing: border-box 
+			@include fluid("border-radius", 4, " undefined")
+		&.swatch 
+			display: inline-block 
+			@include fluid("padding", 6) 
+			@include fluid("width", 142) 
+			margin: 10px auto 0 
+		&.mode-toggle 
+			position: absolute 
+			top: 0 
+			right: 0 
+			@include fluid("width", 68) 
+			@include fluid("height", 40) 
+	.value-fields 
+		display: none 
+		align-items: center 
+		@include fluid("margin-bottom", 17) 
+		&.active 
+			display: flex 
+		.field-label 
+			@include fluid("margin-right", 5) 
+			font-style: normal 
+			font-weight: bold 
+			@include fluid("font-size", 18) 
+		.field-input 
+			@include fluid("width", 37) 
+			@include fluid("height", 35) 
+			background: rgba(255, 255, 255, 0.12)
+			@include fluid("border", 1, "solid rgba(255, 255, 255, 0.2)") 
+			box-sizing: border-box 
+			@include fluid("border-radius", 6, " undefined")
+			font-style: normal 
+			font-weight: bold 
+			@include fluid("font-size", 14) 
+			color: white 
+			text-align: center 
+	.rgb-fields 
+		.field-group 
+			display: flex 
+			align-items: center 
+			@include fluid("margin-right", 8) 
+	.color-indicator 
+		display: inline-block 
+		vertical-align: middle 
+		@include fluid("margin-right", 10) 
+		@include fluid("width", 20) 
+		@include fluid("height", 20) 
+		@include fluid("border-radius", 4) 
+		background: #ccc 
+.mrt-18 
+	@include fluid("margin-top", 18) 
+.color-picker-panel input::-webkit-outer-spin-button,
+.color-picker-panel input::-webkit-inner-spin-button 
+	-webkit-appearance: none 
+	margin: 0 

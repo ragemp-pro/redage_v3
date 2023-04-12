@@ -1,0 +1,1347 @@
+@import @/views/assets/css/main.sass
+
+#fractions
+    @include fluid("width", 1260)
+    height: 100%
+    display: flex
+    font-family: 'TTNorms-Regular'
+    &.pt-63
+        @include fluid("padding-top", 63)
+    .fractions__left
+        display: flex
+        flex-direction: column
+        @include fluid("min-width", 274)
+        height: 100%
+        .fractions__left_title
+            font-family: 'TTNorms-Bold'
+            font-weight: bold
+            @include fluid("font-size", 32)
+            @include fluid("line-height", 38)
+            color: #FFFFFF
+            @include fluid("margin-bottom", 12)
+        .fractions__left_subtitle
+            color: #869199
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 20)
+            @include fluid("line-height", 24)
+            @include fluid("margin-bottom", 27)
+    .fractions__button_big
+        @include fluid("width", 273)
+        @include fluid("min-height", 48)
+        background: #FFFFFF
+        @include fluid("border-radius", 8)
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #1E262F
+        font-family: 'TTNorms-Medium'
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        transition: all 0.5s ease
+        @include fluid("margin-bottom", 38)
+        &:hover
+            transition: all 0.5s ease
+            background: #cacaca
+        .fractionsicon-plus
+            @include fluid("margin-right", 12)
+            @include fluid("font-size", 14)
+    .fractions__menu_element
+        display: flex
+        align-items: center
+        color: #60686D
+        @include fluid("font-size", 24)
+        @include fluid("margin-bottom", 16)
+        &:hover
+            color: #FFFFFF
+        &.active
+            color: #FFFFFF
+        &.white
+            color: #FFFFFF
+        &.mb-36
+            @include fluid("margin-bottom", 36)
+        .fractions__menu_text
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 22)
+            @include fluid("margin-left", 12)
+    .fractions__stats
+        @include fluid("margin-top", 42)
+        display: flex
+        flex-direction: column
+        @include fluid("margin-bottom", 21)
+    .fractions__stats_element
+        display: flex
+        align-items: center
+        font-weight: 500
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 17)
+        @include fluid("margin-bottom", 16)
+    .fractions__stats_circle
+        @include fluid("margin-right", 16)
+        @include fluid("height", 16)
+        @include fluid("width", 16)
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        &.online
+            background: rgba(5, 187, 99, 0.2)
+            .fractions__stats_smallcircle
+                background: #05BB63
+        &.offline
+            background: rgba(215, 21, 67, 0.2)
+            .fractions__stats_smallcircle
+                background: #D71543
+        &.neutral
+            background: rgba(255, 255, 255, 0.2)
+            .fractions__stats_smallcircle
+                background: #FFFFFF
+    .fractions__stats_smallcircle
+        border-radius: 50%
+        @include fluid("width", 8)
+        @include fluid("height", 8)
+    .fractions__right
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        @include fluid("margin-left", 56)
+    .fractions__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .fractions__header_image
+            @include fluid("width", 59)
+            @include fluid("height", 59)
+            background-image: url('./assets/images/logo.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("margin-right", 24)
+        .box-flex
+            align-items: center
+            [class^="fractionsicon-"]
+                @include fluid("font-size", 32)
+        .fractions__header_title
+            @include fluid("margin-left", 12)
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 29)
+        .fractions__header_subtitle
+            @include fluid("margin-top", 8)
+            color: #A6B1BA
+            font-weight: normal
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+    .fractions__main_button
+        @include fluid("padding-left", 56)
+        @include fluid("padding-right", 56)
+        @include fluid("padding-top", 12)
+        @include fluid("padding-bottom", 12)
+        display: flex
+        align-items: center
+        justify-content: center
+        background: rgba(255, 255, 255, 0.2)
+        @include fluid("border-radius", 8)
+        transition: all 0.5s ease
+        color: white
+        &.h-40
+            @include fluid("width", 269)
+            @include fluid("min-height", 40)
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            padding: 0
+        &.black
+            @include fluid("width", 128)
+            @include fluid("height", 28)
+            background: #1E262F
+            @include fluid("border-radius", 4)
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            @include fluid("margin-right", 24)
+            align-self: center
+            &.trans
+                background: transparent
+                color: white
+                &:hover
+                    color: white
+        .fractionsicon-plus
+            @include fluid("font-size", 10)
+        &.extra
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            font-family: 'TTNorms-Medium'
+            padding: 0
+            @include fluid("width", 152)
+            @include fluid("height", 36)
+        &.w-134
+            @include fluid("width", 134)
+            @include fluid("height", 32)
+            font-weight: 500
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)
+            padding: 0
+        &.extrasmall
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            font-family: 'TTNorms-Medium'
+            padding: 0
+            @include fluid("width", 120)
+            @include fluid("height", 36)
+        &:hover
+            transition: all 0.5s ease
+            background: white
+            color: black
+        &.h-36
+            @include fluid("width", 152)
+            @include fluid("height", 36)
+        &.w-120
+            @include fluid("width", 120)
+        &.news
+            @include fluid("height", 34)
+            @include fluid("width", 120)
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            @include fluid("margin-right", 10)
+            &:last-child
+                @include fluid("margin-right", 0)
+        &.medium
+            @include fluid("width", 167)
+            @include fluid("height", 42)
+            margin-top: auto
+            padding: 0
+        &.mini
+            @include fluid("width", 128)
+            @include fluid("height", 28)
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            color: white
+            &:hover
+                color: black
+        &.w-100
+            width: 100%
+            @include fluid("height", 32)
+            font-weight: 500
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)
+        &.complaints
+            @include fluid("width", 180)
+            @include fluid("height", 36)
+            @include fluid("border-radius", 8)
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            padding: 0
+    .fractions__content
+        @include fluid("border-radius", 8)
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        @include fluid("margin-top", 32)
+        &.backgr
+            background: rgba(255,255,255,0.1)
+            @include fluid("height", 678)
+            @include fluid("padding", 24)
+        &.extrabig
+            @include fluid("min-height", 714)
+            @include fluid("height", 714)
+    .fractions__main_box
+        background: rgba(255,255,255,0.1)
+        @include fluid("border-radius", 8)
+        display: flex
+        flex-direction: column
+        @include fluid("padding", 24)
+        &.h-568
+            @include fluid("width", 584)
+            @include fluid("height", 568)
+        &.w-317
+            @include fluid("width", 317)
+            @include fluid("height", 192)
+        &.w-317h272
+            @include fluid("width", 317)
+            @include fluid("height", 272)
+        &.w-600
+            @include fluid("width", 600)
+            @include fluid("height", 192)
+        &.h-430
+            @include fluid("margin-top", 17)
+            @include fluid("width", 440)
+            @include fluid("height", 430)
+        &.w-268
+            @include fluid("width", 268)
+            @include fluid("height", 210)
+        &.w-408
+            @include fluid("width", 408)
+            @include fluid("height", 210)
+        &.w-215
+            @include fluid("width", 215)
+            @include fluid("height", 210)
+        &.w-520
+            @include fluid("margin-bottom", 20)
+            @include fluid("width", 520)
+            @include fluid("height", 226)
+        &.h-190
+            @include fluid("height", 190)
+        &.big
+            @include fluid("width", 391)
+            @include fluid("height", 484)
+        &.w-440
+            @include fluid("width", 440)
+            @include fluid("height", 240)
+        &.w-477
+            @include fluid("width", 477)
+            @include fluid("height", 240)
+        &.h-484
+            @include fluid("height", 484)
+        &.large
+            width: 100%
+            @include fluid("height", 454)
+            @include fluid("margin-top", 20)
+    .mt-20
+        @include fluid("margin-top", 20)
+    
+    .fractions__button_small
+        @include fluid("padding-top", 4)
+        @include fluid("padding-bottom", 4)
+        @include fluid("padding-left", 3)
+        @include fluid("padding-right", 3)
+        @include fluid("min-width", 30)
+        @include fluid("min-height", 30)
+        display: flex
+        align-items: center
+        justify-content: center
+        background: rgba(255, 255, 255, 0.2)
+        @include fluid("border-radius", 4)
+        font-weight: 500
+        font-family: 'TTNorms-Medium'
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        @include fluid("margin-right", 8)
+        &.active, &:hover
+            background: #DE8D14
+    .w-506
+        @include fluid("width", 506)
+    .fractions__main_head
+        color: #869199
+        @include fluid("font-size", 24)
+        @include fluid("margin-bottom", 24)
+        display: flex
+        align-items: center
+        .fractions__main_title
+            margin-left: 16px
+            font-weight: 500
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 20)
+            @include fluid("line-height", 24)
+            color: white
+    .fractions__lead_photo
+        @include fluid("min-width", 84)
+        @include fluid("height", 106)
+        background-image: url('./assets/images/lead.png')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("margin-right", 20)
+        position: relative
+        &.big
+            @include fluid("height", 140)
+            @include fluid("min-width", 122)
+        .fractions__photo_absolute
+            border-radius: 50%
+            @include fluid("width", 26)
+            @include fluid("height", 26)
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            transform: translate(-50%, 0%)
+            @include fluid("bottom", -13)
+            left: 50%
+            @include fluid("font-size", 12)
+            background: #FFFFFF
+            color: black
+            &:hover
+                background: #d8d4d4
+    .mb-24
+        @include fluid("margin-bottom", 24)
+    .fractions__main_element
+        display: flex
+        flex-direction: column
+        &.flex
+            flex-direction: row
+    .fractions__weapon_box
+        @include fluid("width", 32)
+        @include fluid("height", 32)
+        display: flex
+        align-content: center
+        justify-content: center
+        text-align: center
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        background: rgba(255, 255, 255, 0.11)
+        @include fluid("border-radius", 4)
+        @include fluid("margin-right", 5)
+        @include fluid("font-size", 32)
+        color: rgba(255, 255, 255, 0.25)
+        &:last-child
+            margin-right: 0
+
+    .fractions_stats_title
+        font-weight: 500
+        font-family: 'TTNorms-Medium'
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 14)
+        color: #869199
+        @include fluid("margin-bottom", 8)
+        &.taleft
+            text-align: left
+        &.mt-20
+            @include fluid("margin-top", 20)
+            margin-bottom: 0
+        .fractionsicon-dots
+            @include fluid("font-size", 14)
+            @include fluid("margin-right", 10)
+            color: #A6B1BA
+        &.fs-14
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+        &.fs-16
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+        &.name
+            @include fluid("max-width", 150)
+            @include fluid("width", 150)
+            text-align: left
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+        &.rank
+            @include fluid("width", 100)
+            @include fluid("max-width", 100)
+            text-align: left
+            &.red
+                color: #EB5757
+            &.green
+                color: #259A70
+        &.descr
+            @include fluid("max-width", 380)
+            @include fluid("width", 380)
+            text-align: left
+        &.date
+            @include fluid("max-width", 100)
+            @include fluid("width", 100)
+            text-align: left
+            display: flex
+                
+        &.large
+            max-width: 100% !important
+        &.flex
+            display: flex
+        &.gray
+            color: #869199
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+            font-weight: normal
+            font-family: 'TTNorms-Regular'
+            @include fluid("max-width", 190)
+        .white
+            color: white
+            @include fluid("margin-left", 5)
+            @include fluid("margin-right", 5)
+        &.whitecolor
+            color: white
+        &.logs
+            @include fluid("width", 62)
+        &.logscenter
+            @include fluid("max-width", 114)
+        &.w-max
+            width: max-content
+            min-width: max-content
+    .date
+        @include fluid("max-width", 100)
+        @include fluid("width", 100)
+        text-align: left
+        display: flex
+    .mr-12
+        @include fluid("margin-right", 12)
+    .fractions__stats_subtitle
+        font-weight: 500
+        font-family: 'TTNorms-Medium'
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+        @include fluid("max-width", 110)
+        &.w-200
+            @include fluid("max-width", 200)
+        &.w-250
+            @include fluid("max-width", 250)
+        &.large
+            max-width: 100%
+        &.fit
+            width: fit-content
+        &.flex
+            display: flex
+        &.gray
+            color: #869199
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+            font-weight: normal
+            font-family: 'TTNorms-Regular'
+            @include fluid("max-width", 190)
+        &.hover
+            &:hover
+                color: #697177
+        &.mw-161
+            @include fluid("max-width", 161)
+            @include fluid("min-width", 161)
+        &.w-min
+            width: min-content
+    
+    .fractionsicon-copy
+        color: #869199
+        @include fluid("margin-left", 10)
+        &:hover
+            opacity: 0.7
+    .fractions__news_text
+        font-style: normal
+        font-weight: normal
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 20)
+        font-weight: normal
+        @include fluid("margin-top", 8)
+        @include fluid("margin-bottom", 8)
+    .fractions__circle_mini
+        @include fluid("width", 12)
+        border-radius: 50%
+        @include fluid("height", 12)
+        background: #FFFFFF
+        color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("font-size", 7)
+        @include fluid("margin-right", 8)
+        color: black
+    .fractions__circle_smallperson
+        @include fluid("width", 6)
+        @include fluid("height", 8)
+        background-image: url('./assets/images/smallperson.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+    .fractions__selector
+        font-weight: 500
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        color: #A6B1BA
+        font-family: 'TTNorms-Medium'
+        @include fluid("padding-bottom", 4)
+        @include fluid("margin-right", 28)
+        &.active
+            color: white
+            @include fluid("border-bottom", 2, "solid #DA2640")
+    .fractions__main_scroll
+        width: 100%
+        @include fluid("padding-right", 18)
+        @include fluid("max-height", 343)
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        overflow-y: auto
+        overflow-x: hidden
+        @include fluid("margin-top", 20)
+        @include fluid("padding-top", 5)
+        &.w-240
+            @include fluid("width", 240)
+        &.w-204
+            @include fluid("width", 204)
+            @include fluid("margin-right", 28)
+        &.w-399
+            @include fluid("width", 399)
+        &.w-482
+            @include fluid("width", 482)
+        &.h-480
+            @include fluid("max-height", 480)
+        &.big
+            @include fluid("max-height", 538)
+            @include fluid("margin-top", 10)
+        &.prscroll-22
+            @include fluid("padding-right", 22)
+        &.w-500
+            @include fluid("width", 500)
+        &.extrabig
+            @include fluid("max-height", 638)
+        &::-webkit-scrollbar
+            @include fluid("width", 4)
+            @include fluid("height", 4)
+            @include fluid("margin-right", 10)
+            @include fluid("border-radius", 25)
+                
+        &::-webkit-scrollbar-track
+            @include fluid("border-radius", 25)
+            background: #39384E
+            border-radius: 100px
+
+        &::-webkit-scrollbar-thumb
+            @include fluid("border-radius", 25)
+            background: white
+            border-radius: 100px
+
+    .fractions__dragondrop_element
+        pointer-events: none
+        position: absolute
+        @include fluid("width", 866)
+        @include fluid("min-height", 48)
+        @include fluid("max-height", 48)
+        z-index: 99
+
+    .fractions__scroll_element
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fluid("min-height", 48)
+        @include fluid("margin-bottom", 24)
+        &.small
+            @include fluid("min-height", 36)
+        .hidden
+            opacity: 0
+        .fractionsicon-fired
+            @include fluid("font-size", 14)
+            &:hover
+                opacity: 0.6
+        &.hover, &.active
+            @include fluid("padding-left", 8)
+            @include fluid("padding-right", 8)
+            &:hover
+                background: rgba(233,241,247,0.15)
+                .hidden
+                    opacity: 1
+        &.activeselected
+            background: white
+            color: black
+        &.p-20
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 20)
+
+        &:last-child
+            margin-bottom: 0
+    .box-flex
+        display: flex
+        align-items: center
+    .box-center
+        display: flex
+        align-items: center
+        justify-content: center
+    .box-between
+        display: flex
+        align-items: center
+        justify-content: space-between
+    .box-column
+        display: flex
+        flex-direction: column
+    .wh-100
+        width: 100%
+        height: 100% 
+        max-width: 100% !important
+        text-align: center
+    .pr-22
+        @include fluid("padding-right", 30)
+        @include fluid("margin-top", 20)
+    .pr-96
+        @include fluid("padding-right", 96)
+    .fractions__progressbar
+        @include fluid("width", 207)
+        @include fluid("height", 6)
+        background: #1E262F
+        @include fluid("border-radius", 30)
+        @include fluid("margin-top", 10)
+        .fractions__progressbar_current
+            @include fluid("height", 6)
+            background: #FB4F69
+            @include fluid("border-radius", 30)
+    .fractions__input
+        @include fluid("width", 654)
+        @include fluid("height", 36)
+        display: flex
+        align-items: center
+        @include fluid("padding-left", 16)
+        @include fluid("padding-top", 12)
+        @include fluid("padding-bottom", 12)
+        background: rgba(255,255,255,0.12)
+        @include fluid("border-radius", 6)
+        &.large
+            @include fluid("width", 486)
+        &.medium
+            @include fluid("width", 400)
+        &.w-522
+            @include fluid("width", 522)
+            @include fluid("height", 36)
+        &.w-269
+            @include fluid("width", 269)
+            @include fluid("margin-bottom", 28)
+        &.small
+            @include fluid("width", 148)
+        .fractionsicon-loop
+            @include fluid("font-size", 12)
+            color: white
+            @include fluid("margin-right", 5)
+        input
+            width: 100%
+            height: 100%
+            color: #ccd8e1
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)
+            background: transparent
+    .large
+        max-width: 100% !important
+        width: 100%
+    
+    .mr-5
+        @include fluid("margin-right", 5)
+    .mb-0
+        margin-bottom: 0
+    .mb-16
+        @include fluid("margin-bottom", 16) 
+    .pl-8
+        @include fluid("padding-left", 8)
+    
+    .mr-10
+        @include fluid("margin-right", 10)
+    
+    .fractions__access_box
+        display: flex
+        align-items: center
+        @include fluid("margin-left", 16)
+        .fractions__access_element
+            background: #1E262F
+            @include fluid("width", 36)
+            @include fluid("height", 28)
+            @include fluid("font-size", 12)
+            display: flex
+            align-items: center
+            justify-content: center
+            &.decline
+                @include fluid("border-top-left-radius", 4)
+                @include fluid("border-bottom-left-radius", 4)
+                color: #FB4F69
+                @include fluid("margin-right", 4)
+                &.active
+                    color: white
+                    background: #DA2640
+            &.neutral
+                @include fluid("margin-right", 4)
+                &.active
+                    color: white
+                    background: #3D444B
+            &.accept
+                @include fluid("border-top-right-radius", 4)
+                @include fluid("border-bottom-right-radius", 4)
+                color: #6FCF97
+                &.active
+                    color: white
+                    background: #6FCF97
+    .pr-270
+        @include fluid("padding-right", 270)
+    .whitecolor
+        color: white
+    
+    .m-0
+        margin: 0
+
+    .mb-0
+        margin-bottom: 0
+    
+    .pr-226
+        @include fluid("padding-right", 226)
+        @include fluid("padding-left", 0)
+    .pr-276
+        @include fluid("padding-right", 276)
+        padding-left: 0
+    .mr-20
+        @include fluid("margin-right", 20)
+    
+    .pr-253
+        @include fluid("padding-right", 253)
+    .not-center
+        align-items: flex-start
+    .pr-218
+        @include fluid("padding-right", 218)
+    
+    .mr-40
+        @include fluid("margin-right", 40)
+    
+    .fw-bold
+        font-weight: 500
+        font-family: 'TTNorms-Medium'
+    .fs-36
+        @include fluid("font-size", 36)
+        @include fluid("padding-bottom", 6)
+    .mr-16
+        @include fluid("margin-right", 16)
+    .gold
+        color: #F2BD00
+    .silver
+        color: #B6B2CD
+    .bronze
+        color: #AB7935
+    .w-166
+        @include fluid("min-width", 166)
+    
+    .fractions__element_black
+        @include fluid("width", 282)
+        @include fluid("height", 119)
+        background: #1E262F
+        @include fluid("border-radius", 7)
+        display: flex
+        justify-content: space-between
+        @include fluid("padding", 10)
+        align-items: center
+        .fractions__black_img
+            @include fluid("min-width", 99)
+            @include fluid("min-height", 99)
+            background-image: url('./assets/images/reward.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("margin-right", 15)
+            @include fluid("border-radius", 6)
+        .fractions__black_title
+            font-weight: 500
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)
+            @include fluid("margin-bottom", 4)
+            font-family: 'TTNorms-Medium'
+            &.gray
+                color: #A6B1BA
+                @include fluid("margin-bottom", 8)
+        .fractions__black_subtitle
+            font-weight: normal
+            @include fluid("font-size", 10)
+            @include fluid("line-height", 12)
+            &.hover
+                &:hover
+                    opacity: 0.7
+        &.newparams
+            @include fluid("width", 284)
+            @include fluid("height", 93)
+            padding: 0
+            @include fluid("padding-left", 16)
+            .fractions__black_img
+                @include fluid("width", 130)
+                @include fluid("height", 89)
+                @include fluid("min-width", 130)
+                @include fluid("min-height", 89)
+                background-image: url('./assets/images/car.png')
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+                margin-right: 0
+                &.form
+                    @include fluid("width", 64)
+                    @include fluid("height", 64)
+                    @include fluid("min-width", 64)
+                    @include fluid("min-height", 64)
+                    background-image: url('./assets/images/form.png')
+                    background-size: contain
+                    background-position: center
+                    @include fluid("margin-right", 15)
+                    background-repeat: no-repeat
+            .gray
+                @include fluid("font-size", 10)
+                @include fluid("line-height", 12)
+                font-family: 'TTNorms-Regular'
+            .silver
+                color: #A6B1BA
+                font-weight: bold
+                font-family: 'TTNorms-Regular'
+    .mt-40
+        @include fluid("margin-top", 40)
+    .mb-18
+        @include fluid("margin-bottom", 18)
+    .mt-8
+        @include fluid("margin-top", 8)
+    .mt-18
+        @include fluid("margin-top", 18)
+    .fractions__main_grid
+        display: grid
+        grid-template-rows: repeat(2, 1fr)
+        grid-template-columns: repeat(3, 1fr)
+        width: 100%
+        height: 100%
+        @include fluid("gap", 20)
+        .fractions__stats_subtitle
+            @include fluid("max-width", 138)
+        &.mini
+            @include fluid("gap", 0)
+            @include fluid("column-gap", 20)
+            grid-template-rows: repeat(2, 1fr)
+            grid-template-columns: repeat(2, 1fr)
+            .fractions__main_element
+                @include fluid("margin-bottom", 10)
+        &.large
+            grid-template-rows: repeat(2, 1fr)
+            grid-template-columns: repeat(4, 1fr)
+            @include fluid("column-gap", 10)
+            @include fluid("margin-bottom", 10)
+            .fractions__weapon_box
+                @include fluid("width", 59)
+                @include fluid("height", 59)
+                @include fluid("font-size", 42)
+                margin: 0
+    .h-fit
+        height: fit-content !important
+    .fractionsicon-settings
+        @include fluid("margin-right", 10)
+        @include fluid("font-size", 12)
+    .w-726
+        @include fluid("width", 726)
+    
+    .fractions__complaints_element
+        @include fluid("width", 726)
+        height: fit-content
+        @include fluid("padding", 20)
+        background: rgba(255,255,255,0.1)
+        @include fluid("border-radius", 8)
+        @include fluid("margin-bottom", 20)
+        .fractions__complaints_text
+            font-weight: 500
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            color: #A6B1BA
+        .fractions__complaints_title
+            @include fluid("margin-top", 16)
+            @include fluid("margin-bottom", 16)
+            font-weight: 500
+            @include fluid("font-size", 20)
+            @include fluid("line-height", 24)
+    .mt-16
+        @include fluid("margin-top", 16)
+    .w-745
+        @include fluid("width", 745)
+    .fractionsrewards__elements
+        width: 100%
+        display: flex
+        flex-direction: column
+        @include fluid("max-height", 690)
+        @include fluid("margin-top", 10)
+        @include fluid("padding-right", 10)
+        overflow-y: auto
+        overflow-x: hidden
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)
+        .fractionsreward__element
+            @include fluid("width", 790)
+            @include fluid("min-height", 96)
+            background: rgba(255,255,255,0.1)
+            @include fluid("border-radius", 8)
+            display: flex
+            align-items: center
+            @include fluid("padding", 24)
+            @include fluid("margin-bottom", 24)
+            position: relative
+            &:last-child
+                margin-bottom: 0
+
+            .fractionsreward__element_title
+                font-weight: 500
+                @include fluid("margin-bottom", 8)
+                @include fluid("font-size", 20)
+                @include fluid("line-height", 24)
+                @include fluid("max-width", 300)
+                @include fluid("width", 300)
+                text-align: left
+            .fractionsreward__element_subtitle
+                font-weight: 500
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 16)
+                color: #A6B1BA
+                @include fluid("max-width", 300)
+                @include fluid("width", 300)
+                text-align: left
+            .fractionsreward__element_box
+                display: flex
+                align-items: center
+                @include fluid("width", 196)
+                @include fluid("margin-left", 10)
+            .fractionsreward__element_reward
+                border-radius: 4px
+                @include fluid("width", 52)
+                @include fluid("height", 52)
+                background: rgba(4,19,30,0.3)
+                @include fluid("margin-right", 20)
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+                &:hover
+                    .tooltiptext
+                        visibility: visible
+                        opacity: 1
+                &:last-child
+                    margin: 0
+            .fractionsreward__element_img
+                @include fluid("width", 38)
+                @include fluid("height", 38)
+                background-image: url('./case.png')
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+            .fractionsreward__element_button
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("width", 156)
+                @include fluid("height", 48)
+                background: #018A7C
+                @include fluid("border-radius", 6)
+                font-weight: 500
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 16)
+                cursor: pointer
+                margin-left: auto
+                &.time
+                    background: #375e80
+                    @include fluid("height", 32)
+                &.taked
+                    background: #435768
+                    opacity: 0.6
+                    @include fluid("height", 32)
+                &.missed
+                    background: #742222
+                    opacity: 0.6
+                    @include fluid("height", 32)
+        .fractionsreward__element_progress
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-left: auto
+            font-weight: 500
+            @include fluid("margin-right", 20)
+            .fractionsreward__progress_count
+                text-align: right
+                font-weight: 500
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 16)
+                сolor: #A6B1BA
+                @include fluid("margin-bottom", 12)
+            .fractionsreward__progressbar
+                background: #3C576A
+                @include fluid("border-radius", 6)
+                @include fluid("width", 100)
+                @include fluid("height", 4)
+                display: flex
+                .fractionsreward__progress
+                    @include fluid("width", 28)
+                    @include fluid("height", 4)
+                    background: #2BB6A8
+                    @include fluid("border-radius", 6)
+
+    .tooltiptext
+        visibility: hidden
+        width: 220px
+        background-color: #555
+        color: #fff
+        text-align: center
+        @include fluid("border-radius", 6)
+        padding: 5px
+        position: absolute
+        z-index: 999999
+        bottom: 125%
+        left: 50%
+        margin-left: -60px
+        opacity: 0
+        transition: opacity 0.3s
+        &::after
+            content: ""
+            position: absolute
+            top: 100%
+            left: 50%
+            margin-left: -5px
+            border-width: 5px
+            border-style: solid
+            border-color: #555 transparent transparent transparent       
+    
+    .pr-210
+        @include fluid("padding-right", 210)
+    .mr-8
+        @include fluid("margin-right", 8)
+
+    .fractions__tasks_box
+        background: rgba(255,255,255,0.1)
+        @include fluid("border-radius", 8)
+        @include fluid("width", 320)
+        height: auto
+        display: flex
+        flex-direction: column
+        @include fluid("padding", 20)
+        .fractions__tasks_image
+            @include fluid("width", 280)
+            @include fluid("height", 80)
+            background-image: url('./assets/images/task.png')
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            position: relative
+            object-fit: cover
+            &.red
+                &::before
+                    content: ''
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -3.96%, rgba(218, 38, 64, 0.42) 69.59%)
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    @include fluid("border-radius", 6)
+                &::after
+                    content: ''
+                    position: absolute
+                    @include fluid("bottom", 0)
+                    left: 0
+                    @include fluid("height", 4)
+                    width: 100%
+                    background: #DA2640
+                    border-radius: 0px 0px 4px 4px
+            &.green
+                &::before
+                    content: ''
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -3.96%, rgba(37, 154, 112, 0.37) 69.59%)
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    @include fluid("border-radius", 6)
+                &::after
+                    content: ''
+                    position: absolute
+                    @include fluid("bottom", 0)
+                    left: 0
+                    @include fluid("height", 4)
+                    width: 100%
+                    background: #259A70
+                    border-radius: 0px 0px 4px 4px
+            &.orange
+                &::before
+                    content: ''
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -3.96%, rgba(248, 119, 0, 0.37) 69.59%)
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    @include fluid("border-radius", 6)
+                &::after
+                    content: ''
+                    position: absolute
+                    @include fluid("bottom", 0)
+                    left: 0
+                    @include fluid("height", 4)
+                    width: 100%
+                    background: #FF7A00
+                    border-radius: 0px 0px 4px 4px
+            &.blue
+                &::before
+                    content: ''
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -3.96%, rgba(5, 180, 219, 0.37) 69.59%)
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    @include fluid("border-radius", 6)
+                &::after
+                    content: ''
+                    position: absolute
+                    @include fluid("bottom", 0)
+                    left: 0
+                    @include fluid("height", 4)
+                    width: 100%
+                    background: #56CCF2
+                    border-radius: 0px 0px 4px 4px
+        .fractions__tasks_title
+            @include fluid("margin-top", 16)
+            @include fluid("margin-bottom", 16)
+            font-weight: 500
+            font-family: 'TTNorms-Medium'
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 22)
+            text-align: center
+        .fractions__tasks_subtitle
+            color: #869199
+            @include fluid("margin-bottom", 6)
+            font-weight: 500
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 16)
+
+        .fractions__tasks_text
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            &.green
+                color: #6FCF97
+            .fractionsicon-map
+                @include fluid("margin-right", 8)
+                color: #6FCF97
+                @include fluid("font-size", 10)
+            &.center
+                text-align: center
+                @include fluid("margin-top", 16)
+        .fractions__tasks_button
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            @include fluid("height", 36)
+            background: #259A70
+            @include fluid("border-radius", 6)
+            @include fluid("margin-top", 26)
+            &:hover
+                background: #1b7051
+            &.unactive
+                background: #1E262F
+                @include fluid("border-radius", 6)
+    .fractions__tasks_grid
+        display: grid
+        grid-template-rows: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr)
+        @include fluid("gap", 20)
+        @include fluid("margin-left", 40)
+
+    .mt-56
+        @include fluid("margin-top", 56)
+    .align-start
+        align-items: flex-start
+
+    .fractions__notification
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        @include fluid("height", 53)
+        @include fluid("border-radius", 8)
+        background: rgba(255,255,255,0.1)
+        @include fluid("padding", 12)
+        font-weight: 500
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+        @include fluid("margin-top", 13)
+        @include fluid("margin-bottom", 17)
+        .fractionsicon-warning
+            @include fluid("font-size", 34)
+            color: #DA2640
+            @include fluid("margin-right", 20)
+        .fractions__notification_text
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            color: #A6B1BA
+    .fractions__war_grid
+        display: grid
+        grid-template-rows: repeat(4, 1fr)
+        grid-template-columns: repeat(3, 1fr)
+        width: 100%
+        height: 100%
+        @include fluid("gap", 10)
+        justify-items: center
+        overflow-y: auto
+        overflow-x: hidden
+        @include fluid("padding-right", 6)
+        @include fluid("max-height", 578)
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)
+        .fractions__war_element
+            display: flex
+            flex-direction: column
+            align-items: center
+        .fractions__war_stats
+            width: -webkit-fill-available
+            @include fluid("height", 26)
+            background: rgba(255,255,255,0.1)
+            display: flex
+            align-items: center
+            justify-content: space-between
+            @include fluid("padding-left", 9)
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            @include fluid("margin-top", 8)
+        .fractions__war_smallgrid
+            @include fluid("border", 1, "solid rgba(255, 255, 255, 0.25)")
+            display: grid
+            grid-template-rows: repeat(3, 1fr)
+            grid-template-columns: repeat(6, 1fr)
+            @include fluid("padding", 8)
+            .fractions__war_border
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("border", 1, "solid rgba(255, 255, 255, 0.25)")
+                @include fluid("width", 48)
+                @include fluid("height", 48)
+                
+            .fractions__war_biz
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("width", 32)
+                @include fluid("height", 32)
+                &:hover
+                    opacity: 0.8
+                &.rm
+                    background: #87CEEB
+                &.lcn
+                    background: #CC9900
+                &.yakudza
+                    background: #8B0000
+                &.armyane
+                    background: #A9A9A9
+                        
+        .fractions__war_price
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+            @include fluid("padding-left", 10)
+            @include fluid("padding-right", 10)
+            background: #259A70
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+    .longtextparams
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+    .hiddenbox14
+        @include fluid("min-width", 14)
+        @include fluid("height", 14)
+        @include fluid("width", 14)
+    .pr-135
+        @include fluid("padding-right", 135)
+
+    .align-startflex
+        align-items: flex-start !important

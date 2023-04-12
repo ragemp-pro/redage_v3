@@ -1,0 +1,12 @@
+﻿{
+  "IsCheck": false,
+  "IsSaleEnable": true,
+  "Convert": 5,
+  "Multiplier": 1,
+  "HappyHoursRB": 50,
+  "Name": "Donate",
+  "Server": "127.0.0.1",
+  "DataBase": "payments",
+  "User": "root",
+  "Password": ""
+}

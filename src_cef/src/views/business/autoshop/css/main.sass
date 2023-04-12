@@ -1,0 +1,257 @@
+@import @/views/assets/css/main.sass
+
+#autoshop
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    @include fluid("padding-top", 75)
+    @include fluid("padding-bottom", 85)
+    @include fluid("padding-left", 30)
+    @include fluid("padding-right", 30)
+    color: white
+    font-family: "UniNeue"
+    font-style: normal
+    font-weight: bold
+
+    .box-content
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+
+        .box-auto-list
+            @include fluid("width", 400)
+            @include fluid("height", 572)
+            @include fluid("padding-top", 10)
+            @include fluid("padding-bottom", 10)
+            display: flex
+            flex-direction: column
+            align-items: center
+            background: rgba(1,22,39,0.8)
+            border-radius: 6px
+
+            .logo
+                color: white
+                @include fluid("font-size", 76)
+
+            .title
+                @include fluid("margin-top", 30)
+                @include fluid("font-size", 24)
+                @include fluid("line-height", 24)
+
+            .box-sort
+                @include fluid("margin-top", 24)
+                @include fluid("width", 330)
+                display: flex
+                justify-content: space-between
+
+                .btn-sort
+                    @include fluid("width", 64)
+                    @include fluid("height", 64)
+                    border: 1px solid #C1C1C1
+                    background: unset
+                    box-sizing: border-box
+                    border-radius: 6px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    cursor: pointer
+                    transition: background .25s linear, border .25s linear
+
+                    span
+                        color: #C1C1C1
+                        @include fluid("font-size", 36)
+
+                    &.active, &:hover
+                        border: 0
+                        background: white
+
+                        span
+                            color: black
+
+            .box-list
+                width: 100%
+                @include fluid("height", 320)
+                @include fluid("margin-top", 10)
+                @include fluid("margin-right", 10)
+                @include fluid("padding-left", 40)
+                @include fluid("padding-right", 25)
+                overflow-x: hidden
+                overflow-y: auto
+
+                &::-webkit-scrollbar
+                    @include fluid("width", 3)
+
+                &::-webkit-scrollbar-track
+                    background: #131924
+                    border-radius: 10px
+
+                &::-webkit-scrollbar-thumb
+                    background: white
+                    border-radius: 10px
+
+                .box-item
+                    @include fluid("height", 36)
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    @include fluid("padding-left", 16)
+                    @include fluid("padding-right", 15)
+                    @include fluid("font-size", 20)
+                    cursor: pointer
+                    border-radius: 3px
+                    font-weight: 500
+                    color: #C1C1C1
+                    transition: background .25s linear
+
+                    span
+                        font-weight: bold
+
+                    &.active, &:hover
+                        background: white
+                        color: black
+
+        .box-auto-info
+            display: flex
+            flex-direction: column
+            align-items: center
+            background: rgba(1,22,39,0.8)
+            border-radius: 6px
+            @include fluid("width", 400)
+            @include fluid("padding-top", 34)
+            @include fluid("padding-bottom", 30)
+
+            .box-title
+                @include fluid("width", 330)
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                .logo
+                    color: white
+                    @include fluid("font-size", 50)
+
+                .title
+                    @include fluid("font-size", 36)
+                    @include fluid("line-height", 36)
+
+            .desc
+                @include fluid("margin-top", 10)
+                @include fluid("width", 330)
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 14)
+                color: #C1C1C1
+                span
+                    color: white
+            .info
+                @include fluid("width", 330)
+                @include fluid("font-size", 24)
+                @include fluid("line-height", 24)
+                @include fluid("margin-top", 26)
+
+            .box-info
+                @include fluid("width", 330)
+                @include fluid("margin-top", 15)
+                @include fluid("font-size", 20)
+                @include fluid("line-height", 20)
+
+                .box-item
+                    width: 100%
+                    @include fluid("margin-top", 20)
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    &:first-child
+                        margin-top: 0
+                    .box-icon
+                        color: #C1C1C1
+                        font-weight: 500
+                        display: flex
+                        align-items: center
+
+                        span
+                            @include fluid("font-size", 26)
+                            @include fluid("margin-right", 20)
+                            color: white
+
+            .box-colors
+                @include fluid("width", 330)
+                @include fluid("padding-top", 16)
+                display: flex
+                align-items: center
+                justify-content: space-between
+                
+                .color
+                    position: relative
+                    @include fluid("width", 26)
+                    @include fluid("height", 26)
+                    border-radius: 26px
+                    cursor: pointer
+
+                    &.active
+                        &::after
+                            content: ""
+                            position: absolute
+                            @include fluid("width", 32)
+                            @include fluid("height", 32)
+                            @include fluid("border", 2, "solid white")
+                            border-radius: 100px
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+
+            .btn-test-drive
+                @include fluid("margin-top", 26)
+                @include fluid("width", 330)
+                @include fluid("height", 55)
+                border: 0
+                background: white
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("font-size", 20)
+                box-sizing: border-box
+                border-radius: 5px
+                cursor: pointer
+                color: black
+                font-family: "UniNeue"
+                font-style: normal
+                font-weight: bold
+                &:hover
+                    opacity: 0.8
+
+    .btn-footer
+        @include fluid("width", 335)
+        @include fluid("height", 55)
+        border: 0
+        background: white
+        //background: linear-gradient(0deg, #27AE60, #27AE60), rgba(27, 30, 40, 0.1)
+        box-sizing: border-box
+        border-radius: 5px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        color: white
+        font-family: "UniNeue"
+        font-style: normal
+        font-weight: bold
+        @include fluid("margin-right", 26)
+        transition: background .25s linear
+        color: black
+        &:nth-child(2)
+            background: #D1A92C
+            color: white
+        &:last-child
+            background: #E74040
+            margin-right: 0
+            color: white
+
+        &.active, &:hover
+            border: 0
+            opacity: 0.8

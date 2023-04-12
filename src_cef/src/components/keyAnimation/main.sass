@@ -1,0 +1,75 @@
+@import @/views/assets/css/main.sass
+
+.KeyAnimation
+    background: rgba(255, 255, 255, 0.15)
+    @include fluid("padding-left", 12)
+    @include fluid("padding-right", 12)
+    @include fluid("padding-bottom", 6)
+    @include fluid("padding-top", 6)
+    @include fluid("border-radius", 6)
+    color: white
+    @include fluid("min-height", 40)
+    font-weight: 500
+    display: flex
+    justify-content: center
+    align-items: center
+    font-weight: bold
+        
+    &:hover
+        background: rgba(255,255,255,1)
+        color: rgba(0, 0, 0, 1)
+
+    &.active
+        animation: key-info-active 500ms
+
+    &.pressed
+        animation: none
+        background: rgba(255, 255, 255, 1)
+        color: rgba(0, 0, 0, 1)
+
+    &.disabled
+        opacity: 0.6
+        pointer-events: none
+
+    &.disabled &:hover
+        background: rgba(255,255,255,0.1)
+        color: rgba(255, 255, 255, 1)
+
+    &.nonactive
+        background: rgba(255,255,255,0.1)
+        color: rgba(255, 255, 255, 1)
+    
+    &.nonactive &:hover
+        background: rgba(255,255,255,0.1)
+        color: rgba(255, 255, 255, 1)
+
+    &.keyDetector
+        color: rgba(255, 255, 255, 1)
+
+        animation: key-info-detector 2s infinite
+
+        &:hover
+            background: rgba(255,255,255,0.3)
+            color: rgba(255, 255, 255, 1)
+
+    &.keyDonate
+        color: rgba(255, 255, 255, 1)
+
+        animation: key-info-donate 5s infinite
+
+        &:hover
+            background:rgba(255,240,189,0.3)
+            color: rgba(255, 255, 255, 1)
+
+.box-KeyAnimation
+    display: flex
+    align-items: center
+    font-family: 'TTNorms-Regular'
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 22)
+    letter-spacing: 0.02em
+    white-space: nowrap
+
+    div:last-child
+        @include fluid("margin-left", 18)
+            

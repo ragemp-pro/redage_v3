@@ -1,0 +1,254 @@
+@import @/views/assets/css/main.sass
+@import ./fonts/style.css
+#newbarbershop
+    position: relative
+    left: 0
+    top: 0
+    display: flex
+    user-select: none
+    font-family: "TTNorms-Regular"
+    width: 100%
+    height: 100%
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0) 0%, rgba(1, 22, 39, 0) 0.01%, rgba(1, 22, 39, 0.8) 100%)
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: white
+    @include fluid("padding-left", 80)
+    @include fluid("padding-right", 80)
+    @include fluid("font-size", 16)
+    ::-webkit-scrollbar 
+        width: resize(4)
+        height: resize(4)
+        margin-right: resize(10)
+        border-radius: resize(25)
+            
+    ::-webkit-scrollbar-track 
+        border-radius: resize(25)
+        background: #39384E
+        border-radius: 100px
+
+
+    ::-webkit-scrollbar-thumb 
+        border-radius: resize(25)
+        background: white
+        border-radius: 100px
+    .newbarbershop__button
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("height", 40)
+        @include fluid("min-width", 40)
+        @include fluid("border-radius", 6)
+        @include fluid("font-size",18)
+        @include fluid("padding-left",7)
+        @include fluid("padding-right",7)
+        font-family: "TTNorms-Bold"
+        background: #FDFFFC
+        color: black
+    .slider
+        @include fluid("margin-top", 15)
+        .rangeslider
+            @include fluid("height", 4)
+            background: rgba(255, 255, 255, 0.1)
+            @include fluid("margin-bottom", 10)
+            
+        .rangeslider__fill
+            background: white
+
+        .rangeslider__handle 
+            border: none
+            background: white
+            @include fluid("top", 2)
+            @include fluid("width", 20)
+            @include fluid("height", 20)
+        
+        .info 
+            display: flex
+            justify-content: space-between
+            color: #C1C1C1
+            font-weight: 500
+            @include fluid("font-size", 16)
+            
+            span 
+            @include fluid("margin-bottom", 20)
+
+            span:nth-child(2) 
+                font-weight: bold
+                color: #fff
+                @include fluid("padding-left", 4)
+                
+    .slider.style 
+
+        .rangeslider__fill
+            background: #171921
+            @include fluid("margin-bottom", 10)
+    .newbarbershop__top
+        @include fluid("padding-top", 60)
+        @include fluid("padding-left", 320)
+        @include fluid("padding-right", 320)
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        .newbarbershop__text
+            letter-spacing: 0.05em
+            color: #FFFFFF
+            opacity: 0.7
+            @include fluid("font-size", 24)
+            @include fluid("margin-top", 24)
+        .newbarbershop__top_header
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+        .newbarbershop__category
+            @include fluid("height", 80)
+            @include fluid("width", 80)
+            @include fluid("border-radius", 15)
+            display: flex
+            align-items: center
+            justify-content: center
+            box-sizing: border-box
+            background: rgba(255, 255, 255, 0.1)
+            @include fluid("font-size",40)
+            color: rgba(255,255,255,0.2)
+
+            &.active
+                transform: skew(-2deg, -2deg)
+                color: white
+                background: rgba(255, 255, 255, 0.2)
+                border: 2px solid rgba(255,255,255,0.1)
+
+                .newbarbershop__category_icon
+                    transform: skew(2deg, 2deg)
+
+
+    .newbarbershop__center
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .newbarbershop__help
+            @include fluid("width", 380)
+            background: rgba(255,255,255,0.1)
+            display: flex
+            flex-direction: column
+            .newbarbershop__help_img
+                @include fluid("height", 180)
+                @include fluid("width", 380)
+                @include fluid("margin-bottom", 12)
+                background: url(./images/keyboard.png)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+            .newbarbershop__help_main
+                @include fluid("padding-top", 12)
+                @include fluid("padding-bottom", 12)
+                @include fluid("padding-right", 20)
+                @include fluid("padding-left", 20)
+                @include fluid("font-size", 14)
+                color: rgba(255,255,255,0.7)
+                .box-between
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include fluid("margin-top", 12)
+                    .underline
+                        text-decoration: underline
+        .newbarbershop__menu
+            display: flex
+            flex-direction: column
+            height: 100%
+            .box-flex
+                align-items: center
+                @include fluid("font-size", 24)
+                font-family: "TTNorms-Bold"
+                .newbarbershop__button
+                    @include fluid("margin-right", 14)
+            .newbarbershop__menu_info
+                @include fluid("margin-top", 18)
+                @include fluid("margin-bottom", 24)
+                color: rgba(255,255,255,0.7)
+            .newbarbershop__menu_list
+                display: flex
+                flex-direction: column
+                @include fluid("padding-right", 18)
+                @include fluid("margin-bottom", 18)
+                @include fluid("height", 258)
+                overflow-y: auto
+                .newbarbershop__menu_element
+                    font-weight: 700
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include fluid("padding-right", 18)
+                    @include fluid("padding-left", 18)
+                    position: relative
+                    background: rgba(255,255,255,0.1)
+                    @include fluid("min-height", 60)
+                    @include fluid("width", 400)
+                    @include fluid("margin-bottom", 6)
+                    .newbarbershop__menu_element-absolute
+                        position: absolute
+                        left: 0%
+                        top: 50%
+                        transform: translate(0%, -50%)
+                        background: rgba(255,255,255,0.2)
+                        @include fluid("height", 34)
+                        @include fluid("width", 4)
+                    .newbarber__menu_price
+                        color: rgba(109,202,66,0.7)
+                    &:hover
+                        background: rgba(255,255,255,0.2)
+                        .newbarbershop__menu_element-absolute
+                            background: white
+                    &.active
+                        background: white
+                        color: black
+                        .newbarbershop__menu_element-absolute
+                            background: black
+            .newbarbershop__menu_colors
+                display: flex
+                align-items: center
+                @include fluid("width", 400)   
+                @include fluid("padding-bottom", 10)    
+                //justify-content: space-between
+                //overflow-x: auto
+                //overflow-y: hidden
+                .newbarbershop__menu_color
+                    transform: skew(-2deg, -2deg)
+                    @include fluid("height", 41)
+                    @include fluid("min-width", 41)
+                    @include fluid("border-radius", 8)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    box-sizing: border-box
+                    background: rgba(255, 255, 255, 0.1)
+                    color: white
+                    font-weight: 700
+                    @include fluid("margin-right", 8)
+                    &.active
+                        background: white;
+                        color: black;
+                        border: 2px solid rgba(255,255,255,0.6)
+                    &.norm
+                        transform: skew(0deg, 0deg)
+                    &:last-child
+                        margin-right: 0
+                        
+    .newbarbershop__bottom
+        width: 100%
+        display: flex
+        justify-content: space-between
+        @include fluid("padding-bottom", 80)
+        .box-flex
+            align-items: center
+            &:first-child
+                .newbarbershop__button
+                    @include fluid("margin-right", 25)
+            &:last-child
+                .newbarbershop__button
+                    @include fluid("margin-left", 25)

@@ -1,0 +1,80 @@
+@import ./main
+
+.box-KeyInfo
+    position: absolute
+    border-radius: 4px
+    @include fluid("padding-top", 10)
+    @include fluid("padding-bottom", 10)
+    @include fluid("padding-left", 22)
+    @include fluid("padding-right", 22)
+    display: flex
+    align-items: center
+    color: white
+    font-family: "UniNeue"
+    font-style: normal
+    font-weight: bold
+    @include fluid("font-size", 14)
+
+    &.relative
+        position: relative
+
+    .KeyInfo
+        display: flex
+        align-items: center
+        justify-content: center
+        background: white
+        color: black
+        border-radius: 4px
+        @include fluid("height", 40)
+        @include fluid("padding-left", 10)
+        @include fluid("padding-right", 10)
+        @include fluid("margin-right", 18)
+        @include fluid("font-size", 26)
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &.text
+            @include fluid("font-size", 22)
+            text-transform: none
+
+    &.big
+        .KeyInfo
+            font-size: 24px
+
+    &.top
+        top: 40px
+
+    &.bottom
+        bottom: 40px
+
+    &.bottom-100
+        bottom: 100px
+
+    &.left
+        left: 40px
+
+    &.left-0
+        left: 0
+
+    &.right
+        right: 40px
+
+    &.right-0
+        right: 0
+
+    &.center
+        left: 50%
+        transform: translate(-50%, 0)
+
+
+
+
+#casesCarusel
+    @for $i from 0 through 90
+        &.translate3d#{$i}
+            transform: translateX(-#{$i}px)
+
+        &.translate3d-#{$i}
+            transform: translateX(#{$i}px)

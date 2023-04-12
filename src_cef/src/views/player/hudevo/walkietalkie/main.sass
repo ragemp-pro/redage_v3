@@ -1,0 +1,121 @@
+@import @/views/assets/css/main.sass
+
+$percent: 1.5
+
+#walkietalkie
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    color: white
+    font-family: "UniNeue"
+    font-style: normal
+    font-weight: bold
+    @include fluid("font-size", 8 * $percent)
+    @include fluid("line-height", 11 * $percent)
+    //z-index: -999
+    @include fluid("padding-bottom", 40 * $percent) 
+    @include fluid("padding-right", 40 * $percent)
+    .walkietalkie__danger
+        position: absolute
+        left: 0
+        @include fluid("top", 340 * $percent) 
+        @include fluid("width", 4 * $percent)
+        @include fluid("height", 38 * $percent)
+    .walkietalkie__volume
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("width", 38 * $percent)
+        @include fluid("top", 258 * $percent) 
+        @include fluid("right", 30 * $percent) 
+        @include fluid("font-size", 12 * $percent)
+    .walkietalkie__block
+        @include fluid("width", 176 * $percent)
+        @include fluid("height", 570 * $percent)
+        background: url('./images/walkie.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("padding-top", 303 * $percent)
+        position: relative
+        .walkietalkie__display
+            @include fluid("padding-top", 2 * $percent)
+            @include fluid("padding-left", 7 * $percent)
+            @include fluid("padding-right", 7 * $percent)
+            @include fluid("width", 118 * $percent)
+            @include fluid("height", 54 * $percent)
+            @include fluid("border-radius", 10 * $percent)
+            display: flex
+            flex-direction: column
+            color: #503C84
+            .walkietalkie__display_top
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include fluid("border-bottom", 1, "solid #503C84")
+                .box-flex
+                    margin-right: auto
+                    @include fluid("margin-left", 14 * $percent)
+                    .walkie-persons
+                        @include fluid("margin-right", 5 * $percent)
+            .walkietalkie__display_bottom
+                @include fluid("max-height", 33 * $percent) 
+                display: flex
+                flex-direction: column
+        .walkietalkie__center
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            @include fluid("margin-top", 19 * $percent)
+            width: 100%
+            @include fluid("padding-left", 34 * $percent)
+            .walkietalkie__button
+                @include fluid("width", 26 * $percent)
+                @include fluid("height", 16 * $percent)
+                @include fluid("border-radius", 4 * $percent)
+                @include fluid("font-size", 10 * $percent)
+                @include fluid("line-height", 13 * $percent)
+                cursor: pointer
+                .walkitetalkie__button_small
+                    @include fluid("width", 26 * $percent)
+                    @include fluid("height", 15 * $percent)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    @include fluid("border-radius", 4 * $percent)
+                &.red
+                    background: #4F2718
+                    @include fluid("border-radius", 4 * $percent)
+                    .walkitetalkie__button_small
+                        background: #A25031
+                        box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.25)
+                &.blue
+                    @include fluid("margin-top", 44 * $percent)
+                    background: #1D2C4D
+                    @include fluid("border-radius", 4 * $percent)
+                    .walkitetalkie__button_small
+                        background: #4C6BAD
+                        box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.25)
+            
+        .walkietalkie__buttons_list
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-template-rows: repeat(4, 1fr)
+            @include fluid("gap", 6 * $percent)
+            @include fluid("margin-top", 24 * $percent)
+            .walkietalkie__list_element
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("width", 22 * $percent)
+                @include fluid("height", 10 * $percent)
+                background: #403F46
+                @include fluid("border-radius", 7 * $percent)
+                color: #C0C0C0

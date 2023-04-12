@@ -1,0 +1,1843 @@
+@import @/views/assets/css/main.sass
+@import './fonts/Gilroy/stylesheet.css'
+
+.mt-20
+    @include fluid("margin-top", 20)
+
+@keyframes animatedeath
+    0%  
+        background: radial-gradient(50% 50% at 50% 50%, #370606 0%, #070707 100%) 
+    100%
+        background: radial-gradient(50% 50% at 50% 50%, #370606 10%, #070707 90%) 
+
+@keyframes key-info-active
+    0% 
+        background: rgba(255, 255, 255, 1)
+        color: rgba(0, 0, 0, 1)
+        border-bottom-color: rgba(0, 0, 0, 1)
+        /*border: 1px solid rgba(255, 255, 255, 1)*/
+    100% 
+        background: rgba(255, 255, 255, 0.1)
+        color: rgba(255, 255, 255, 1)
+
+@keyframes key-info-detector
+    0%
+        background: rgba(255,255,255,0.05)
+    50%
+        background: rgba(255,255,255,0.2)
+    100%
+        background: rgba(255,255,255,0.05)
+
+@keyframes key-info-donate
+    0%
+        background: rgba(255,240,189,0.05)
+    50%
+        background: rgba(255,240,189,0.2)
+    100%
+        background: rgba(255,240,189,0.05)
+
+$circleTransitionDelay: 185ms
+
+.hudevo__hide
+    opacity: 0 !important
+    pointer-events: none
+
+
+#hudevo
+    position: absolute
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    height: 100%
+    @include fluid("font-size", 16)
+    @include fluid("line-height", 19)
+    font-family: 'Gilroy'
+    font-weight: 500
+    box-sizing: border-box
+    color: white
+    z-index: -1
+    //background: #535353
+    //background-image: url(./background.png)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    .newhud__chat-block
+        @include fluid("height", 308)
+        width: 40%
+    .box-between
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+    .hudevo__left
+        @include fluid("min-width", 551)
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        position: relative
+        .hudevo__leftcenter_absolute
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translate(0, -50%)
+    .hudevo__center
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        z-index: 2
+    .hudevo__right
+        @include fluid("min-width", 551)
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        position: relative
+    .flex-end
+        display: flex
+        align-items: flex-end
+    .flex-start
+        display: flex
+        align-items: flex-start
+    .ml-13
+        @include fluid("margin-left", 13)
+    .buttonsinfo__button
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+        font-family: 'Gilroy'
+        font-style: normal
+        font-weight: 600
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 17)
+        @include fluid("margin-right", 3)
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("padding-left", 9)
+        @include fluid("padding-right", 9)
+        @include fluid("padding-top", 6)
+        @include fluid("padding-bottom", 6)
+        @include fluid("border", 2, "solid")
+        border-image-source: linear-gradient(43.64deg, rgba(248, 40, 71, 0) -1.83%, #F82847 73.21%) !important
+        border-image-slice: 1 !important
+    .gift
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("width", 200)
+        @include fluid("height", 170)
+        background-image: url(./images/case.png)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("padding-left", 5)
+        position: absolute
+        @include fluid("left", -60)
+        top: 0
+        .gift__image
+            @include fluid("margin-top", 8)
+            @include fluid("width", 100)    
+            @include fluid("height", 100)
+            background-image: url(./images/money.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("margin-bottom", 5)
+        .gift__text
+            @include fluid("max-width", 100)
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+            text-align: center
+        .gift__subtitle
+            @include fluid("margin-top", 5)
+            color: gray
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+
+
+    .buttonsinfo
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        margin-bottom: auto
+        @include fluid("margin-top", 10)
+        .buttonsinfo__element
+            @include fluid("padding-right", 90)
+            @include fluid("padding-left", 10)
+            @include fluid("padding-top", 6)
+            @include fluid("padding-bottom", 6)
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 400
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            display: flex
+            align-items: center
+            justify-content: center
+        .box-flex
+            @include fluid("margin-bottom", 5)
+    .hudevo__killlist
+        display: flex
+        align-items: center
+        flex-direction: column-reverse
+        @include fluid("margin-top", 10)
+        .hudevo__killlist_element
+            display: flex
+            align-items: center
+            @include fluid("margin-bottom", 6)
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            position: relative
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            .killlist_absolute
+                position: absolute
+                @include fluid("width", 3)
+                @include fluid("height", 19)
+                background: #F82847
+            .hudevo__killlist_killer
+                @include fluid("height", 37)
+                width: fit-content
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                @include fluid("padding-right", 49)
+                @include fluid("padding-left", 11)
+                .killlist_absolute
+                    @include fluid("left", -3)
+                    top: 50%
+                    transform: translate(0, -50%)
+            .hudevo__killlist_killed
+                position: relative
+                @include fluid("height", 37)
+                width: fit-content
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                @include fluid("padding-left", 49)
+                @include fluid("padding-right", 11)
+                .killlist_absolute
+                    @include fluid("right", -3)
+                    top: 50%
+                    transform: translate(0, -50%)
+        .hudevo__killlist_sprite
+            @include fluid("width", 62)
+            @include fluid("height", 73)
+            background-image: url(./images/killsprite.png)
+            z-index: 10
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: 50%
+            @include fluid("left", -31)
+            transform: translate(0, -50%)
+            @include fluid("font-size", 32)
+    .hudevo__radio
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        line-height: initial
+        @include fluid("margin-top", 10)
+        .hudevo__radio_title
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #FFFFFF
+            color: #252525
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            @include fluid("margin-right", 3)
+            @include fluid("padding-left", 5)
+            @include fluid("padding-right", 5)
+        .hudevo__radio_subtitle
+            @include fluid("width", 20)
+            @include fluid("height", 20)
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("font-size", 13)
+            background: #F82847
+        .hudevo__radio_element
+            @include fluid("margin-top", 7)
+            width: fit-content
+            @include fluid("height", 30)
+            padding-right: 4px
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            @include fluid("padding-right", 14)
+            @include fluid("padding-left", 38)
+            position: relative
+            .hudevo__radio_absolute
+                position: absolute
+                @include fluid("width", 10)
+                @include fluid("height", 10)
+                @include fluid("right", -5)
+                top: 50%
+                transform: translate(0, -50%)
+                background: #F82847
+                &.active
+                    background: #67FF4F
+
+    .hudevo__bizwar
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        line-height: initial
+        @include fluid("margin-top", 10)
+        .hudevo__bizwar_title
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #FFFFFF
+            color: #252525
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            @include fluid("margin-bottom", 7)
+            @include fluid("padding-left", 7)
+            @include fluid("padding-right", 7)
+        .hudevo__bizwar_element
+            @include fluid("margin-top", 5)
+            @include fluid("width", 182)
+            @include fluid("height", 30)
+            padding-right: 4px
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+        .hudevo__bizwar_score
+            background: #F82847
+            @include fluid("height", 22)
+            @include fluid("min-width", 22)
+            @include fluid("padding-left", 6)
+            @include fluid("padding-right", 6)
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("font-size", 14)
+            font-weight: 600
+            @include fluid("margin-left", 7)
+
+    .hudevo__speedometr
+        display: flex
+        margin-top: auto
+        .hudevo__speedometr_bottom
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            font-weight: 700
+            @include fluid("font-size", 20)
+            @include fluid("line-height", 24)
+            @include fluid("margin-right", 12)
+            .hudevoicon-fuel
+                color: #A6B1BA
+                @include fluid("margin-right", 10)
+        .hudevo__speedometr_title
+            font-weight: 700
+            @include fluid("font-size", 48)
+            @include fluid("line-height", 24)
+            @include fluid("margin-right", 5)
+            @include fluid("width", 74)
+        .hudevoicon-left
+            @include fluid("font-size", 18)
+            @include fluid("margin-right", 8)
+            color: #A6B1BA
+        .hudevoicon-right
+            color: #A6B1BA
+            @include fluid("font-size", 18)
+        .hudevo__speedometr_gray
+            @include fluid("margin-top", 5)
+            color: #A6B1BA
+            font-weight: 700
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 24)
+        .box-column
+            align-items: center
+        .hudevo__speedometr_icon
+            @include fluid("font-size", 24)
+            color: #A6B1BA
+        .hudevo__speedometr_text
+            @include fluid("margin-top", 4)
+            font-weight: 700
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 24)
+        .active
+            color: #F82847
+        .hudevo__speedometr_fuel
+            @include fluid("margin-top", 24)
+            @include fluid("width", 252)
+            @include fluid("height", 8)
+            display: flex
+            background: rgba(166,177,186,0.4)
+            @include fluid("margin-bottom", 5)
+            .filled
+                height: 100%
+                background: #F82847
+    .hudevo__playerinfo
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        line-height: initial
+        @include fluid("margin-bottom", 40)
+        z-index: 2
+        .hudevo__weaponbox
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            @include fluid("height", 122)
+        .align-end
+            align-items: flex-end
+        .hudevo__playerinfo_link
+            @include fluid("margin-bottom", 5)
+            font-weight: 600
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 14)
+        .hudevo__playerinfo_online
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("width", 59)
+            @include fluid("height", 22)
+            font-weight: 400
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            @include fluid("margin-right", 4)
+            .hudevoicon-person
+                @include fluid("margin-right", 6)
+                @include fluid("font-size", 12)
+        .hudevo__playerinfo_name
+            background: #DA2640
+            @include fluid("height", 22)
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+        .hudevo__playerinfo_logo
+            background: #DA2640
+            @include fluid("margin-left", 6)
+            @include fluid("width", 41)
+            @include fluid("height", 41)
+            display: flex
+            align-items: center
+            justify-content: center
+            &.transform
+                transform: rotate(90deg)
+            &.zdobich
+                background-image: url(./images/zd.png)
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+                .hudevo__playerinfo_icon
+                    opacity: 0
+            .hudevo__playerinfo_icon
+                @include fluid("width", 19)
+                @include fluid("height", 17)
+                background-image: url(./images/r.svg)
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+        .hudevo__playerinfo_money
+            position: relative
+            @include fluid("min-width", 150)
+            @include fluid("height", 30)
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            @include fluid("padding-right", 14)
+            @include fluid("margin-right", 5)
+            font-weight: 500
+            @include fluid("font-size", 20)
+            @include fluid("line-height", 24)
+
+        .hudevo__playerinfo_hide
+            opacity: 0
+            position: absolute
+
+        .hudevo__playerinfo_icon
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("width", 30)
+            @include fluid("height", 30)
+            @include fluid("font-size", 16)
+            background: #DA2640
+        .hudevo__playerinfo_weapon
+            @include fluid("width", 177)
+            @include fluid("height", 60)
+            display: flex
+            align-items: center
+            justify-content: center
+            .hudevo__weapon_image
+                @include fluid("width", 143)
+                @include fluid("height", 53)
+                background-image: url(./images/weapon.png)
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+        .hudevo__playerinfo_white
+            @include fluid("width", 22)
+            @include fluid("height", 22)
+            background: white
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("margin-right", 2)
+            color: #252525
+            line-height: initial
+        .hudevo__playerinfo_ammo
+            background: white
+            @include fluid("height", 22)
+            @include fluid("min-width", 22)
+            @include fluid("padding-left", 5)
+            @include fluid("padding-right", 5)
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            color: #252525
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("margin-right", 2)
+            line-height: initial
+        .hudevo__playerinfo_red
+            color: white
+            background: #DA2640
+            @include fluid("height", 22)
+            @include fluid("font-size", 14)
+            font-weight: 600
+            @include fluid("padding-left", 5)
+            @include fluid("padding-right", 5)
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            line-height: initial
+        .hudevo__playerinfo_donate
+            width: 164px
+            height: 69px
+            background-image: url(./images/donate.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            
+    .hudevo__playerinfo_stars
+        display: flex
+        align-items: center
+        color: rgba(253, 255, 252, 0.25)
+        .hudevoicon-star
+            @include fluid("margin-left", 8)
+            &.active
+                color: white
+    .mb-5
+        @include fluid("margin-bottom", 5)
+    .hudevo__quests
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .hudevo__quest
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            @include fluid("margin-bottom", 10)
+            .box-flex
+                align-items: center
+            .hudevo__quest_circle
+                @include fluid("width", 20)
+                @include fluid("height", 20)
+                border-radius: 50%
+                display: flex 
+                align-items: center
+                justify-content: center
+                @include fluid("border", 2, "solid rgba(255, 255, 255, 0.25)")
+                @include fluid("margin-right", 8)
+                .questcircle
+                    @include fluid("height", 10)
+                    @include fluid("width", 10)
+                    border-radius: 50%
+                    background: #F82847
+                    &.purple
+                       background: #9b7ae3 
+            .hudevo__quest_title
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+                font-weight: 600
+                @include fluid("font-size", 15)
+                @include fluid("line-height", 14)
+            .hudevo__quest_square
+                background: #67FF4F
+                @include fluid("width", 5)
+                @include fluid("height", 5)
+                @include fluid("margin-right", 5)
+            .hudevo__quest_subtitle
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+                font-weight: 400
+                @include fluid("font-size", 13)
+                @include fluid("line-height", 14)
+                @include fluid("max-width", 197)
+            .hudevo__quest_button
+                @include fluid("min-width", 24)
+                @include fluid("min-height", 24)
+                @include fluid("padding-left", 5)
+                @include fluid("padding-right", 5)
+                @include fluid("padding-bottom", 3)
+                @include fluid("padding-top", 3)
+                display: flex
+                align-items: center
+                justify-content: center
+                font-weight: 600
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 17)
+                background: #F82847
+                &.purple
+                    background: #9b7ae3 
+            .hudevo__quest_info
+                @include fluid("min-width", 24)
+                @include fluid("min-height", 24)
+                background: white
+                color: #252525
+                @include fluid("margin-left", 3)
+                @include fluid("padding-left", 5)
+                @include fluid("padding-right", 5)
+                @include fluid("padding-bottom", 3)
+                @include fluid("padding-top", 3)
+                display: flex
+                align-items: center
+                justify-content: center
+                font-weight: 400
+                @include fluid("font-size", 13)
+                @include fluid("line-height", 15)  
+
+    .mb-6
+        @include fluid("margin-bottom", 6)
+
+    .hudevo__lobby
+        display: flex
+        flex-direction: column
+        align-items: center
+        align-items: flex-end
+        .hudevo__lobby_header
+            background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+            @include fluid("width", 139)
+            @include fluid("height", 20)
+            @include fluid("margin-right", 2)
+            @include fluid("padding-right", 5)
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            text-align: right
+            color: #252525
+        .hudevo__lobby_count
+            background: #F82847
+            @include fluid("width", 36)
+            @include fluid("height", 20)
+            display: flex
+            align-items: center
+            justify-content: center
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+        .hudevo__lobby_element
+            @include fluid("margin-top", 7)
+            @include fluid("width", 177)
+            @include fluid("height", 30)
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            color: #FFFFFF
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            @include fluid("padding-right", 10)
+            .hudevoicon-person
+                @include fluid("margin-left", 8)
+                @include fluid("font-size", 14)
+        .hudevo__lobby_health
+            @include fluid("width", 177)
+            background: rgba(255, 255, 255, 0.25)
+            @include fluid("height", 4)
+            display: flex
+            .currenthealth
+                width: 30%
+                height: 100%
+                background: #F82847
+                
+
+
+
+
+    .adminmenu
+        @include fluid("width", 520)
+        height: auto
+        background: rgba(30,38,47,0.9)
+        border-radius: 7px
+        z-index: 20001
+        position: absolute
+        @include fluid("right", 50)
+        @include fluid("padding", 10)
+        top: 50%
+        .adminmenu__grid
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            @include fluid("margin-bottom", 10)
+            .adminmenu__element
+                @include fluid("border", 1, "solid gray")
+                display: flex
+                justify-content: space-between
+                @include fluid("width", 250)
+                @include fluid("padding-left", 5)
+                @include fluid("padding-right", 5)
+                .gray
+                    color: #A6B1BA
+        .adminmenu__title
+            @include fluid("font-size", 18)
+            font-weight: bold
+            @include fluid("margin-bottom", 6)
+
+
+
+
+
+    .hudevo__chat_obman
+        @include fluid("height", 308)
+        @include fluid("width", 500)
+        opacity: 0
+        z-index: -1
+        pointer-events: none
+    .hudevo__chat-block
+        @include fluid("height", 308)
+        width: 100%
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 1
+        .hudevo__chat
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            display: flex
+            flex-direction: column
+            transition: opacity ease .2s                
+            @include fluid("border-radius", 8)
+            //@include fluid("padding-left", 14)
+            //@include fluid("padding-right", 14)
+            @include fluid("padding-bottom", 11)
+            //@include fluid("padding-top", 11)
+            &.chatbackground
+                background: rgba(30, 38, 47, 0.2)
+            &.noActive
+                opacity: 0.35
+
+            .hudevo__chat_messages
+                width: 100%
+                overflow: hidden
+                display: flex
+                flex-direction: column-reverse                
+                direction: rtl
+                text-align: left
+                overflow-y: auto
+                @include fluid("padding-left", 10)                    
+                box-sizing: border-box
+                //user-select: text
+
+                .scroll
+                    @include fluid("padding-left", 7)
+
+                &::-webkit-scrollbar
+                    @include fluid("width", 3)
+
+                &::-webkit-scrollbar-track
+                    background: rgba(253,255,252,0.4)
+                    @include fluid("border-radius", 4)
+
+                &::-webkit-scrollbar-thumb
+                    background: #FDFFFC
+                    @include fluid("border-radius", 6)
+                p
+                    font-family: 'TTNorms-Medium'
+                    font-weight: 500
+                    font-style: normal
+                    //font-family: 'TTNorms-Bold'
+                    //font-weight: bold
+                    //font-style: normal
+                    position: relative
+                    direction: ltr
+                    //@include fluid("margin-left", 10)
+                    //text-shadow: 0 0 3px #00000014, 0 0 3px #0000001f
+                    word-break: keep-all
+                    //filter: drop-shadow(0px 0px 1px black)
+                    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6)
+                    &.oldshadow
+                        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7), -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgba(0, 0, 0, 0.7), -1px 1px 0 rgba(0, 0, 0, 0.7), 1px 1px 0 rgba(0, 0, 0, 0.7) !important
+                    //.timestamp
+                    //    color: #ccc
+
+                    .chat__span
+                        @include fluid("max-height", 28)
+                        @include fluid("max-width", 28)
+                        @include fluid("border", 1, "solid white")
+                        @include fluid("padding", 5)
+                        @include fluid("margin-right", 7)
+                        @include fluid("border-radius", 3)
+                        box-sizing: border-box
+                        &.market
+                            background: #2BB6A8
+                            @include fluid("font-size", 18)
+                            border: 0
+                        &.shop
+                            background: #FF9F1C
+                            border: 0
+                            @include fluid("padding-top", 6)
+                            @include fluid("padding-bottom", 6)
+                            @include fluid("padding-left", 5)
+                            @include fluid("padding-right", 5)
+            
+            .hudevo__chat_input_block
+                @include fluid("margin-top", 20)
+                @include fluid("min-height", 30)
+                @include fluid("width", 500)
+                @include fluid("margin-left", 10)
+                overflow: hidden
+                .hudevo__chat_input_box
+                    position: relative
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    @include fluid("height", 35)
+                    background: rgba(0,0,0,0.25)
+
+                    .hudevo__chat_input_chat     
+                        position: absolute
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        top: 50%
+                        transform: translateY(-50%)
+                        @include fluid("height", 16)
+                        @include fluid("width", 64)
+                        @include fluid("padding-right", 6)
+                        @include fluid("padding-left", 10)
+                        @include fluid("border-right", 1, "solid rgba(255, 255, 255, 0.15)")
+                        @include fluid("font-size", 12)
+                        text-transform: uppercase
+                        box-sizing: border-box
+                        
+                    .hudevo__chat_input
+                        width: 100%
+                        height: 100%
+                        border: 0
+                        //@include fluid("margin-left", 10)
+                        @include fluid("padding-left", 70)
+                        background: rgba(255,255,255,0.0)
+                        color: white
+                        font-family: 'TTNorms-Regular'
+
+                        &::-webkit-input-placeholder
+                            color: rgba(255,255,255,0.8)
+                    .hudevo__chat_input_send
+                        display: flex
+                        align-items: center
+                        @include fluid("height", 22)
+                        @include fluid("padding-right", 10)
+                        @include fluid("padding-left", 6)
+                        @include fluid("margin-left", 6)
+                        @include fluid("border-left", 1, "solid rgba(255, 255, 255, 0.15)")
+                        .hudevo__chat_input_send_icon
+                            @include fluid("font-size", 20)
+                            color: rgba(255, 255, 255, 0.6)
+                            &.active
+                                color: rgba(255, 255, 255, 1)
+
+            .hudevo__chat_buttons_helpcmd
+                background: rgba(0, 0, 0, 0.25)
+                @include fluid("margin-left", 10)
+                @include fluid("font-size", 12)
+                @include fluid("width", 500)
+                @include fluid("margin-top", 6)
+                @include fluid("padding-right", 10)
+                @include fluid("padding-left", 6)
+                @include fluid("max-height", 138)
+                overflow: hidden
+                overflow-y: auto
+                
+                &::-webkit-scrollbar
+                    @include fluid("width", 3)
+
+                &::-webkit-scrollbar-track
+                    background: rgba(253,255,252,0.4)
+                    @include fluid("border-radius", 4)
+                &::-webkit-scrollbar-thumb
+                    background: #FDFFFC
+                    @include fluid("border-radius", 6)
+                
+            .hudevo__chat_buttons_block
+                @include fluid("width", 500)
+                @include fluid("margin-top", 6)
+                @include fluid("margin-left", 10)
+                @include fluid("height", 35)
+                width: 100%
+                .hudevo__chat_buttons
+                    display: flex
+                    align-items: center
+                    height: 100%
+                    .hudevo__chat_buttons_key
+                        display: flex
+                        align-items: center
+                        @include fluid("height", 26)
+                        @include fluid("margin-right", 8)
+                        @include fluid("padding-right", 6)
+                        @include fluid("border-right", 1, "solid rgba(255, 255, 255, 0.15)")
+                    .hudevo__chat_button
+                        cursor: pointer
+                        height: 100%
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        @include fluid("padding-left", 19)
+                        @include fluid("padding-right", 19)
+                        @include fluid("margin-right", 6)
+                        background: rgba(255,255,255,0.15)
+                        font-family: 'RF Dewi Extended'
+                        &.active
+                            background: #F82847
+                            color: white
+    .hudevo__petcontrol
+        display: flex
+        flex-direction: column
+        @include fluid("font-size", 16)
+        justify-content: flex-end
+        margin-bottom: auto
+        @include fluid("margin-top", 10)
+        .hudevo__lobby_health
+            display: flex
+            @include fluid("width", 191)
+            @include fluid("height", 4)
+            background: rgba(255, 255, 255, 0.25)
+            position: relative
+            @include fluid("margin-top", 2)
+
+        .hudevo__lobby_health_current
+            height: 100%
+            width: 56%
+            background: #E71D36
+        .petcontrol__name
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            color: #FFFFFF
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            @include fluid("margin-left", 40)
+        .box-flex
+            align-items: center
+        .hudevo__petbox
+            width: fit-content
+            @include fluid("height", 56)
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @include fluid("padding", 14)
+            @include fluid("padding-right", 32)
+            position: relative
+        .petcontrol__buttons
+            display: flex
+            flex-wrap: wrap
+            @include fluid("gap", 7)
+            @include fluid("width", 250)
+            @include fluid("margin-top", 5)
+            .box-flex
+                align-items: center
+        .petcontrol__button
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("height", 20)
+            @include fluid("min-width", 20)
+            background: rgba(255, 255, 255, 0.25)
+            @include fluid("margin-right", 3)
+            &.active
+                background: white
+                color: #252525
+        .petcontrol__button_text
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 12.3%, rgba(255, 255, 255, 0.19) 100%)
+            @include fluid("padding-left", 8)
+            @include fluid("padding-right", 8)
+            @include fluid("padding-bottom", 2)
+            @include fluid("padding-top", 2)
+            display: flex
+            align-items: center
+            justify-content: center
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            font-weight: 400
+            @include fluid("font-size", 13)
+            @include fluid("line-height", 15)
+        .petcontrol__pet
+            @include fluid("height", 36)
+            @include fluid("width", 36)
+            @include fluid("border", 3, "solid #F82847")
+            background: rgba(255, 255, 255, 0.1)
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            box-sizing: border-box
+            position: absolute
+            @include fluid("right", -18)
+            top: 50%
+            transform: translate(0%, -50%)
+            .petcontrol__pet_img
+                @include fluid("height", 34)
+                @include fluid("width", 34)
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center
+                border-radius: 50%
+    .hudevo__left_bottom
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        height: fit-content
+        .hudevo__map
+            @include fluid("margin-right", 30)
+    .hudevo__placetime
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+        @include fluid("margin-left", 10)
+        .placetime__icon
+            @include fluid("font-size", 20)
+        .placetime__buttons
+            display: flex
+            align-items: center
+            .playerinfo__box
+                @include fluid("margin-right", 12)
+            .playerinfo__box_key
+                position: absolute
+                @include fluid("bottom", -9)
+                @include fluid("right", -3)
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+                font-weight: 400
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 20)
+                font-family: 'RF Dewi'
+                color: white
+        .hudevo__placetime_image
+            @include fluid("width", 169)
+            @include fluid("height", 44)
+            background-image: url(./images/bottom-info.png)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("padding-left", 25)
+            display: flex
+            align-items: flex-start
+            justify-content: center
+            position: relative
+            flex-direction: column
+            font-family: 'Gilroy'
+            @include fluid("margin-bottom", 14)
+            .hudevo__placetime_cirlce
+                @include fluid("min-width", 24)
+                @include fluid("min-height", 24)
+                @include fluid("width", 24)
+                @include fluid("height", 24)
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("border", 1, "solid #F82847")
+                font-weight: 600
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 14)
+                position: absolute
+                top: 0%
+                @include fluid("left", -12)
+                transform: translate(0%, 50%)
+            .hudevo__placetime_title
+                font-weight: 600
+                @include fluid("font-size", 18)
+                @include fluid("line-height", 21)
+                color: #FFFFFF
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+                white-space: nowrap
+            .hudevo__placetime_subtitle
+                white-space: nowrap
+                font-weight: 400
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 16)
+                color: #FFFFFF
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            .hudevoicon-clock
+                @include fluid("font-size", 18)
+    .hudevo__dropitem
+        @include fluid("margin-top", 43)
+        display: flex
+        flex-direction: column
+        .hudevo__dropitem_header
+            @include fluid("width", 349)
+            @include fluid("height", 25)
+            background: #F82847
+            display: flex
+            align-items: center
+            @include fluid("padding-left", 9)
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 400
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            @include fluid("margin-bottom", 3)
+        .hudevo__dropitem_subheader
+            @include fluid("margin-bottom", 3)
+            @include fluid("margin-left", 3)
+            @include fluid("height", 25)
+            @include fluid("width", 24)
+            display: flex
+            align-items: center
+            justify-content: center
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            background: #F82847
+        .hudevo__dropitem_image
+            @include fluid("width", 90)
+            @include fluid("height", 90)
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            background: white
+            overflow: hidden
+            .dropitem__image
+                @include fluid("width", 70)
+                @include fluid("height", 70)
+                background-position: center
+                background-size: contain
+                background-repeat: no-repeat
+                object-fit: contain
+                z-index: 1
+            .dropitem__absolute
+                position: absolute
+                @include fluid("left", 130)
+                @include fluid("bottom", -10)
+                z-index: 0
+                font-weight: 900
+                @include fluid("font-size", 144)
+                @include fluid("line-height", 184)
+                letter-spacing: -0.34em
+                color: rgba(37, 37, 37, 0.03)
+        .hudevo__dropitem_info
+            @include fluid("width", 256)
+            @include fluid("height", 90)
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            @include fluid("padding-top", 10)
+            @include fluid("padding-left", 14)
+            @include fluid("padding-right", 14)
+            @include fluid("padding-bottom", 10)
+            background: white
+            @include fluid("margin-right", 3)
+            @include fluid("margin-left", 3)
+            .hudevo__dropitem_title
+                font-family: 'Gilroy'
+                font-style: normal
+                font-weight: 600
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 17)
+                color: #252525
+                @include fluid("margin-bottom", 1)
+            .hudevo__dropitem_subtitle
+                font-family: 'Gilroy'
+                font-style: normal
+                font-weight: 400
+                @include fluid("font-size", 13)
+                @include fluid("line-height", 15)
+                color: #252525
+        .hudevo__dropitem_take
+            @include fluid("width", 24)
+            @include fluid("height", 90)
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 400
+            @include fluid("font-size", 13)
+            @include fluid("line-height", 15)
+            color: #252525
+            background: white
+            display: flex
+            align-items: center
+            justify-content: center
+            .transform
+                transform: rotate(90deg)
+   
+    .hudevo__restart
+        position: absolute
+        @include fluid("margin-top",10)
+        display: flex
+        align-items: center
+        @include fluid("right", 0)
+        @include fluid("bottom", 10)
+        .restart__icon
+            color: #FF9F1C
+            @include fluid("font-size",24)
+            @include fluid("margin-right",12)
+    .hudevo__activecapt
+        @include fluid("margin-top", 20)
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        font-family: 'Gilroy'
+        @include fluid("width", 475)
+        .hudevo__activecapt_image
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            width: 244px
+            min-height: 37px
+            background-image: url(./images/battlepass-background.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            color: #252525
+            font-weight: 600
+            font-size: 14px
+            line-height: 14px
+            @include fluid("margin-bottom", 18)
+            text-align: center
+        .hudevo__activecapt_time
+            font-weight: 500
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+            color: #FFFFFF
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            @include fluid("margin-bottom", 20)
+        .hudevoicon-skull, .hudevoicon-war-person
+            @include fluid("font-size", 18)
+        .mr
+            @include fluid("margin-right", 10)
+        .ml
+            @include fluid("margin-left", 10)
+        .box-flex
+            font-weight: 700
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 18)
+            color: #FFFFFF
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+        .hudevo__activecapt_square
+            @include fluid("width", 10)
+            @include fluid("height", 10)
+            &.green
+                background: #2AD300
+            &.red
+                background: #F82847
+        .hudevo__activecapt_line
+            @include fluid("height", 3)
+            @include fluid("width", 475)
+            display: flex
+            justify-content: space-between
+            align-items: center
+            background: rgba(255,255,255,0.3)
+            .hudevo__activecapt_left
+                @include fluid("width", 90)
+                height: 100%
+                background: #2AD300
+            .hudevo__activecapt_center
+                @include fluid("width", 90)
+                height: 100%
+                background: #f8b628
+            .hudevo__activecapt_right
+                background: #F82847
+                @include fluid("width", 90)
+                height: 100%
+        .fs-10
+            @include fluid("font-size", 10)
+            text-align: center
+        .activewidth
+            @include fluid("max-width", 150)
+            @include fluid("min-width", 150)
+            &.l
+                text-align: left
+            &.r
+                text-align: right
+    .mt-14
+        @include fluid("margin-top", 14)
+    .mt-5
+        @include fluid("margin-top", 5)
+    
+    .hudevo__streamer
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-family: 'Gilroy'
+        position: absolute
+        right: 0
+        @include fluid("bottom", 80)
+        .hudevo__streamer_image
+            width: 183px
+            height: 30px
+            background-image: url(./images/redage.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("margin-bottom", 7)
+    .hudevo__taxicount
+        display: flex
+        flex-direction: column
+        font-family: 'Gilroy'
+        @include fluid("bottom", 20)
+        @include fluid("margin-top", 10)
+        .hudevo__taxicount_title
+            @include fluid("height", 20)
+            font-style: normal
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            text-align: left
+            color: #FFFFFF
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            @include fluid("padding-right", 8)
+            @include fluid("padding-left", 17) 
+        .box-flex
+            align-items: center
+        .hudevo__taxicount_thin
+            font-style: normal
+            font-weight: 400
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            @include fluid("margin-right", 10)
+        .hudevo__taxicount_cost
+            @include fluid("width", 56)
+            @include fluid("height", 20)
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #F82847
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+
+    .hudevo__greenzone
+        position: absolute
+        @include fluid("right", -97)
+        bottom: 0
+        @include fluid("border-bottom", 6, "solid #67FF4F")
+        background: linear-gradient(180deg, rgba(103, 255, 79, 0) 0%, rgba(103, 255, 79, 0.25) 100%)
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("width", 83)
+        @include fluid("height", 90)
+        color: #67FF4F
+        .hudevoicon-shield
+            @include fluid("margin-top", 9)
+            filter: drop-shadow(0px 0px 23px #67FF4F)
+            @include fluid("font-size", 35)
+            @include fluid("margin-bottom", 4)
+        .hudevo__greenzone_text
+            @include fluid("margin-bottom", 8)
+            @include fluid("max-width", 60)
+            text-align: center
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 400
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+            color: #FFFFFF
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            b
+                font-weight: 600
+    .hudevo__bottom_usebutton
+        @include fluid("height", 40)
+        @include fluid("margin-top", 10)
+        @include fluid("margin-bottom", 10)
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("font-size", 20)
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            background: linear-gradient(270deg, #F82847 0%, rgba(248, 40, 71, 0) 100%)
+            @include fluid("height", 2)
+        #ProgressBarKey
+            @include fluid("width", 40)
+            @include fluid("height", 40)
+            position: relative
+            @include fluid("margin-right", 14)
+        .progressbar-text
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("width", 30)
+            @include fluid("height", 30)
+            color: #000000
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 400
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            background: white
+    .hudevo-usebutton__text
+        font-family: 'Gilroy'
+        font-style: normal
+        font-weight: 400
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 16)
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+    .hudevo__check
+        position: absolute
+        right: 0
+        top: 0
+        width: 160px
+        height: 143px
+        background-image: url(./images/check.png)
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        padding-top: 40px
+        flex-direction: column
+        padding-left: 13px
+        padding-right: 13px
+        .hudevo__check_title
+            color: #252525
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            font-size: 14px
+            line-height: 14px
+        .hudevo__check_subtitle
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 400
+            font-size: 12px
+            line-height: 12px
+            color: #252525
+            max-width: 75px
+            text-align: left
+        .box-between
+            margin-bottom: 2px
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+        .hudevo__check_money
+            text-shadow: 0px 0px 39px #53CC3F
+            align-self: center
+            margin-top: 22px
+            color: #53CC3F
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            font-size: 24px
+            line-height: 14px
+            align-self: center
+    .hudevo__event
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+        .hudevo__event_image
+            @include fluid("width", 233)
+            @include fluid("height", 102)
+            background-image: url(./images/event.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            align-self: center
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, 0%)
+    .hudevo__notification
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+    .hudevo__battlepass
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, 0%)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .hudevo__battlepass_image
+            @include fluid("width", 357)
+            @include fluid("height", 93)
+            background-image: url(./images/battlepass-info.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            align-self: center
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, 0%)
+    .hudevo__notification_subtitle
+        background: #F82847
+        @include fluid("padding-left", 5)
+        @include fluid("padding-right", 5)
+        @include fluid("padding-bottom", 2)
+        @include fluid("padding-top", 2)
+        font-family: 'Gilroy'
+        font-style: normal
+        font-weight: 600
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 14)
+        color: white
+        text-transform: uppercase
+        text-align: center
+        &.battlepass
+            @include fluid("margin-top", 32)
+            @include fluid("margin-left", 4)
+        &.mt-51
+            @include fluid("margin-top", 51)
+    .hudevo__battlepass_background
+        @include fluid("width", 356)
+        @include fluid("height", 37)
+        background-image: url(./images/battlepass-background.png)
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        align-self: center
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #252525
+        font-weight: 600
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 14)
+    .hudevo__notification_title
+        @include fluid("width", 268)
+        @include fluid("height", 37)
+        background: white
+        align-self: center
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #252525
+        text-align: center
+        font-weight: 600
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 14)
+        &.fs-14
+            font-family: 'Gilroy'
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+        &.large
+            width: fit-content
+            @include fluid("padding-right", 9)
+            @include fluid("padding-left", 9)
+            @include fluid("height", 21)
+            text-align: center
+    .hudevo__winner
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        flex-direction: column
+        @include fluid("margin-bottom", 10)
+        @include fluid("width", 444)
+        @include fluid("height", 272)
+        background-image: url(./images/winner.png)
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("padding-top", 40)
+        .hudevo__winner_image
+            @include fluid("margin-top", 15)
+            @include fluid("width", 119)
+            @include fluid("height", 88)
+            background-image: url(./images/money.png)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+        &.noback
+            background-image: none
+    .hudevo__level
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        flex-direction: column
+        @include fluid("margin-bottom", 10)
+        .hudevo__level_image
+            @include fluid("width", 244)
+            @include fluid("height", 66)
+            background-image: url(./images/level.png)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @include fluid("margin-bottom", 14)
+            .level
+                font-weight: 600
+                @include fluid("font-size", 22)
+                @include fluid("width", 40)
+                text-align: center
+                @include fluid("margin-left", 13)
+            .newlevel
+                @include fluid("width", 40)
+                color: rgba(255, 255, 255, 0.55)
+                font-weight: 600
+                @include fluid("font-size", 18)
+                text-align: center
+                @include fluid("margin-right", 10)
+
+    .hudevo__weekprise
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        .hudevo__weekprise_prise
+            @include fluid("width", 201)
+            @include fluid("height", 134)
+            background-image: url(./images/prise.png)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("margin-right", -32)
+            .hudevo__weekprise_image
+                @include fluid("width", 113)
+                @include fluid("height", 113)
+                background-image: url(./images/money.png)
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+        .hudevo__weekprise_sprite
+            position: absolute
+            left: 0
+            top: 0
+            @include fluid("width", 346)
+            @include fluid("height", 110)
+            background-image: url(./images/sprite.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            z-index: -1
+        .align-right
+            align-self: flex-end
+            font-weight: 600
+            @include fluid("font-size", 13)
+            @include fluid("line-height", 14)
+        .justify-start
+            justify-content: flex-start
+    .hudevo__notification_text
+        align-self: center
+        @include fluid("margin-top", 6)
+        @include fluid("border-top", 3, "solid #F82847")
+        @include fluid("padding-top", 8)
+        @include fluid("padding-bottom", 14)
+        @include fluid("padding-left", 12)
+        @include fluid("padding-right", 12)
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%)
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        font-weight: 400
+        @include fluid("font-size", 13)
+        @include fluid("line-height", 14)
+        &.large
+            @include fluid("max-width", 350)
+        &.small
+            @include fluid("margin-top", 5)
+            @include fluid("max-width", 228)
+        &.medium
+            @include fluid("width", 268)
+        b
+            font-weight: 600
+    .hudevo__center_bottom
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: auto
+        justify-content: center
+    .hudevo__playerinfo_button
+        @include fluid("min-width", 20)
+        @include fluid("height", 20)
+        @include fluid("padding-left", 6)
+        @include fluid("padding-right", 6)
+        background: rgba(255, 255, 255, 0.25)
+        display: flex
+        align-items: center
+        justify-content: center
+        font-style: normal
+        font-weight: 400
+        @include fluid("font-size", 13)
+        @include fluid("line-height", 15)
+        font-family: 'Gilroy'
+        position: relative
+        &.bottom
+            @include fluid("min-width", 32)
+            @include fluid("height", 32)
+            position: relative
+        &:hover
+            background: rgba(255,255,255,1)
+            color: #5b5b5b
+
+        &.active
+            animation: key-info-active 500ms
+
+        &.pressed
+            animation: none
+            background: rgba(255, 255, 255, 1)
+            color: #464545
+
+        &.disabled
+            opacity: 0.6
+            pointer-events: none
+
+        &.disabled &:hover
+            background: rgba(255,255,255,0.1)
+            color: rgba(255, 255, 255, 1)
+
+        &.nonactive
+            background: rgba(255,255,255,0.1)
+            color: rgba(255, 255, 255, 1)
+        
+        &.nonactive &:hover
+            background: rgba(255,255,255,0.1)
+            color: rgba(255, 255, 255, 1)
+
+        &.keyDetector
+            color: rgba(255, 255, 255, 1)
+
+            animation: key-info-detector 2s infinite
+
+            &:hover
+                background: rgba(255,255,255,0.3)
+                color: rgba(255, 255, 255, 1)
+
+        &.keyDonate
+            color: rgba(255, 255, 255, 1)
+
+            animation: key-info-donate 5s infinite
+
+            &:hover
+                background:rgba(255,240,189,0.3)
+                color: rgba(255, 255, 255, 1)
+
+        &.keyPet
+            @include fluid("border", 2, "solid")
+            border-image-source: linear-gradient(43.64deg, rgba(248, 40, 71, 0) -1.83%, #F82847 73.21%) !important
+            border-image-slice: 1 !important
+            @include fluid("width", 28)
+            @include fluid("height", 28)
+            display: flex
+            align-items: center
+            justify-content: center
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+            font-family: 'Gilroy'
+            font-style: normal
+            font-weight: 600
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            background: transparent
+            &.pressed, &:hover
+                color: white !important
+                background: rgba(0,0,0,0) !important
+                border-image-source: linear-gradient(217.64deg, rgba(248, 40, 71, 0) -1.83%, #F82847 73.21%) !important
+
+    .w-228
+        @include fluid("width", 228)
+    .hudevo__elementparams
+        border-width: 2px
+        border-top-style: solid
+        border-bottom-style: solid
+        border-left-style: solid 
+        border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 74.56%) !important
+        border-image-slice: 1 !important
+        position: relative
+        z-index: 1
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.19) 9.17%, rgba(255, 255, 255, 0) 74.56%)
+        &.paramsright
+            border-right-style: solid 
+            border-left-style: hidden 
+            background: linear-gradient(279deg, rgba(255, 255, 255, 0.19) 12.3%, rgba(255, 255, 255, 0) 100%) !important
+            border-image-source: linear-gradient(270.3deg, rgba(255, 255, 255, 0.25) 0.24%, rgba(255, 255, 255, 0) 99.74%) !important
+
+    &.night
+        .hudevo__elementparams      
+            border-width: 2px
+            border-top-style: solid
+            border-bottom-style: solid
+            border-left-style: solid 
+            border-image-source: linear-gradient(90.3deg, rgba(255, 255, 255, 0.25) 0.24%, rgba(255, 255, 255, 0) 99.74%) !important
+            border-image-slice: 1 !important
+            position: relative
+            z-index: 1
+            background: linear-gradient(89.87deg, rgba(0, 0, 0, 0.25) -2.38%, rgba(0, 0, 0, 0) 99.89%) !important
+            &.paramsright
+                border-right-style: solid 
+                border-left-style: hidden 
+                background: linear-gradient(279deg, rgba(0, 0, 0, 0.25) -2.38%, rgba(0, 0, 0, 0) 99.89%) !important
+                border-image-source: linear-gradient(270.3deg, rgba(255, 255, 255, 0.25) 0.24%, rgba(255, 255, 255, 0) 99.74%) !important
+
+        .hudevo__placetime
+            .hudevo__placetime_image
+                @include fluid("width", 169)
+                @include fluid("height", 44)
+                background-image: url(./images/bottom-info-night.png) !important
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+        .hudevo__notification_text
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important
+    .mr-6
+        @include fluid("margin-right", 6)

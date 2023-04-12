@@ -1,0 +1,11 @@
+<script>
+    //import image from '../../images/job_bus.png'
+</script>
+
+<div class="text">
+    <p><span style="font-weight: 400;"><strong>Для домов доступны улучшения</strong>, с помощью которых вы сможете складывать и прятать вещи и оружие. В списке доступных улучшений можно найти:</span></p>
+    <p><span style="font-weight: 400;"><strong>Сейф</strong> - предназначен для хранения оружия<br /></span><span style="font-weight: 400;"><strong>Аптечка</strong> - позволяет вылечиться, находясь дома.<br /></span><span style="font-weight: 400;"><strong>Шкаф для хранения одежды</strong><br /></span><strong>Шкаф для хранения предметов</strong><br /><span style="font-weight: 400;"><strong>Взломостойкий сейф</strong> &mdash; его невозможно взломать, максимум можно купить 1 штуку, в нем можно хранить только оружие<br /></span><span style="font-weight: 400;"><strong>Сигнализация</strong> - срабатывает при взломе дома и вызывает полицию</span></p>
+    <p><span style="font-weight: 400;"><strong>Если не хватает гаражных мест</strong>, можно увеличить их, купив улучшение гаража:</span></p>
+    <p><span style="font-weight: 400;">С <strong>1</strong> гаражного места до <strong>2</strong> гаражных мест - 16.000$<br /></span><span style="font-weight: 400;">С <strong>2</strong> гаражных мест до <strong>3</strong> гаражных мест - 24.000$<br /></span><span style="font-weight: 400;">С <strong>3</strong> гаражных мест до <strong>4</strong> гаражных мест - 36.000$<br /></span><span style="font-weight: 400;">С <strong>4</strong> гаражных мест до <strong>5</strong> гаражных мест - 48.000$<br /></span><span style="font-weight: 400;">С <strong>5</strong> гаражных мест до <strong>6</strong> гаражных мест - 80.000$<br /></span><span style="font-weight: 400;">С <strong>6</strong> гаражных мест до <strong>10</strong> гаражных мест - 250.000$<br /></span><span style="font-weight: 400;">С <strong>10</strong> гаражных мест до <strong>15</strong> гаражных мест - 15.000 RedBucks<br /></span><span style="font-weight: 400;">С <strong>15</strong> гаражных мест до <strong>23</strong> гаражных мест - 30.000 RedBucks<br /></span><span style="font-weight: 400;">С <strong>23</strong> гаражных мест до <strong>38</strong> гаражных мест - 60.000 RedBucks</span></p>
+    
+</div>

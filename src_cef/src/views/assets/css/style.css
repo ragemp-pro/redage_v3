@@ -1,0 +1,103 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin:0;
+}
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+html
+{
+    overflow-y: hidden;
+}
+
+html, body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-family: UniNeue;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+html {
+  height: 100%;
+
+}
+
+div, span, object, iframe, img, table, caption, thead, tbody, tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu, nav, footer, header, section, summary, mark, audio, video {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code, del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label {
+	border: 0;
+	font-size: 100%;
+    vertical-align: baseline;
+    list-style: none;
+	margin: 0;
+	padding: 0;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, nav, section, audio, video {
+	display: block;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+table caption, table th, table td {
+	text-align: left;
+	vertical-align: middle;
+}
+a img {
+	border: 0;
+}
+:focus {
+	outline: 0;
+}
+b {
+	font-weight: 900;
+    font-family: 'RF Dewi Extended';
+}
+
+* {
+	 box-sizing: border-box;
+}
+
+input {
+    border: none;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-bottom {
+    margin-bottom: 18px;
+}
+ul {
+    list-style: none;
+}
+button {
+    border:none;
+}

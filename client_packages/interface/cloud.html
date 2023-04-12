@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8" />
+        <meta name="viewport" content="width=device-width" />
+		
+		<script>
+			const onLoadRes = (elementName, url, successCallbakc, errorCallback) => {
+				let script = document.createElement(elementName);
+				
+                if (elementName === "script") {
+                    script.src = url;
+				    script.type = "application/javascript";
+                } else {
+                    script.href = url;
+				    script.rel = "stylesheet";
+				    script.type = "text/css";
+                }
+				
+
+				document.head.append(script);
+
+				script.onload = function() {
+					if (typeof successCallbakc === "function")
+						successCallbakc ()
+				};
+				
+				script.onerror = function() {
+					if (typeof errorCallback === "function")
+						errorCallback ()
+				};
+			}
+						
+            const loadRes = (url) => {
+                document.cloud = url + "/cloud/";
+                onLoadRes('script', url + "/build/bundle.js");
+            }
+
+
+			console.log('Start')
+
+            onLoadRes('link', "https://cdn.ragemp.pro/build/bundle.css", () => {
+                    loadRes ("https://cdn.ragemp.pro")
+                }, (element) => {
+				    console.log('Fail Rus Cdn')
+                    onLoadRes('link', "https://redage.akamaized.net/build/bundle.css", () => {
+                            loadRes ("https://redage.akamaized.net")
+                        }, (element) => {
+				            console.log('Fail Global Cdn')
+                        }
+                    )
+                }
+            )
+		</script>
+    </head>
+    <body>
+    
+    </body>
+</html>

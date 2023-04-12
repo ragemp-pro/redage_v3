@@ -1,0 +1,1521 @@
+@import @/views/assets/css/main.sass
+
+@font-face 
+    font-family: 'ENF'
+    src: url('../fonts/13857.eot')
+    src: local("☺"), url('../fonts/13857.woff') format("woff"), url('../fonts/13857.ttf') format("truetype"), url('../fonts/13857.svg') format("svg")
+    font-weight: normal
+    font-style: normal
+    
+.container_cards 
+  display: flex
+  font-family: 'TTNorms-Regular'
+  align-items: center
+  justify-content: center
+  height: 100%
+  width: 100%
+  
+  
+  .rounding5 
+    @include fluid("border-radius", 5)
+  
+  
+  .card 
+    @include fluid("width", 670)
+    @include fluid("height", 365)
+    background: #fff
+    position: relative
+    overflow: hidden
+    box-shadow: 0px 0px 29px 2px #0000005c
+    &.lspd 
+      &:after 
+        background-color: #1E69BA
+        content: ""
+        position: absolute
+        width: 50%
+        height: 100%
+        background-image: url('../lspd/images/lspd_icon.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+      
+  
+      &:before 
+        content: ""
+        position: absolute
+        background-image: url('../lspd/images/back.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        @include fluid("right", 24)
+        z-index: 1
+        @include fluid("width", 169)
+        @include fluid("height", 169)
+        @include fluid("bottom", 36)
+      
+  
+      .title 
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: #1E69BA
+        @include fluid("padding-top", 11)
+        @include fluid("margin-bottom", 20)
+        font-weight: bold
+      
+  .passport__licenses_title
+    @include fluid("margin-bottom", 12)
+    @include fluid("margin-top", 20)
+  .passport__licenses
+    display: flex
+    align-items: flex-start
+    width: 100%
+    .icon-box
+      @include fluid("font-size", 28)
+      color: #60686D
+      @include fluid("margin-right", 28)
+      &.active
+        color: white
+  .passport
+    @include fluid("width", 748)
+    @include fluid("height", 432)
+    @include fluid("border-radius", 10)
+    color: white
+    .desc
+      font-weight: 400
+      color: #A6B1BA !important
+      @include fluid("font-size", 18)
+    .passport__name
+      color: white
+      font-weight: 500
+      @include fluid("font-size", 24)
+      font-family: 'TTNorms-Regular'
+  .lspd_leather .ct .left .a .title 
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: #1E69BA
+    @include fluid("padding-top", 11)
+    @include fluid("margin-bottom", 20)
+    font-weight: bold
+  
+  
+  .card.lspd .right .title span:nth-child(1), .lspd_leather .ct .left .a .title span:nth-child(1) 
+    @include fluid("font-size", 44)
+    @include fluid("margin-bottom", -11)
+  
+  
+  .card.lspd .right .title span:nth-child(2), .lspd_leather .ct .left .a .title span:nth-child(2) 
+    @include fluid("font-size", 27)
+  
+  
+  .card.lspd .right .desc span:nth-child(2), .lspd_leather .ct .left .a .desc span:nth-child(2) 
+    color: #1E69BA
+    @include fluid("font-size", 19)
+  
+  
+  .card.lspd .right 
+    float: right
+    display: flex
+    flex-direction: column
+    width: 50%
+    height: 100%
+  
+    .desc 
+      display: flex
+      flex-direction: column
+      align-items: center
+      @include fluid("padding-right", 25)
+      @include fluid("padding-left", 25)
+      @include fluid("margin-bottom", 14)
+    
+  
+  
+  .lspd_leather .ct .left .a .desc 
+    display: flex
+    flex-direction: column
+    align-items: center
+    @include fluid("padding-right", 25)
+    @include fluid("padding-left", 25)
+    @include fluid("margin-bottom", 14)
+  
+  
+  .card.lspd .right .desc .line, .lspd_leather .ct .left .a .desc .line 
+    width: 100%
+    text-align: center
+    @include fluid("border-bottom", 1, "solid #1E69BA")
+    @include fluid("font-size", 19)
+    text-transform: uppercase
+    @include fluid("max-width", 259)
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+  
+  
+  .card.lspd .right .cont 
+    display: flex
+    width: 100%
+  
+    .ava 
+      @include fluid("margin-top", -32)
+      @include fluid("height", 150)
+  
+      img 
+        @include fluid("max-width", 124)
+        @include fluid("max-height", 150)
+      
+    
+  
+    .desc 
+      @include fluid("padding-left", 0)
+      width: 100%
+  
+      p 
+        color: #1E69BA
+        @include fluid("font-size", 10)
+        text-align: center
+        @include fluid("margin-top", 11)
+      
+    
+  
+  
+  .lspd_leather .ct .left .a p 
+    color: #1E69BA
+    @include fluid("font-size", 20)
+    text-align: center
+    @include fluid("margin-top", 11)
+    font-weight: bold
+    @include fluid("padding-left", 8)
+    @include fluid("padding-right", 8)
+  
+  
+  .layout.openIn:after 
+    background: rgba(0, 0, 0, 0.5)
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: -1
+  
+  
+  .lspd_leather .ct 
+    .left 
+      background-image: url('../lspd/images/2.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 392)
+      @include fluid("height", 682)
+      background-repeat: no-repeat
+      @include fluid("padding", 43)
+      @include fluid("padding-left", 40)
+      @include fluid("padding-right", 43)
+  
+      &.badgeLSPD 
+        background: none
+        width: auto
+        height: auto
+        background-repeat: no-repeat
+        @include fluid("padding", 0)
+        @include fluid("padding-left", 0)
+        @include fluid("padding-right", 0)
+      
+    
+  
+    .right 
+      background-image: url('../lspd/images/5.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 392)
+      @include fluid("height", 682)
+      background-repeat: no-repeat
+      position: relative
+    
+  
+    .center 
+      background-image: url('../lspd/images/4.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 93)
+      @include fluid("margin-left", -21)
+      @include fluid("margin-right", -21)
+    
+  
+    display: flex
+    box-shadow: 0px 0px 29px 2px #0000005c
+    @include fluid("border-radius", 5)
+  
+    .left 
+      .a 
+        position: relative
+        background: #fff
+        height: 100%
+        width: 100%
+        box-shadow: inset 0px 0px 10px #000
+  
+        .ava img 
+          margin: 0 auto
+        
+      
+  
+      &.badgeLSPD .a .ava img 
+        @include fluid("width", 107)
+        @include fluid("height", 128)
+      
+  
+      .a 
+        .ava 
+          @include fluid("margin-bottom", 20)
+          display: flex
+        
+  
+        &:after 
+          content: ""
+          position: absolute
+          background-image: url('../lspd/images/back.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          @include fluid("width", 221)
+          @include fluid("height", 225)
+          right: 0
+          left: 0
+          margin: auto
+          @include fluid("bottom", 90)
+          background-size: 100%
+        
+      
+    
+  
+    .right:after 
+      content: ""
+      position: absolute
+      background-image: url('../lspd/images/6.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 304)
+      @include fluid("height", 401)
+      right: 0
+      left: 0
+      margin: auto
+      @include fluid("bottom", 0)
+      background-size: 100%
+      @include fluid("top", 0)
+    
+  
+  
+  .card.ems 
+    background: #A20000
+  
+    &:after 
+      content: ""
+      position: absolute
+      background: #fff
+      width: 100%
+      height: 88%
+      border-radius: 9px 9px 34px 34px
+      @include fluid("padding-top", 18)
+      @include fluid("top", 8)
+    
+  
+    .left 
+      .ava 
+        @include fluid("margin-bottom", 5)
+      
+  
+      .label 
+        span 
+          &:nth-child(1) 
+            color: #B91111
+            font-weight: bold
+            @include fluid("margin-right", 5)
+          
+  
+          &:nth-child(2) 
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+          
+        
+  
+        @include fluid("font-size", 25)
+        @include fluid("max-width", 315)
+        display: flex
+      
+    
+  
+    .right 
+      position: absolute
+      @include fluid("right", 49)
+      @include fluid("top", 45)
+      &.emsblock
+        transform: scale(0.6)
+        right: 0
+        @include fluid("top", 100)
+      .title-r 
+        @include fluid("font-size", 120)
+        font-weight: 800
+        color: #A20000
+        display: flex
+        align-items: center
+        @include fluid("height", 130)
+        @include fluid("margin-bottom", -15)
+      
+  
+      .serial 
+        @include fluid("width", 250)
+        float: right
+        @include fluid("margin-top", 15)
+        text-align: center
+  
+        img 
+          @include fluid("max-width", 246)
+        
+      
+  
+      .h2r 
+        font-weight: 800
+        @include fluid("font-size", 32)
+      
+    
+  
+  
+  .ic_ems 
+    background-image: url('../ems/images/ems_ic.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    @include fluid("width", 86)
+    @include fluid("height", 86)
+    @include fluid("margin-right", 20)
+  
+  
+  .card.ems 
+    .left 
+      @include fluid("margin-top", 20)
+      @include fluid("margin-left", 55)
+      display: flex
+      .box-column
+        display: flex
+        flex-direction: column
+    
+  
+    .content 
+      position: relative
+    
+  
+    .title 
+      @include fluid("font-size", 33)
+      color: #fff
+      font-weight: 800
+      display: flex
+      background: #A20000
+      @include fluid("margin-top", 27)
+      justify-content: center
+      align-items: center
+    
+  
+    .content 
+      position: relative
+      z-index: 1
+    
+  
+  
+  .star 
+    background-image: url('../ems/images/white_star.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    @include fluid("width", 17)
+    @include fluid("height", 16)
+  
+  
+  .card 
+    &.ems:before 
+      content: ""
+      position: absolute
+      background-image: url('../lspd/images/back.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 229)
+      @include fluid("height", 229)
+      border-radius: 9px 9px 34px 34px
+      @include fluid("padding-top", 18)
+      z-index: 1
+      background-repeat: no-repeat
+      @include fluid("right", 58)
+      @include fluid("bottom", 20)
+      background-size: 100%
+    
+  
+    &.lsnews 
+      .lg 
+        .logo 
+          background-image: url('../lsnews/images/logo_lsnews.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          @include fluid("width", 359)
+          @include fluid("height", 93)
+        
+  
+        .logo2 
+          background-image: url('../lsnews/images/ln.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          @include fluid("width", 132)
+          @include fluid("height", 92)
+        
+  
+        @include fluid("margin-top", 18)
+        @include fluid("margin-left", 30)
+        @include fluid("margin-right", 45)
+        display: flex
+        justify-content: space-between
+      
+  
+      &:after 
+        content: ""
+        @include fluid("top", 0)
+        position: absolute
+        background-image: url('../lsnews/images/background.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        @include fluid("width", 537)
+        @include fluid("height", 365)
+        @include fluid("right", 0)
+      
+  
+      .lc 
+        @include fluid("margin-left", 30)
+        @include fluid("margin-top", 10)
+        display: flex
+        flex-wrap: wrap
+  
+        .desc-bl 
+          display: flex
+          flex-wrap: wrap
+          width: 50%
+          @include fluid("margin-left", 12)
+        
+  
+        .ava img 
+          @include fluid("width", 155)
+          @include fluid("height", 193)
+        
+  
+        .desc-bl .desc 
+          display: flex
+          flex-direction: column
+  
+          &:nth-child(1) 
+            @include fluid("width", 125)
+          
+  
+          &:nth-child(3), &:nth-child(4) 
+            width: 100%
+          
+  
+          span 
+            &:nth-child(1) 
+              color: #B91111
+              font-weight: bold
+            
+  
+            &:nth-child(2) 
+              font-weight: bold
+              color: #000000
+              overflow: hidden
+              text-overflow: ellipsis
+            
+          
+  
+          &:nth-child(2) span 
+            &:nth-child(2) 
+              font-weight: bold
+              color: #000000
+            
+          
+        
+      
+  
+      &:before 
+        content: ""
+        position: absolute
+        @include fluid("width", 229)
+        @include fluid("height", 229)
+        border-radius: 9px 9px 34px 34px
+        @include fluid("padding-top", 18)
+        z-index: 1
+        background-repeat: no-repeat
+        @include fluid("right", 58)
+        @include fluid("bottom", 20)
+        background-size: 100%
+      
+  
+      .right 
+        .img 
+          background-image: url('../army/images/usa.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          @include fluid("width", 73)
+          @include fluid("height", 30)
+        
+  
+        background-image: url('../lspd/images/back.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        position: absolute
+        @include fluid("right", 25)
+        @include fluid("width", 169)
+        @include fluid("height", 169)
+        @include fluid("bottom", 40)
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("padding-top", 70)
+      
+  
+      .bottom 
+        background: #B91111
+        border-radius: 0px 0px 5px 5px
+        @include fluid("font-size", 22)
+        color: #FFFFFF
+        position: absolute
+        @include fluid("bottom", 0)
+        width: 100%
+        @include fluid("padding-right", 42)
+        justify-content: space-between
+        @include fluid("height", 36)
+        display: flex
+        @include fluid("padding-left", 30)
+        align-items: center
+      
+  
+      .right .serial 
+        font-weight: bold
+        color: #000000
+        @include fluid("font-size", 20)
+      
+    
+  
+    &.gov .content 
+      height: 100%
+  
+      .left_block 
+        @include fluid("width", 38)
+        background: #003875
+        height: 100%
+        z-index: 1
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+  
+        &:after 
+          background-image: url('../goverment/images/stars.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          content: ""
+          position: absolute
+          @include fluid("width", 20)
+          @include fluid("height", 344)
+        
+      
+  
+      .title 
+        div 
+          &:nth-child(1) 
+            @include fluid("font-size", 33)
+            font-weight: 800
+          
+  
+          &:nth-child(2) 
+            font-weight: bold
+            @include fluid("font-size", 29)
+            display: flex
+            align-items: center
+          
+        
+  
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("padding-top", 5)
+        @include fluid("margin-bottom", 5)
+      
+  
+      &:before 
+        background-image: url('../goverment/images/background.png')
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        border-radius: 8px 8px 0px 0px
+      
+  
+      .desc-bl 
+        @include fluid("padding-left", 46)
+        display: flex
+        position: relative
+  
+        .ava 
+          @include fluid("margin-right", 38)
+          display: flex
+          flex-direction: column
+          @include fluid("font-size", 18)
+          font-weight: bold
+        
+  
+        .pl1 
+          display: flex
+          flex-direction: column
+          @include fluid("padding-top", 15)
+          @include fluid("margin-right", 20)
+  
+          .desc 
+            display: flex
+            flex-direction: column
+  
+            span 
+              &:nth-child(1) 
+                @include fluid("font-size", 18)
+              
+  
+              &:nth-child(2) 
+                @include fluid("font-size", 26)
+                @include fluid("margin-bottom", 5)
+                @include fluid("width", 160)
+                text-overflow: ellipsis
+                white-space: nowrap
+                overflow: hidden
+              
+            
+          
+        
+  
+        .pl2 
+          .desc 
+            span 
+            display: flex
+            flex-direction: column
+            @include fluid("margin-bottom", 15)
+          
+  
+          .img_b 
+            background-image: url('../goverment/images/logo_gv.png')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            @include fluid("width", 137)
+            @include fluid("height", 137)
+          
+        
+  
+        .pl3 
+          display: flex
+          align-items: center
+  
+          .serialid 
+            display: flex
+            flex-wrap: wrap
+            @include fluid("width", 10)
+            word-wrap: anywhere
+          
+  
+          .imgid 
+            background-image: url('../army/images/serial.png')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            @include fluid("width", 20)
+            @include fluid("height", 19)
+            @include fluid("margin", 5)
+          
+        
+  
+        .pl2 
+          @include fluid("margin-right", 15)
+        
+  
+        .pl3 .imgid 
+          background-image: url('../army/images/serial.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          @include fluid("width", 64)
+          @include fluid("height", 246)
+          @include fluid("margin", 5)
+        
+      
+    
+  
+  
+  .black_star 
+    background-image: url('../goverment/images/black_star.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    @include fluid("width", 20)
+    @include fluid("height", 19)
+    @include fluid("margin", 5)
+  
+  
+  .card.gov 
+    .content .usa:before 
+      content: ""
+      position: absolute
+      background-image: url('../goverment/images/USA_gv.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 26)
+      @include fluid("height", 137)
+      @include fluid("left", 47)
+      @include fluid("top", 10)
+    
+  
+    &.passport .content 
+      &:before 
+        background-image: url('../passport/images/passport.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        @include fluid("border-radius", 8)
+      
+  
+      .desc-bl 
+        .pl1 
+          @include fluid("padding-top", 0)
+        @include fluid("padding-top", 89)
+        flex-direction: column
+  
+        .pl4 
+          .desc 
+            @include fluid("width", 99)
+            display: flex
+            flex-direction: column
+            align-items: center
+          
+  
+          @include fluid("width", 99)
+          display: flex
+          justify-content: center
+  
+          .img-usa 
+            background-image: url('../army/images/usa.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("width", 73)
+            @include fluid("height", 30)
+            @include fluid("margin-bottom", 7)
+            display: flex
+          
+        
+  
+        .m1 
+          width: 100%
+          display: flex
+        
+      
+    
+  .newproject__buttonblock
+    display: flex
+    align-items: center
+    color: white
+    @include fluid("margin-bottom", 18)
+    .newproject__button
+        cursor: pointer
+        @include fluid("padding-top", 4)
+        @include fluid("padding-bottom", 4)
+        @include fluid("padding-right", 8)     
+        @include fluid("margin-right", 16)                   
+        @include fluid("padding-left", 8)
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        background: #FFFFFF
+        @include fluid("border-radius", 3)
+        color: #1E262F
+        font-weight: 600
+        font-family: 'Montserrat-Medium'
+        @include fluid("font-size", 20)
+  .m-t50
+    @include fluid("margin-top", 50)
+  .m-t20
+    @include fluid("margin-top", 20)
+  .m2 
+    width: 100%
+    display: flex
+  
+  .passport__idcard
+    position: absolute
+    @include fluid("left", 48)
+    @include fluid("top", 36)
+    font-weight: 800
+    @include fluid("font-size", 28)
+    color: #3D444B
+    font-family: 'RF Dewi Extended'
+    .b
+      font-family: 'RF Dewi Extended'
+    .number
+      font-family: 'RF Dewi Extended'
+      font-weight: 600
+      font-style: normal
+      @include fluid("margin-left", 18)
+  .card 
+    &.lsnews .content .lc
+    .ava 
+      @include fluid("border", 2, "solid #A20000")
+      @include fluid("padding-top", 10)
+      @include fluid("margin-right", 20)
+      @include fluid("width", 120)
+      @include fluid("height", 160)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+    &.gov .content .desc-bl
+      .ava 
+        @include fluid("border", 8, "solid #1E262F")
+        @include fluid("margin-top", 6)
+        @include fluid("margin-right", 20)
+        @include fluid("width", 140)
+        @include fluid("height", 180)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+    &.ems .content .left
+        .ava 
+          @include fluid("border", 8, "solid #A20000")
+          @include fluid("padding-top", 10)
+          @include fluid("margin-right", 20)
+          @include fluid("width", 180)
+          @include fluid("height", 220)
+          background-repeat: no-repeat
+          background-position: center
+          background-size: cover
+    &.gov.passport .content .desc-bl
+      .ava 
+        @include fluid("border", 8, "solid #1E262F")
+        @include fluid("padding-top", 10)
+        @include fluid("width", 180)
+        @include fluid("height", 220)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+  
+      .desc 
+        display: flex
+        flex-direction: column
+        
+      
+  
+      .m2 .desc span:nth-child(2) 
+        @include fluid("font-size", 26)
+      
+  
+      @include fluid("padding-left", 42)
+  
+      .pl4 .number 
+        @include fluid("font-size", 18)
+        font-weight: 600
+        @include fluid("margin-bottom", 5)
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+      
+  
+      .pl2 
+        @include fluid("margin-right", 24)
+      
+    
+  
+    &.fib 
+      .content 
+        .pl1 
+          display: flex
+          @include fluid("padding-left", 33)
+          @include fluid("padding-right", 33)
+          justify-content: space-between
+  
+          .txt div 
+            &:nth-child(1) 
+              @include fluid("font-size", 169)
+              font-weight: 800
+              color: #081130
+              @include fluid("line-height", 130)
+            
+  
+            &:nth-child(2) 
+              font-weight: 800
+              color: #081130
+              @include fluid("font-size", 15)
+              text-align: center
+            
+          
+  
+          .img_lg 
+            @include fluid("width", 150)
+            @include fluid("height", 150)
+          
+  
+          .img_lspdBadge 
+            @include fluid("width", 108)
+            @include fluid("height", 140)
+          
+        
+  
+        .title 
+          color: #081130
+          @include fluid("font-size", 33)
+          font-weight: 800
+          display: flex
+          width: 100%
+          justify-content: center
+          @include fluid("margin-bottom", 10)
+        
+      
+  
+      &.badge 
+        .content .title 
+          @include fluid("margin-top", 10)
+          @include fluid("font-size", 16)
+        
+  
+        @include fluid("width", 376)
+        @include fluid("height", 690)
+        @include fluid("top", -5)
+        bottom: 0
+        position: absolute !important
+      
+  
+      .content 
+        .pl1 .ava 
+          @include fluid("border", 8, "solid #081130")
+          @include fluid("height", 150)
+          overflow: hidden
+          text-align: center
+          @include fluid("width", 122)
+          background-size: cover
+          background-position: center
+          background-repeat: no-repeat
+        
+  
+        .pl2 .t1 
+          width: 45%
+          @include fluid("font-size", 33)
+          font-weight: 800
+          @include fluid("margin-right", 31)
+          display: flex
+          color: #081130
+          @include fluid("height", 57)
+          align-items: center
+        
+      
+  
+      &.badge 
+        .img_lg 
+          @include fluid("width", 124)
+          @include fluid("height", 124)
+          margin: 0 auto
+          position: absolute
+          @include fluid("bottom", 24)
+          left: 0
+          right: 0
+        
+  
+        .title 
+          @include fluid("margin-bottom", 5)
+        
+      
+    
+  
+  
+  .lspd_leather .ct .left.badgeLSPD .a .title 
+    @include fluid("margin-bottom", 5)
+  
+  
+  .card.fib 
+    &.badge 
+      .img_lspdBadge 
+        @include fluid("width", 108)
+        @include fluid("height", 140)
+      
+  
+      .content 
+        .pl2 .t1 
+          width: 100%
+          @include fluid("margin-right", 0)
+          justify-content: center
+        
+  
+        .ava 
+          display: flex
+          @include fluid("margin-top", 20)
+          @include fluid("margin-bottom", 20)
+          justify-content: center
+  
+          img 
+            @include fluid("border", 8, "solid #081130")
+          
+        
+  
+        .pl2 .t2 
+          @include fluid("font-size", 39)
+          @include fluid("width", 216)
+        
+  
+        .pl1 
+          display: flex
+          @include fluid("padding-left", 0)
+          @include fluid("padding-right", 0)
+          justify-content: center
+        
+      
+    
+  
+    .content 
+      .pl2 .t2 
+        font-family: ENF
+        @include fluid("font-size", 33)
+        position: relative
+        z-index: 4
+        width: 52%
+        text-align: center
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+  
+        &:after 
+          content: ""
+          position: absolute
+          width: 100%
+          @include fluid("height", 2)
+          background: #081130
+          @include fluid("bottom", 9)
+          @include fluid("left", 0)
+          z-index: -1
+        
+      
+  
+      .pl3 
+        background: #081130
+        color: #fff
+        @include fluid("margin", 5)
+        @include fluid("height", 57)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fluid("padding-left", 30)
+        @include fluid("padding-right", 30)
+  
+        .t1 
+          font-weight: 800
+          @include fluid("width", 330)
+        
+  
+        .t2 
+          background-image: url('../fib/images/fib.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          @include fluid("width", 40)
+          @include fluid("height", 40)
+        
+      
+  
+      .pl2 
+        display: flex
+        @include fluid("padding-left", 33)
+        @include fluid("padding-right", 33)
+        align-items: center
+      
+    
+  
+    &.badge .content .pl2 
+      .t1 
+        width: 100%
+        text-align: center
+      
+  
+      display: flex
+      flex-direction: column
+      justify-content: center
+    
+  
+    .content .pl1 .ava img 
+      @include fluid("width", 109)
+    
+  
+  
+  .card_leather .b1 
+    background-image: url('../fib/images/fib_1.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    @include fluid("width", 682)
+    @include fluid("height", 392)
+    @include fluid("padding-top", 13)
+    @include fluid("padding-left", 7)
+    z-index: 1
+    position: relative
+  
+  
+  .card.fib.badge 
+    z-index: 10
+    position: relative
+  
+    &::after 
+      position: absolute
+      left: 0
+      opacity: 0.1
+      right: 0
+      margin: auto
+      background-image: url('../fibbadge/images/fib.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      content: ""
+      @include fluid("width", 240)
+      @include fluid("height", 240)
+      background-size: 100%
+      @include fluid("bottom", 87)
+    
+  
+  
+  .card_leather 
+    .b1.badge 
+      background-image: url('../fibbadge/images/badgeFib.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 392)
+      @include fluid("height", 682)
+      @include fluid("padding-top", 13)
+      @include fluid("padding-left", 7)
+      z-index: 1
+      position: relative
+    
+  
+    .b2 
+      background-image: url('../fib/images/fib_3.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("height", 92)
+      z-index: 0
+      @include fluid("margin-top", -20)
+      @include fluid("margin-bottom", -20)
+    
+  
+    .b3 
+      background-image: url('../fib/images/fib_2.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("height", 391)
+      background-size: 101%
+      background-position: -2px 0px
+      @include fluid("width", 682)
+      position: relative
+  
+      .pl1 
+        background: #fff
+        display: flex
+        flex-direction: column
+        @include fluid("width", 298)
+        @include fluid("height", 298)
+        box-shadow: inset 0px 0px 10px #000
+        position: absolute
+        @include fluid("left", 49)
+        @include fluid("top", 47)
+        @include fluid("padding", 10)
+        align-items: center
+  
+        p 
+          &:nth-child(1) 
+            font-weight: bold
+            @include fluid("font-size", 15)
+            text-align: center
+            @include fluid("margin-bottom", 8)
+          
+  
+          &:nth-child(3) 
+            font-weight: 800
+            @include fluid("font-size", 13)
+            text-align: center
+            @include fluid("margin-bottom", 8)
+          
+  
+          &:nth-child(4) 
+            font-weight: bold
+            @include fluid("font-size", 11)
+            text-align: center
+            @include fluid("width", 242)
+          
+        
+      
+    
+  
+    .b1 .card.fib 
+      transform: scale(0.88)
+      box-shadow: inset 0px 0px 10px #000
+    
+  
+    .b3 
+      .pl1 .t2 
+        font-family: ENF
+        @include fluid("font-size", 33)
+        position: relative
+        z-index: 4
+        width: 100%
+        text-align: center
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+  
+        &:after 
+          content: ""
+          position: absolute
+          width: 100%
+          @include fluid("height", 2)
+          background: #081130
+          @include fluid("bottom", 10)
+          @include fluid("left", 0)
+          z-index: -1
+        
+      
+  
+      .pl2 
+        width: 47%
+        height: 100%
+        display: flex
+        justify-content: center
+        position: absolute
+        @include fluid("right", 0)
+        @include fluid("padding-top", 15)
+        align-items: center
+  
+        &:after 
+          background-image: url('../fib/images/fib.png')
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          @include fluid("width", 240)
+          content: ""
+          position: absolute
+          @include fluid("height", 240)
+        
+      
+    
+  
+  
+  .card_army 
+    .right 
+      position: absolute
+      @include fluid("right", 0)
+      @include fluid("width", 27)
+      bottom: 0
+      height: 60%
+      display: flex
+      justify-content: center
+      align-items: center
+      background: #003875
+      color: #fff
+      font-weight: bold
+      z-index: 1
+    
+  
+    &.msc .right 
+      background: black
+    
+  
+    .right p 
+      transform: rotate(90deg)
+      position: absolute
+      @include fluid("width", 190)
+      top: 19%
+    
+  
+    .content 
+      .ava 
+        @include fluid("padding-top", 21)
+        @include fluid("margin-right", 3)
+  
+        div 
+          &:nth-child(2) 
+            @include fluid("font-size", 22)
+            font-weight: bold
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+            @include fluid("max-width", 150)
+          
+  
+          &:nth-child(3) 
+            background-image: url('../army/images/usa.png')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            @include fluid("width", 73)
+            @include fluid("height", 30)
+            @include fluid("margin-top", 3)
+            @include fluid("margin-bottom", 10)
+          
+        
+  
+        .label 
+          z-index: 10
+          display: flex
+          flex-direction: column
+  
+          span 
+            &:nth-child(1) 
+              @include fluid("font-size", 22)
+              font-weight: bold
+            
+  
+            &:nth-child(2) 
+              @include fluid("font-size", 24)
+              text-transform: uppercase
+              font-weight: bold
+              @include fluid("margin-bottom", 22)
+              text-overflow: ellipsis
+              white-space: nowrap
+              overflow: hidden
+              @include fluid("width", 230)
+            
+          
+        
+      
+  
+      .ar1 
+        background: #003875
+        border-radius: 0px 5px 0px 55px
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("height", 235)
+        justify-content: center
+        @include fluid("width", 183)
+        position: absolute
+        @include fluid("right", 0)
+      
+    
+  
+    &.msc .content .ar1 
+      background: black
+    
+  
+    .content .ar1 
+      .title 
+        @include fluid("font-size", 15)
+        font-weight: bold
+        color: #fff
+        text-align: center
+        @include fluid("margin-bottom", 7)
+        @include fluid("margin-top", 10)
+      
+  
+      p 
+        @include fluid("font-size", 20)
+        color: #65B890
+        font-weight: bold
+      
+    
+  
+    &.msc .content .ar1 p 
+      color: #EF1C21
+    
+  
+    .content 
+      .ar1 img 
+        @include fluid("margin-bottom", 2)
+      
+  
+      display: flex
+      @include fluid("padding-left", 30)
+      @include fluid("margin-bottom", 10)
+    
+  
+    &:before 
+      background-image: url('../army/images/backgroud.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      content: ""
+      position: absolute
+      @include fluid("width", 287)
+      @include fluid("height", 287)
+      @include fluid("right", 0)
+      @include fluid("left", 0)
+      margin: auto
+      @include fluid("bottom", 26)
+    
+  
+    .bottom-ar 
+      @include fluid("padding-left", 30)
+      @include fluid("padding-right", 88)
+      @include fluid("font-size", 12)
+      font-weight: bold
+    
+  
+    .serial 
+      background-image: url('../army/images/serial.png')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      @include fluid("width", 64)
+      @include fluid("height", 246)
+      position: absolute
+      @include fluid("right", 27)
+      @include fluid("bottom", 15)
+    
+  
+    overflow: hidden
+    position: relative
+    @include fluid("width", 366)
+    @include fluid("height", 567)
+    background: #fff
+    box-shadow: 0px 0px 29px 2px #0000005c
+  
+  
+  .card_leather .card.fib 
+    display: block
+  
+  
+  .card 
+    &.fibbadge 
+      @include fluid("width", 376)
+      @include fluid("height", 690)
+      @include fluid("top", -5)
+      bottom: 0
+      position: absolute
+    
+  
+    &.fib 
+      .content 
+        display: flex
+        width: 100%
+        height: 100%
+        @include fluid("border", 8, solid #081130)
+        flex-direction: column
+      
+  
+      @include fluid("padding", 10)
+    
+  

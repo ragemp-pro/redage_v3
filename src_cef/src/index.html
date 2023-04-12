@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf8'>
+	<meta name='viewport' content='width=device-width'>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+		if(window.mp === undefined)
+			window.mp = {trigger:()=>{}}
+	</script>
+	<link rel="stylesheet" type="text/css" href="build/bundle.css">
+</head>
+<body>
+	<% htmlWebpackPlugin.files.js.forEach(function(file){%>
+	<script type="application/javascript" src="<%= file %>"></script><%})%>
+	<!-- Global site tag (gtag.js) - Google Ads: 819417749 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-819417749"></script>
+</body>
+</html>

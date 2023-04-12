@@ -1,0 +1,23 @@
+@import @/views/assets/css/main.sass
+
+.box-dropinfo
+    position: absolute
+    display: flex
+    user-select: none
+    font-family: "UniNeue"
+    overflow: hidden
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+    @include fluid("padding", 50)
+
+    .box-KeyInfo
+        position: relative
+        height: fit-content
+        @include fluid("margin-right", 25)
+
+        &:last-child
+            margin-right: 0

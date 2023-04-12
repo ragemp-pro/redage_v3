@@ -1,0 +1,62 @@
+.docs .passport{
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    left: 50%;
+    top: 50%;
+    margin: -450px 0 0 -250px;
+    background-image: url('../images/passport.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 20px;
+    font-weight: 400;
+}
+.docs .passport p{
+    margin: 0;
+    font-size: 12pt;
+}
+.docs .passport #firstname{
+    margin-left: 200px;
+    margin-bottom: 13px;
+}
+.docs .passport #lastname{
+    margin-left: 240px;
+    margin-bottom: 15px;
+}
+.docs .passport #date{
+    margin-left: 300px;
+    margin-bottom: 16px;
+}
+.docs .passport #gender{
+    margin-left: 195px;
+    margin-bottom: 14px;
+}
+.docs .passport #member{
+    margin-left: 245px;
+    margin-bottom: 14px;
+}
+.docs .passport #work{
+    margin-left: 220px;
+}
+.docs .passport #number{
+    font-size: 24pt;
+    margin-top: 270px;
+    margin-bottom: 138px;
+    margin-left: 50px;
+}
+.docs .passport .exit, .license .exit {
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-color: #EF3B3A;
+    border-radius: 20px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding: 7px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.docs .passport #exit{margin-top: 33px}

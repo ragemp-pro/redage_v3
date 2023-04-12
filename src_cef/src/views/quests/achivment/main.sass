@@ -1,0 +1,169 @@
+@import @/views/assets/css/main.sass
+
+@keyframes dash
+  to
+    stroke-dashoffset: 0
+
+#questsprise
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-weight: bold
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 24)
+    color: #FFFFFF
+    font-family: 'TTNorms-Regular'
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.58) 0%, #011627 100%)
+    letter-spacing: 0.02em
+    @include fluid("padding-left", 247)
+    @include fluid("padding-right", 247)
+    @include fluid("padding-bottom", 185)
+    @include fluid("padding-top", 178)
+    .questsprise-header
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        color: #FF9F1C
+        @include fluid("font-size", 36)
+        @include fluid("line-height", 42)
+        font-weight: bold
+        letter-spacing: 0.01em
+        text-transform: uppercase
+        font-family: 'TTNorms-Bold'
+        .box-between
+            @include fluid("width", 100)
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            .icon-star-small
+                @include fluid("font-size", 22)
+                @include fluid("line-height", 24)
+            .icon-star-big
+                @include fluid("font-size", 32)
+                @include fluid("line-height", 36)
+    .questsprise-questname-main
+        position: relative
+        text-transform: uppercase
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 0
+        letter-spacing: 0.01em
+        @include fluid("stroke-width", 0.1)
+        stroke: rgba(255,255,255,0.1)
+        .questsprise-questname-text
+            width: 100%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -70%)
+            @include fluid("font-size", 56)
+            @include fluid("line-height", 62)
+            letter-spacing: 0.01em
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            justify-content: center
+            z-index: 1
+        .questprise-backgroundtext
+            @include fluid("font-size", 96)
+            @include fluid("line-height", 100)
+            @include fluid("stroke-dasharray", 500)
+            @include fluid("stroke-dashoffset", 500)
+            animation: dash 5s linear infinite alternate forwards
+            fill: none
+        .questprise-backgroundblock
+            width: 100%
+            text-anchor: middle
+            dominant-baseline: middle
+            position: relative
+    .questprise-description
+        @include fluid("width", 694)
+        font-weight: 500
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 21)
+        text-align: center
+        @include fluid("margin-bottom", 70)
+
+    .questprise-prise
+        @include fluid("width", 740)
+        @include fluid("height", 200)
+        position: relative
+        display: flex
+        justify-content: space-between
+        margin-bottom: auto
+        .questprise-center-maintext
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+            @include fluid("margin-bottom", 54)
+        .box-money
+            @include fluid("margin-bottom", 35)
+            display: flex
+            align-items: center
+            .questsnewdialogicon-money
+                @include fluid("font-size", 24)
+                @include fluid("margin-right", 14)
+        .box-exp
+            display: flex
+            align-items: center
+            color: #FF9F1C
+            .questsnewdialogicon-exp
+                @include fluid("font-size", 24)
+                @include fluid("margin-right", 14)
+        
+        .questprise-smalltext
+            @include fluid("margin-top", 26)
+            @include fluid("margin-bottom", 26)
+            font-weight: 500
+        .questprise-grid
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-template-columns: repeat(4, 1fr)
+            @include fluid("gap", 16)
+            .questprise-grid__item
+                background: rgba(253, 255, 252, 0.15)
+                @include fluid("width", 80)
+                @include fluid("height", 80)
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .questprise-grid__item_icon
+                    colro: #FFFFFF
+                    @include fluid("font-size", 32)
+    .quests-newbutton
+        display: flex
+        align-items: center
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 1)
+        .quests-button
+            background: #FDFFFC
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            @include fluid("padding-bottom", 6)
+            @include fluid("padding-top", 6)
+            @include fluid("border-radius", 6)
+            @include fluid("margin-right", 26)
+            color: black
+            @include fluid("min-height", 40)
+            font-weight: 500
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: bold
+        &.myata
+            @include fluid("margin-bottom", 40)
+            .quests-button
+                background: #2BB6A8
+                color: white
+        &.right
+            @include fluid("margin-left", 26)
+            flex-direction: row-reverse
+            .quests-button
+                margin-right: 0
+                @include fluid("margin-left", 26)

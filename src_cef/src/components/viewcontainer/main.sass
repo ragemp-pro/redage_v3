@@ -1,0 +1,16 @@
+#viewcontainer
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    //background: rgba(39, 38, 55, 0.65)
+    pointer-events: none
+    filter: blur(1px)
+    z-index: 0
+    overflow: hidden
+
+    &.active
+        pointer-events: auto
+        filter: blur(0px)
+        z-index: 1

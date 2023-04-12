@@ -1,0 +1,74 @@
+.rangeslider,.rangeslider__fill {
+    display: block;
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px
+}
+
+.rangeslider {
+    background: #e6e6e6;
+    position: relative
+}
+
+.rangeslider {
+    height: 10px;
+    width: 100%;
+}
+
+.rangeslider--vertical {
+    width: 20px;
+    min-height: 150px;
+    max-height: 100%
+}
+
+.rangeslider--disabled {
+    filter: alpha(Opacity=40);
+    opacity: .4
+}
+
+.rangeslider__fill {
+    background: #E74856;
+    position: absolute
+}
+
+.rangeslider .rangeslider__fill {
+    top: 0;
+    height: 100%
+}
+
+.rangeslider--vertical .rangeslider__fill {
+    bottom: 0;
+    width: 100%
+}
+
+.rangeslider__handle {
+    border: 1px solid #000;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #E74856;
+}
+.rangeslider .rangeslider__handle {
+    top: 5px;
+    left: 0;
+    touch-action: pan-y;
+    -ms-touch-action: pan-y
+}
+
+.rangeslider--vertical .rangeslider__handle {
+    left: -10px;
+    touch-action: pan-x;
+    -ms-touch-action: pan-x
+}
+
+input[type=range]:focus+.rangeslider .rangeslider__handle {
+    -moz-box-shadow: 0 0 8px rgba(255,0,255,.9);
+    -webkit-box-shadow: 0 0 8px rgba(255,0,255,.9);
+    box-shadow: 0 0 8px rgba(255,0,255,.9)
+}

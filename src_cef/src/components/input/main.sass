@@ -1,0 +1,36 @@
+@import @/views/assets/css/main.sass
+
+.main__input
+    @include fluid("width", 350)
+    @include fluid("height", 70)
+    width: 100%
+    @include fluid("margin-bottom", 15)
+    @include fluid("border-radius", 5)
+    @include fluid("padding", 23)
+    @include fluid("border", 2, "solid rgba(253,255,252,0.5)")
+    display: flex
+    align-items: center
+    box-sizing: border-box
+    border-radius: 6px
+    box-sizing: border-box
+    &.main__input_error
+        @include fluid("border", 2, "solid #BE2020")
+    .main__input_icon
+        @include fluid("margin-right", 23)
+        @include fluid("font-size", 18)
+    .main__input_text
+        background-color: rgba(32,32,32,0.0)
+        font-family: inherit
+        @include fluid("font-size", 18)
+        color: white
+        caret-color: #808080
+        width: 100%
+    .main__input_text::-webkit-input-placeholder 
+        color:#CCCCCC
+    &:hover, &:focus, &.hover
+        background: rgba(253,255,252,0.1)
+        box-sizing: border-box
+        @include fluid("border", 2, "solid rgb(27, 43, 56)" ) 
+    &.settings
+        @include fluid("width", 240)
+        @include fluid("height", 62)

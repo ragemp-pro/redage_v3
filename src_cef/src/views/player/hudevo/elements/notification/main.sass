@@ -1,0 +1,204 @@
+@import @/views/assets/css/main.sass
+
+.newhud__notification
+    position: absolute
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 999999999 !important
+    top: 75%
+    left: 50%
+    transform: translateX(-50%)
+    color: white
+    font-family: 'TTNorms-Medium'
+    font-weight: 500
+    font-style: normal
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7), -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgba(0, 0, 0, 0.7), -1px 1px 0 rgba(0, 0, 0, 0.7), 1px 1px 0 rgba(0, 0, 0, 0.7)
+    pointer-events: none !important
+    &.list
+        top: unset
+        bottom: 5%
+    .notification-true
+        color: #2BB6A8
+        @include fluid("font-size", 26)
+    .newhud__notification_progress_box
+        .newhud__notification_progress
+            position: relative
+            @include fluid("width", 210 / 2)
+            @include fluid("height", 2)
+            background: rgba(253,255,252,.15)
+            @include fluid("margin-top", 15)
+            @include fluid("margin-bottom", 8)
+
+            i
+                position: absolute
+                height: 100%
+                background: white
+            &:first-child    
+                @include fluid("border-top-left-radius", 23)
+                @include fluid("border-bottom-left-radius", 23)       
+                transform: rotate(180deg)
+            &:last-child 
+                @include fluid("border-top-right-radius", 23)
+                @include fluid("border-bottom-right-radius", 23)  
+
+    .box-flex
+        align-items: center
+        .newhud__notification_title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+            font-family: 'TTNorms-Bold'
+            font-weight: bold
+            letter-spacing: 0.05em
+        .newhud__notification_count
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)
+            display: flex
+            align-items: center
+            justify-content: cennter
+            @include fluid("height", 24)
+            @include fluid("min-width", 24)
+            @include fluid("border-radius", 4)
+            @include fluid("padding-left", 7)
+            @include fluid("padding-right", 7)
+            @include fluid("margin-left", 10)
+            background: rgba(253,255,252,0.15)
+            letter-spacing: 0.01em
+    .newhud__notification_subtitle
+        @include fluid("margin-top", 8)
+        @include fluid("width", 350)
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 18)
+        text-align: center
+
+    .newhud__notification_list
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-family: 'TTNorms-Regular'
+        letter-spacing: 0.02em
+        @include fluid("font-size", 14)
+        font-weight: 500
+        word-wrap: break-word
+
+        .newhud__notification_box
+            position: relative
+            background: rgba(1,10,18,0.9)
+            @include fluid("width", 350)
+            @include fluid("padding", 18)
+            @include fluid("border-left", 2, solid #43A843)
+            @include fluid("border-top-right-radius", 4)
+            @include fluid("border-bottom-right-radius", 4)  
+            @include fluid("margin-top", 10)
+
+            .newhud__notification_box_progress
+                position: absolute
+                @include fluid("width", 348)
+                @include fluid("height", 2)
+                bottom: 0
+                right: 0
+
+                i
+                    position: absolute
+                    height: 100%
+                    background: white
+            &:first-child
+                margin-top: 0
+
+            &.success
+                @include fluid("border-left", 2, solid #43A843)
+
+            &.information
+                @include fluid("border-left", 2, solid #FFF0BD)
+
+            &.error
+                @include fluid("border-left", 2, solid #FF5773)
+
+
+    .hudevo__notification_subtitle
+        background: #F82847
+        @include fluid("padding-left", 5)
+        @include fluid("padding-right", 5)
+        @include fluid("padding-bottom", 2)
+        @include fluid("padding-top", 2)
+        font-family: 'Gilroy'
+        font-style: normal
+        font-weight: 600
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 14)
+        color: white
+        text-transform: uppercase
+        text-align: center
+
+    .hudevo__notification_title
+        @include fluid("width", 268)
+        @include fluid("height", 37)
+        background: white
+        align-self: center
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #252525
+        text-align: center
+        font-weight: 600
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 14)
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.0)
+        text-transform: uppercase
+        &.fs-14
+            font-family: 'Gilroy'
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+        &.large
+            width: fit-content
+            @include fluid("padding-right", 9)
+            @include fluid("padding-left", 9)
+            @include fluid("height", 21)
+            text-align: center
+    .hudevo__notification_count
+        @include fluid("height", 3)
+        width: 100%
+        background: white
+        .activeline
+            width: 0
+            height: 100%
+            background: #F82847
+            &.success
+                background: #43A843
+
+            &.information
+                background: #FFF0BD
+
+            &.error
+                background: #FF5773
+
+    .hudevo__notification_text
+        align-self: center
+        @include fluid("max-width", 268)
+        @include fluid("padding-top", 8)
+        @include fluid("padding-bottom", 14)
+        @include fluid("padding-left", 12)
+        @include fluid("padding-right", 12)
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%)
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        font-weight: 400
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 14)
+        &.large
+            @include fluid("max-width", 350)
+        &.small
+            @include fluid("margin-top", 5)
+            @include fluid("max-width", 228)
+        &.medium
+            @include fluid("width", 268)
+        b
+            font-weight: 600
+    &.night
+        .hudevo__notification_text
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important

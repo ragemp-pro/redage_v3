@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'hudevoicon';
+  src:  url('fonts/hudevoicon.eot?d60qz9');
+  src:  url('fonts/hudevoicon.eot?d60qz9#iefix') format('embedded-opentype'),
+    url('fonts/hudevoicon.ttf?d60qz9') format('truetype'),
+    url('fonts/hudevoicon.woff?d60qz9') format('woff'),
+    url('fonts/hudevoicon.svg?d60qz9#hudevoicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="hudevoicon-"], [class*=" hudevoicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hudevoicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hudevoicon-ammo:before {
+  content: "\e900";
+}
+.hudevoicon-bank:before {
+  content: "\e901";
+}
+.hudevoicon-bel:before {
+  content: "\e902";
+}
+.hudevoicon-clock:before {
+  content: "\e903";
+}
+.hudevoicon-close:before {
+  content: "\e904";
+}
+.hudevoicon-donate:before {
+  content: "\e905";
+}
+.hudevoicon-engine:before {
+  content: "\e906";
+}
+.hudevoicon-fuel:before {
+  content: "\e907";
+}
+.hudevoicon-inv:before {
+  content: "\e908";
+}
+.hudevoicon-key:before {
+  content: "\e909";
+}
+.hudevoicon-left:before {
+  content: "\e90a";
+}
+.hudevoicon-light:before {
+  content: "\e90b";
+}
+.hudevoicon-lobby:before {
+  content: "\e90c";
+}
+.hudevoicon-micro:before {
+  content: "\e90d";
+}
+.hudevoicon-mini-rado:before {
+  content: "\e90e";
+}
+.hudevoicon-person:before {
+  content: "\e90f";
+}
+.hudevoicon-phone:before {
+  content: "\e910";
+}
+.hudevoicon-prise-right:before {
+  content: "\e911";
+}
+.hudevoicon-radio:before {
+  content: "\e912";
+}
+.hudevoicon-right:before {
+  content: "\e913";
+}
+.hudevoicon-shield:before {
+  content: "\e914";
+}
+.hudevoicon-skull:before {
+  content: "\e915";
+}
+.hudevoicon-star:before {
+  content: "\e916";
+}
+.hudevoicon-wallet:before {
+  content: "\e917";
+}
+.hudevoicon-war-left:before {
+  content: "\e918";
+}
+.hudevoicon-war-person:before {
+  content: "\e919";
+}
+.hudevoicon-war-right:before {
+  content: "\e91a";
+}

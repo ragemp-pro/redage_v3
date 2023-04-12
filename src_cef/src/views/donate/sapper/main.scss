@@ -1,0 +1,321 @@
+@import '@/views/assets/css/main.sass';
+
+#sapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: UniNeue;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;   
+
+    .game {
+        background-image: url("data:image/svg+xml,%3Csvg width='340' height='794' viewBox='0 0 340 794' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M327 1.46905e-05C334.18 1.50044e-05 340 5.82031 340 13V253.004C339.834 253.001 339.667 253 339.5 253C320.998 253 306 267.998 306 286.5C306 305.002 320.998 320 339.5 320C339.667 320 339.834 319.999 340 319.996L340 781C340 788.18 334.18 794 327 794H13C5.8203 794 -3.13835e-07 788.18 0 781L2.01511e-05 319.996C18.271 319.729 33 304.835 33 286.5C33 268.165 18.271 253.271 2.30795e-05 253.004L3.35703e-05 13C3.38842e-05 5.8203 5.82033 0 13 0L327 1.46905e-05Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='170' y1='0' x2='170' y2='794' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%238E8E8E'/%3E%3Cstop offset='1' stop-color='%23424242'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+        display: flex;
+        @include fluid("width", 340);
+        @include fluid("height", 794);
+        background-size: 100%;
+
+        .box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .box:after {
+            background-image: url("data:image/svg+xml,%3Csvg width='340' height='794' viewBox='0 0 340 794' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M327 1.46905e-05C334.18 1.50044e-05 340 5.82031 340 13V253.004C339.834 253.001 339.667 253 339.5 253C320.998 253 306 267.998 306 286.5C306 305.002 320.998 320 339.5 320C339.667 320 339.834 319.999 340 319.996L340 781C340 788.18 334.18 794 327 794H13C5.8203 794 -3.13835e-07 788.18 0 781L2.01511e-05 319.996C18.271 319.729 33 304.835 33 286.5C33 268.165 18.271 253.271 2.30795e-05 253.004L3.35703e-05 13C3.38842e-05 5.8203 5.82033 0 13 0L327 1.46905e-05Z' fill='%23F0F0F0'/%3E%3C/svg%3E%0A");
+            @include fluid("width", 340);
+            @include fluid("height", 794);
+            background-size: 100%;
+            content:" ";
+            position: absolute;
+            width: 100%;
+            @include fluid("bottom", 15);
+            height: 100%;
+            left: 0;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .logoSapper {
+               
+                margin: auto;
+                @include fluid("margin-bottom", 17);
+                @include fluid("margin-top", 46);
+                @include fluid("width", 162);
+                @include fluid("height", 71);
+            }
+            .desc {
+                font-weight: 500;
+                @include fluid("font-size", 10);
+                text-align: center;
+                @include fluid("padding-left", 25);
+                @include fluid("padding-right", 25);
+                color: #000000;
+                @include fluid("margin-bottom", 5);
+            }
+            .title {
+                font-weight: bold;
+                @include fluid("font-size", 24);
+                color: #000000;
+                @include fluid("margin-bottom", 11);
+                text-align: center;
+                span {
+                    color: #FFA928;
+                }
+                &.rb {
+                    @include fluid("font-size", 16);
+                    margin-bottom: 0
+                    
+                    span {
+                        color: #FF5271;
+                    }
+                    
+                }
+            }
+
+            .win {
+                text-align: center;
+                .n {
+                    color: #FF5271;
+                    font-weight: bold;
+                    @include fluid("font-size", 48)
+                }
+                & p {
+                    font-weight: 500;
+                    color: #656565;
+                    @include fluid("font-size", 14)
+                }
+               
+            }
+
+            .input {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include fluid("margin-top", 28);
+                .rate {
+                    text-align: center;
+                    @include fluid("width", 197);
+                    font-weight: 500;
+                    @include fluid("font-size", 18);
+                    color: #5C5C5C;
+                    background: #C4C4C4;
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    @include fluid("border-radius", 15);
+                    @include fluid("margin-bottom", 11);
+                }
+                .btn {
+                    background: #FF5372;
+                    @include fluid("height", 47);
+                    @include fluid("font-size", 24);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    @include fluid("width", 197);
+                    @include fluid("margin-bottom", 9);
+                    transition: ease all .2s;
+                    &:hover {
+                        background: #f84264;
+                    }
+                }
+
+                .exit {
+                    font-weight: bold;
+                    @include fluid("font-size", 12);
+                    color: #5C5C5C;
+                    transition: ease all .2s;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                }
+            }
+
+
+
+            .playZone {
+                display: flex;
+                flex-direction: column-reverse;
+                @include fluid("margin-top", 21);
+
+                .group:last-child {
+                    .info:after { 
+                        display: none;
+                    }
+                }
+
+
+
+                .group.success {
+                    &:nth-child(1) {
+                        .info:after { 
+                            background: #5CCA36;
+                        }
+                    }
+                }
+                .group.success {
+                    &:last-child {
+                        .info:after { 
+                            background: #5CCA36;
+                        }
+                    }
+                }
+
+
+                
+                .group {
+                    display: flex;
+                    width: 100%;
+                    @include fluid("padding-left", 29);
+                    @include fluid("margin-bottom", 11);
+
+                    .info {
+                        font-weight: 500;
+                        @include fluid("width", 25);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include fluid("font-size", 14);
+                        color: #909090;
+                        @include fluid("margin-right", 12);
+                        position: relative;
+
+                        &:after {
+                            @include fluid("height", 23);
+                            background: #919191;
+                            content: "";
+                            @include fluid("width", 1);
+                            @include fluid("top", -17);
+                            position: absolute;
+                        }
+                        &.success {
+                            color: #5CCA36;
+                        }
+                        &.fail {
+                            color: red
+                        }
+                        &.half {
+                            color:#ee7b00
+                        }
+
+                    }
+
+                    .items
+                    {
+                        display: flex;
+                        
+                        & li {
+
+
+
+                            @include fluid("width", 30);
+                            @include fluid("margin-right", 16);
+                            @include fluid("height", 30);
+                            position: relative;
+                            @include fluid("border-radius", 100);
+                            &.checked {
+                                background: linear-gradient(180deg, #E2E2E2 0%, #C4C4C4 55.21%, #A5A5A5 100%);
+                                border: 1px solid #AFAFAF;
+
+                                &:before {
+                                    background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 55.21%, #D9D9D9 100%);
+                                    @include fluid("border-width", 1);
+                                    @include fluid("border-radius", 100);
+                                    border-style: solid;
+                                    border-color: #AFAFAF;
+                                    @include fluid("max-width", 30);
+                                    @include fluid("max-height", 30);
+                                    width: 100%;
+                                    height: 100%;
+                                    @include fluid("left", -1);
+                                    @include fluid("top", -1);
+                                    opacity: 0;
+                                    position: absolute;
+                                    content: "";
+                                    transition: ease all .2s;
+                                }
+                                &:hover:before {
+                                    opacity: 1;
+                                }
+
+                            }
+                            &.mine {
+                            
+                                border: 1px solid #AFAFAF;
+                                
+                                &:before {
+                                    background-image: url("./images/logo-sapper.png");
+                                    position: absolute;
+                                    @include fluid("width", 22);
+                                    @include fluid("height", 9);
+                                    background-size: 100%;
+                                    left: 0;
+                                    content: "";
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                }
+
+                            }
+                            &.success {
+                            
+                                border: 1px solid #AFAFAF;
+                                
+                                &:before {
+                                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='7.5' fill='url(%23paint0_linear)' stroke='%2367B34C'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='8' y1='0' x2='8' y2='16' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%239DFF7A'/%3E%3Cstop offset='0.598958' stop-color='%2347BF1D'/%3E%3Cstop offset='1' stop-color='%232B7212'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+                                    position: absolute;
+                                    @include fluid("width", 16);
+                                    @include fluid("height", 16);
+                                    background-size: 100%;
+                                    left: 0;
+                                    content: "";
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                }
+
+                            }
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                        }
+                    }
+
+
+                }
+
+                .info.half:after { 
+                    background: linear-gradient(0deg, #5CCA36 0%, #909090 100%), #C4C4C4;
+                }
+                .info.success:after { 
+                    background: #5CCA36;
+                }
+
+
+            }
+
+
+        }
+
+
+    }
+
+
+}
+

@@ -1,0 +1,63 @@
+@import @/views/assets/css/main.sass
+
+#popup__death
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    animation: animatedeath 2s ease infinite
+    color: white
+    .popup__death_timer
+        border-radius: 50%
+        @include fluid("height", 168)
+        @include fluid("width", 168)
+        @include fluid("font-size", 42)
+        @include fluid("border", 4, "solid rgba(255,255,255,0.15)")
+        display: flex
+        align-items: center
+        justify-content: center
+        font-family: 'TTNorms-Bold'
+        font-weight: bold
+    .popup__death_title
+        @include fluid("margin-top", 67)
+        @include fluid("margin-bottom", 38)
+        @include fluid("font-size", 48)
+        font-family: 'TTNorms-Bold'
+        font-weight: bold
+        color: #E71D36
+    .popup__death_subtitle
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 25)
+        @include fluid("max-width", 462)
+        text-align: center
+    .popup__death__buttons
+        display: flex
+        justify-content: space-between
+        @include fluid("width", 590)
+        @include fluid("margin-top", 43)
+        .popup__death_button
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("border-radius", 4)
+            @include fluid("width", 186)
+            @include fluid("height", 40)
+            background: rgba(255,255,255,0.2)
+            cursor: pointer
+            &:hover
+                background: white
+                color: black
+    .popup__death_icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        @include fluid("font-size", 480)
+        color: rgba(255,255,255,0.2)
+        z-index: -1

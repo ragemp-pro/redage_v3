@@ -1,0 +1,83 @@
+
+.dial {
+    font-family: 'UniNeue';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin: -150px 0 0 -150px;
+}
+
+.dial .img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+}
+
+.dial .base {
+    background-image: url('../images/s1.png')
+}
+
+.dial .num {
+    background-image: url('../images/s2.png')
+}
+
+.dial .center {
+    background-image: url('../images/s3.png')
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -1px); }
+    20% { transform: translate(-1px, 0px); }
+    30% { transform: translate(0px, 1px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 1px); }
+    60% { transform: translate(-1px, 1px); }
+    70% { transform: translate(1px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    90% { transform: translate(1px, 1px); }
+    100% { transform: translate(1px, -1px); }
+}
+
+.shake1 {
+    animation-name: shake;
+    animation-duration: 6s;
+    transform-origin:50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake2 {
+    animation-name: shake;
+    animation-duration: 5s;
+    transform-origin:75% 75%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake3 {
+    animation-name: shake;
+    animation-duration: 4s;
+    transform-origin:100% 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake4 {
+    animation-name: shake;
+    animation-duration: 3s;
+    transform-origin:50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shake1,
+.shake2,
+.shake3,
+.shake4 {
+    display:inline-block;
+}

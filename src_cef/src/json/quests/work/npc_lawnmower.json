@@ -1,0 +1,11 @@
+{
+    "0": {
+        "buttons":[
+            {"name": "Устроиться на работу.", "type": "perform"},
+            {"name": "Арендовать рабочее авто.", "type": "action"},
+            {"name": "Неинтересно."}
+        ],
+        "text":"Привет!",
+        "sound": "cloud/npc/hunt/hunter1.ogg"
+    }
+}

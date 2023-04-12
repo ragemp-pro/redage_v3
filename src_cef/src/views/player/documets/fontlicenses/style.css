@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'inv';
+  src:  url('./inv.eot?vllgxc');
+  src:  url('./inv.eot?vllgxc#iefix') format('embedded-opentype'),
+    url('./inv.ttf?vllgxc') format('truetype'),
+    url('./inv.woff?vllgxc') format('woff'),
+    url('./inv.svg?vllgxc#inv') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="inv-"], [class*=" inv-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'inv' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inv-backpack:before {
+  content: "\e900";
+}
+.inv-car:before {
+  content: "\e901";
+}
+.inv-close:before {
+  content: "\e902";
+}
+.inv-freeze:before {
+  content: "\e903";
+}
+.inv-home:before {
+  content: "\e904";
+}
+.inv-key:before {
+  content: "\e905";
+}
+.inv-lic-boat:before {
+  content: "\e906";
+}
+.inv-lic-car:before {
+  content: "\e907";
+}
+.inv-lic-drone:before {
+  content: "\e908";
+}
+.inv-lic-gun:before {
+  content: "\e909";
+}
+.inv-lic-health:before {
+  content: "\e90a";
+}
+.inv-lic-helipad:before {
+  content: "\e90b";
+}
+.inv-lic-medical:before {
+  content: "\e90c";
+}
+.inv-lic-moto:before {
+  content: "\e90d";
+}
+.inv-lic-truck:before {
+  content: "\e90e";
+}
+.inv-safe:before {
+  content: "\e90f";
+}
+.inv-slap:before {
+  content: "\e910";
+}
+.inv-trade:before {
+  content: "\e911";
+}
+.inv-user:before {
+  content: "\e912";
+}
+.inv-key-2:before {
+  content: "\e970";
+}
+.inv-drop:before {
+  content: "\e913";
+}
+.inv-modifications:before {
+  content: "\e914";
+}
+.inv-store:before {
+  content: "\e915";
+}

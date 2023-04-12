@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'organisationsicon';
+  src:  url('./organisationsicon.eot?3oq9ox');
+  src:  url('./organisationsicon.eot?3oq9ox#iefix') format('embedded-opentype'),
+    url('./organisationsicon.ttf?3oq9ox') format('truetype'),
+    url('./organisationsicon.woff?3oq9ox') format('woff'),
+    url('./organisationsicon.svg?3oq9ox#organisationsicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="organisationsicon-"], [class*=" organisationsicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'organisationsicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.organisationsicon-hanger:before {
+  content: "\e900";
+}
+.organisationsicon-clothes:before {
+  content: "\e901";
+}
+.organisationsicon-line:before {
+  content: "\e902";
+}
+.organisationsicon-eye:before {
+  content: "\e903";
+}
+.organisationsicon-phone:before {
+  content: "\e904";
+}
+.organisationsicon-rupor:before {
+  content: "\e905";
+}
+.organisationsicon-shop:before {
+  content: "\e906";
+}
+.organisationsicon-gps:before {
+  content: "\e907";
+}
+.organisationsicon-loop:before {
+  content: "\e908";
+}
+.organisationsicon-personal:before {
+  content: "\e909";
+}
+.organisationsicon-park:before {
+  content: "\e90a";
+}
+.organisationsicon-tasks:before {
+  content: "\e90b";
+}
+.organisationsicon-achivments:before {
+  content: "\e90c";
+}
+.organisationsicon-settings:before {
+  content: "\e90d";
+}
+.organisationsicon-up:before {
+  content: "\e90e";
+}
+.organisationsicon-down:before {
+  content: "\e90f";
+}
+.organisationsicon-clock:before {
+  content: "\e910";
+}
+.organisationsicon-edit:before {
+  content: "\e911";
+}
+.organisationsicon-send:before {
+  content: "\e912";
+}
+.organisationsicon-info:before {
+  content: "\e913";
+}
+.organisationsicon-icon:before {
+  content: "\e914";
+}
+.organisationsicon-add:before {
+  content: "\e915";
+}
+.organisationsicon-dell:before {
+  content: "\e916";
+}
+.organisationsicon-plus:before {
+  content: "\e917";
+}
+.organisationsicon-minus:before {
+  content: "\e918";
+}
+.organisationsicon-sellcar:before {
+  content: "\e919";
+}
+.organisationsicon-tuning:before {
+  content: "\e91a";
+}
+.organisationsicon-edit1:before {
+  content: "\e91b";
+}
+.organisationsicon-save:before {
+  content: "\e91c";
+}
+.organisationsicon-crime:before {
+  content: "\e91d";
+}
+.organisationsicon-customs:before {
+  content: "\e91e";
+}
+.organisationsicon-office:before {
+  content: "\e91f";
+}
+.organisationsicon-gps2:before {
+  content: "\e920";
+}
+.organisationsicon-alarm:before {
+  content: "\e921";
+}
+.organisationsicon-light:before {
+  content: "\e922";
+}
+.organisationsicon-sherif:before {
+  content: "\e923";
+}
+.organisationsicon-dron:before {
+  content: "\e924";
+}

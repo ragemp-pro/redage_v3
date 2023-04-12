@@ -1,0 +1,3962 @@
+@import '@/views/assets/css/main.sass'
+@import './assets/fonts/Gilroy/stylesheet.css'
+
+#newphone
+    z-index: 10000
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: flex-end
+    font-family: 'Gilroy'
+    color: #000000
+    font-weight: 500
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 21)
+    @include fluid("padding-bottom", 80)
+    @include fluid("padding-right", 80)
+    &.notif
+        @include fluid("bottom", -492)
+    .newphone__loader
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 30000
+        @include fluid("width", 294)
+        @include fluid("height", 634)
+        background: white
+        @include fluid("border-radius", 38)
+        @include fluid("margin-bottom", 14)
+        @include fluid("margin-right", 17)
+        @include fluid("margin-left", 17)
+        @include fluid("margin-top", 14)
+        display: flex
+        flex-direction: column
+        &.small
+            width: 100%
+            height: 100%
+            margin: 0
+    .newphone__loader_spinner
+        position: relative
+        @include fluid("width", 60)
+        @include fluid("height", 60)
+        background: #6e6e6e
+        padding: 10px
+        @include fluid("border-radius", 10)
+        align-self: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        div
+            width: 6%
+            height: 16%
+            background: #FFF
+            position: absolute
+            left: 49%
+            top: 43%
+            opacity: 0
+            -webkit-border-radius: 50px
+            -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
+            -webkit-animation: fade 1s linear infinite
+
+            &.bar1
+                -webkit-transform: rotate(0deg) translate(0, -130%)
+                -webkit-animation-delay: 0s
+
+            &.bar2
+                -webkit-transform: rotate(30deg) translate(0, -130%)
+                -webkit-animation-delay: -0.9167s
+
+            &.bar3
+                -webkit-transform: rotate(60deg) translate(0, -130%)
+                -webkit-animation-delay: -0.833s
+
+            &.bar4
+                -webkit-transform: rotate(90deg) translate(0, -130%)
+                -webkit-animation-delay: -0.7497s
+
+            &.bar5
+                -webkit-transform: rotate(120deg) translate(0, -130%)
+                -webkit-animation-delay: -0.667s
+
+            &.bar6
+                -webkit-transform: rotate(150deg) translate(0, -130%)
+                -webkit-animation-delay: -0.5837s
+
+            &.bar7
+                -webkit-transform: rotate(180deg) translate(0, -130%)
+                -webkit-animation-delay: -0.5s
+
+            &.bar8
+                -webkit-transform: rotate(210deg) translate(0, -130%)
+                -webkit-animation-delay: -0.4167s
+
+            &.bar9
+                -webkit-transform: rotate(240deg) translate(0, -130%)
+                -webkit-animation-delay: -0.333s
+
+            &.bar10
+                -webkit-transform: rotate(270deg) translate(0, -130%)
+                -webkit-animation-delay: -0.2497s
+
+            &.bar11
+                -webkit-transform: rotate(300deg) translate(0, -130%)
+                -webkit-animation-delay: -0.167s
+
+            &.bar12
+                -webkit-transform: rotate(330deg) translate(0, -130%)
+                -webkit-animation-delay: -0.0833s
+
+    @-webkit-keyframes fade
+        from
+            opacity: 1
+
+        to
+            opacity: 0.25
+            
+    .no-loader
+        .newphone__loader
+            visibility: hidden !important
+            opacity: 0 !important
+            display: none !important
+
+    .box-between
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .newphone__image
+        @include fluid("width", 328)
+        @include fluid("height", 662)   
+        background-image: url(./assets/images/phone.png)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("padding-bottom", 14)
+        @include fluid("padding-right", 17)
+        @include fluid("padding-left", 17)
+        @include fluid("padding-top", 14)
+        position: relative
+    .newphone__background
+        height: 100%
+        width: 100%
+        background-image: url(./assets/images/background1.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        &.over-hiden
+            overflow: hidden
+
+
+    .newphone__notification
+        position: absolute
+        left: 50%
+        @include fluid("top", 60)
+        transform: translate(-50%, 0%)
+        background: #FFFFFF
+        @include fluid("border-radius", 10)
+        @include fluid("width", 284)
+        @include fluid("padding", 12)
+        z-index: 200000
+        box-shadow: 2px 2px 3px #000
+        .box-between
+            line-height: normal
+            @include fluid("font-size", 14)
+            font-weight: 500
+            color: rgba(0, 0, 0, 0.5)
+        .fw-bold
+            font-weight: 600
+
+    .newphone__header
+        z-index: 20000
+        position: relative
+        @include fluid("min-height", 26)
+        @include fluid("max-height", 26)
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        @include fluid("padding-right", 17)
+        @include fluid("padding-left", 17)
+        font-weight: 700
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 11)
+        .newphone__header_image
+            @include fluid("height", 26) 
+            @include fluid("width", 132)
+            background-image: url(./assets/images/header.png)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center 
+            border-radius: 0px 0px 18px 18px
+            @include fluid("margin-right", 5)
+            @include fluid("margin-left", 5)
+        .time
+            @include fluid("margin-right", 5)
+            line-height: 1
+            color: white
+            text-shadow: 0px 0px 3px #000
+            @include fluid("font-size", 16)
+        .phoneicons-location
+            color: white
+            text-shadow: 0px 0px 3px #000
+            @include fluid("font-size", 12)
+        .newphone__header_connection
+            display: flex
+            align-items: flex-end
+            .newphone__header_connect
+                @include fluid("width", 2)
+                background: #000000  
+                @include fluid("margin-right", 1)
+            .newphone__header_connect1
+                @include fluid("height", 5) 
+            .newphone__header_connect2
+                @include fluid("height", 6) 
+            .newphone__header_connect3
+                @include fluid("height", 7) 
+            .newphone__header_connect4
+                @include fluid("height", 8) 
+        .newphone__header_battery
+            color: white
+            text-shadow: 0px 0px 3px #000
+            @include fluid("font-size", 11)
+        .box-between
+            @include fluid("width", 68)
+            align-items: flex-end
+            @include fluid("font-size", 14)
+        .box-flex
+            @include fluid("width", 68)
+            align-items: center
+        .newphone__header_text
+            @include fluid("font-size", 10)
+            color: white
+            text-shadow: 0px 0px 3px #000
+            &.ml-auto
+                margin-left: auto
+                @include fluid("margin-right", 5)
+    .newphone__mainmenu_grid
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(4, 1fr)
+        @include fluid("grid-gap", 4)
+        @include fluid("column-gap", 4)
+        width: 100%
+        @include fluid("margin-top", 28)
+        @include fluid("padding-right", 12)
+        @include fluid("padding-left", 12)
+    .newphone__mainmenu_element
+        display: flex
+        flex-direction: column
+        align-items: center
+        cursor: pointer
+        @include fluid("width", 64)
+        transition: all 0.5s ease
+        &:hover
+            transition: all 0.5s ease
+            .newphone__mainmenu_icon
+                box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.3)
+    .newphone__mainmenu_icon
+        @include fluid("width", 46)
+        @include fluid("height", 46)
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        @include fluid("border-radius", 12)
+    .newphone__mainmenu_name
+        @include fluid("margin-top", 4)
+        text-align: center
+        font-weight: 500
+        color: white
+        text-shadow: 1px 1px 1px #000
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 16)
+    .newphone__mainmenu_bottom
+        margin-top: auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("width", 278)
+        @include fluid("height", 74)
+        background: rgba(174, 173, 173, 0.1)
+        @include fluid("border-radius", 26)
+        @include fluid("margin-bottom", 8)
+        @include fluid("margin-left", 8)
+        @include fluid("margin-right", 8)
+        @include fluid("padding-right", 14)
+        @include fluid("padding-left", 14)
+    .newphone__mainmenu_weather
+        grid-column-start: 1
+        grid-column-end: 3
+        grid-row-start: 1
+        grid-row-end: 3
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 16)
+        width: 100%
+        height: 100%
+        font-weight: 500 
+        color: #000000
+        transition: all 0.5s ease
+        &:hover
+            transition: all 0.5s ease
+            .newphone__mainmenu_currentweather   
+                box-shadow: 0px 0px 24px rgba(255, 255, 255, 0.3)
+        .phoneicons-location
+            @include fluid("margin-left", 5)
+            @include fluid("font-size", 10)
+            color: white
+            text-shadow: 1px 1px 1px #000
+            font-weight: 500  
+        .newphone__mainmenu_currentweather   
+            @include fluid("border-radius", 12)
+            @include fluid("height", 128)
+            @include fluid("padding", 14)
+            display: flex
+            @include fluid("height", 115)
+            @include fluid("width", 115)
+            @include fluid("min-height", 115)
+            @include fluid("min-width", 115)
+            flex-direction: column
+            align-items: center
+            background-position: center
+            background-repeat: no-repeat
+            color: white
+            background-size: cover
+            &.newphone__weather_imagecloud
+                @include fluid("border-radius", 12)
+                background-image: url(./assets/images/mainmenu__weather/cloud.png)
+            &.newphone__weather_imagefog
+                @include fluid("border-radius", 12)
+                background-image: url(./assets/images/mainmenu__weather/fog.png)
+            &.newphone__weather_imagerain
+                @include fluid("border-radius", 12)
+                background-image: url(./assets/images/mainmenu__weather/rain.png)
+            &.newphone__weather_imagesnow
+                @include fluid("border-radius", 12)
+                background-image: url(./assets/images/mainmenu__weather/snow.png)
+            &.newphone__weather_imagesunny
+                @include fluid("border-radius", 12)
+                background-image: url(./assets/images/mainmenu__weather/sunny.png)
+            &.newphone__weather_imagethunder
+                @include fluid("border-radius", 12)
+                background-image: url(./assets/images/mainmenu__weather/thunder.png)
+            &.newphone__weather_imagenight
+                @include fluid("border-radius", 12)
+                background-image: url(./assets/images/mainmenu__weather/night.png)
+            &.newphone__weather_imagenightcloud
+                background-image: url(./assets/images/mainmenu__weather/nightcloud.png)
+            &.newphone__weather_imagenightfog
+                background-image: url(./assets/images/mainmenu__weather/nightfog.png)
+            &.newphone__weather_imagenightrain
+                background-image: url(./assets/images/mainmenu__weather/nightrain.png)
+            &.newphone__weather_imagenightthunder
+                background-image: url(./assets/images/mainmenu__weather/nightthunder.png)
+            &.newphone__weather_imagenightsnow
+                background-image: url(./assets/images/mainmenu__weather/nightsnow.png)
+            .box-flex
+                z-index: 10001
+                align-items: center
+            .newphone__weather_gradus
+                @include fluid("margin-top", 3)
+                @include fluid("margin-bottom", 12)
+                z-index: 10001
+                @include fluid("font-size", 32)
+                @include fluid("line-height", 37)
+                font-style: normal
+                font-weight: normal
+    .newphone__weather_icon
+        @include fluid("width", 24)
+        @include fluid("height", 24)
+        @include fluid("margin-right", 5)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        &.cloud
+            background-image: url(./assets/images/weather/cloud_small.png)
+        &.fog
+            background-image: url(./assets/images/weather/fog_small.png)
+        &.rain
+            background-image: url(./assets/images/weather/rain_small.png)
+        &.snow
+            background-image: url(./assets/images/weather/snow_small.png)
+        &.sunny
+            background-image: url(./assets/images/weather/sun_small.png)
+        &.thunder
+            background-image: url(./assets/images/weather/thunder_small.png)
+        &.night
+            background-image: url(./assets/images/weather/moon_small.png)
+        &.nightcloud
+            background-image: url(./assets/images/weather/moon_small_cloud.png)
+        &.nightfog
+            background-image: url(./assets/images/weather/moon_small_fog.png)
+        &.nightrain
+            background-image: url(./assets/images/weather/moon_small_rain.png)
+        &.nightthunder
+            background-image: url(./assets/images/weather/moon_small_thunder.png)
+        &.nightsnow
+            background-image: url(./assets/images/weather/moon_small_snow.png)
+    .newphone__weather_sunny
+        background: white
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #FDC964 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_cloud
+        background: white
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #C4DAE7 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_rain
+        background: white
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #B5DFF7 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_snow
+        background: white
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #EFF5F8 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_thunder
+        background: white
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #BEBEBE 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_fog
+        background: white
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #C3CCD4 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_night
+        background: #052947
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #0f1e2b 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_nightcloud
+        background: #052947
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #0f1e2b 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_nightfog
+        background: #052947
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #0f1e2b 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_nightrain
+        background: #052947
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #0f1e2b 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_nightthunder
+        background: #052947
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #0f1e2b 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather_nightsnow
+        background: #052947
+        position: relative
+        &::after
+            @include fluid("border-radius", 12)
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            left: 0
+            top: 0
+            background: linear-gradient(180deg, #0f1e2b 29.17%, rgba(255, 255, 255, 0) 100%)
+    .newphone__weather
+        width: 100%
+        height: 100%
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        &::after
+            @include fluid("border-radius", 38)
+            z-index: 10001
+        .newphone__weather_icon
+            @include fluid("width", 24)
+            @include fluid("height", 24)
+            @include fluid("margin-right", 5)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            &.cloud
+                background-image: url(./assets/images/weather/cloud_small.png)
+            &.fog
+                background-image: url(./assets/images/weather/fog_small.png)
+            &.rain
+                background-image: url(./assets/images/weather/rain_small.png)
+            &.snow
+                background-image: url(./assets/images/weather/snow_small.png)
+            &.sunny
+                background-image: url(./assets/images/weather/sun_small.png)
+            &.thunder
+                background-image: url(./assets/images/weather/thunder_small.png)
+            &.night
+                background-image: url(./assets/images/weather/moon_small.png)
+            &.nightcloud
+                background-image: url(./assets/images/weather/moon_small_cloud.png)
+            &.nightfog
+                background-image: url(./assets/images/weather/moon_small_fog.png)
+            &.nightrain
+                background-image: url(./assets/images/weather/moon_small_rain.png)
+            &.nightthunder
+                background-image: url(./assets/images/weather/moon_small_thunder.png)
+            &.nightsnow
+                background-image: url(./assets/images/weather/moon_small_snow.png)
+        .newphone__weather_headicon
+            @include fluid("width", 24)
+            @include fluid("height", 24)
+            @include fluid("margin-right", 16)
+            background-repeat: no-repeat
+            background-size: contain
+            background-image: url(./assets/images/weather.png)
+            background-position: center
+        .blue
+            color: #3D77FA
+            @include fluid("margin-left", 5)
+        .newphone__weather_header
+            display: flex
+            align-items: center
+            z-index: 20000
+            position: relative
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 21)
+            font-weight: bold
+        .box-column
+            z-index: 20000
+        .newphone__weather_day
+            @include fluid("margin-top", 10)
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+            font-weight: 500
+        .newphone__weather_city
+            @include fluid("margin-top", 4)
+            @include fluid("font-size", 20)
+            @include fluid("line-height", 24)
+            font-weight: bold
+        .newphone__weather_image
+            z-index: 20000
+            width: 100%
+            @include fluid("height", 214)
+            background-size: contain
+            background-position: right
+            background-repeat: no-repeat
+            @include fluid("margin-top", 20)
+            &.cloud
+                background-image: url(./assets/images/weather/cloud.png)
+            &.fog
+                background-image: url(./assets/images/weather/fog.png)
+            &.rain
+                background-image: url(./assets/images/weather/rain.png)
+            &.snow
+                background-image: url(./assets/images/weather/snow.png)
+            &.sunny
+                background-image: url(./assets/images/weather/sun.png)
+            &.thunder
+                background-image: url(./assets/images/weather/thunder.png)
+            &.night
+                background-image: url(./assets/images/weather/moon.png)
+            &.nightcloud
+                background-image: url(./assets/images/weather/mooncloud.png)
+            &.nightfog
+                background-image: url(./assets/images/weather/moonfog.png)
+            &.nightrain
+                background-image: url(./assets/images/weather/moonrain.png)
+            &.nightthunder
+                background-image: url(./assets/images/weather/moonthunder.png)
+            &.nightsnow
+                background-image: url(./assets/images/weather/moonsnow.png)
+        .newphone__weather_temp
+            display: flex
+            @include fluid("font-size", 90)
+            @include fluid("line-height", 107)
+            font-weight: 500
+            z-index: 20000
+            .newphone__weather_number
+                @include fluid("margin-right", 10)
+            .newphone__weather_type
+                @include fluid("font-size", 24)
+                @include fluid("line-height", 29)
+            .newphone__weather_gr
+                @include fluid("height", 60)
+        .newphone__weather_list
+            display: flex
+            align-items: center
+            justify-content: space-between
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            @include fluid("padding-right", 20)
+            @include fluid("margin-top", 20)
+            font-weight: 500
+            z-index: 20000
+            .newphone__weather_element
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                .newphone__weather_time
+                    @include fluid("margin-bottom", 10)
+                .newphone__weather_icon 
+                    margin: 0
+                .newphone__weather_temper
+                    @include fluid("margin-top", 10)
+                    @include fluid("font-size", 15)
+                    @include fluid("line-height", 17)
+                    font-weight: 600
+    .newphone__homebutton
+        @include fluid("height", 6)
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 20000
+        margin-top: auto
+        @include fluid("margin-bottom", 12)
+        @include fluid("margin-top", 12)
+        .newphone__homebutton_button
+            @include fluid("width", 200)
+            @include fluid("height", 6)
+            background: #080C10
+            @include fluid("border-radius", 3)
+    .newphone__weather_content
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 100%
+        @include fluid("padding-left", 20)
+        @include fluid("padding-top", 20)
+        @include fluid("padding-bottom", 20)
+
+
+    .newphone__maps_wrapper
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+        .newphone__maps_icon
+            @include fluid("font-size", 25)
+            color: #FB4F69
+            position: absolute
+            top: calc(50% - 0px)
+            left: calc(50% - 0px)
+            transform: translate(-50%, -50%)
+            pointer-events: none
+            z-index: 1
+
+        .newphone__maps_container
+            position: relative
+            pointer-events: none
+
+            .newphone__maps_image
+                position: absolute
+                top: 0
+                left: 0
+                //background-image: url('./assets/images/rsz_1map.jpg')
+                width: 8192px
+                height: 8192px
+                background-repeat: no-repeat
+                background-position: top left
+                pointer-events: none
+
+    .newphone__maps
+        position: relative
+        overflow: hidden
+        @include fluid("width", 294)
+        @include fluid("height", 634)
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        //background-position: -800px -600px
+        //background-repeat: no-repeat
+        color: white
+
+        .newphone__maps_box
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            @include fluid("height", 634)
+
+        .newphone__maps_content
+            display: flex
+            flex-direction: column
+            width: 100%
+            height: auto
+            @include fluid("padding-left", 20)
+            @include fluid("padding-top", 20)
+            z-index: 1
+        .box-flex
+            align-items: center
+        &.taxi
+            .newphone__important_icon, .newphone__chevron-back
+                color: #FF7A00 !important
+            .newphone__maps_square, .newphone__project_button
+                background: #FF7A00 !important
+            .newphone__maps_element
+                .newphone__maps_elementicon
+                    color: #FF7A00 !important
+            .newphone__project_button
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    background: #d36600 !important
+            .newphone__maps_selected
+                .box-column
+                    .newphone__maps_headersubtitle
+                        @include fluid("font-size", 12)
+        &.mech
+            .newphone__important_icon, .newphone__chevron-back, .newphone__column_subtitle
+                color: #3E3E3E !important
+            .newphone__maps_square, .newphone__project_button
+                background: #3E3E3E !important
+            .newphone__maps_element
+                .newphone__maps_elementicon
+                    color: #3E3E3E !important
+            .newphone__project_button
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    background: #5a5a5a !important
+            .newphone__chevron-back
+                color: #DA2640 !important
+            .newphone__client_button
+                background: rgba(231, 29, 54, 0.2)
+                color: #DA2640
+                @include fluid("font-size", 16)
+        .newmphone__maps_circle
+            background: #A6B1BA
+            @include fluid("min-width", 16)
+            @include fluid("height", 16)
+            position: relative
+            border-radius: 50%
+            @include fluid("margin-right", 10)
+            @include fluid("margin-bottom", 26)
+            .newmphone__maps_circle2
+                position: absolute
+                background: white
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                @include fluid("min-width", 4)
+                @include fluid("min-height", 4)
+                border-radius: 50%
+        .newphone__maps_column
+            display: flex
+            flex-direction: column
+            width: 100%
+            @include fluid("padding-bottom", 10)
+            @include fluid("margin-bottom", 18)
+            @include fluid("border-bottom", 2, "solid #E2EAF0")
+            cursor: pointer
+            &.hover
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    @include fluid("border-bottom", 2, "solid #707477")
+                    .newphone__column_title
+                        color: #666f75
+                    .newphone__column_subtitle
+                        color: #c46004
+            .newphone__column_title
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 19)
+                color: #869199
+                font-weight: 500
+            .newphone__column_subtitle
+                @include fluid("margin-top", 4)
+                @include fluid("font-size", 18)
+                @include fluid("line-height", 21)
+                color: #FF7A00
+                font-weight: 500       
+
+    .newphone__maps_icon
+        color: #FB4F69
+        @include fluid("font-size", 30)
+    .newphone__maps_headerimage
+        @include fluid("width", 32)
+        @include fluid("height", 32)
+        background-image: url('./assets/images/renticon.png')
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        @include fluid("margin-right", 16)
+        &.trucker
+            @include fluid("width", 32)
+            @include fluid("height", 32)
+            background-image: url('./assets/images/trucker.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.taxi
+            @include fluid("width", 32)
+            @include fluid("height", 32)
+            background-image: url('./assets/images/taxi.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.tinderimg
+            @include fluid("width", 32)
+            @include fluid("height", 32)
+            background-image: url('./assets/images/tinder.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.mech
+            @include fluid("width", 32)
+            @include fluid("height", 32)
+            background-image: url('./assets/images/mech.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.radio
+            @include fluid("width", 32)
+            @include fluid("height", 32)
+            background-image: url('./assets/images/radioicon.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.rent
+            @include fluid("width", 20)
+            @include fluid("height", 20)
+            background-image: url('./assets/images/renticon.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.property
+            @include fluid("width", 20)
+            @include fluid("height", 20)
+            background-image: url('./assets/images/propertyicon.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.news
+            @include fluid("width", 55)
+            @include fluid("height", 24)
+            background-image: url('./assets/images/newsicon.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        &.ravito
+            @include fluid("width", 32)
+            @include fluid("height", 32)
+            background-image: url('./assets/images/avito.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 4)
+        &.auction
+            @include fluid("width", 32)
+            @include fluid("height", 32)
+            background-image: url('./assets/images/auction.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 4)
+        &.small
+            background-image: url('./assets/images/notification.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("width", 20)
+            @include fluid("height", 20)
+            @include fluid("border-radius", 4)
+    .newphone__maps_headertitle
+        font-weight: bold
+        @include fluid("font-size", 15)
+        @include fluid("line-height", 20)
+        @include fluid("margin-bottom", 4)
+    .newphone__maps_headertitleGPS
+        font-weight: bold
+        @include fluid("font-size", 15)
+        @include fluid("line-height", 20)
+        @include fluid("margin-bottom", 4)    
+        &.mw-60
+            @include fluid("max-width", 60)
+            @include fluid("width", 60)
+    .newphone__maps_headersubtitle
+        color: #E2EAF0
+        font-weight: normal
+        font-style: normal
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 16)
+    .newphone__maps_headersubtitleGPS
+        color: #E2EAF0
+        font-weight: normal
+        font-style: normal
+        text-shadow: 2px 2px 3px #000
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 16)    
+    .newphone__maps_importannt
+        display: flex
+        overflow-x: scroll
+        overflow-y: hidden
+        margin-top: auto
+        width: 100%
+        color: #000000
+        &::-webkit-scrollbar
+            @include fluid("width", 0)
+            opacity: 0
+        &::-webkit-scrollbar-track
+            background: rgba(255, 255, 255, 0)
+            @include fluid("border-radius", 6)
+            opacity: 0
+        &::-webkit-scrollbar-thumb
+            background: rgba(255, 255, 255, 0)
+            @include fluid("border-radius", 6)
+            opacity: 0
+
+        .newphone__important_element
+            display: flex
+            align-items: center
+            @include fluid("padding-left", 14)
+            @include fluid("padding-right", 14)
+            @include fluid("padding-top", 8)
+            @include fluid("padding-bottom", 8)
+            background: #FFFFFF
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            @include fluid("border-radius", 20)
+            @include fluid("margin-right", 10)
+            @include fluid("font-size", 14)
+            cursor: pointer
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4)
+            .newphone__important_icon
+                @include fluid("margin-right", 5)
+                color: #DA2640
+                @include fluid("font-size", 12)
+    .newphone__maps_categories
+        width: 100%
+        height: auto
+        margin-top: auto
+        @include fluid("max-height", 570)
+        background: white
+        @include fluid("border-radius", 38)
+        color: #1E262F
+        display: flex
+        flex-direction: column
+        z-index: 1
+        .newphone__maps_price
+            display: flex
+            align-items: center
+            position: relative
+            width: 100%
+            @include fluid("height", 70)
+            @include fluid("padding-left", 28)
+            color: white
+            .newphone__maps_car
+                position: absolute
+                right: 0
+                @include fluid("top", -30)
+                @include fluid("width", 171)
+                @include fluid("height", 122)   
+                background-image: url(./assets/images/taxicar.png)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+                &.mech
+                    @include fluid("width", 137)
+                    @include fluid("height", 111) 
+                    background-image: url(./assets/images/mechcar.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center
+                &.truck
+                    @include fluid("width", 137)
+                    @include fluid("height", 111) 
+                    background-image: url(./assets/images/truckcar.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center
+            .newphone__maps_pricetitle
+                color: rgba(255, 255, 255, 0.7)
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 17)
+            .newphone__maps_pricesubtitle
+                font-weight: 600
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 18)
+        .newphone__maps_subcategories
+            width: 100%
+            height: auto
+            background: white
+            @include fluid("border-radius", 38)
+            color: #1E262F
+            display: flex
+            flex-direction: column
+            @include fluid("padding-top", 16)
+    .phoneicons-add1
+        @include fluid("font-size", 23)
+        color: #A6B1BA
+        transform: rotate(45deg)
+        transition: all 0.5s ease
+        &:hover 
+            color: #5e6469
+            transition: all 0.5s ease
+    .newphone__maps_header
+        @include fluid("font-size", 24)
+        font-weight: bold
+        @include fluid("margin-bottom", 16)
+        &.none-m
+            margin-bottom: 0
+        &.m-top
+            @include fluid("margin-top", 16)
+    .newphone__maps_grid
+        @include fluid("min-height", 252)
+        @include fluid("max-height", 252)
+        @include fluid("margin-bottom", 26)
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(3, 1fr)
+        @include fluid("gap", 12)
+        width: 100%
+        .newphone__maps_element
+            @include fluid("height", 76)
+            @include fluid("width", 76)
+            @include fluid("padding", 5)
+            background: #F4F5F5
+            @include fluid("border-radius", 10)
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4)
+            .newphone__maps_elementicon
+                @include fluid("font-size", 24)
+                color: #DA2640
+                @include fluid("margin-bottom", 8)
+            .newphone__maps_elementname
+                color: #1E262F
+                text-align: center
+                font-weight: 500
+                @include fluid("font-size", 13)
+                @include fluid("line-height", 17)
+    .newphone__chevron-back
+        color: #FB4F69
+        @include fluid("font-size", 16)
+        margin-left: auto
+        transform: rotate(180deg)
+    .newphone__maps_selected
+        display: flex
+        align-items: center
+        @include fluid("width", 254)
+        background: #FFFFFF
+        box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1)
+        @include fluid("border-radius", 12)
+        @include fluid("min-height", 70)
+        @include fluid("padding", 12)
+        @include fluid("margin-bottom", 12)
+        cursor: pointer
+        transition: all 0.5s ease
+        &:hover
+            transition: all 0.5s ease
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4)
+        .newphone__maps_square
+            color: white
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("font-size", 24)
+            background: #DA2640
+            @include fluid("border-radius", 4)
+            @include fluid("min-height", 35)
+            @include fluid("min-width", 35)
+            @include fluid("margin-right", 20)
+        .newphone__maps_headertitle
+            font-weight: 600
+            @include fluid("font-size", 16)
+            color: #1E262F
+            @include fluid("line-height", 19)
+        .newphone__maps_headersubtitle
+            font-weight: normal
+            @include fluid("font-size", 16)
+            color: #869199
+            @include fluid("line-height", 19)
+    .newphone__shadow
+        text-shadow: 1px 1px 1px #000
+    .newphone__maps_client
+        @include fluid("width", 254)
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 16)
+        @include fluid("padding-top", 12)
+        @include fluid("padding-bottom", 12)
+        @include fluid("border-radius", 8)
+        @include fluid("font-size", 12)
+        @include fluid("margin-bottom", 12)
+        box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1)
+        .box-flex
+            @include fluid("margin-bottom", 8)
+        .gray
+            @include fluid("margin-bottom", 8)
+            color: #869199
+        .orange
+            font-weight: bold
+        .newphone__client_button
+            width: 100%
+            @include fluid("height", 44)
+            display: flex
+            align-items: center
+            justify-content: center
+            background: rgba(255, 122, 0, 0.2)
+            @include fluid("border-radius", 8)
+            color: #FF7A00
+            @include fluid("margin-top", 10)
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                cursor: pointer
+                background: rgba(255, 122, 0, 0.1)
+
+        .newmphone__client_circle
+            @include fluid("min-width", 8)
+            @include fluid("min-height", 8)
+            @include fluid("margin-right", 5)
+            border-radius: 50%
+            background: #1E262F
+            border: 1px solid #1E262F
+            box-shadow: 0px 0px 2px 2px rgba(255, 107, 0, 0.3)
+            &.to
+                background: #FF7A00
+                border: 1px solid #FF7A00
+            &.mech
+                background: #DA2640
+                border: 1px solid #DA2640
+                box-shadow: 0px 0px 2px 2px rgba(231, 29, 54, 0.2)
+    .newphone__maps_list
+        @include fluid("min-height", 421)
+        @include fluid("max-height", 421)
+        @include fluid("padding-top", 10)
+        @include fluid("padding-bottom", 10)
+        overflow-y: auto
+        overflow-x: hidden
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("width", 288)
+        @include fluid("padding-right", 10)
+        @include fluid("margin-right", 6)
+        @include fluid("padding-left", 16)
+        &.newphone__maps_clients
+            @include fluid("height", 462)
+
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)
+        .newphone__maps_title
+            text-align: center
+            color: #1E262F
+            @include fluid("font-size", 28)
+            @include fluid("line-height", 32)
+            @include fluid("margin-bottom", 12)
+            @include fluid("margin-top", 24)
+            font-weight: bold
+        .newphone__maps_subtitle
+            text-align: center
+            color: #869199
+            @include fluid("font-size", 18)
+            @include fluid("margin-bottom", 14)
+    .newphone__project_button
+        @include fluid("margin-top", 20)
+        @include fluid("margin-bottom", 20)
+        margin-top: auto
+        @include fluid("font-size", 18)
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #DA2640
+        @include fluid("border-radius", 12)
+        @include fluid("width", 262) 
+        @include fluid("min-height", 52)
+        color: white
+        transition: all 0.5s ease
+        cursor: pointer
+        text-align: center
+        align-self: center
+        &:hover
+            transition: all 0.5s ease
+            background: #c0233b
+        &.rent
+            background: rgba(255, 107, 0, 0.15)
+            color: #FF6B00
+            @include fluid("margin-bottom", 0)
+            &:hover
+                background: #FF6B00
+                color: white
+        &.tinder
+            @include fluid("max-height", 52)
+            @include fluid("height", 52)
+            background: #F44E73
+            color: white
+            @include fluid("margin-bottom", 0)
+            &:hover
+                background: #c7425f
+                color: white
+        &.rentnm
+            background: rgba(255, 107, 0, 0.15)
+            color: #FF6B00
+            &:hover
+                background: #FF6B00
+                color: white
+        &.radio
+            background: #9001D1
+            color: white
+            &:hover
+                background: #670992
+                color: white
+        &.property
+            background: #5D5FEF
+            color: white
+            @include fluid("margin-bottom", 0)
+            &:hover
+                background: #5052c7
+                color: white
+        &.auction
+            background: #259A70
+            color: white
+            &:hover
+                background: #196449
+                color: white
+        &.forbes
+            background: #1E262F
+            color: white
+            @include fluid("margin-right", 20)
+            @include fluid("margin-left", 20)
+            @include fluid("width", 248) 
+            &:hover
+                background: #14191f
+                color: white
+        &.small
+            @include fluid("min-height", 36) 
+            @include fluid("min-width", 120)
+            @include fluid("width", 120)
+            @include fluid("font-size", 12)
+    .newphone__gallery
+        width: 100%
+        height: 100%
+        background: #FEFEFE
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        color: #000000
+        position: relative
+        .newphone__homebutton
+            margin-top: 0
+        .newphone__gallery_grid
+            @include fluid("padding-left", 10)
+            @include fluid("padding-right", 5)
+            @include fluid("margin-right", 5)
+            @include fluid("padding-top", 20)
+            @include fluid("width", 290)
+            @include fluid("max-height", 559)
+            display: grid
+            grid-template-rows: max-content
+            grid-template-columns: repeat(3, 1fr)
+            @include fluid("gap", 2)
+            overflow-y: auto
+            overflow-x: hidden
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+        .newphone__gallery_count
+            font-weight: bold
+            @include fluid("font-size", 14)
+            margin-top: auto
+            @include fluid("margin-bottom", 10)
+            text-align: center
+        .newphone__gallery_item
+            @include fluid("width", 88)
+            @include fluid("height", 88)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            cursor: pointer
+            position: relative
+            &.active
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 0
+                    @include fluid("width", 88)
+                    @include fluid("height", 88)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-image: url(./assets/images/selected__image.png)
+        .newphone__gallery_title
+            @include fluid("padding-left", 10)
+            @include fluid("padding-top", 10)
+            font-weight: bold
+            @include fluid("font-size", 24)
+    .newphone__gallery_date
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        .newphone__gallery_month
+            @include fluid("font-size", 14)
+            color: #060503
+        .newphone__gallery_time
+            @include fluid("font-size", 12)
+            color: #060503
+    .newphone__gallery_image
+        width: 100%
+        height: 100%
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        background-color: white
+        border-top: 1px solid gray
+    .newphone__gallery_header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fluid("font-size", 14)
+        @include fluid("padding-left", 10)
+        @include fluid("padding-right", 10)
+        @include fluid("padding-top", 10)
+    .newphone__backicon
+        @include fluid("font-size", 16)
+        color: #156FE3
+    .newphone__gallery_footer
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("padding-bottom", 10)
+        .box-between
+            color: #216BCD
+            @include fluid("font-size", 22)
+            @include fluid("margin-bottom", 14)
+            @include fluid("padding-left", 20)
+            @include fluid("padding-right", 20)
+            width: 100%
+            .phoneicons-upload
+                cursor: pointer
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    color: #1d57a1
+            .phoneicons-trash
+                cursor: pointer
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    color: #1d57a1
+            .phoneicons-reload
+                cursor: pointer
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    color: #1d57a1
+        .newphone__gallery_last
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            border-bottom-left-radius: 15px
+            border-bottom-right-radius: 15px
+            overflow-x: scroll
+            overflow-y: hidden
+            margin-top: auto
+            width: 100%
+            &::-webkit-scrollbar
+                @include fluid("width", 0)
+                opacity: 0
+            &::-webkit-scrollbar-track
+                background: rgba(255, 255, 255, 0)
+                @include fluid("border-radius", 6)
+                opacity: 0
+            &::-webkit-scrollbar-thumb
+                background: rgba(255, 255, 255, 0)
+                @include fluid("border-radius", 6)
+                opacity: 0
+            .newphone__galleryfooter_item
+                @include fluid("min-width", 30)
+                @include fluid("height", 40)
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+    .newphone__popup
+        position: absolute
+        left: 50%
+        bottom: 0%
+        transform: translate(-50%, 0%)
+        height: 100%
+        width: 100%
+        z-index: 2000
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        @include fluid("padding-bottom", 24)
+        background: #5250504d
+        @include fluid("border-radius", 38)
+        @include fluid("max-width", 294)
+        z-index: 30000
+        .newphone__popup_element
+            width: 95%
+            @include fluid("height", 50)
+            background: white
+            @include fluid("border-radius", 14)
+            @include fluid("margin-bottom", 10)
+            color: #1d57a1
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                background: #E2E1DD
+            &.red
+                color: #E2424F
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    background: #E2E1DD
+
+    .orange
+        color: #FF7A00
+    .red
+        color: #DA2640
+    .purple
+        color: #9001D1
+    .violet 
+        color: #5D5FEF !important
+    .green
+        color: #259A70 !important    
+    .green__background
+        background: #259A70 !important       
+    .newphone__ads_violet
+        color: #5D5FEF !important
+        @include fluid("margin-bottom", 10)
+        @include fluid("padding-left", 16)
+        width: 100%
+        font-weight: 600
+        text-align: left
+    .violet__background
+        cursor: pointer
+        background: #5D5FEF !important
+    .red__background
+        background: #DA2640 !important
+        cursor: pointer
+    .orange__background
+        background: #FF7A00 !important
+        cursor: pointer
+    .newphone__rent
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        color: #000000
+        position: relative
+        .newphone__rent_status
+            background: #E2EAF0
+            border-radius: 2px
+            @include fluid("padding-left", 6)
+            @include fluid("padding-right", 6)
+            @include fluid("padding-top", 3)
+            @include fluid("padding-bottom", 3)
+            @include fluid("margin-left", 8)
+            font-weight: 500
+            @include fluid("font-size", 12)
+
+        .newphone__rent_content
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            .box-flex
+                align-items: center
+            
+            .box-center
+                text-align: center
+        .newphone__rent_list
+            height: auto
+            @include fluid("max-height", 514)
+            overflow-y: auto
+            overflow-x: hidden
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 8)
+            @include fluid("margin-right", 8)
+            &.small
+                @include fluid("max-height", 454)
+
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+        .newphone__rent_none
+            @include fluid("margin-top", 20)
+            background: #F4F5F5
+            @include fluid("border-radius", 12)
+            @include fluid("width", 262) 
+            @include fluid("min-height", 104) 
+            @include fluid("padding-left", 16)
+            display: flex
+            justify-content: space-between
+            align-items: center
+            align-self: center
+            transition: all 0.5s ease
+            position: relative
+            &.vehicle
+                .box-flex
+                    position: relative
+                    width: fit-content
+                    .newphone__rent_status
+                        position: absolute
+                        left: 100%
+
+            &:first-child
+                @include fluid("margin-top", 5)
+            &:last-child
+                @include fluid("margin-bottom", 5)
+            .box-column
+                .box-flex
+                    align-items: center
+                    @include fluid("margin-bottom", 10)
+                    .orange
+                        overflow: hidden
+                        white-space: nowrap
+                        text-overflow: ellipsis
+                        @include fluid("max-width", 65)
+            &.hover
+                &:hover
+                    transition: all 0.5s ease
+                    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4)
+            .orange
+                color: #FF6B00
+                font-weight: 600
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 18)
+            .gray
+                color: #869199
+                font-weight: 500
+                @include fluid("font-size", 12)
+                @include fluid("line-height", 14)
+            .newphone__rent_noneimage
+                @include fluid("min-width", 98)
+                @include fluid("height", 104)   
+                background-image: url(./assets/images/nonerent.png)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: inherit
+                &.pos-center
+                    background-position: center
+                &.rent
+                    @include fluid("margin-right", 10)
+                &.auction
+                    @include fluid("margin-right", 10)
+                    background-image: url(./assets/images/auction_pers.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: bottom
+                &.house
+                    @include fluid("margin-right", 10)
+                    background-image: url(./assets/images/house.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center  
+                &.business
+                    @include fluid("margin-right", 10)
+                    background-image: url(./assets/images/shop.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center  
+                &.person
+                    @include fluid("margin-right", 10)
+                    background-image: url(./assets/images/person.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center  
+                &.heal
+                    @include fluid("margin-right", 10)
+                    background-image: url(./assets/images/heal.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center 
+                &.signal
+                    @include fluid("margin-right", 10)
+                    background-image: url(./assets/images/signal.png)
+                    background-repeat: no-repeat
+                    background-size: contain
+                    background-position: center 
+            .date
+                @include fluid("margin-top", 8)
+    .newphone__project_title
+        color: #1E262F
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 29)
+    .newphone__margin_left16
+        @include fluid("margin-left", 16)
+    .newphone__auction_content
+        height: auto
+        @include fluid("max-height", 495)
+        @include fluid("padding-top", 10)
+        @include fluid("padding-bottom", 10)
+        width: 100%
+        overflow-y: auto
+        overflow-x: hidden
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("width", 288)
+        @include fluid("padding-right", 10)
+        @include fluid("margin-right", 6)
+        .box-center
+            text-align: center
+        &.newphone__maps_clients
+            @include fluid("max-height", 462)
+
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)
+
+    .newphone__ads_list
+        height: auto
+        @include fluid("max-height", 374)
+        @include fluid("padding-top", 10)
+        @include fluid("padding-bottom", 10)
+        width: 100%
+        overflow-y: auto
+        overflow-x: hidden
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include fluid("width", 288)
+        @include fluid("padding-right", 10)
+        @include fluid("margin-right", 6)
+        @include fluid("padding-left", 16)
+        &.auction
+            @include fluid("max-height", 366)
+            @include fluid("padding-top", 10)
+            &.big
+                @include fluid("max-height", 450)
+        &.filter
+            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1)
+            @include fluid("border-radius", 8)
+            @include fluid("width", 262)
+            @include fluid("margin-bottom", 20)
+            align-self: center
+            .w-100
+                width: 100%
+                @include fluid("margin-bottom", 10)
+        &.newphone__maps_clients
+            @include fluid("max-height", 462)
+
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)
+    .newphone__ads_element
+        @include fluid("width", 254)
+        display: flex
+        flex-direction: column
+        box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1)
+        @include fluid("border-radius", 8)
+        @include fluid("margin-bottom", 12)
+        @include fluid("padding-top", 16)
+        @include fluid("padding-bottom", 16)
+        align-items: center
+        min-height: fit-content
+        .box-between
+            min-height: fit-content
+        .newphone__ads_image
+            @include fluid("width", 210)
+            @include fluid("height", 140)   
+            @include fluid("min-height", 140) 
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            @include fluid("margin-bottom", 16)
+            &.contain
+                background-size: contain
+        .newphone__ads_titletext
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 16)
+            @include fluid("margin-top", 10)
+            @include fluid("margin-bottom", 5)
+            @include fluid("font-size", 16)
+            font-weight: bold
+            color: #000000
+            width: 100%
+        .newphone__ads_text
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 16)
+            @include fluid("margin-bottom", 10)
+            @include fluid("font-size", 14)
+            word-break: break-all
+            font-weight: 500
+            color: #000000
+            width: 100%
+        .box-between
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 16)
+            @include fluid("font-size", 14)
+            font-weight: 500
+            width: 100%
+        
+        .newphone__ads_vip
+            width: 100%
+            background: #DA2640
+            display: flex
+            align-items: center
+            overflow: hidden
+            justify-content: center
+            white-space: nowrap
+            color: white
+            @include fluid("font-size", 14)
+            @include fluid("margin-bottom", 16)
+            div
+                @include fluid("margin-right", 12)
+        .newphone__ads_circle
+            color: white
+            background: #DA2640
+            border-radius: 50%
+            @include fluid("width", 24)
+            @include fluid("height", 24)
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("font-size", 14)
+            @include fluid("margin-right", 8)
+            cursor: pointer
+            &:last-child
+                margin: 0
+            &:hover
+                background: #aa2034
+    .newphone__ads_gray
+        @include fluid("font-size", 14)
+        font-weight: 500
+        color: #869199
+        &.m-8
+            @include fluid("margin-bottom", 8)
+    .newphone__message_textarea
+        font-family: inherit
+        resize: none
+        width: 100%
+        @include fluid("height", 120)
+        @include fluid("margin-bottom", 10)
+        border: none
+        outline: none
+        @include fluid("padding-right", 10)
+        &.profile
+            @include fluid("width", 264)
+            @include fluid("border", 1, "solid black")
+            @include fluid("border-radius", 16)
+            @include fluid("padding", 14)
+    .newphone__ads_info
+        @include fluid("font-size", 14)
+        font-weight: 500
+        color: #869199
+        @include fluid("width", 254)
+        align-self: center
+        @include fluid("height", 226)
+        @include fluid("padding", 16)
+        @include fluid("margin-bottom", 10)
+        border: 1px solid #A6B1BA
+        box-sizing: border-box
+        @include fluid("border-radius", 8)
+        font-family: inherit
+        &.small 
+            @include fluid("height", 175)
+            .newphone__ads_textarea
+                @include fluid("height", 65)
+        .newphone__ads_textarea
+            font-family: inherit
+            resize: none
+            width: 100%
+            @include fluid("height", 120)
+            @include fluid("margin-bottom", 10)
+            border: none
+            outline: none
+            @include fluid("padding-right", 10)
+        .newphone__ads_capture
+            display: flex
+            justify-content: flex-end
+            align-items: flex-end
+            @include fluid("height", 60)
+            cursor: pointer
+            .newphone__ads_addimg
+                @include fluid("margin-right", 5)
+                @include fluid("min-width", 100)
+                @include fluid("height", 60) 
+                background-image: url(./assets/images/nonerent.png)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: bottom
+            .box-column
+                cursor: pointer
+                color: #DA2640
+                @include fluid("font-size", 20)
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                height: 100%
+    .newphone__project_categorie
+        @include fluid("width", 254)
+        @include fluid("min-height", 50)
+        background: #FFFFFF
+        box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1)
+        @include fluid("border-radius", 8)
+        @include fluid("padding-left", 12)
+        @include fluid("padding-right", 12)
+        @include fluid("padding-top", 16)
+        @include fluid("padding-bottom", 16)
+        @include fluid("margin-bottom", 12)
+        cursor: pointer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-weight: 600
+        color: #1E262F
+        @include fluid("font-size", 16)
+        transition: all 0.5s ease
+        &:hover
+            transition: all 0.5s ease
+            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4)
+        &:last-child
+            margin: 0
+        .newphone__tinder_circle
+            @include fluid("min-width", 36)
+            @include fluid("height", 36)
+            border-radius: 100%
+            //background-image: url(./assets/images/cameraphoto.png)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            display: flex
+            align-items: center
+            justify-content: center
+    .newphone__radio
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        color: #000000
+        position: relative
+        .newphone__radio_list
+            height: auto
+            @include fluid("height", 480)
+            @include fluid("padding-top", 10)
+            @include fluid("padding-bottom", 10)
+            @include fluid("padding-right", 10)
+            @include fluid("padding-left", 10)
+            width: 100%
+            overflow-y: auto
+            overflow-x: hidden
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+        .newphone__radio_back
+            margin-top: auto
+            width: 100%
+            text-align: center
+            display: flex
+            align-items: center
+            justify-content: center
+        .newphone__project_categorie
+            .box-flex
+                @include fluid("margin-left", 8)
+        .newphone__chevron-back
+            color: #9001D1
+        .newphone__project_title
+            @include fluid("font-size", 16)
+        .newphone__radio_headertitle
+            font-weight: 600
+            @include fluid("font-size", 16)
+            color: #1E262F
+            @include fluid("line-height", 19)
+        .newphone__radio_content
+            width: 100%
+            height: 100%
+            @include fluid("padding", 20)
+            .box-flex
+                align-items: center
+        .newphone__radio_live
+            background: #DA2640
+            border-radius: 50%
+            @include fluid("width", 8)
+            @include fluid("height", 8) 
+            @include fluid("margin-right", 8)
+        .m-t33
+            @include fluid("margin-top", 33)
+        .newphone__radio_headphones
+            @include fluid("margin-top", 18)
+            @include fluid("margin-bottom", 18)
+            @include fluid("min-width", 272)
+            @include fluid("height", 272) 
+            background-image: url(./assets/images/headphones.png)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: bottom
+        .newphone__radio_button
+            @include fluid("width", 24)
+            @include fluid("height", 24) 
+            background: #E2EAF0
+            @include fluid("border-radius", 6)
+            color: #9001D1
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("font-size", 20)
+            @include fluid("margin-right", 20)
+            transition: all 0.5s ease
+            cursor: pointer
+            &:hover
+                transition: all 0.5s ease
+                background: #bfc5ca
+            &.m-l
+                @include fluid("margin-right", 0)
+                @include fluid("margin-left", 18)
+        .box-between
+            @include fluid("margin-top", 8)
+        .switch input 
+            display: none
+
+        .switch
+            position: relative
+            display: inline-block
+            background: #131517
+            @include fluid("border-radius", 40)
+            @include fluid("width", 48)
+            @include fluid("height", 28)
+            .slider
+                position: absolute
+                cursor: pointer
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                background: #9001D1
+                -webkit-transition: .4s
+                transition: .4s
+                
+                &::before
+                    position: absolute
+                    content: ""
+                    @include fluid("width", 22)
+                    @include fluid("height", 22)
+                    @include fluid("left", 17)
+                    top: 50%
+                    -webkit-transition: .4s
+                    transition: .4s
+                    background: #FFFFFF
+                    box-sizing: border-box
+                    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+                    transform: translate(-50%, -50%)
+            input:checked + .slider:before  
+                @include fluid("height", 22)
+                @include fluid("left", 34)
+                background: white
+                box-sizing: border-box
+                box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+
+            .slider.round
+                @include fluid("border-radius", 34)
+
+                &::before
+                    border-radius: 50%
+    .newphone__forbes
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        color: #000000
+        position: relative
+        .newphone__forbes_list
+            @include fluid("height", 488)
+            @include fluid("padding-top", 10)
+            @include fluid("padding-bottom", 10)
+            @include fluid("width", 288)
+            @include fluid("padding-right", 10)
+            @include fluid("margin-right", 6)
+            @include fluid("padding-left", 16)
+            overflow-y: auto
+            overflow-x: hidden
+            display: flex
+            flex-direction: column
+            align-items: center
+            &.small 
+                @include fluid("margin-top", 10)
+                @include fluid("height", 322)
+                .newphone__forbes_subtitle
+                    @include fluid("padding-left", 4)
+                .newphone__forbes_element
+                    @include fluid("font-size", 16)
+                    .box-column
+                        width: 100%
+                    .box-between
+                        width: 100%
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+        .newphone__forbes_back
+            margin-top: auto
+            width: 100%
+            text-align: center
+            display: flex
+            align-items: center
+            justify-content: center
+        .newphone__forbes_categorie
+            .box-flex
+                @include fluid("margin-left", 8)
+        .newphone__chevron-back
+            color: #000000
+        .newphone__project_title
+            @include fluid("margin-top", 6)
+            @include fluid("font-size", 18)
+            @include fluid("padding-left", 20)
+            font-weight: bold
+        .newphone__forbes_headertitle
+            font-weight: 600
+            @include fluid("font-size", 16)
+            color: #1E262F
+            @include fluid("line-height", 19)
+        .newphone__forbes_content
+            width: 100%
+            height: 100%
+            @include fluid("max-height", 578)
+            @include fluid("padding-top", 20)
+            .box-flex
+                align-items: center
+        .newphone__forbes_headerimage
+            @include fluid("width", 70)
+            @include fluid("height", 20)
+            background-image: url('./assets/images/forbesicon.png')
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-bottom", 10)
+            @include fluid("margin-left", 20)
+        .newphone__forbes_element
+            @include fluid("width", 254)
+            @include fluid("min-height", 84)
+            display: flex
+            justify-content: space-between
+            display: flex
+            align-items: center
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            @include fluid("padding-top", 8)
+            @include fluid("padding-bottom", 8)
+            @include fluid("margin-bottom", 10)
+            background: #FFFFFF
+            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.1)
+            @include fluid("border-radius", 8)
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+            font-weight: 600
+            cursor: pointer
+            transition: all 0.5s ease
+            &.hover
+                &:hover
+                    transition: all 0.5s ease
+                    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4)
+            .gray
+                color: #869199
+                font-weight: 500
+                @include fluid("font-size", 12)
+                @include fluid("line-height", 14)
+                @include fluid("margin-bottom", 4)
+                @include fluid("margin-top", 4)
+        .newphone__forbes_position
+            height: 100%
+            @include fluid("margin-right", 16)
+        .newphone__forbes_title
+            font-weight: 500
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 29)
+            @include fluid("margin-bottom", 16)
+        .newphone__forbes_subtitle
+            font-weight: 500
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 21)
+            @include fluid("margin-bottom", 16)
+            color: #000000
+            text-align: left
+            width: 100%
+        .newphone__forbes_text
+            font-weight: 500
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 21)
+        .box-between
+            .box-flex
+                font-weight: 500
+                font-style: normal
+                @include fluid("font-size", 18)
+                @include fluid("line-height", 21)
+                .gray
+                    color: #869199
+                    @include fluid("margin-right", 5)
+    .newphone__project_padding16
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 16)
+    .newphone__project_padding20
+        @include fluid("padding-left", 20)
+        @include fluid("padding-right", 20)
+        @include fluid("margin-bottom", 20)
+        &.p-top
+            @include fluid("padding-top", 20)
+        .newphone__project_title
+            padding: 0
+    .newphone__project_padding
+        @include fluid("padding-left", 14)
+        @include fluid("padding-right", 20)
+        .newphone__project_title
+            padding: 0
+    .phoneicons-clubs
+        @include fluid("font-size", 30)
+        @include fluid("margin-bottom", 15)
+    .newphone__forbes_hidden
+        @include fluid("width", 40)
+        @include fluid("height", 40)   
+        background-image: url(./assets/images/hidden.svg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        @include fluid("margin-bottom", 15)
+        &.noneelements
+            background-image: url(./assets/images/tumbleweed.png)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+    .newphone__forbes_anon
+        @include fluid("margin-top", 15)
+        @include fluid("margin-bottom", 255)
+        color: #869199
+        font-weight: 500
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 14)
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        &.no-mar
+            @include fluid("margin-bottom", 247)
+    .phoneicons-filter
+        @include fluid("width", 12)
+        @include fluid("height", 12)   
+        background-image: url(./assets/images/filter.svg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        @include fluid("margin-right", 5)
+    .newphone__button_filter
+        @include fluid("width", 80)
+        @include fluid("height", 26)
+        @include fluid("font-size", 12)
+        color: white
+        background: #60686D
+        @include fluid("border-radius", 8)  
+        transition: all 0.5s ease
+        cursor: pointer
+        align-items: center
+        display: flex
+        justify-content: center
+        &:hover
+            background: #4e5558
+            transition: all 0.5s ease
+        .phoneicons-close
+            @include fluid("margin-left", 2)
+    .newphone__ads_categorie
+        background: #080C10
+        border-radius: 2px
+        @include fluid("padding", 4)
+        color: white
+        line-height: 1
+        text-transform: lowercase
+    .m-0
+        margin: 0
+    .w-1
+        width: 100%
+    .newphone__ads_input
+        font-family: inherit
+        @include fluid("width", 254)
+        @include fluid("border-radius", 8) 
+        border: 1px solid #869199
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 16)
+        @include fluid("padding-top", 10)
+        @include fluid("padding-bottom", 10)
+        color: #869199
+        @include fluid("font-size", 16)
+        @include fluid("margin-bottom", 10)
+        align-self: center
+        &.small
+            @include fluid("width", 100)
+        &.small170
+            @include fluid("width", 170)
+    .newphone__ads_title
+        width: 100%
+        @include fluid("font-size", 20)
+        @include fluid("margin-bottom", 10)
+    .newphone__font_16
+        @include fluid("font-size", 16)
+    .newphone__font_12
+        @include fluid("font-size", 12)
+    .newphone__mb-10
+        @include fluid("margin-bottom", 10)
+    .newphone__checkbox
+        @include fluid("width", 20)
+        @include fluid("height", 20)
+        position: relative
+        .styled-checkbox-1
+            @include fluid("width", 20)
+            @include fluid("height", 20)
+        .styled-checkbox 
+            position: absolute // take it out of document flow
+            opacity: 0 // hide it
+
+            & + label 
+                position: relative
+                cursor: pointer
+                padding: 0
+            
+
+            // Box.
+            & + label:before 
+                content: ''
+                display: inline-block
+                vertical-align: text-top
+                @include fluid("width", 20)
+                @include fluid("height", 20)
+                @include fluid("border-radius", 4) 
+                background: #dedcdc
+            
+            // Box checked
+            &:checked + label:before 
+                background: #DA2640
+            
+            
+            // Disabled state label.
+            &:disabled + label 
+                color: #b8b8b8
+                cursor: auto
+            
+
+            // Disabled box.
+            &:disabled + label:before 
+                box-shadow: none
+                background: #ddd
+            
+
+            // Checkmark. Could be replaced with an image
+            &:checked + label:after 
+                content: ''
+                position: absolute
+                background-image: url(./assets/images/check.svg)
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                @include fluid("width", 16)
+                @include fluid("height", 16)
+                color: white
+            &.viol
+                &:checked + label:before 
+                    background: #5D5FEF !important
+    .newphone__call
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        color: #000000
+        position: relative
+    .nephone__call_selectors
+        width: 100%
+        @include fluid("height", 116)
+        @include fluid("padding-top", 16)
+        background: #FFFFFF
+        z-index: 2000
+        box-shadow: 0px -4px 40px rgba(131, 134, 166, 0.12)
+        display: flex
+        justify-content: center
+        align-items: center
+        @include fluid("padding-left", 31)
+        @include fluid("padding-right", 31)
+        display: flex
+        flex-direction: column
+        border-radius: 0px 0px 38px 38px
+        .newphone__call_selector
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            color: rgba(52, 52, 53, 0.5)
+            @include fluid("font-size", 12)
+            @include fluid("font-size", 14)
+            font-weight: 500
+            &:active, &.active
+                color: #0A75F2
+        .newphone__selector_icon
+            @include fluid("font-size", 20)
+            @include fluid("margin-bottom", 6)
+    .newphone__dial
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: #000000
+        @include fluid("padding-top", 35)
+        @include fluid("border-radius", 38)
+    .newphone__dial_input
+        font-family: inherit
+        @include fluid("width", 240)
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 16)
+        color: #343435
+        @include fluid("font-size", 28)
+        text-align: center
+        font-weight: 500
+        @include fluid("margin-bottom", 8)
+        align-self: center
+    .newphone__dial_button
+        @include fluid("width", 230)
+        @include fluid("height", 33)
+        @include fluid("border-radius", 20) 
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("font-size", 14)
+        font-weight: 600
+        color: #2F6AA4
+        cursor: pointer
+        transition: all 0.5s ease
+        &:hover
+            transition: all 0.5s ease
+            color: #255585
+
+    .newphone__dial_grid
+        display: grid
+        grid-template-rows: repeat(4, 1fr)
+        grid-template-columns: repeat(3, 1fr)
+        @include fluid("width", 230)
+        @include fluid("grid-gap", 12)
+        @include fluid("column-gap", 22)
+        @include fluid("margin-top", 25)
+    .newphone__dial_element
+        cursor: pointer
+        @include fluid("width", 58)
+        @include fluid("height", 58)
+        background: rgba(172, 177, 187, 0.2)
+        color: #000000
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        color: #343435
+        @include fluid("font-size", 36)
+        transition: all 0.5s ease
+        &:hover
+            background: rgba(172, 177, 187, 0.5)
+            transition: all 0.5s ease
+        &.hidden
+            background: transparent
+        &.call 
+            background: linear-gradient(137.39deg, #0BBC28 14.46%, #5BF775 94.6%)
+            color: white
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                background: #5BF775
+                color: white
+        &.decline
+            background: linear-gradient(137.39deg, #DA0211 14.46%, #FF0000 94.6%)
+            color: white
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                background: #FF0000
+    .newphone__dial_remove
+        @include fluid("width", 20)
+        @include fluid("height", 20)
+        transition: all 0.5s ease
+        background: rgba(172, 177, 187, 0.2)
+        color: #000000
+        position: relative
+        @include fluid("font-size", 14)
+        display: flex
+        align-items: center
+        justify-content: center
+        &:hover
+            background: rgba(172, 177, 187, 0.5)
+            transition: all 0.5s ease
+            &::after
+                transition: all 0.5s ease
+                @include fluid("border-right", 10, "solid rgba(172, 177, 187, 0.5)")
+        &::after
+            transition: all 0.5s ease
+            content: ''
+            position: absolute
+            width: 0
+            height: 0
+            @include fluid("border-top", 10, "solid transparent")
+            @include fluid("border-bottom", 10, "solid transparent")
+            @include fluid("border-right", 10, "solid rgba(172, 177, 187, 0.2)")
+            @include fluid("left", -4.813)
+            @include fluid("top", 10)
+            transform: translate(-50%, -50%)
+    .newphone__dial_popup
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        background: rgba(0, 0, 0, 0.7)
+        z-index: 20000
+        @include fluid("border-radius", 28)
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+    .newphone__dial_popupback
+        background: #F5F5F5
+        height: 90%
+        width: 100%
+        @include fluid("border-radius", 28)
+        @include fluid("padding-top", 16)
+        @include fluid("padding-right", 16)
+        @include fluid("padding-left", 16)
+    .newphone__addcontact_image
+        @include fluid("width", 218)
+        @include fluid("height", 176)
+        background-image: url(./assets/images/addcontact.png)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        @include fluid("margin-bottom", 20)
+        align-self: center
+    .newphone__addcontact_element
+        @include fluid("width", 262)
+        @include fluid("padding", 12)
+        background: #FFFFFF
+        @include fluid("border-radius", 12)
+        @include fluid("margin-bottom", 12)
+        text-align: left
+        align-self: center
+        &.edit
+            background: #F5F5F5
+            .newphone__addcontact_input
+                background: #F5F5F5
+        .gray
+            color: rgba(0, 0, 0, 0.3)
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            @include fluid("margin-bottom", 4)
+        .newphone__addcontact_input
+            font-family: inherit
+            width: 100%
+            color: rgba(0, 0, 0, 0.6)
+            @include fluid("font-size", 19)
+            text-align: left
+            font-weight: 500
+    .newphone__addcontact_button
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        background: linear-gradient(90.02deg, #2A8CFF 0.01%, #0A75F2 99.98%)
+        @include fluid("border-radius", 12)
+        @include fluid("width", 262)
+        @include fluid("height", 50)
+        color: white
+        font-weight: 500
+        transition: all 0.5s ease
+        @include fluid("margin-top", 80)
+        &:hover
+            transition: all 0.5s ease
+            background: linear-gradient(90.02deg, #1e6bc4 0.01%, #0c54a7 99.98%)
+        .phoneicons-add1
+            color: white
+            @include fluid("margin-right", 10)
+            @include fluid("font-size", 19)
+            transform: rotate(0)
+    .newphone__contacts
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: #000000
+        @include fluid("padding-top", 35)
+        @include fluid("border-radius", 38)
+    .contactgray
+        color: rgba(0, 0, 0, 0.2)
+        font-weight: 600
+        @include fluid("margin-top", 20)
+    .blue
+        color: #2A8CFF
+        margin: 0
+    .newphone__maps_header
+        margin: 0
+    .newphone__contacts_circle
+        @include fluid("font-size", 19)
+        @include fluid("width", 24)
+        @include fluid("height", 24)
+        @include fluid("border", 3, "solid #2A8CFF")
+        color: #2A8CFF
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: bold
+        border-radius: 50%
+        cursor: pointer
+        &:hover
+            @include fluid("border", 3, "solid #1f6cc5")
+            color: #1f6cc5
+    .newphone__contacts_inputblock
+        background: #EEEFF1
+        @include fluid("border-radius", 6)
+        @include fluid("width", 262)
+        @include fluid("height", 40)
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("padding-left", 18)
+        @include fluid("padding-right", 18)
+        @include fluid("padding-top", 10)
+        @include fluid("padding-bottom", 10)
+        @include fluid("margin-top", 16)
+        @include fluid("margin-bottom", 22)
+        color: rgba(52, 52, 53, 0.4)
+        .newphone__contacts_input
+            @include fluid("margin-left", 10)
+            background: #EEEFF1
+            width: 100%
+            height: 100%
+            font-family: inherit
+            @include fluid("font-size", 16)
+            text-align: left
+            font-weight: 500
+
+    .newphone__gallery_nophoto
+        @include fluid("margin-bottom", 20)
+        @include fluid("font-size", 16)
+        text-align: center
+        font-weight: 500
+
+    .newphone__contacts_info
+        display: flex
+        align-items: center
+        width: 100%
+        font-weight: 600
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+        @include fluid("margin-bottom", 20)
+        color: #000000
+        &.b-white
+            background: #FFFFFF
+            @include fluid("height", 80)
+            @include fluid("margin-top", 10)
+        .newphone__contacts_avatar
+            @include fluid("height", 50)
+            @include fluid("width", 50)
+            @include fluid("margin-right", 12)
+            border-radius: 50%
+            background: #444444
+            background-position: center
+            background-repeat: no-repeat
+        .gray
+            color: rgba(52, 52, 53, 0.5)
+            font-weight: 500
+            @include fluid("margin-bottom", 4)
+
+    .newphone__contacts_list
+        height: auto
+        @include fluid("max-height", 303)
+        overflow-y: auto
+        overflow-x: hidden
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 8)
+        @include fluid("margin-right", 8)
+        &.n-p
+            @include fluid("border-top", 1, "solid rgba(0, 0, 0, 0.1)")
+            @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, 0.1)")
+            margin: 0
+            padding: 0
+            margin-bottom: auto
+        &.big
+            @include fluid("max-height", 436)
+            @include fluid("margin-top", 8)
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)
+        .newphone__contacts_categorie
+            width: 100%
+            @include fluid("min-height", 30)
+            @include fluid("padding-left", 33)
+            color: rgba(0, 0, 0, 0.3)
+            font-weight: 600
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+            display: flex
+            align-items: center
+            background: #EEEFF1
+        .newphone__contacts_element
+            cursor: pointer
+            display: flex
+            align-items: center
+            width: 100%
+            @include fluid("border-bottom", 2, "solid rgba(0, 0, 0, 0.1)")
+            @include fluid("min-height", 48)
+            @include fluid("padding-left", 33)
+            color: #000000
+            font-weight: 500
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+    .box-between
+        .box-flex
+            transition: all 0.5s ease
+            opacity: 1
+            &:hover
+                transition: all 0.5s ease
+                opacity: 0.7
+    .newphone__contacts_bigicon
+        @include fluid("font-size", 90)
+        @include fluid("margin-top", 24)
+        @include fluid("margin-bottom", 10)
+        align-self: center
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        @include fluid("min-width", 90)
+        @include fluid("min-height", 90)
+        @include fluid("width", 90)
+        @include fluid("height", 90)
+        border-radius: 50%
+        &.hover
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                opacity: 0.75
+    .newphone__contacts_name
+        text-align: center
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 28)
+        font-weight: 500
+        @include fluid("margin-bottom", 20)
+    .newphone__contacts_box
+        @include fluid("border-radius", 10)
+        background: #F5F5F5
+        color: #3A9FFF
+        @include fluid("min-width", 126)
+        @include fluid("height", 60)
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        transition: all 0.5s ease
+        &:hover
+            transition: all 0.5s ease
+            background: #e9e7e7
+        .newphone__contacts_but
+            @include fluid("font-size", 22)
+            @include fluid("margin-bottom", 4)
+    .newphone__contacts_number
+        @include fluid("margin-top", 10)
+        @include fluid("border-top", 1, "solid rgba(0, 0, 0, 0.1)")
+        @include fluid("padding-top", 16)
+        @include fluid("padding-bottom", 16)
+        width: 100%
+        font-weight: 500
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        color: #000000
+        .blue
+            @include fluid("margin-top", 6)
+
+    .newphone__contacts_button
+        @include fluid("border-top", 1, "solid rgba(0, 0, 0, 0.1)")
+        @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, 0.1)")
+        background: #F5F5F5
+        width: 100%
+        @include fluid("height", 47)
+        display: flex
+        align-items: center
+        text-align: left
+        @include fluid("padding-left", 16)
+        @include fluid("margin-bottom", 10)
+        &:hover
+            transition: all 0.5s ease
+            background: #e9e7e7
+        &.red
+            color: #FF0000
+    .newphone__recent_element
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("border-top", 1, "solid rgba(0, 0, 0, 0.1)")
+        @include fluid("padding-top", 14)
+        @include fluid("padding-bottom", 14)
+        font-weight: 600
+        color: #000000
+        width: 100%
+        @include fluid("padding-left", 16)
+        @include fluid("padding-right", 16)
+        .box-flex
+            align-items: center
+        .phoneicons-call
+            @include fluid("margin-right", 8)
+            color: rgba(0, 0, 0, 0.2)
+        .gray
+            color: rgba(0, 0, 0, 0.5)
+        .newphone__recent_info
+            @include fluid("width", 18)
+            @include fluid("height", 18)
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            @include fluid("border", 1, "solid #2A8CFF")
+            color: #2A8CFF
+            @include fluid("font-size", 12)
+            @include fluid("margin-left", 5)
+        &:last-child
+            @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, 0.1)")
+        .newphone__recent_name
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            @include fluid("width", 126)
+    .newphone__callview
+        backdrop-filter: blur(16px)
+        height: 100%
+        width: 100%
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        color: #000000
+        position: relative
+        .newphone__callview_content
+            @include fluid("border-radius", 38)
+            height: 100%
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            @include fluid("padding-top", 74)
+            .newphone__contacts_bigicon
+                color: rgba(255, 255, 255, 0.4)
+            .newphone__callview_name
+                @include fluid("margin-top", 16)
+                @include fluid("margin-bottom", 16)
+                text-align: center
+                @include fluid("font-size", 35)
+                font-weight: 500
+                color: white
+            .gray
+                color: rgba(255, 255, 255, 0.5)
+                text-align: center
+                @include fluid("font-size", 16)
+                font-weight: 500
+        .newphone__calview_center
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 100%
+
+        .newphone__dial_element
+            @include fluid("width", 60)
+            @include fluid("font-size", 27)
+            @include fluid("height", 60)
+            background: rgba(255, 255, 255, 0.2)
+            color: rgba(255, 255, 255, 0.8)
+            &:hover, &.active
+                background: rgba(255, 255, 255, 0.8)
+                color: black
+            &.call 
+                background: #5BF775
+                color: white
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    background: #5BF775
+                    color: white
+            &.decline
+                background: #DA0211
+                color: white
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    background: #FF0000
+        .newphone__calview_flex
+            display: flex
+            align-items: center
+            justify-content: space-between
+            @include fluid("width", 214)
+            margin-top: auto
+            @include fluid("margin-bottom", 56)
+            color: white
+
+            &.isCall
+                justify-content: center
+
+            .newphone__dial_element
+                @include fluid("margin-bottom", 10)
+            .box-column
+                align-items: center
+                font-weight: 400
+                @include fluid("font-size", 14)
+    .newphone__settings
+        background: #F3F2F7
+        height: 100%
+        width: 100%
+        @include fluid("border-radius", 38)
+        display: flex
+        flex-direction: column
+        color: #000000
+        position: relative
+        .newphone__settings_imagesselect
+            display: grid
+            grid-template-rows: repeat(4, 1fr)
+            grid-template-columns: repeat(3, 1fr)
+            @include fluid("width", 288)
+            @include fluid("grid-gap", 12)
+            @include fluid("column-gap", 12)
+            height: auto
+            @include fluid("max-height", 507)
+            overflow-y: auto
+            overflow-x: hidden
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 8)
+            @include fluid("margin-right", 8)
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+        .newphone__settings_imageselector
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            @include fluid("width", 80)
+            @include fluid("height", 160)
+            @include fluid("border", 2, "solid transparent")
+            &.active
+                @include fluid("border", 2, "solid #2A8CFF")
+        .phoneicons-asdasd
+            color: #3F8AE0
+        .newphone__settings_content
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            @include fluid("padding-top", 15)
+        .switch input 
+            display: none
+
+        .switch
+            position: relative
+            display: inline-block
+            background: white
+            @include fluid("border-radius", 40)
+            @include fluid("width", 48)
+            @include fluid("height", 28)
+            border: none
+            .slider
+                position: absolute
+                cursor: pointer
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                border: 1px solid #b6b6b6
+                background: #d6d6d6
+                -webkit-transition: .4s
+                transition: .4s
+                
+                &::before
+                    position: absolute
+                    content: ""
+                    @include fluid("width", 22)
+                    @include fluid("height", 22)
+                    @include fluid("left", 17)
+                    top: 50%
+                    -webkit-transition: .4s
+                    transition: .4s
+                    box-sizing: border-box
+                    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+                    transform: translate(-50%, -50%)
+            input:checked + .slider:before  
+                @include fluid("height", 22)
+                @include fluid("left", 34)
+                background: #3F8AE0
+                box-sizing: border-box
+                box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+            .slider.round
+                @include fluid("border-radius", 34)
+
+                &::before
+                    border-radius: 50%
+        .newphone__chevron-back
+            color: rgba(10, 54, 104, 0.2)
+        .newphone__settings_icon
+            @include fluid("min-width", 30)
+            @include fluid("margin-right", 11)
+            @include fluid("height", 30)
+            display: flex
+            align-items: center
+            justify-content: center
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            color: white
+            &.wallpaper
+                background-image: url(./assets/images/wallpaper.png)
+            &.sound
+                background-image: url(./assets/images/sound.png)
+            &.sounds
+                background-image: url(./assets/images/sounds.png)    
+            &.mute
+                background: #FF9402
+                @include fluid("border-radius", 8)
+            &.forbes
+                background-image: url(./assets/images/forbes.png)
+                border: 1px solid gray
+                @include fluid("border-radius", 8)
+    .phoneicons-Vector-Stroke
+        @include fluid("margin-right", 6)
+    .newphone__settings_flex
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("margin-top", 30)
+        @include fluid("margin-bottom", 20)
+        .box-flex
+            @include fluid("width", 60)
+            color: #3F8AE0
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                color: #3470b4
+    .newphone__settings_element
+        cursor: pointer
+        display: flex
+        align-items: center
+        width: 100%
+        @include fluid("min-height", 48)
+        @include fluid("padding-left", 13)
+        color: #000000
+        font-weight: 500
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        background: #FFFFFF
+        &:hover
+            transition: all 0.5s ease
+            .newphone__chevron-back
+                transition: all 0.5s ease
+                color: #3F8AE0
+        &.bot
+            @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, 0.1)")
+            @include fluid("border-top", 1, "solid rgba(0, 0, 0, 0.1)")
+            @include fluid("margin-top", 26)
+        .box-between
+            @include fluid("min-height", 48)
+            @include fluid("padding-right", 13)
+            @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, 0.1)")
+        .last-child
+            border: 0px solid transparent !important
+        &:last-child
+            .box-between
+                border-bottom: none
+        &.tinderprofile
+            .box-between
+                padding: 0
+                .sound__input-block
+                    .switch
+                        position: relative
+                        display: inline-block
+                        background: white
+                        @include fluid("border-radius", 40)
+                        @include fluid("width", 48)
+                        @include fluid("height", 28)
+                        border: none
+                        .slider
+                            position: absolute
+                            cursor: pointer
+                            top: 0
+                            left: 0
+                            right: 0
+                            bottom: 0
+                            border: 1px solid #b6b6b6
+                            background: #d6d6d6
+                            -webkit-transition: .4s
+                            transition: .4s
+                            
+                            &::before
+                                position: absolute
+                                content: ""
+                                @include fluid("width", 22)
+                                @include fluid("height", 22)
+                                @include fluid("left", 17)
+                                top: 50%
+                                -webkit-transition: .4s
+                                transition: .4s
+                                box-sizing: border-box
+                                box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+                                transform: translate(-50%, -50%)
+                        input:checked + .slider:before  
+                            @include fluid("height", 22)
+                            @include fluid("left", 34)
+                            background: #F44E73
+                            box-sizing: border-box
+                            box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
+                        .slider.round
+                            @include fluid("border-radius", 34)
+
+                            &::before
+                                border-radius: 50%
+    .newphone__messages
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: #000000
+        @include fluid("padding-top", 35)
+        @include fluid("border-radius", 38)
+        .newphone__messages_list
+            height: auto
+            @include fluid("max-height", 420)
+            overflow-y: auto
+            overflow-x: hidden
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            @include fluid("padding-left", 6)
+            @include fluid("padding-right", 8)
+            @include fluid("margin-right", 8)
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+        .newphone__messages_element
+            cursor: pointer
+            display: flex
+            align-items: center
+            width: 100%
+            @include fluid("min-height", 72)
+            @include fluid("padding-left", 13)
+            color: #000000
+            font-weight: 500
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+            background: #FFFFFF
+            &:hover
+                transition: all 0.5s ease
+            .box-between
+                width: 100%
+            .last-child
+                border: 0px solid transparent !important
+            .box-column
+                @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, 0.1)")
+        .newphone__settings_bigicon
+            @include fluid("font-size", 40)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            @include fluid("width", 40)
+            @include fluid("height", 40)
+            @include fluid("margin-right", 8)
+            border-radius: 50%
+            color: rgba(10, 54, 104, 0.2)
+            &.n-m
+                margin: 0
+        .phoneicons-Button
+            @include fluid("width", 44)
+        .text-center
+            text-align: center
+        .pr-13
+            @include fluid("width", 192)
+        .gray
+            color: #818C99
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+        .newphone__messages_name
+            @include fluid("width", 92)
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            @include fluid("font-size", 17)
+            @include fluid("line-height", 22)
+            font-weight: bold
+            &.w-162
+                @include fluid("width", 162)
+        .newphone__messages_message
+            @include fluid("width", 192)
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            color: #6D7885
+            font-weight: 500
+            @include fluid("font-size", 15)
+            @include fluid("line-height", 20)
+            @include fluid("margin-bottom", 6)
+        .newphone__messages_time
+            @include fluid("font-size", 12)
+            color: #6D7885
+            font-weight: normal
+            width: max-content
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+            @include fluid("width", 90)
+        .newphone__circle_count
+            color: white
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #0779F2
+            @include fluid("min-width", 8)
+            @include fluid("height", 8)
+            @include fluid("margin-right", 5)
+            border-radius: 50%
+
+            &.isNotVisible
+                opacity: 0
+
+        .phoneicons-Button
+            color: #3A9FFF
+        .newphone__messages_smallicon
+            transform: rotate(0)
+            @include fluid("font-size", 23)
+            color: #3A9FFF
+            transition: all 0.5s ease
+            cursor: pointer
+            &:hover
+                transition: all 0.5s ease   
+                color: #348de0
+        .newphone__messages_bottom
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            @include fluid("margin-bottom", 21)
+            position: relative
+            .newphone__messages_smiles
+                position: absolute
+                @include fluid("bottom", 50)
+                @include fluid("right", 5)
+                @include fluid("width", 280)
+                @include fluid("height", 400)
+                z-index: 30000
+                background: white
+                @include fluid("border-radius", 8)
+                @include fluid("border", 1, "solid #d9d9d9")
+                display: flex
+                flex-direction: column
+                align-items: center
+                .newphone__smiles_input
+                    font-family: inherit
+                    color: #818C99
+                    display: flex
+                    align-items: center
+                    @include fluid("width", 270)
+                    @include fluid("border-radius", 18) 
+                    @include fluid("padding-left", 12)
+                    @include fluid("padding-right", 12)
+                    @include fluid("padding-top", 6)
+                    @include fluid("padding-bottom", 6)
+                    color: #869199
+                    @include fluid("font-size", 12)
+                    @include fluid("border", 1, "solid #E1E3E6")
+                    background: #F2F3F5
+                    @include fluid("margin-top", 10)
+                    input
+                        font-family: inherit
+                        @include fluid("font-size", 12)
+                        color: #869199
+                        width: 100%
+                        height: 100%
+                        background: #F2F3F5
+                    .phonesmiles-loop
+                        @include fluid("margin-right", 5)
+                .newphone__smiles_selector
+                    @include fluid("padding-left", 8)
+                    @include fluid("padding-right", 8)
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include fluid("border-bottom", 1, "solid #d9d9d9")
+                    @include fluid("padding-top", 8)
+                    @include fluid("padding-bottom", 4)
+                    width: 100%
+                    .newphone__smiles_select
+                        color: gray
+                        @include fluid("height", 24)
+                        @include fluid("border-bottom", 2, "solid transparent")
+                        &.active, &:hover
+                            color: black
+                            @include fluid("border-bottom", 2, "solid #DA0211")
+                .newphone__smiles_info
+                    display: flex
+                    align-items: center
+                    @include fluid("border-top", 1, "solid #d9d9d9")
+                    @include fluid("padding-left", 12)
+                    @include fluid("padding-right", 12)
+                    @include fluid("height", 53)
+                    position: relative
+                    width: 100%
+                    .newphone__smiles_image
+                        @include fluid("width", 36)
+                        @include fluid("height", 36)
+                        @include fluid("margin-right", 10)
+                        @include fluid("font-size", 30)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        text-align: center
+
+
+                .newphone__smiles_subtitle
+                    color: gray
+                    @include fluid("font-size", 12)
+                    @include fluid("margin-top", 2)
+                .newphone__smiles_skins
+                    @include fluid("padding", 2)
+                    @include fluid("border", 1, "solid #d9d9d9")
+                    @include fluid("border-radius", 12)
+                    background-color: #fff
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    position: absolute
+                    @include fluid("right", 12)
+                    bottom: 50%
+                    transform: translate(0%, 50%)
+                    .newphone__smiles_skin
+                        @include fluid("width", 12)
+                        @include fluid("height", 12)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border-radius: 100%
+                        position: relative
+                        &.mr-3
+                            @include fluid("margin-right", 3)
+                        &.yellow
+                            background-color: #ffc93a
+                        &.white
+                            background-color: #fadcbc
+                        &.medium
+                            background-color: #e0bb95
+                        &.zagar
+                            background-color: #bf8f68
+                        &.nigger
+                            background-color: #9b643d
+                        &.makaka
+                            background-color: #594539
+                        &.selected
+                            &::after
+                                content: ""
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%, -50%)
+                                @include fluid("width", 4)
+                                @include fluid("height", 4)
+                                background-color: #fff
+                                border-radius: 100%
+                                transition: opacity .2s ease-out
+
+                .newphone__smiles_block
+                    @include fluid("width", 270)
+                    @include fluid("max-height", 260)
+                    @include fluid("height", 260)
+                    @include fluid("margin-top", 10)
+                    @include fluid("padding-left", 6)
+                    @include fluid("padding-right", 6)
+                    overflow-y: auto
+                    .newphone__smiles_categorie
+                        @include fluid("font-size", 14)
+                        @include fluid("margin-bottom", 8)
+                        @include fluid("margin-top", 8)
+                        text-align: left
+                    .newphone__smiles_grid
+                        display: grid
+                        grid-template-columns: repeat(6, 1fr)
+                        @include fluid("gap", 6)
+                        .newphone__smiles_box
+                            @include fluid("height", 36)
+                            @include fluid("width", 36)
+                            z-index: 1
+                            position: relative
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            text-align: center
+
+
+                            .newphone__smile_img
+                                @include fluid("height", 26)
+                                @include fluid("width", 26)
+                                background-position: center
+                                background-repeat: no-repeat
+                                background-size: contain
+                                position: relative
+                                z-index: 2
+
+                            .newphone__smile_text
+                                @include fluid("font-size", 26)
+                                position: relative
+                                z-index: 2
+
+                            &:hover
+                                &::after
+                                    z-index: -1
+                                    content: ""
+                                    position: absolute
+                                    top: 50%
+                                    left: 50%
+                                    transform: translate(-50%, -50%)
+                                    @include fluid("height", 36)
+                                    @include fluid("width", 36)
+                                    background-color: #f4f4f4
+                                    border-radius: 100%
+
+                        .newphone__smiles_smile
+                            @include fluid("height", 36)
+                            @include fluid("width", 36)
+                            z-index: 1
+                            position: relative
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            .newphone__smile_img
+                                @include fluid("height", 26)
+                                @include fluid("width", 26)  
+                                position: relative
+                                z-index: 2 
+                            &:hover
+                                &::after
+                                    z-index: -1
+                                    content: ""
+                                    position: absolute
+                                    top: 50%
+                                    left: 50%
+                                    transform: translate(-50%, -50%)
+                                    @include fluid("height", 36)
+                                    @include fluid("width", 36)   
+                                    background-color: #f4f4f4
+                                    border-radius: 100%
+                        &.stickers_grid
+                            grid-template-columns: repeat(2, 1fr)
+                            @include fluid("gap", 20)
+                            .newphone__smiles_smile
+                                @include fluid("height", 90)
+                                @include fluid("width", 90)
+                                .newphone__smile_img
+                                    @include fluid("height", 80)
+                                    @include fluid("width", 80)  
+                                &:hover
+                                    &::after
+                                        z-index: -1
+                                        content: ""
+                                        position: absolute
+                                        top: 50%
+                                        left: 50%
+                                        transform: translate(-50%, -50%)
+                                        @include fluid("height", 90)
+                                        @include fluid("width", 90)  
+                                        background-color: #f4f4f4
+                                        border-radius: 100%
+                    &::-webkit-scrollbar
+                        @include fluid("width", 3)
+
+                    &::-webkit-scrollbar-track
+                        background: rgba(253,255,252,0.2)
+                        @include fluid("border-radius", 2)
+
+                    &::-webkit-scrollbar-thumb
+                        background: #C6D1DA
+                        @include fluid("border-radius", 6)
+                .newphone__messages_smile
+                    cursor: pointer
+        .newphone__messages_input
+            font-family: inherit
+            color: #818C99
+            @include fluid("min-width", 168)
+            width: 100%
+            @include fluid("margin-right", 6)
+            @include fluid("margin-left", 6)
+            @include fluid("border-radius", 18) 
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            @include fluid("padding-top", 6)
+            @include fluid("padding-bottom", 6)
+            color: #869199
+            @include fluid("font-size", 17)
+            @include fluid("border", 1, "solid #E1E3E6")
+            background: #F2F3F5
+        .newphone__messages_chat
+            width: 100%
+            @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, 0.1)")
+            @include fluid("border-top", 1, "solid rgba(0, 0, 0, 0.1)")
+            @include fluid("margin-top", 8)
+            @include fluid("margin-bottom", 8)
+            height: auto
+            @include fluid("max-height", 440)
+            @include fluid("min-height", 440)
+            overflow-y: auto
+            overflow-x: hidden
+            display: flex
+            flex-direction: column
+            align-items: center
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 8)
+            @include fluid("padding-top", 8)
+            @include fluid("margin-right", 8)
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+            .newphone__messages_sms
+                @include fluid("padding-left", 12)
+                @include fluid("padding-right", 12)
+                @include fluid("padding-top", 7)
+                @include fluid("padding-bottom", 7)
+                @include fluid("max-width", 204)
+                background: #EBEDF0
+                @include fluid("border-radius", 18)
+                align-self: flex-start
+                color: #000000
+                @include fluid("margin-bottom", 16)
+                font-weight: 500
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 22)
+                .message
+                    @include fluid("margin-bottom", 2)
+                .message__time
+                    @include fluid("font-size", 11)
+                    color: #000000
+                    opacity: 0.4
+                    text-align: right
+
+                .getElementData
+                    position: absolute
+                    width: 100%
+                    height: 100%
+
+                .message__img
+                    @include fluid("width", 204)
+                    @include fluid("min-height", 140)
+                    @include fluid("max-height", 140)
+                    @include fluid("border-radius", 18)
+                    background-position: center
+                    background-size: cover
+                    background-repeat: no-repeat
+
+                &.me
+                    align-self: flex-end
+                    background: #5A5E63
+                    color: #FFFFFF
+                    .message__time
+                        @include fluid("font-size", 11)
+                        color: #FFFFFF
+                        opacity: 0.6
+                        text-align: right
+                        &.message__error
+                            color: #E86270
+
+                &.map
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    @include fluid("width", 204)
+                    @include fluid("min-height", 140)
+                    @include fluid("height", 140)
+                    position: relative
+                    @include fluid("margin-bottom", 20)
+                    .newphone__maps_wrapper
+                        @include fluid("border-radius", 18)
+                        @include fluid("width", 204)
+                        @include fluid("min-height", 140)
+                        @include fluid("height", 140)
+                    .message__time
+                        @include fluid("bottom", -20) 
+                        @include fluid("right", 10) 
+                        position: absolute
+                        opacity: 1
+                        color: #000000
+                &.image
+                    @include fluid("width", 204)
+                    @include fluid("min-height", 140)
+                    @include fluid("max-height", 140)
+                    position: relative
+                    @include fluid("margin-bottom", 20)
+                    padding: 0
+                    .message__time
+                        @include fluid("bottom", -20) 
+                        @include fluid("right", 10) 
+                        position: absolute
+                        opacity: 1
+                        color: #000000
+    .m-top10
+        @include fluid("margin-top", 10)
+    .newphone__messages_smallicon
+        transform: rotate(0)
+        @include fluid("font-size", 23)
+        color: #3A9FFF
+        transition: all 0.5s ease
+        cursor: pointer
+        @include fluid("margin-left", 8)
+        &:hover
+            transition: all 0.5s ease   
+            color: #348de0
+        &.small
+            @include fluid("font-size", 18)
+    .m-0
+        margin: 0
+    .newphone__popup_border
+        @include fluid("max-height", 526)
+        height: auto
+        background: white
+        @include fluid("border-radius", 38)
+        @include fluid("max-width", 294)
+        .newphone__gallery_grid
+            height: auto
+            @include fluid("padding-bottom", 24)
+            @include fluid("max-height", 440)
+    .b-2
+        bottom: 2%
+        @include fluid("max-height", 636)
+        padding: 0
+    .pt-20
+        @include fluid("padding-top", 20)
+    
+    .mb-10
+        @include fluid("margin-bottom", 10)
+    .mb-0
+        margin-bottom: 0
+    .w-100
+        width: 100%
+    .mechcolor
+        color: #bcbbbb
+    .mt-5
+        @include fluid("margin-top", 5)
+    .mt-15
+        @include fluid("margin-top", 15)
+    
+    .fs-18
+        @include fluid("font-size", 18)
+    
+    .mr-6
+        @include fluid("margin-right", 6)
+    
+    .mb-4
+        @include fluid("margin-bottom", 4)
+    .mb-6
+        @include fluid("margin-bottom", 6)
+    .width-12
+        @include fluid("width", 12)
+    .box-100
+        display: flex
+        flex-direction: column
+        height: 100%
+        &.over
+            @include fluid("height", 480)
+            overflow-x: auto
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+    .mt-0
+        margin-top: 0
+    .newphone__charts
+        height: max-content !important
+        min-height: max-content !important
+        width: 100%
+        .chart-container
+            height: max-content !important
+            min-height: max-content !important
+            width: 100%
+            .frappe-chart
+                width: 100%
+    .chart-legend
+        height: max-content !important
+        min-height: max-content !important
+        width: 100%
+
+    .truckercolor
+        color: #FAD2D7
+    .w-262
+        @include fluid("width", 262)
+    .colorwhite
+        color: white
+    .greenid
+        font-weight: 500
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 14)
+        color: #259A70
+        @include fluid("margin-bottom", 2)
+        &.auc
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 16)
+            width: 100%
+
+    .tinder 
+        width: 100%
+        height: 100% 
+        overflow: hidden 
+        display: flex 
+        flex-direction: column 
+        position: relative 
+        opacity: 1 
+        transition: opacity 0.1s ease-in-out 
+        .loaded 
+            &.tinder 
+                opacity: 1 
+        .tinder--status 
+            position: absolute 
+            top: 50% 
+            margin-top: -30px 
+            z-index: 1000
+            width: 100% 
+            text-align: center 
+            pointer-events: none 
+            i 
+                font-size: 100px 
+                opacity: 0 
+                transform: scale(0.3) 
+                transition: all 0.2s ease-in-out 
+                position: absolute 
+                width: 100px 
+                margin-left: -50px 
+        &.tinder_love 
+            .tindericons-heart 
+                opacity: 0.7 
+                transform: scale(1) 
+        &.tinder_nope 
+            .tindericons-mark 
+                opacity: 0.7 
+                transform: scale(1) 
+        .tinder--cards 
+            flex-grow: 1 
+            text-align: center 
+            display: flex 
+            justify-content: center 
+            align-items: flex-start
+            z-index: 1 
+            @include fluid("max-height", 376)
+        .tinder--card 
+            display: inline-block 
+            width: 100%
+            @include fluid("min-height", 294) 
+            background: #FFFFFF 
+            @include fluid("padding-bottom", 40) 
+            overflow: hidden 
+            position: absolute 
+            will-change: transform 
+            transition: all 0.3s ease-in-out
+            cursor: grab 
+            h3 
+                @include fluid("margin-top", 32) 
+                @include fluid("font-size", 32) 
+                padding: 0 16px 
+                pointer-events: none 
+            p 
+                @include fluid("margin-top", 24) 
+                @include fluid("font-size", 20) 
+                padding: 0 16px 
+                pointer-events: none 
+        .moving 
+            &.tinder--card 
+                transition: none
+                cursor: grabbing 
+        .tinder--buttons 
+            flex: 0 0 100px 
+            text-align: center 
+            @include fluid("padding-top", 20) 
+            button 
+                border-radius: 50% 
+                @include fluid("line-height", 60) 
+                @include fluid("width", 60) 
+                border: 0 
+                background: #FFFFFF 
+                display: inline-block 
+                margin: 0 8px 
+                &:focus 
+                    outline: 0 
+            i 
+                @include fluid("font-size", 32) 
+                vertical-align: middle 
+        .tindericons-heart 
+            color: #FFACE4 
+        .tindericons-mark 
+            color: #CDD6DD 
+        .tinder__name
+            user-select: none
+            @include fluid("margin-top", 6)
+            @include fluid("font-size", 18)
+            width: 100%
+            text-align: left
+            &.gray
+                @include fluid("margin-top", 4)
+                @include fluid("font-size", 14)
+                color: rgba(0,0,0,0.70)
+    .tinder__button
+        &:hover
+            opacity: 0.7
+    .tinder__line
+        user-select: none
+        width: 100%
+        height: 1px
+        background: gray
+        @include fluid("margin-top", 8)
+        @include fluid("margin-bottom", 8)
+    .tinder__descr
+        user-select: none
+        @include fluid("font-size", 14)
+        width: 100%
+        color: grey
+        @include fluid("max-height", 144)
+        text-align: left
+    .tindimage
+        @include fluid("width", 294)
+        @include fluid("height", 150)
+        background-image: url(./assets/images/cameraphoto.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        pointer-events: none
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        .tindimage__photo_selectors
+            display: flex
+            align-items: center
+            justify-content: center
+            .tindimage__photo_selector
+                @include fluid("width", 6)
+                @include fluid("height", 6)
+                border-radius: 50%
+                @include fluid("margin-right", 4)
+                background: white
+                &.active
+                    background: #FE4F68
+@media (min-width: 1023px)
+    .newphone__charts
+        .frappe-chart
+            height: 700px
+            width: 100%
+            color: red
+@media (min-width: 1919px)
+    .newphone__charts
+        .frappe-chart
+            height: 700px
+@media (min-width: 2560px)
+    .newphone__charts
+        .frappe-chart
+            @include fluid("height", 450)
+            width: 100%
+            color: yellow

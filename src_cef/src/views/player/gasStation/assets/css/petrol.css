@@ -1,0 +1,50 @@
+.petrol-menu {
+    position: absolute;
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -375px;
+    height: 550px;
+    width: 750px;
+    left: 50%;
+    bottom: 0;
+}
+
+.petrol-menu input {
+    text-align: center;
+    margin-left: 290px;
+    margin-top: 400px;
+    background: none;
+    font-size: 25pt;
+    border: none;
+    height: 30px;
+    width: 140px;
+    float: left;
+}
+
+.petrol-menu .btns {
+    margin-left: 45px;
+    margin-top: 369px;
+    height: 136px;
+    width: 63px;
+    float: left;
+}
+
+.petrol-menu .btn {
+    cursor: pointer;
+    height: 34px;
+    width: 60px;
+}
+
+.petrol-menu .no {
+    margin-top: 0px;
+}
+
+.petrol-menu input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.petrol-menu input::-webkit-outer-spin-button,
+.petrol-menu input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

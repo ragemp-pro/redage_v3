@@ -1,0 +1,673 @@
+@import @/views/assets/css/main.sass
+
+#furniture
+    z-index: 1000
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: rgba(1,22,39,0.8)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    font-family: 'TTNorms-Regular'
+    color: white
+    font-weight: 500
+    @include fluid("font-size", 16)
+    @include fluid("line-height", 19)
+    @include fluid("padding-top", 60)
+    @include fluid("padding-bottom", 80)
+    @include fluid("padding-left", 80)
+    @include fluid("padding-right", 80)
+    position: relative
+    .house__furniture_icon
+        @include fluid("margin-right", 5)
+    .house__furniture
+        display: grid
+        grid-template-columns: repeat(3, 1fr)      
+        grid-template-rows: repeat(3, 1fr)   
+        z-index: 1
+        width: 100%
+        @include fluid("width", 1350)
+        @include fluid("max-height", 780)
+        @include fluid("padding-right", 15)
+        @include fluid("margin-top", 60)
+        @include fluid("height", 780)
+        @include fluid("gap", 20)
+        overflow-y: auto
+        overflow-x: hidden
+        .box-column
+            .house__furniture_title
+                @include fluid("width", 196)
+                @include fluid("font-size", 24)
+            .house__furniture_text
+                &.money
+                    @include fluid("margin-bottom", 20)
+                    @include fluid("margin-top", 20)
+                    color: #2BB6A8
+        .house__furniture_smallimage
+            @include fluid("width", 20)
+            @include fluid("height", 20)
+            //background: url(./images/247.png)
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-right", 10)
+        .house__furniture_image
+            @include fluid("width", 196)
+            @include fluid("height", 160)
+            //background: url(./images/shkaf.png)
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+        &::-webkit-scrollbar
+            @include fluid("width", 4)
+        &::-webkit-scrollbar-track
+            background: rgba(255, 255, 255, 0.2)
+            @include fluid("border-radius", 6)
+        &::-webkit-scrollbar-thumb
+            background: white
+            @include fluid("border-radius", 6)
+        .house__furniture_element
+            background: rgba(255, 255, 255, 0.05)
+            @include fluid("width", 432)
+            @include fluid("height", 240)
+            @include fluid("padding-left", 20)
+            @include fluid("padding-right", 20)
+            @include fluid("padding-top", 20)
+            @include fluid("padding-bottom", 20)
+        .box-between
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            .house__element_button
+                background: rgba(255, 255, 255, 0.1)
+                border-radius: 4px
+                @include fluid("width", 190)
+                @include fluid("height", 40)
+                display: flex
+                align-items: center
+                justify-content: center
+                &:hover
+                    color: black
+                    background: white
+    .house__buy
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        
+    .house__background
+        z-index: 0
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        @include fluid("font-size", 700)
+        opacity: 0.03
+    .house__info_flex
+        display: flex
+        height: fit-content
+        @include fluid("width", 400)
+        justify-content: space-between
+        @include fluid("margin-bottom", 18)
+        .house__stat
+            @include fluid("font-size", 16)
+            @include fluid("margin-bottom", 10)
+            @include fluid("line-height", 16)
+            @include fluid("width", 160)
+            text-align: right
+    .house__buy_flex
+        z-index: 1
+        display: flex
+        @include fluid("margin-bottom", 10)
+        @include fluid("margin-top", 90)
+        .house__line
+            @include fluid("width", 86)
+            @include fluid("height", 40)
+            background: url(./images/lines.png)
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            @include fluid("margin-left", 54)
+            @include fluid("margin-right", 54)
+        .box-column
+            align-items: center
+    .house__buy_center
+        z-index: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+        .box-column
+            @include fluid("margin-top", 20)
+        .house__upgrade_element
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("font-size", 16)
+            background: rgba(255,255,255,0.1)
+            @include fluid("width", 300)
+            @include fluid("height", 40) 
+            @include fluid("margin-bottom", 10) 
+            &:hover
+                background: rgba(255,255,255,0.07)
+    .house__info
+        z-index: 1
+        @include fluid("margin-top", 236)
+        @include fluid("margin-bottom", 40)
+        color: rgba(255,255,255,0.7)
+        @include fluid("font-size", 24) 
+        letter-spacing: 0.05em
+        text-align: center
+        span
+            color: white
+        &.small
+            @include fluid("font-size", 16) 
+        &.m-0
+            margin-top: 0
+            text-align: right
+        &.margin-none
+            margin: 0
+            text-align: center
+    .house__menu
+        z-index: 1
+        color: rgba(255,255,255,0.7)
+    .house__stat
+        z-index: 1
+        @include fluid("font-size", 48)
+        @include fluid("line-height", 57)
+        &.mint
+            color: #2BB6A8
+        &.orange
+            color: #FF9F1C
+    .house__header
+        z-index: 1
+        @include fluid("font-size", 32)
+        @include fluid("line-height", 38)
+        text-align: center
+    .house__panel
+        z-index: 1
+        width: 100%
+        height: 100%
+        @include fluid("max-height", 872)
+    .house__mainmenu
+        z-index: 1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        height: 100%
+        &::-webkit-scrollbar
+            @include fluid("width", 4)
+        &::-webkit-scrollbar-track
+            background: rgba(255, 255, 255, 0.2)
+            @include fluid("border-radius", 6)
+        &::-webkit-scrollbar-thumb
+            background: white
+            @include fluid("border-radius", 6)
+    .house__mainmenu_block
+        display: flex
+        flex-direction: column
+        align-items: left
+        @include fluid("width", 400)
+        @include fluid("min-width", 400)
+        @include fluid("max-width", 400)
+        &.parking
+            @include fluid("width", 300)
+            @include fluid("min-width", 300)
+            @include fluid("max-width", 300)
+            @include fluid("padding-right", 15)
+            box-sizing: border-box
+            overflow-y: auto
+            overflow-x: hidden
+    .house__mainmenu_categorie
+        position: relative
+        @include fluid("height", 60)
+        @include fluid("width", 286)
+        @include fluid("padding-left", 20)
+        @include fluid("margin-bottom", 6)
+        display: flex
+        align-items: center
+        background: rgba(255,255,255,.2)
+        &:hover, &.active
+            color: black
+            background: white
+            .house__mainmenu_categorie-header
+                color: black
+
+            .house__gray
+                color: #313131
+                .house__white
+                    color: black
+            .line
+                background: black
+        &.big
+            @include fluid("height", 100)
+        .house__mainmenu_categorie-header
+            color: white
+            font-weight: 500
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 21)
+
+        .line
+            position: absolute
+            @include fluid("height", 32)
+            @include fluid("width", 4)
+            position: absolute
+            top: 50%
+            left: 0%
+            transform: translate(0%, -50%)
+            background: white
+    .house__mainmenu_center
+        z-index: 1
+        width: 100%
+        max-width: 1102px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &.left
+            align-items: flex-start
+    .box-between
+        z-index: 1
+        position: relative
+        display: flex
+        width: 100%
+        justify-content: center
+        align-items: center
+    
+    .house__main_menu
+        z-index: 1
+        width: 100%
+        @include fluid("width", 460)
+        @include fluid("max-height", 460)
+        @include fluid("padding-right", 15)
+        @include fluid("height", 460)
+        display: flex
+        flex-direction: column
+        align-items: center
+        overflow-y: auto
+        &::-webkit-scrollbar
+            @include fluid("width", 4)
+        &::-webkit-scrollbar-track
+            background: rgba(255, 255, 255, 0.2)
+            @include fluid("border-radius", 6)
+        &::-webkit-scrollbar-thumb
+            background: white
+            @include fluid("border-radius", 6)
+    .house__gray
+        z-index: 1
+        color: rgba(255,255,255,0.7)
+        @include fluid("font-size", 12) 
+        &.ml
+            @include fluid("margin-left", 10)
+        .house__white
+            font-weight: bold
+            @include fluid("font-size", 14)
+            color: white
+    .house__box_button
+        display: flex
+        align-items: center
+        @include fluid("margin-bottom", 20)
+    .house__button_orange
+        background: #FF9F1C
+        border-radius: 6px
+        @include fluid("width", 40)
+        @include fluid("margin-right", 10)
+        @include fluid("height", 40)
+        display: flex
+        align-items: center
+        justify-content: center
+        color: black
+    .house__element
+        z-index: 1
+        @include fluid("min-height", 90)
+        width: 100%
+        background: rgba(255, 255, 255, 0.1)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("padding-right", 20)
+        @include fluid("padding-left", 20)
+        @include fluid("margin-bottom", 10)
+        position: relative
+        .house__garage_icon
+            @include fluid("font-size", 40)
+            @include fluid("margin-right", 10)
+        &.small
+            @include fluid("min-height", 70)
+            .box-flex
+                align-items: center
+        &:hover
+            color: black
+            background: white
+            .house__gray
+                color: rgba(0,0,0,0.7)
+        .house__element_icon
+            @include fluid("font-size", 60)
+            @include fluid("margin-right", 23)
+        .box-column
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            .house__info
+                text-align: inherit
+                @include fluid("font-size", 14)
+        .line
+            position: absolute
+            height: 100%
+            @include fluid("width", 4)
+            position: absolute
+            top: 50%
+            left: 0%
+            transform: translate(0%, -50%)
+            background: rgba(255,255,255,0.2)
+            &.done
+                background: #2BB6A8
+        .box-between
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &.big
+            @include fluid("height", 120)
+        .green
+            color: #2BB6A8
+        .house_element_center
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+    .house__button_white
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("height", 40)
+        @include fluid("min-width", 40)
+        @include fluid("width", 40)
+        @include fluid("border-radius", 6)
+        @include fluid("font-size",18)
+        @include fluid("padding-left",7)
+        @include fluid("padding-right",7)
+        font-family: "TTNorms-Bold"
+        background: #FDFFFC
+        color: black
+    .house__floor
+        display: flex
+        align-items: center
+        flex-direction: column
+        @include fluid("margin-top", 56)
+        .box-flex
+            align-items: center
+            @include fluid("margin-top", 10)
+        .box-column
+            align-items: center
+            @include fluid("margin-left", 10)
+            @include fluid("margin-right", 10)
+            .house__current_floor
+                @include fluid("font-size", 48)
+                @include fluid("line-height",57)
+        .house__floor_lines
+            display: flex
+            align-items: center
+            .house__floor_line
+                background: rgba(253,255,252,0.3)
+                @include fluid("height", 6)
+                @include fluid("min-width", 34)
+                @include fluid("margin-right", 5)
+                &:last-child
+                    margin-right: 0
+                &.active
+                    background: #FDFFFC
+    .house__parking_names
+        z-index: 1
+        @include fluid("margin-top", 56)
+        @include fluid("min-width", 1052)
+        @include fluid("padding-left", 122)
+        display: flex
+        &.bottom
+            @include fluid("margin-top", 5)
+            @include fluid("padding-left", 36)
+    .house__car_name
+        z-index: 1
+        text-align: center
+        @include fluid("width", 182)
+        color: rgba(255,255,255,0.7)
+        &:last-child
+            @include fluid("width", 150)
+        &.active
+            color: white
+    .house__parking_top
+        z-index: 1
+        @include fluid("margin-top", 6)
+        position: relative
+        @include fluid("height", 160)
+        @include fluid("min-width", 1052)
+        background: url('./images/garage_top.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        &.bottom
+            background: url('./images/garage_bot.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat 
+    .house__parking_places
+        z-index: 1
+        @include fluid("min-width", 1052)
+        @include fluid("padding-left", 122)
+        display: flex
+        &.bottom
+            @include fluid("padding-left", 64)
+            .house__car_position
+                right: 20%
+                left: auto
+            .house__car_image
+                transform: rotate(33deg)
+                margin-top: 0
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("margin-right", 40)
+                @include fluid("margin-top", -15)
+                @include fluid("width", 171)
+                @include fluid("max-width", 171)
+                @include fluid("min-width", 171)
+                .house__car_details
+                    @include fluid("right", 51)
+                .house__bike_details
+                    @include fluid("right", 51)
+            .house__car_place
+                .house__circle_green
+                    top: auto
+                    bottom: 0
+                .house__car_position
+                    top: auto
+                    bottom: 25%
+                    right: 14%
+        .house__car_place
+            @include fluid("width", 182)
+            @include fluid("padding-left", 5)
+            @include fluid("padding-top", 10)
+            position: relative
+            text-align: end
+            &.top
+                &:last-child
+                    @include fluid("width", 150)
+            &.active
+                color: white
+    
+    .house__car_image
+        z-index: 1
+        transform: rotate(209deg)
+        @include fluid("margin-top", 30)
+        @include fluid("font-size", 153)
+        position: relative
+        .house__car_details
+            position: absolute
+            @include fluid("right", 6)
+            top: 0
+            @include fluid("height", 154)
+            @include fluid("min-width", 69)
+            background: url('./images/car_details.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+
+        .house__bike_details
+            position: absolute
+            @include fluid("right", -1)
+            @include fluid("top", 7)
+            @include fluid("height", 154)
+            @include fluid("min-width", 69)
+            background: url('./images/bycicle_details.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+    .house__car_position
+        position: absolute
+        @include fluid("font-size", 26)
+        top: 30%
+        left: 0%
+        transform: translate(-50%, -50%)
+    .house__circle_green
+        background: rgba(43,182,168,0.1)
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("height", 60)
+        @include fluid("width", 60)
+        border-radius: 50%
+        position: absolute
+        top: 29%
+        left: 36%
+        transform: translate(-50%, -50%)
+        @include fluid("font-size", 26)
+        color: rgba(43,182,168,1)
+    .house__parking_box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        height: 100%
+    
+    .house__text_big
+        @include fluid("font-size", 64)
+        @include fluid("line-height", 76)
+    
+    .m-60
+        @include fluid("margin-top", 64)
+        @include fluid("margin-bottom", 64)
+
+#house__popup
+    position: fixed
+    z-index: 10000
+    background: rgba(1,22,39,0.89)
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    color: white
+    font-family: 'TTNorms-Bold'
+    .house__popup_block
+        background: rgba(71, 71, 71, 0.1)
+        border: 1px solid rgba(255, 255, 255, 0.5)
+        box-sizing: border-box
+        border-radius: 45px
+        @include fluid("width", 450)
+        @include fluid("height", 360)
+        @include fluid("padding-top", 40)
+        @include fluid("margin-bottom", 20)
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        font-weight: bold
+
+        .house__popup_image
+            position: absolute
+            top: 0
+            right: 50%
+            transform: translate(50%, -50%)
+            @include fluid("font-size", 88)
+
+        .house__popup_header
+            @include fluid("margin-top", 20)
+            @include fluid("font-size", 32)
+            .orange
+                color: #FF9F1C
+
+    .house__gray
+        z-index: 1
+        color: rgba(255,255,255,0.7)
+        @include fluid("font-size", 12) 
+        @include fluid("max-width", 138) 
+        text-align: center
+        font-family: 'TTNorms-Regular'
+    .house__white
+        @include fluid("margin-top", 16)
+        @include fluid("margin-bottom", 30)
+        @include fluid("font-size", 18) 
+        font-family: 'TTNorms-Regular'
+
+    .box-flex
+        align-items: center
+        .house__and
+            @include fluid("font-size", 24)
+            @include fluid("margin-left", 24)
+            @include fluid("margin-right", 24)
+        
+        .box-column
+            align-items: center
+            .house__popup_top
+                @include fluid("font-size", 32)
+                position: relative
+
+    .house__popup_icon
+        position: absolute
+        top: 50%
+        left: -100%
+        transform: translate(-50%, -50%)
+        @include fluid("width", 30)
+        @include fluid("height", 30)
+        background: url('./images/star.png')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: contain
+
+.house_bottom_buttons
+    z-index: 1
+    margin-top: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include fluid("font-size", 18)
+    &.back
+        flex-direction: row-reverse
+        .house_bottom_button
+            margin-left: 0
+            @include fluid("margin-right", 12)
+    &.esc
+        position: absolute
+        right: 0
+        bottom: 0
+    .house_bottom_button
+        color: black
+        background: #FDFFFC
+        border-radius: 6px
+        @include fluid("padding-left", 12)
+        @include fluid("padding-right", 12)
+        @include fluid("padding-top", 10)
+        @include fluid("padding-bottom", 10)
+        @include fluid("margin-left", 12)
+    &.ml-20
+        @include fluid("margin-left", 20)

@@ -1,0 +1,212 @@
+@import @/views/assets/css/main.sass
+#metro
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    font-family: 'TTNorms-Regular'
+    background: rgba(1,22,39,0.9)
+    @include fluid("padding-left", 212)
+    @include fluid("padding-top", 45)
+    @include fluid("padding-right", 114)
+    @include fluid("padding-bottom", 60)
+    @include fluid("font-size", 12)
+    @include fluid("line-height", 14)
+    letter-spacing: 0.05em
+    font-weight: 500
+    color: white
+    .metro__header
+        @include fluid("margin-bottom", 30)
+        @include fluid("font-size", 36)
+        @include fluid("line-height", 42)
+        font-family: 'TTNorms-Bold' 
+        display: flex
+        align-items: center
+        .metroicons-station
+            @include fluid("font-size", 42)
+            @include fluid("margin-right", 10)
+    .metro__main
+        display: flex
+        justify-content: space-between
+        width: 100%
+        @include fluid("padding-right", 284)
+        .metro__img
+            background: url(./images/map.png)
+            @include fluid("width", 835)
+            @include fluid("height", 849)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            position: relative
+            color: rgba(255,255,255,0.7)
+            .first
+                position: absolute
+                top: 89%
+                left: 33%
+            .second
+                position: absolute
+                top: 68%
+                left: 41%
+            .third
+                position: absolute
+                top: 45.5%
+                left: 31%
+            .fourth
+                position: absolute
+                top: 46%
+                left: 68%
+            .fifth
+                position: absolute
+                top: 16%
+                left: 69%   
+            .sixth
+                position: absolute
+                top: 10%
+                left: 52%   
+            .seventh
+                position: absolute
+                top: 11%
+                left: 32%  
+            .eight
+                position: absolute
+                top: 23%
+                left: 19%  
+            .nineth
+                position: absolute
+                top: 32%
+                left: 46%  
+            .tenth
+                position: absolute
+                top: 38%
+                left: 63%   
+            .thent
+                position: absolute
+                top: 38%
+                left: 63% 
+            .eleventh
+                position: absolute
+                top: 60%
+                left: 73% 
+            .metro__img_element
+                display: flex
+                flex-direction: column
+                align-items: center
+                &.active, &:hover
+                    .text
+                        text-decoration: underline
+                        color: #FF9F1C
+
+                .gray
+                    color: rgba(255,255,255,0.6)
+                    @include fluid("font-size", 10)
+                    text-decoration: none
+                .red
+                    color: white
+                    @include fluid("font-size", 10)
+                    text-decoration: none
+
+        .metro__title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+            font-family: 'TTNorms-Bold'
+            display: flex
+            align-items: center
+            @include fluid("margin-bottom", 38)
+            .metroicons-ticket, .metroicons-znak
+                @include fluid("font-size", 28)
+                @include fluid("margin-right", 20)
+        .metro__stations
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(5, 1fr)
+            @include fluid("gap", 10)
+            @include fluid("margin-bottom", 48)
+            .metro__station
+                @include fluid("padding-left", 21)
+                @include fluid("padding-top", 11)
+                background: rgba(255, 255, 255, 0.1)
+                border-radius: 4px
+                @include fluid("width", 172)
+                @include fluid("height", 55)
+                transition: all .1s ease
+                border: 1px solid rgba(255, 255, 255, 0)
+                opacity: 0.7
+                display: flex
+                flex-direction: column
+                &:hover, &.active
+                    transition: all .1s ease
+                    opacity: 1
+                    border: 1px solid rgba(255, 255, 255, 0.7)
+                        
+                &.noActive
+                    opacity: 0.25
+                    &:hover, &.active
+                        transition: all .1s ease
+                        opacity: 1
+                        border: 1px solid rgba(255, 255, 255, 0)
+                .metro__station__header
+                    display: flex
+                    @include fluid("margin-bottom", 7)
+                .metroicons-diamond
+                    background: url(./images/diamond.png)
+                    @include fluid("width", 7)
+                    @include fluid("height", 12)
+                    background-size: contain
+                    background-position: center
+                    background-repeat: no-repeat
+                    @include fluid("margin-right", 5)
+                .metro__station_price
+                    color: rgba(255,255,255,0.7)
+        .price
+            color: #2BB6A8
+        .metro__small
+            font-weight: 500
+            color: rgba(255,255,255,0.7)
+        .metro__subtitle
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 21)
+            @include fluid("margin-top", 10)
+            @include fluid("margin-bottom", 14)
+        .price
+            color: #2BB6A8
+        .metro__button
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 21)
+            display: flex
+            align-items: center
+            justify-content: center
+            background: rgba(255, 255, 255, 0.1)
+            @include fluid("width", 245)
+            @include fluid("height", 53)
+            border: 1px solid rgba(255, 255, 255, 0.7)
+            box-sizing: border-box
+            box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.15)
+            border-radius: 4px
+            font-weight: bold
+            font-family: "TTNorms-Bold"
+            &:hover
+                opacity: 0.9
+
+    .m-l-26
+        @include fluid("margin-left", 16)                
+    .metro__bottom
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 21)
+        @include fluid("margin-top", 7) 
+        .metro__menu_button
+            background: white
+            background: #FDFFFC
+            border-radius: 6px
+            @include fluid("padding-left", 11)
+            @include fluid("padding-top", 11)
+            @include fluid("padding-right", 11)
+            @include fluid("padding-bottom", 11)
+            color: black
+            font-weight: bold
+            @include fluid("margin-left", 26)
+        .metro__text
+            @include fluid("margin-left", 26)

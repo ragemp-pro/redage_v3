@@ -1,0 +1,534 @@
+@font-face {
+  font-family: 'phoneicons';
+  src:  url('./phoneicons.eot?wtmxyt');
+  src:  url('./phoneicons.eot?wtmxyt#iefix') format('embedded-opentype'),
+    url('./phoneicons.ttf?wtmxyt') format('truetype'),
+    url('./phoneicons.woff?wtmxyt') format('woff'),
+    url('./phoneicons.svg?wtmxyt#phoneicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="phoneicons-"], [class*=" phoneicons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'phoneicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.phoneicons-smile:before {
+  content: "\e97a";
+}
+.phoneicons-mic-off1:before {
+  content: "\e96d";
+}
+.phoneicons-decline:before {
+  content: "\e96e";
+}
+.phoneicons-reload:before {
+  content: "\e94d";
+}
+.phoneicons-check:before {
+  content: "\e954";
+}
+.phoneicons-filter:before {
+  content: "\e95e";
+}
+.phoneicons-hidden:before {
+  content: "\e963";
+}
+.phoneicons-upload:before {
+  content: "\e95f";
+}
+.phoneicons-trash:before {
+  content: "\e960";
+}
+.phoneicons-icons8-upload-50-1:before {
+  content: "\e961";
+}
+.phoneicons-asdasd:before {
+  content: "\e913";
+}
+.phoneicons-volume-medium:before {
+  content: "\e94a";
+}
+.phoneicons-Vector-Stroke:before {
+  content: "\e94b";
+}
+.phoneicons-Vector:before {
+  content: "\e94c";
+}
+.phoneicons-padlock-1-1:before {
+  content: "\e94e";
+}
+.phoneicons-add1:before {
+  content: "\e965";
+}
+.phoneicons-battery:before {
+  content: "\e950";
+}
+.phoneicons-black-plane:before {
+  content: "\e951";
+}
+.phoneicons-home:before {
+  content: "\e952";
+}
+.phoneicons-jobs:before {
+  content: "\e953";
+}
+.phoneicons-licenses:before {
+  content: "\e903";
+}
+.phoneicons-location:before {
+  content: "\e904";
+}
+.phoneicons-locator:before {
+  content: "\e905";
+}
+.phoneicons-lsc:before {
+  content: "\e906";
+}
+.phoneicons-mafia:before {
+  content: "\e907";
+}
+.phoneicons-npc:before {
+  content: "\e908";
+}
+.phoneicons-orga:before {
+  content: "\e909";
+}
+.phoneicons-parks:before {
+  content: "\e90a";
+}
+.phoneicons-recent:before {
+  content: "\e90c";
+}
+.phoneicons-rent:before {
+  content: "\e90e";
+}
+.phoneicons-search:before {
+  content: "\e90f";
+}
+.phoneicons-smiles:before {
+  content: "\e910";
+}
+.phoneicons-weapons:before {
+  content: "\e911";
+}
+.phoneicons-247:before {
+  content: "\e912";
+}
+.phoneicons-bands:before {
+  content: "\e955";
+}
+.phoneicons-bank:before {
+  content: "\e956";
+}
+.phoneicons-burgers:before {
+  content: "\e957";
+}
+.phoneicons-Button:before {
+  content: "\e958";
+}
+.phoneicons-buttons:before {
+  content: "\e959";
+}
+.phoneicons-call:before {
+  content: "\e966";
+}
+.phoneicons-cars:before {
+  content: "\e95b";
+}
+.phoneicons-carwash:before {
+  content: "\e95c";
+}
+.phoneicons-chat:before {
+  content: "\e95d";
+}
+.phoneicons-clothes:before {
+  content: "\e921";
+}
+.phoneicons-clubs:before {
+  content: "\e922";
+}
+.phoneicons-contacts:before {
+  content: "\e923";
+}
+.phoneicons-drugs:before {
+  content: "\e924";
+}
+.phoneicons-fraction:before {
+  content: "\e925";
+}
+.phoneicons-fuelstation:before {
+  content: "\e926";
+}
+.phoneicons-gos:before {
+  content: "\e927";
+}
+.phoneicons-giftbox:before {
+  content: "\e900";
+}
+.phoneicons-youtube:before {
+  content: "\e902";
+}
+.phoneicons-back:before {
+  content: "\e914";
+}
+.phoneicons-close:before {
+  content: "\e915";
+}
+.phoneicons-discord:before {
+  content: "\e916";
+}
+.phoneicons-forum:before {
+  content: "\e917";
+}
+.phoneicons-line:before {
+  content: "\e918";
+}
+.phoneicons-news:before {
+  content: "\e919";
+}
+.phoneicons-online:before {
+  content: "\e91a";
+}
+.phoneicons-settings:before {
+  content: "\e91b";
+}
+.phoneicons-vk:before {
+  content: "\e91c";
+}
+.phoneicons-vk1:before {
+  content: "\e969";
+}
+.phoneicons-discord1:before {
+  content: "\e968";
+}
+.phoneicons-youtube1:before {
+  content: "\e967";
+}
+.phoneicons-arrow1:before {
+  content: "\e964";
+}
+.phoneicons-twitch:before {
+  content: "\e95a";
+}
+.phoneicons-eye1:before {
+  content: "\e94f";
+}
+.phoneicons-car-top:before {
+  content: "\e96f";
+}
+.phoneicons-ban:before {
+  content: "\e970";
+}
+.phoneicons-time:before {
+  content: "\e971";
+}
+.phoneicons-garage:before {
+  content: "\e972";
+}
+.phoneicons-bike-top:before {
+  content: "\e973";
+}
+.phoneicons-safe:before {
+  content: "\e974";
+}
+.phoneicons-medkit:before {
+  content: "\e975";
+}
+.phoneicons-bike:before {
+  content: "\e976";
+}
+.phoneicons-car:before {
+  content: "\e977";
+}
+.phoneicons-house:before {
+  content: "\e978";
+}
+.phoneicons-check1:before {
+  content: "\e979";
+}
+.phoneicons-hanger:before {
+  content: "\e91d";
+}
+.phoneicons-clothes1:before {
+  content: "\e91e";
+}
+.phoneicons-line1:before {
+  content: "\e91f";
+}
+.phoneicons-eye:before {
+  content: "\e920";
+}
+.phoneicons-phone:before {
+  content: "\e928";
+}
+.phoneicons-rupor:before {
+  content: "\e929";
+}
+.phoneicons-shop:before {
+  content: "\e92a";
+}
+.phoneicons-gps:before {
+  content: "\e92b";
+}
+.phoneicons-loop:before {
+  content: "\e92c";
+}
+.phoneicons-personal:before {
+  content: "\e92d";
+}
+.phoneicons-park:before {
+  content: "\e92e";
+}
+.phoneicons-tasks:before {
+  content: "\e92f";
+}
+.phoneicons-achivments:before {
+  content: "\e930";
+}
+.phoneicons-settings1:before {
+  content: "\e931";
+}
+.phoneicons-up:before {
+  content: "\e932";
+}
+.phoneicons-down:before {
+  content: "\e933";
+}
+.phoneicons-clock:before {
+  content: "\e934";
+}
+.phoneicons-edit:before {
+  content: "\e935";
+}
+.phoneicons-send:before {
+  content: "\e937";
+}
+.phoneicons-info:before {
+  content: "\e938";
+}
+.phoneicons-icon:before {
+  content: "\e939";
+}
+.phoneicons-add:before {
+  content: "\e93a";
+}
+.phoneicons-dell:before {
+  content: "\e93b";
+}
+.phoneicons-plus:before {
+  content: "\e93c";
+}
+.phoneicons-minus:before {
+  content: "\e93d";
+}
+.phoneicons-sellcar:before {
+  content: "\e949";
+}
+.phoneicons-tuning:before {
+  content: "\e948";
+}
+.phoneicons-edit1:before {
+  content: "\e947";
+}
+.phoneicons-save:before {
+  content: "\e946";
+}
+.phoneicons-crime:before {
+  content: "\e945";
+}
+.phoneicons-customs:before {
+  content: "\e944";
+}
+.phoneicons-office:before {
+  content: "\e943";
+}
+.phoneicons-gps2:before {
+  content: "\e942";
+}
+.phoneicons-alarm:before {
+  content: "\e941";
+}
+.phoneicons-light:before {
+  content: "\e940";
+}
+.phoneicons-sherif:before {
+  content: "\e93f";
+}
+.phoneicons-dron:before {
+  content: "\e93e";
+}
+.phoneicons-p-radio:before {
+  content: "\e412";
+}
+.phoneicons-door:before {
+  content: "\e433";
+}
+.phoneicons-bullets:before {
+  content: "\e434";
+}
+.phoneicons-microphone:before {
+  content: "\e435";
+}
+.phoneicons-bank1:before {
+  content: "\e436";
+}
+.phoneicons-money:before {
+  content: "\e437";
+}
+.phoneicons-engine:before {
+  content: "\e438";
+}
+.phoneicons-gas:before {
+  content: "\e439";
+}
+.phoneicons-close1:before {
+  content: "\e43a";
+}
+.phoneicons-arrow:before {
+  content: "\e43b";
+}
+.phoneicons-send1:before {
+  content: "\e43c";
+}
+.phoneicons-flatarrow:before {
+  content: "\e43d";
+}
+.phoneicons-twoarrow:before {
+  content: "\e43e";
+}
+.phoneicons-connect-good:before {
+  content: "\e43f";
+}
+.phoneicons-connect-medium:before {
+  content: "\e440";
+}
+.phoneicons-power-null:before {
+  content: "\e441";
+}
+.phoneicons-power-full:before {
+  content: "\e442";
+}
+.phoneicons-power-medium:before {
+  content: "\e443";
+}
+.phoneicons-phone-home:before {
+  content: "\e444";
+}
+.phoneicons-exit:before {
+  content: "\e445";
+}
+.phoneicons-dollar:before {
+  content: "\e446";
+}
+.phoneicons-star:before {
+  content: "\e447";
+}
+.phoneicons-helmet:before {
+  content: "\e448";
+}
+.phoneicons-helmet-table:before {
+  content: "\e449";
+}
+.phoneicons-success:before {
+  content: "\e44a";
+}
+.phoneicons-questions:before {
+  content: "\e44b";
+}
+.phoneicons-information:before {
+  content: "\e44c";
+}
+.phoneicons-error:before {
+  content: "\e44d";
+}
+.phoneicons-alert:before {
+  content: "\e44e";
+}
+.phoneicons-update:before {
+  content: "\e44f";
+}
+.phoneicons-ar-refresh:before {
+  content: "\e450";
+}
+.phoneicons-ar-close:before {
+  content: "\e451";
+}
+.phoneicons-p-bonus:before {
+  content: "\e452";
+}
+.phoneicons-p-rent:before {
+  content: "\e453";
+}
+.phoneicons-p-car:before {
+  content: "\e454";
+}
+.phoneicons-p-fraction:before {
+  content: "\e455";
+}
+.phoneicons-p-biz:before {
+  content: "\e456";
+}
+.phoneicons-p-add:before {
+  content: "\e457";
+}
+.phoneicons-p-sim:before {
+  content: "\e458";
+}
+.phoneicons-p-call-accept:before {
+  content: "\e459";
+}
+.phoneicons-p-call-cancel:before {
+  content: "\e45a";
+}
+.phoneicons-p-gps:before {
+  content: "\e45b";
+}
+.phoneicons-p-contacts:before {
+  content: "\e45c";
+}
+.phoneicons-p-gift:before {
+  content: "\e45d";
+}
+.phoneicons-p-lock:before {
+  content: "\e45e";
+}
+.phoneicons-p-bank:before {
+  content: "\e45f";
+}
+.phoneicons-p-hotel:before {
+  content: "\e460";
+}
+.phoneicons-bullet-2:before {
+  content: "\e461";
+}
+.phoneicons-tent:before {
+  content: "\e962";
+}
+.phoneicons-p-house:before {
+  content: "\edf2";
+}
+.phoneicons-backpack:before {
+  content: "\e90b";
+}
+.phoneicons-withdrow:before {
+  content: "\e901";
+}
+.phoneicons-person:before {
+  content: "\e90d";
+}
+.phoneicons-price-tags:before {
+  content: "\e936";
+}

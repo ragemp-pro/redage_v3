@@ -1,0 +1,172 @@
+@import @/views/assets/css/main.sass
+
+#support
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-weight: bold
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 24)
+    color: #FFFFFF
+    font-family: 'TTNorms-Regular'
+    @include fluid("padding-left", 100)
+    @include fluid("padding-right", 100) 
+    .main__button_square
+        @include fluid("width", 62)
+        @include fluid("height", 62)
+        @include fluid("margin-left", 20)
+        @include fluid("border-radius", 2)
+        background-color: white
+        color: black
+    .support__header
+        @include fluid("height", 58)
+        display: flex
+        align-items: center
+        @include fluid("margin-bottom", 20)
+        .support__icon
+            @include fluid("margin-right", 13) 
+            @include fluid("width", 50)
+            @include fluid("height", 50)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+        .support__header_title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+        .support__header_subtitle
+                color: rgba(255,255,255,0.7)
+                @include fluid("margin-top", 14)
+                text-decoration: underline
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 19)
+                font-family: 'TTNorms-Regular'
+                font-weight: 300
+                &:hover
+                    color: rgba(255,255,255,0.4)
+    .support__nav
+        @include fluid("width", 300)
+        display: flex
+        flex-direction: column
+        @include fluid("height", 750)
+        .support__title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+            color: white
+            @include fluid("margin-top", 30)
+            @include fluid("margin-bottom", 20)
+            font-weight: bold
+            font-family: 'TTNorms-Bold'
+            &:first-child
+                margin-top: 0
+        .support__subtitle
+            font-weight: bold
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)  
+            color: rgba(255,255,255,0.5)
+            @include fluid("margin-bottom", 10)
+            &.hover, &.active
+                color: white
+    .support__background
+        @include fluid("width", 730)
+        @include fluid("height", 750)
+        display: flex
+        flex-direction: column
+        box-sizing: border-box
+
+    .supportchat__block
+        @include fluid("width", 730)
+        @include fluid("height", 650)
+        background: rgba(255,255,255,0.1)
+        @include fluid("border-radius", 8)
+        @include fluid("padding", 24)
+        .restartchat__header
+            @include fluid("margin-bottom", 5)
+        .supportchat__chat_messages
+            background: rgba(255,255,255,0.1)
+            @include fluid("height", 515)
+            @include fluid("max-height", 515)
+            overflow-y: auto
+            width: 100%
+            @include fluid("padding", 12)
+            display: flex
+            flex-direction: column
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+            .supportchat__chat_message
+                @include fluid("font-size", 14)
+                @include fluid("margin-bottom", 10)
+                background: white
+                color: black
+                @include fluid("padding", 8)
+                @include fluid("border-radius", 12)
+                width: fit-content
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: flex-start
+                &.me
+                    align-self: flex-end
+                    @include fluid("margin-right", 10)
+                &.admin
+                    align-self: flex-start
+                    @include fluid("margin-left", 10)
+                .time
+                    @include fluid("font-size", 10)
+                    @include fluid("line-height", 10)
+                .admin
+                    color: #81191A
+        .supportchat__chat_input
+            background: rgba(255,255,255,0.1)
+            width: 100%
+            @include fluid("height", 50)
+            display: flex
+            align-items: center
+            justify-content: space-between
+            @include fluid("padding-left", 10)
+            @include fluid("padding-right", 10)
+            @include fluid("margin-top", 20)
+            .supportchat__input
+                font-family: inherit
+                @include fluid("font-size", 14)
+                color: #869199
+                width: 100%
+                @include fluid("height", 40)
+                @include fluid("margin-right", 10)
+                background: rgba(255,255,255,0.1)
+                @include fluid("padding-left", 10)
+            .supportchat__sendbutton
+                background: rgba(255,255,255,0.1)
+                @include fluid("width", 40)
+                @include fluid("height", 40)
+                display: flex
+                align-items: center
+                justify-content: center
+                transition: all 0.5s ease
+                &:hover
+                    transition: all 0.5s ease
+                    background: white
+                    color: black
+    .support__wiki
+        @include fluid("width", 730)
+        @include fluid("height", 750)
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)

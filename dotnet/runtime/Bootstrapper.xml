@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bootstrapper</name>
+    </assembly>
+    <members>
+        <member name="T:GTANetworkAPI.CancelEventArgs">
+            <summary>
+            Used to cancel events.
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.ResourceStart">
+            <summary>
+            Event has no parameters.
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.ResourceStop">
+            <summary>
+            Event has no parameters.
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.ResourceStartEx">
+            <summary>
+            Event Params: <see cref="T:System.String"/> resourceName
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.ResourceStopEx">
+            <summary>
+            Event Params: <see cref="T:System.String"/> resourceName
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.MapChange">
+            <summary>
+            Event Params: <see cref="T:System.String"/> mapName, <see cref="T:GTANetworkAPI.XmlGroup"/> map
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.ChatMessage">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:System.String"/> message
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.Update">
+            <summary>
+            Event has no parameters.
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.EntityCreated">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Entity"/> entity
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.EntityDeleted">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Entity"/> entity
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.EntityModelChange">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.NetHandle"/> entity, <see cref="T:System.UInt32"/> oldModel
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerConnected">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.IncomingConnection">
+            <summary>
+            Event Params: <see cref="T:System.String"/> ip, <see cref="T:System.String"/> serial, <see cref="T:System.String"/> rgscName, <see cref="T:System.UInt64"/> rgscId, <see cref="T:GTANetworkAPI.CancelEventArgs"/> cancel
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerDisconnected">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerSpawn">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerDeath">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:GTANetworkAPI.Client"/> killer, <see cref="T:System.UInt32"/> reason
+            <para>Death reason can be of either <see cref="T:GTANetworkAPI.WeaponHash"/> or <see cref="T:GTANetworkAPI.DeathReason"/></para>
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerDamage">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:System.Single"/> healthLoss, <see cref="T:System.Single"/> armorLoss
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerPickup">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:GTANetworkAPI.Pickup"/> pickup
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerWeaponSwitch">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:GTANetworkAPI.WeaponHash"/> oldWeaponHash, <see cref="T:GTANetworkAPI.WeaponHash"/> newWeaponHash
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerDetonateStickies">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerEnterCheckpoint">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Checkpoint"/> checkpoint, <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerExitCheckpoint">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Checkpoint"/> checkpoint, <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerEnterColshape">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.ColShape"/> colShape, <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerExitColshape">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.ColShape"/> colShape, <see cref="T:GTANetworkAPI.Client"/> client
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerEnterVehicleAttempt">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:System.SByte"/> seatID
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerExitVehicleAttempt">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:GTANetworkAPI.Vehicle"/> vehicle
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerEnterVehicle">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:System.SByte"/> seatID
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.PlayerExitVehicle">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Client"/> client, <see cref="T:GTANetworkAPI.Vehicle"/> vehicle
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleDamage">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:System.Single"/> bodyHealthLoss, <see cref="T:System.Single"/> engineHealthLoss
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleDeath">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleHornToggle">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleSirenToggle">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:System.Boolean"/> oldValue
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleDoorBreak">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:System.Int32"/> index
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleWindowSmash">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:System.Int32"/> index
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleTyreBurst">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:System.Int32"/> index
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.VehicleTrailerChange">
+            <summary>
+            Event Params: <see cref="T:GTANetworkAPI.Vehicle"/> vehicle, <see cref="T:GTANetworkAPI.Vehicle"/> trailer
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.FirstChanceException">
+            <summary>
+            <para>Occurs when an exception is thrown in managed code, before the runtime searches
+            the call stack for an exception handler in the application domain.</para>
+            <para>Event Params: <see cref="T:System.Exception"/> exception</para>
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.UnhandledException">
+            <summary>
+            Occurs when an exception is not caught.
+            Event Params: <see cref="T:System.Exception"/> exception
+            </summary>
+        </member>
+        <member name="F:GTANetworkAPI.Event.Invalid">
+            <summary>
+            An invalid event for internal usage
+            </summary>
+        </member>
+        <member name="M:GTANetworkAPI.Entity.op_Equality(GTANetworkAPI.Entity,GTANetworkAPI.Entity)">
+            public static bool operator ==(Entity left, Entity right) => left?.Value == right?.Value;
+            public static bool operator !=(Entity left, Entity right) => left?.Value != right?.Value;
+        </member>
+        <member name="M:GTANetworkMethods.ClientEvent.TriggerClientEventInRange(GTANetworkAPI.Vector3,System.Single,System.String,System.Object[])">
+            GTANetworkInternals.RemoteEventResponseHandler.Push((int)player.Value, requestId, callback.Method, callback.Target);
+        </member>
+        <member name="M:GTANetworkMethods.IPlayer.SetPlayerEyeColor(GTANetworkAPI.Client,System.Byte)">
+            void SetPlayerDefaultClothes(Client player);
+        </member>
+        <member name="M:GTANetworkMethods.Task.Run(System.Action,System.Int64)">
+            <summary>
+            Runs thread-safe API code on main thread.
+            </summary>
+            <param name="task"></param>
+            <param name="delayTime">should be in ms (milliseconds)</param>
+        </member>
+    </members>
+</doc>

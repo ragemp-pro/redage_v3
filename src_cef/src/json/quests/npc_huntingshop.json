@@ -1,0 +1,10 @@
+{
+    "0": {
+        "buttons":[
+            {"name": "Посмотреть.", "type": "perform"},
+            {"name": "Неинтересно."}
+        ],
+        "text":"Привет, чекай товары.",
+        "sound": "cloud/npc/hunt/hunter1.ogg"
+    }
+}

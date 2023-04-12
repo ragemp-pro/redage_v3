@@ -1,0 +1,278 @@
+@import @/views/assets/css/main.sass
+
+#ores-sale
+    width: 100%
+    height: 100%
+    color: white
+    font-family: 'UniNeue', Tahoma, Arial
+    @include fluid("font-size", 16)
+    display: flex
+    align-items: center
+    justify-content: center
+    font-style: normal
+    font-weight: bold
+    .arenda
+        @include fluid("width", 1052)
+        @include fluid("height", 856)
+        @include fluid("border-radius", 6)
+        background: rgba(1,22,39,0.8)
+        display: flex
+        flex-direction: column
+        @include fluid("padding-bottom", 45)
+
+        &.nonactive
+            user-select: none
+            filter: blur(1px)
+
+        .arenda-header
+            box-sizing: border-box
+            @include fluid("padding-top", 27)
+            @include fluid("padding-right", 56)
+            @include fluid("padding-left", 56)
+            @include fluid("padding-bottom", 46)
+            width: 100%
+            @include fluid("height", 190)
+            background: rgba(1,22,39,0.8)
+            @include fluid("border-top-left-radius", 6)
+            @include fluid("border-top-right-radius", 6)
+            @include fluid("border-bottom-left-radius", 0)
+            @include fluid("border-bottom-right-radius", 0)
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @include fluid("margin-bottom", 10)
+
+            .arenda-header__text
+                @include fluid("max-width", 637)
+        
+                .arenda-header__title
+                    @include fluid("font-size", 24)
+                    @include fluid("line-height", 32)
+                    @include fluid("margin-bottom", 8)
+
+                .arenda-header__main-text
+                    @include fluid("line-height", 22)
+                    color: #595E6C
+                
+            .arendaicon-off
+                color: #595E6C
+                @include fluid("font-size", 73)
+
+        .arenda-main
+            width: 100%
+            @include fluid("height", 620)
+            box-sizing: border-box
+            @include fluid("padding-right", 56)
+            @include fluid("padding-left", 56)
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            @include fluid("gap", 20)
+            overflow-y: auto
+
+            .arenda-main__element
+                @include fluid("width", 300)
+                @include fluid("height", 300)
+                background: rgba(1,22,39,0.8)
+                @include fluid("border-radius", 6)
+                border: 1px solid transparent
+                border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+                border-image-slice: 1
+                display: flex
+                flex-direction: column
+                align-items: center
+                @include fluid("padding-top", 11)
+                @include fluid("padding-bottom", 9)
+                @include fluid("padding-left", 22)
+                @include fluid("padding-right", 22)
+                box-sizing: border-box
+
+                .arenda-main__title
+                    @include fluid("font-size", 24)
+                    @include fluid("line-height", 32)
+                    @include fluid("margin-bottom", 8)
+                
+                .arenda-main__price
+                    color: #34D387
+                    @include fluid("font-size", 14)
+                    @include fluid("line-height", 19)
+                    display: flex
+                    align-items: center
+
+                    .arendaicon-money
+                        @include fluid("margin-right", 6)
+                        @include fluid("font-size", 20)
+
+                .arenda-main__img
+                    @include fluid("height", 170)
+                    width: 100%
+                    background-image: url('../images/ore_gold.png')
+                    background-size: contain
+                    background-position: center
+                    background-repeat: no-repeat
+
+                .arenda-main__amount_info
+                    @include fluid("font-size", 16)
+                    @include fluid("line-height", 18)
+                    @include fluid("margin-bottom", 8)
+                
+                .arenda-main__button
+                    @include fluid("width", 250)
+                    @include fluid("height", 50)
+                    @include fluid("border", 1, "solid #3A3E4E")
+                    box-sizing: border-box
+                    @include fluid("border-radius", 6)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    @include fluid("font-size", 20)
+                    @include fluid("line-height", 27)
+                    cursor: pointer
+                    transition: all 0.4s ease
+                    @include fluid("margin-top", 6)
+                    &:hover
+                        transition: all 0.4s ease
+                        background: #3A3E4E
+
+            &::-webkit-scrollbar 
+                @include fluid("width", 3)
+            /* Track */
+            &::-webkit-scrollbar-track 
+                background: #3a4a68 
+                @include fluid("border-radius", 10)
+            /* Handle */
+            &::-webkit-scrollbar-thumb 
+                background: #D33437
+                @include fluid("border-radius", 10)
+    
+    .props-arenda
+        position: absolute
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        
+        .arenda-customize
+            position: relative
+            @include fluid("width", 400)
+            height: fit-content
+            background: #121317
+            @include fluid("border", 3, "solid #474A56")
+            box-sizing: border-box
+            @include fluid("border-radius", 6)
+            display: flex
+            flex-direction: column
+            align-items: center
+            @include fluid("padding-top", 27)
+            @include fluid("padding-right", 68)
+            @include fluid("padding-left", 68)
+            @include fluid("padding-bottom", 23)
+
+            .arenda-customize__title
+                @include fluid("font-size", 26)
+                @include fluid("line-height", 35)
+                @include fluid("margin-bottom", 6)
+            
+            .arenda-customize__subtitle
+                @include fluid("font-size", 20)
+                @include fluid("line-height", 27)
+                @include fluid("margin-bottom", 13)
+                color: #D33437
+
+            .arenda-customize__img
+                @include fluid("height", 223)
+                width: 100%
+                background-image: url('../images/ore_gold.png')
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+                border: 1px solid transparent
+                border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+                border-image-slice: 1
+                @include fluid("margin-bottom", 17)
+
+            .arenda-customize__paragraph
+                @include fluid("font-size", 18)
+                @include fluid("line-height", 24)
+                @include fluid("margin-bottom", 13)
+            
+            .arenda-customize__rangeslider
+                width: 100%
+                @include fluid("margin-bottom", 8)
+
+                input
+                    font-weight: bold
+                    background-repeat: no-repeat
+                    background-color: transparent
+                    @include fluid("font-size", 24)
+                    @include fluid("height", 40)
+                    @include fluid("border", 1, "solid #3A3E4E")
+                    box-sizing: border-box
+                    @include fluid("border-radius", 3)
+                    font-family: 'UniNeue'
+                    width: 100%
+                    line-height: 32px
+                    -webkit-transition: all ease .2s
+                    -moz-transition: all ease .2s
+                    -ms-transition: all ease .2s
+                    -o-transition: all ease .2s
+                    transition: all ease .2s
+                    text-align: center
+
+                    color: #C1C1C1
+                    @include fluid("background-size", 24)
+
+            .arenda-customize__input-description
+                display: flex
+                justify-content: space-between
+                width: 100%
+                @include fluid("font-size", 18)
+                @include fluid("line-height", 24)
+                @include fluid("margin-bottom", 17)
+                
+                .arenda-customize_gray
+                    color: #3F424B
+            .adrenda-customize__radio-buttons
+                width: 100%
+                display: flex
+                justify-content: space-between
+                @include fluid("margin-bottom", 24)
+        
+                .color
+                    position: relative
+                    @include fluid("width", 21)
+                    @include fluid("height", 21)
+                    border-radius: 50%
+                    cursor: pointer
+                    box-sizing: border-box
+
+                    &.active
+                        @include fluid("border", 2, "solid rgba(255,255,255,0.6)")
+        
+            .arenda-customize__button
+                width: 100%
+                @include fluid("height", 40)
+                @include fluid("border", 1, "solid #3A3E4E")
+                box-sizing: border-box
+                @include fluid("border-radius", 6)
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("font-size", 20)
+                @include fluid("line-height", 27)
+                cursor: pointer
+                transition: all 0.4s ease
+                @include fluid("margin-bottom", 14)
+                &:hover
+                    transition: all 0.4s ease
+                    background: #3A3E4E
+                
+                .arenda-customize__money
+                    color: #34D387
+                    @include fluid("margin-left", 5)
+            
+            .arenda-customize__exit
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 19)
+                cursor: pointer

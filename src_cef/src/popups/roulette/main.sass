@@ -1,0 +1,192 @@
+@import @/views/assets/css/main.sass
+
+#popuponate__roulette
+    position: relative !important
+    z-index: 1
+    display: flex
+    flex-direction: column
+    font-family: "TTNorms-Regular"
+    width: 100%
+    height: 100%
+    background: rgba(1,22,39,0.9)
+    align-items: center
+    color: white    
+    overflow-x: auto
+    overflow-y: scroll
+
+    &::-webkit-scrollbar
+        @include fluid("width", 6)
+
+    &::-webkit-scrollbar-track
+        background: rgba(255, 255, 255, 0.2)
+        @include fluid("border-radius", 6)
+    &::-webkit-scrollbar-thumb
+        background: linear-gradient(180deg, #FF4040 0%, #C63030 100%)
+        @include fluid("border-radius", 6)
+
+    #newdonate__popup
+        background: rgba(29, 21, 21, .85)
+        z-index: 2
+    .newdonate__header
+        font-weight: 800
+        @include fluid("font-size", 32)
+        @include fluid("line-height", 43)
+        @include fluid("margin-top", 26)
+    .newdonate__roulette-title
+        text-transform: uppercase
+        font-weight: 800
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 32)
+        @include fluid("margin-bottom", 26)
+    .newdonate__roulette-count
+        @include fluid("width", 318)
+        display: flex
+        justify-content: space-between
+        @include fluid("margin-bottom", 42)
+        .newdonate__roulette-circle
+            @include fluid("width", 50)
+            @include fluid("height", 50)
+            background: rgba(43, 43, 43, 0.4)
+            box-sizing: border-box
+            border-radius: 50%
+            @include fluid("border", 2, "solid rgba(255, 255, 255, 0.4)") 
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 32)
+            cursor: pointer
+            &.active
+                @include fluid("border", 2, "solid #FF4040") 
+
+    .newdonate__roulette-container
+        position: relative !important
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        height: auto
+
+    .newdonate__roulette-main
+        @include fluid("width", 972)
+        @include fluid("min-height", 192)
+        overflow: hidden
+        display: flex
+        align-items: center
+        position: relative
+        @include fluid("margin-top", 12)
+
+        .newdonate__roulette-main-line
+            position: absolute
+            @include fluid("width", 2)
+            @include fluid("height", 192)
+            z-index: 1
+            background: white
+            top: 0%
+            left: 50%
+
+        .newdonate__roulette-elements
+            @include fluid("width", 9000)
+            display: flex
+            align-items: center
+
+    .newdonate__roulette-element
+        @include fluid("width", 120)
+        @include fluid("height", 120)
+        background: linear-gradient(360deg, rgba(218, 218, 218, 0.2) 0%, rgba(218, 218, 218, 0) 100%)
+        @include fluid("border", 2, "solid rgba(218, 218, 218, 0.4)")
+        box-sizing: border-box
+        @include fluid("border-radius", 6)
+        display: flex
+        align-items: center
+        justify-content: center
+        &.margin-22
+            @include fluid("margin-right", 22)
+        &.red
+            background: linear-gradient(360deg, rgba(255, 64, 64, 0.2) 0%, rgba(255, 64, 64, 0) 100%)
+            @include fluid("border", 2, "solid rgba(255, 64, 64, 0.4)")
+        &.blue
+            background: linear-gradient(360deg, rgba(0, 163, 255, 0.2) 0%, rgba(0, 163, 255, 0) 100%)
+            @include fluid("border", 2, "solid #00A3FF")
+        &.pink
+            background: linear-gradient(360deg, rgba(173, 0, 255, 0.2) 0%, rgba(173, 0, 255, 0) 100%)
+            @include fluid("border", 2, "solid #AD00FF")
+        &.yellow
+            background: linear-gradient(360deg, rgba(255, 189, 0, 0.2) 0%, rgba(255, 189, 0, 0) 100%)
+            @include fluid("border", 2, "solid #FFBD00")
+
+        .roulette-element__img
+            @include fluid("width", 60)
+            @include fluid("height", 60)
+            //background-image: url('images/star.png')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+
+    .newdonate__roulette-buttons
+        display: flex
+        @include fluid("margin-top", 38)
+        @include fluid("margin-bottom", 18)
+        width: 100%
+        height: 100%
+        justify-content: center
+        .newdonate__button_small
+            &.yellow
+                background: linear-gradient(270deg, #FFD458 -0.04%, #FFBD00 87.53%)
+                box-shadow: 0px 0px 40px rgba(255, 64, 64, 0.4)
+
+    .newdonate__roulette-items
+        @include fluid("width", 972)
+        height: 100%
+        display: grid
+        grid-template-rows: repeat(2, 1fr)
+        grid-template-columns: repeat(7, 1fr)
+        @include fluid("gap", 22)
+        @include fluid("margin-bottom", 22)
+        
+
+    .newdonate__roulette-info
+        @include fluid("width", 240)
+        @include fluid("height", 101)
+        @include fluid("min-height", 101)
+        background-image: url('images/symbol.png')
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        display: flex
+        align-items: center
+        justify-content: center
+        text-transform: uppercase
+        font-weight: 800
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 32)
+        @include fluid("margin-bottom", 10)
+        @include fluid("margin-top", 20)
+    
+    .newdonate__roulette_hidden-box
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .newdonate__button_small
+        @include fluid("margin-left", 19)
+        transform: skewX(-40deg)
+        @include fluid("width", 250)
+        @include fluid("height", 46)    
+        background: linear-gradient(270deg, #FF6969 -0.04%, #FF4040 87.53%)
+        box-shadow: 0px 0px 40px rgba(255, 64, 64, 0.4)
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        background-size: 400% 400%
+        animation: buttonanim 1.5s ease infinite
+
+        &:hover
+            box-shadow: 0px 0px 30px #FF6969
+
+        .newdonate__button-text
+            transform: skewX(40deg)
+            font-weight: bold
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 24)

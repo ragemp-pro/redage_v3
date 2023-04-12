@@ -1,0 +1,27 @@
+@import @/views/assets/css/main.sass
+.notification-form
+    top: 0
+    @include fluid("right", 76)
+    @include fluid("width", 350)
+    @include fluid("height", 80)
+    background-color: rgba(32,32,32,0.80)
+    @include fluid("border-radius", 5)
+    @include fluid("padding", 14)
+    position: absolute
+    display: flex
+    align-items: center
+    .notification-form__square
+        @include fluid("width", 52)
+        @include fluid("height", 52)
+        @include fluid("border-radius", 5)
+        @include fluid("margin-right", 14)
+        
+        &.notification-form__square_accept
+            background-color: rgba(32,190,69,0.3)
+        &.notification-form__square_error
+            background-color: rgba(190,32,32,0.3)
+    .notification-form__subtitle
+        @include fluid("font-size", 18)
+        opacity: 0.95
+        font-weight: 300
+        font-style: normal

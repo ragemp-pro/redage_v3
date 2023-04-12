@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'lscustom';
+  src:  url('./lscustom.eot?r64ga6');
+  src:  url('./lscustom.eot?r64ga6#iefix') format('embedded-opentype'),
+    url('./lscustom.ttf?r64ga6') format('truetype'),
+    url('./lscustom.woff?r64ga6') format('woff'),
+    url('./lscustom.svg?r64ga6#lscustom') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ilsc-"], [class*=" ilsc-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'lscustom' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ilsc-Spoiler:before {
+  content: "\e909";
+}
+.ilsc-FrontBumper:before {
+  content: "\e90e";
+}
+.ilsc-RearBumper:before {
+  content: "\e90f";
+}
+.ilsc-SideSkirt:before {
+  content: "\e904";
+}
+.ilsc-Muffler:before {
+  content: "\e914";
+}
+.ilsc-Frame:before {
+  content: "\e912";
+}
+.ilsc-Lattice:before {
+  content: "\e915";
+}
+.ilsc-Hood:before {
+  content: "\e900";
+}
+.ilsc-Wings:before {
+  content: "\e90c";
+}
+.ilsc-Roof:before {
+  content: "\e905";
+}
+.ilsc-FrontWheels:before {
+  content: "\e90b";
+}
+.ilsc-Horn:before {
+  content: "\e901";
+}
+.ilsc-Xenon:before {
+  content: "\e902";
+}
+.ilsc-Headlights:before {
+  content: "\e911";
+}
+.ilsc-Engine:before {
+  content: "\e910";
+}
+.ilsc-Turbo:before {
+  content: "\e908";
+}
+.ilsc-Transmission:before {
+  content: "\e907";
+}
+.ilsc-Suspension:before {
+  content: "\e906";
+}
+.ilsc-Brakes:before {
+  content: "\e90d";
+}
+.ilsc-WindowTint:before {
+  content: "\e913";
+}
+.ilsc-Color1:before {
+  content: "\e903";
+}
+.ilsc-Color2:before {
+  content: "\e90a";
+}
+.ilsc-ColorAdditional:before {
+  content: "\e916";
+}
+.ilsc-Cover:before {
+  content: "\e917";
+}
+.ilsc-Vinyls:before {
+  content: "\e918";
+}
+.ilsc-NumberPlate:before {
+  content: "\e919";
+}
+.ilsc-Armour:before {
+  content: "\e91a";
+}
+.ilsc-back:before {
+  content: "\e91b";
+}
+.ilsc-user:before {
+  content: "\e91c";
+}

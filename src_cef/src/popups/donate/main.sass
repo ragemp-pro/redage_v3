@@ -1,0 +1,223 @@
+@import @/views/assets/css/main.sass
+#donatepopup
+    z-index: 100000
+    position: fixed
+    left: 0
+    top: 0
+    display: flex
+    user-select: none
+    font-family: "TTNorms-Regular"
+    width: 100%
+    height: 100%
+    background: rgba(1,22,39,0.9)
+    display: flex
+    align-items: center
+    justify-content: center
+    color: white
+    .donatepopup__back
+        position: absolute
+        background-image: url('./images/donate-back.png')
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        &.delete
+            background-image: none
+    .donatepopup__main
+        background-image: url('./images/donate-header.png')
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        @include fluid("width", 588)
+        @include fluid("height", 588)
+        @include fluid("padding-top", 193)
+        display: flex
+        flex-direction: column
+        align-items: center
+        &.delete
+            @include fluid("padding-top", 288)
+            background-image: url('./images/delete-header.png')
+            background-position: center
+            background-size: cover
+            background-repeat: no-repeat
+    .popup__title
+        @include fluid("font-size", 44)
+        @include fluid("line-height", 30)
+        letter-spacing: 1px
+        text-transform: uppercase
+        @include fluid("margin-bottom", 36)
+        font-family: "TTNorms-Bold"
+        font-weight: bold
+        color: #FF9F1C
+        white-space: nowrap
+    .popup__subtitle
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 25)
+        @include fluid("width", 380)
+        font-weight: 500
+        @include fluid("margin-bottom", 30)
+        text-align: center
+    .popup__input
+        @include fluid("width", 380)
+        @include fluid("height", 41)
+        background: rgba(253, 255, 252, 0.05)
+        text-align: center
+        font-family: inherit
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 21)
+        border: 1px solid rgba(253, 255, 252, 0.05)
+        @include fluid("margin-bottom", 10)
+        color: #DFDFDF
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 10000000000000 
+        &:focus
+            border: 1px solid rgba(253, 255, 252, 0.7)
+    .box-between
+        display: flex
+        justify-content: space-between
+        @include fluid("width", 380)
+    .popup__button
+        background: rgba(253, 255, 252, 0.1)
+        border: 1px solid rgba(253, 255, 252, 0.7)
+        box-sizing: border-box
+        border-radius: 4px
+        @include fluid("width", 142)
+        @include fluid("height", 40)
+        color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: 500
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        z-index: 10000000000000 
+        &.orange
+            background: #FF9F1C
+        &.big
+            @include fluid("width", 221)
+            border: 1px solid #ff9f1c
+        &:hover
+            opacity: 0.9
+        &.red
+            background: #E71D36
+            border: 1px solid transparent
+        &.bordered
+            background: rgba(231, 29, 54, 0.1)
+            border: 1px solid rgba(231, 29, 54, 0.7)
+    .donatepopup__payments
+        display: flex
+        flex-direction: column
+        @include fluid("width", 546)
+        .donatepopup__donate_info
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 25)
+            @include fluid("height", 40)
+            @include fluid("margin-top", 15)
+            font-weight: 500
+            color: #E71D36
+            text-align: center
+
+        .box-between
+            display: flex
+            justify-content: space-between
+            @include fluid("width", 512)
+            .donatepopup__nickname
+                @include fluid("font-size", 24)
+                @include fluid("line-height", 25)
+                font-weight: 500
+                @include fluid("margin-bottom", 22)
+            .donatepopup__small
+                @include fluid("font-size", 14)
+                @include fluid("line-height", 25)
+                font-weight: 500
+            .donatepopup__count
+                @include fluid("font-size", 18)
+                @include fluid("line-height", 25)
+                font-weight: bold
+                font-family: "TTNorms-Bold"
+                @include fluid("margin-bottom", 22)
+                .red
+                    color: #E71D36
+                    @include fluid("margin-left", 5)
+            .donatepopup__button
+                display: flex
+                align-items: center
+                justify-content: center
+                border: 1px solid #2BB6A8
+                box-sizing: border-box
+                border-radius: 4px
+                @include fluid("width", 240)
+                @include fluid("height", 40)
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 19)
+                .gray
+                    color: rgba(255,255,255,0.7)
+                    letter-spacing: 0.05em
+                    @include fluid("margin-right", 5)
+
+            .donatepopup__logo
+                background-image: url('./images/logo.png')
+                background-position: center
+                background-size: contain
+                background-repeat: no-repeat
+                @include fluid("width", 190)
+                @include fluid("height", 125)
+
+        .popup__button_box
+            @include fluid("width", 512)
+            @include fluid("margin-top", 33)
+
+            .popup__button
+                @include fluid("width", 248)
+
+        .donatepopup__payments_title
+            @include fluid("margin-top", 41)
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 25)
+            font-weight: 500
+        .donatepopup__grid
+            @include fluid("width", 512)
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(1, 1fr)
+            @include fluid("height", 100)
+            @include fluid("gap", 16)
+            @include fluid("margin-top", 33)
+            z-index: 1000000
+
+            .donatepopup__element
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 100%
+                @include fluid("height", 100)
+                background: rgba(253, 255, 252, 0.05)
+                border-radius: 4px   
+                border: 1px solid rgba(253, 255, 252, 0)
+                transition: border .25ms ease
+                &:hover, &.active
+                    transition: border 1s ease
+                    border: 1px solid rgba(253, 255, 252, 0.7)
+                .donatepopup__element_img
+                    background-position: center
+                    background-size: contain
+                    background-repeat: no-repeat
+                    @include fluid("width", 60)
+                    @include fluid("height", 60)
+                .donatepopup__element_label
+                    position: absolute
+                    @include fluid("top", 5)
+                    @include fluid("right", 5)
+                    background: linear-gradient(90deg, #FF4040 64.73%, #FF7979 116.51%)
+                    box-shadow: 0px 0px 40px rgba(255, 64, 64, 0.4)
+                    @include fluid("border-radius", 6)
+                    @include fluid("padding-left", 6)
+                    @include fluid("padding-right", 6)
+                    @include fluid("padding-top", 3)
+                    @include fluid("padding-bottom", 3)

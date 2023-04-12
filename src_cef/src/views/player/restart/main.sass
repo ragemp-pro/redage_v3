@@ -1,0 +1,83 @@
+@import @/views/assets/css/main.sass
+
+#restartchat
+    z-index: 1000
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.27) 0%, rgba(1, 22, 39, 0.74) 100%)
+    font-family: 'TTNorms-Regular'
+    color: white
+    font-weight: 500
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 21)
+    .restartchat__block
+        @include fluid("width", 1320)
+        @include fluid("height", 900)
+        background: rgba(255,255,255,0.1)
+        @include fluid("border-radius", 8)
+        @include fluid("padding", 24)
+    .restartchat__header
+        @include fluid("font-size", 26)
+        @include fluid("margin-bottom", 40)
+    .restartchat__chat_messages
+        background: rgba(255,255,255,0.1)
+        @include fluid("height", 720)
+        @include fluid("max-height", 720)
+        overflow-y: auto
+        width: 100%
+        @include fluid("padding", 12)
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.2)
+            @include fluid("border-radius", 2)
+
+        &::-webkit-scrollbar-thumb
+            background: #C6D1DA
+            @include fluid("border-radius", 6)
+        .restartchat__chat_message
+            @include fluid("font-size", 14)
+            @include fluid("margin-bottom", 10)
+            background: white
+            color: black
+            @include fluid("padding", 8)
+            @include fluid("border-radius", 12)
+            width: fit-content
+            word-wrap: break-word
+    .restartchat__chat_input
+        background: rgba(255,255,255,0.1)
+        width: 100%
+        @include fluid("height", 50)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("padding-left", 10)
+        @include fluid("padding-right", 10)
+        @include fluid("margin-top", 20)
+        .restartchat__input
+            font-family: inherit
+            @include fluid("font-size", 14)
+            color: #869199
+            width: 100%
+            @include fluid("height", 40)
+            @include fluid("margin-right", 10)
+            background: rgba(255,255,255,0.1)
+            @include fluid("padding-left", 10)
+        .restartchat__sendbutton
+            background: rgba(255,255,255,0.1)
+            @include fluid("width", 40)
+            @include fluid("height", 40)
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: all 0.5s ease
+            &:hover
+                transition: all 0.5s ease
+                background: white
+                color: black

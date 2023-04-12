@@ -1,0 +1,360 @@
+@import @/views/assets/css/main.sass
+
+#animations
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-weight: bold
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 24)
+    color: #FFFFFF
+    font-family: 'TTNorms-Regular'
+    background: rgba(1,22,39,0.8)
+    letter-spacing: 0.02em
+    @include fluid("padding-left", 115)
+    @include fluid("padding-right", 115)
+    @include fluid("padding-bottom", 66)
+    @include fluid("padding-top", 38)
+    .quests-newbutton
+        display: flex
+        align-items: center
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 22)
+        .m-l-26
+            @include fluid("margin-left", 16)
+        .quests-button
+            background: #FDFFFC
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            @include fluid("padding-bottom", 6)
+            @include fluid("padding-top", 6)
+            @include fluid("border-radius", 6)
+            @include fluid("margin-right", 26)
+            color: black
+            @include fluid("min-height", 40)
+            font-weight: 500
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: bold
+        &.myata
+            @include fluid("margin-bottom", 40)
+            .quests-button
+                background: #2BB6A8
+                color: white
+        &.right
+            @include fluid("margin-left", 26)
+            flex-direction: row-reverse
+            .quests-button
+                margin-right: 0
+                @include fluid("margin-left", 26)
+    ::-webkit-scrollbar 
+        @include fluid("width", 4)
+        @include fluid("margin-right", 10)
+        @include fluid("border-radius", 25)
+            
+            
+    ::-webkit-scrollbar-track 
+        @include fluid("border-radius", 25)
+        background: rgba(253,255,252,0.15)
+        border-radius: 100px
+
+    ::-webkit-scrollbar-thumb 
+        @include fluid("border-radius", 25)
+        background: #FDFFFC
+        border-radius: 100px
+
+    .animations__subtitle
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 28)  
+        font-weight: bold
+
+
+    .animations__header
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fluid("padding-right", 35)
+        @include fluid("margin-bottom", 30)
+        .box-flex
+            @include fluid("font-size", 48)
+            @include fluid("line-height", 57)  
+            .animations__title
+                font-weight: bold
+            .animationsicon-mainanim
+                align-self: flex-end
+                @include fluid("margin-right", 24)
+                color: #FF9F1C
+    .animations__main
+        width: 100%
+        @include fluid("height", 640)
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        .animations__categories
+            display: flex
+            flex-direction: column
+            .animations__categories_list
+                @include fluid("height", 580)
+                @include fluid("width", 341)
+                overflow-y: auto
+                @include fluid("margin-top", 36)
+                .animations__categories_element
+                    position: relative
+                    @include fluid("height", 100)
+                    @include fluid("width", 300)
+                    @include fluid("border-radius", 6)
+                    @include fluid("border", 1, "solid rgba(253,255,252,0.2)")
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @include fluid("padding-left", 36)
+                    @include fluid("padding-right", 16)
+                    @include fluid("margin-bottom", 20)
+                    box-sizing: border-box
+                    overflow: hidden
+                    &.active 
+                        background: rgba(253,255,252,0.2)
+                        @include fluid("border", 1, "solid transparent")
+                    &:hover
+                        background: rgba(253,255,252,0.1)
+                        @include fluid("border", 1, "solid transparent")
+                    &:last-child
+                        margin-bottom: 0
+                    .animations__categories_title
+                        @include fluid("font-size", 16)
+                        @include fluid("line-height", 19)    
+                        font-weight: bold
+                    .animations__categories_subtitle
+                        @include fluid("margin-top", 7)
+                        @include fluid("font-size", 12)
+                        @include fluid("line-height", 14)    
+                        font-weight: normal
+                        .orange
+                            color: #FF9F1C
+                    .animations__categories_img
+                        position: absolute
+                        @include fluid("height", 225)
+                        @include fluid("width", 225)
+                        @include fluid("right", -60)
+                        background-image: url(./images/preview.png)
+                        background-position: center
+                        background-size: cover
+                        top: 0
+        .animations__line
+            height: 100%
+            @include fluid("border-radius", 16)
+            @include fluid("height", 580)
+            @include fluid("width", 3)
+            background: rgba(253,255,252,0.15)
+        .animations__block
+            height: 100%
+            @include fluid("width", 1220)
+            backgroound: white
+            display: flex
+            flex-direction: column
+            .animations__block_header
+                display: flex
+                justify-content: space-between
+                width: 100%
+                align-items: flex-start
+                @include fluid("padding-right", 35)
+                .animations__find_block
+                    @include fluid("height", 42)
+                    @include fluid("width", 412)
+                    display: flex
+                    align-items: center
+                    @include fluid("border", 1, "solid rgba(253, 255, 252, 0.6)")
+                    @include fluid("padding-left", 18)
+                    @include fluid("padding-right", 18)
+                    .animations__input
+                        background: transparent
+                        width: 100%
+                        font-family: inherit
+                        color: #DFDFDF
+                        @include fluid("font-size", 14)
+                        @include fluid("line-height", 21)    
+                        @include fluid("margin-left", 12)
+
+            .animations__grid
+                width: 100%
+                @include fluid("height", 580)
+                overflow-x: auto
+                display: grid
+                grid-template-columns: repeat(6, 1fr)
+                grid-template-rows: repeat(12, 1fr)
+                @include fluid("gap", 20)
+                @include fluid("margin-top", 18)
+                @include fluid("padding-right", 35)
+    .animations__grid_element
+        position: relative
+        overflow: hidden
+        box-sizing: border-box
+        @include fluid("height", 180)
+        @include fluid("width", 180)
+        @include fluid("border", 1, "solid rgba(253,255,252,0.2)")
+        @include fluid("border-radius", 6)
+        position: relative
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        &.active
+            @include fluid("border", 1, "solid transparent")
+            background: rgba(253,255,252,0.2)
+        .animations__progress
+            position: absolute
+            left: 0
+            bottom: 0
+            z-index: 1
+            @include fluid("width", 180)
+            @include fluid("height", 6)
+            background: rgba(255,255,255,0.2)
+            .animations__progress_current
+                width: 40%
+                @include fluid("height", 6)
+                background: white
+        .animations__element_img
+            position: absolute
+            left: 0
+            top: 0
+            @include fluid("width", 180)
+            @include fluid("height", 180)
+
+        .animations__element_star
+            position: absolute
+            @include fluid("top", 15)
+            @include fluid("right", 15)
+            color: white
+            z-index: 9
+
+            &:hover
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    background: white
+                    filter: blur(15px)
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+
+            &.active
+                color: #FF9F1C
+                &:hover
+                    &::after
+                        background: #FF9F1C
+                    
+        .animations__element_title
+            position: absolute
+            bottom: 0%
+            left: 0%
+            background: rgba(0,0,0,0.2)
+            @include fluid("border-bottom-left-radius", 5)
+            @include fluid("border-bottom-right-radius", 5)
+            @include fluid("height", 42)
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            font-style: normal
+            font-weight: normal
+            @include fluid("font-size", 12)
+            @include fluid("line-height", 14)    
+            text-align: center
+        
+        &.isBind
+            @include fluid("height", 120)
+            @include fluid("width", 120)
+            @include fluid("border-radius", 4)
+
+            .animations__element_img
+                @include fluid("width", 120)
+                @include fluid("height", 120)
+
+            .animations__progress
+                @include fluid("width", 120)
+                @include fluid("height", 4)
+            
+            .animations__element_preview
+                @include fluid("width", 120)
+                @include fluid("height", 120)
+    .animations__element_preview
+        position: absolute
+        left: 0
+        top: 0
+        @include fluid("width", 180)
+        @include fluid("height", 180)
+        background-image: url(./images/preview.png)
+        background-position: center
+        background-size: cover
+
+    .animations__dragondrop
+        pointer-events: none
+        position: absolute
+        @include fluid("width", 120)
+        @include fluid("height", 120)
+        z-index: 99
+
+        .animations__dragondrop_block
+            position: relative
+            box-sizing: border-box
+            @include fluid("height", 120)
+            @include fluid("width", 120)
+            @include fluid("border", 1, "solid rgba(253,255,252,0.2)")
+            @include fluid("border-radius", 6)
+            position: relative
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            @include fluid("margin-bottom", 12)
+            pointer-events: none
+            
+            .animations__element_preview
+                pointer-events: none
+                @include fluid("width", 120)
+                @include fluid("height", 120)
+
+    .animations__dell
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.2)
+        @include fluid("font-size", 12)
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 2
+
+    .animations__fastbuttons
+        width: 100%
+        @include fluid("height", 196)
+        display: grid
+        grid-template-columns: repeat(10, 1fr)
+        @include fluid("margin-top", 26)
+        .animations__fast_element
+            display: flex
+            flex-direction: column
+            align-items: center
+            .animations__fast_button
+                display: flex
+                align-items: center
+                justify-content: center
+                background: white
+                color: black
+                @include fluid("border-radius", 4)
+                @include fluid("height", 34)
+                @include fluid("width", 34)    
+                @include fluid("margin-bottom", 12)  
+            
+            
+            .animations__fast_text
+                @include fluid("margin-top", 12)  
+                @include fluid("font-size", 12)
+                @include fluid("line-height", 14)    

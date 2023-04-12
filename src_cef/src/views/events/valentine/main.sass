@@ -1,0 +1,222 @@
+@import @/views/assets/css/main.sass
+
+#valentine
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-weight: bold
+    @include fluid("font-size", 22)
+    color: #FFFFFF
+    font-family: 'TTNorms-Regular'
+    background: rgba(1,22,39,0.8)
+    letter-spacing: 0.02em
+    @include fluid("padding-left", 115)
+    @include fluid("padding-right", 115)
+    @include fluid("padding-bottom", 66)
+    @include fluid("padding-top", 151)
+    
+    .margin-right-35
+        @include fluid("margin-right", 35)
+
+    .valentine-newbutton
+        display: flex
+        align-items: center
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 22)
+        &:last-child
+            margin-right: 0
+        .valentine-button
+            background: #FDFFFC
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            @include fluid("padding-bottom", 6)
+            @include fluid("padding-top", 6)
+            @include fluid("border-radius", 6)
+            @include fluid("margin-right", 26)
+            color: black
+            @include fluid("min-height", 40)
+            font-weight: 500
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: bold
+        &.right
+            @include fluid("margin-right", 100)
+            &:last-child
+                margin-right: 0
+            flex-direction: row-reverse
+            .valentine-button
+                margin-right: 0
+                @include fluid("margin-left", 26)
+    
+    .valentine__main_img
+        @include fluid("height", 376)
+        @include fluid("width", 780)
+        background: url('./images/valent.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+    
+    .valentine__text
+        @include fluid("margin-top", 65)
+        margin-bottom: auto
+        text-align: center
+        @include fluid("width", 752)
+    
+    .valentine__heart_img
+        @include fluid("padding-top", 72)
+        @include fluid("height", 588)
+        @include fluid("width", 640)
+        background: url('./images/heart.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        margin-bottom: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        .valentine__input
+            background: transparent
+            color: #FDFFFC
+            font-family: inherit
+            @include fluid("line-height", 36)
+            @include fluid("font-size", 18)
+            @include fluid("border-bottom", 1, "solid #FDFFFC")
+            @include fluid("margin-bottom", 16)
+            @include fluid("width", 412)
+            @include fluid("padding-left", 14)
+            &::placeholder
+                color: #FDFFFC
+        .valentine__input_big
+            color: #FDFFFC
+            @include fluid("padding-left", 14)
+            @include fluid("padding-right", 14)
+            @include fluid("padding-top", 8)
+            @include fluid("height", 262)
+            @include fluid("width", 412)
+            @include fluid("border", 1, "solid #FDFFFC")
+            resize: none
+            background: transparent
+            font-family: inherit
+            word-wrap: break-word
+            @include fluid("line-height", 21)
+            @include fluid("font-size", 18)
+            &::placeholder
+                color: #FDFFFC
+    .valentine__hearts_img
+        @include fluid("padding-top", 72)
+        @include fluid("height", 588)
+        @include fluid("width", 1380)
+        background: url('./images/hearts.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        margin-bottom: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        .valentine__hearts_name
+            font-family: 'Nickainley'
+            @include fluid("line-height", 96)
+            @include fluid("font-size", 96)
+            color: rgba(255,255,255,0.2)
+            position: relative
+            display: table-caption
+            display: flex
+            flex-direction: column
+            align-items: center
+            transform: rotateZ(350deg)
+            font-weight: normal
+            .valentine__hearts_absolute
+                display: flex
+                flex-direction: column
+                align-items: center
+                display: table-caption
+                @include fluid("line-height", 72)
+                @include fluid("font-size", 72)
+                color: white
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+        
+        .valentine__hearts_text
+            @include fluid("margin-top", 5)
+            @include fluid("width", 394)
+            font-weight: 500
+            @include fluid("line-height", 18)
+            @include fluid("font-size", 20)
+            letter-spacing: 1px
+            color: #FFFFFF
+            text-align: center
+            word-break: break-all
+    .valentine__mail_img
+        @include fluid("margin-top", 100)
+        @include fluid("height", 418)
+        @include fluid("width", 870)
+        background: url('./images/mail.png')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        margin-bottom: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        @include fluid("padding-top", 20)
+        .valentine__input
+            background: transparent
+            font-weight: bold
+            color: #000000
+            font-family: inherit
+            @include fluid("line-height", 36)
+            @include fluid("font-size", 18)
+            @include fluid("border-bottom", 1, "solid #000000")
+            @include fluid("margin-bottom", 16)
+            @include fluid("width", 412)
+            @include fluid("padding-left", 14)
+            &::placeholder
+                color: #000000
+        .valentine__input_big
+            font-weight: bold
+            color: #000000
+            @include fluid("padding-left", 14)
+            @include fluid("padding-right", 14)
+            @include fluid("padding-top", 8)
+            @include fluid("height", 262)
+            @include fluid("width", 412)
+            @include fluid("border", 1, "solid #000000")
+            resize: none
+            background: transparent
+            font-family: inherit
+            @include fluid("line-height", 21)
+            @include fluid("font-size", 18)
+            &::placeholder
+                color: #000000
+    
+        .valentine__mail_name
+            color: #000000
+            @include fluid("width", 412)
+            text-align: center
+            font-weight: bold
+            @include fluid("line-height", 52)
+            @include fluid("font-size", 36)
+            @include fluid("border-bottom", 1, "solid #000000")
+            @include fluid("margin-bottom", 22)
+            display: flex
+            justify-content: center
+            &::placeholder
+                color: #000000
+        .valentine__mail_text
+            color: #000000
+            @include fluid("width", 752)  
+            font-weight: 500         
+            @include fluid("line-height", 20)
+            @include fluid("font-size", 18)
+            text-align: center
+            word-break: break-all
+        .box-column
+            align-items: center 

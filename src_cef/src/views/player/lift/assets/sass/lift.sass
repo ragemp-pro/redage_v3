@@ -1,0 +1,101 @@
+@import ../../../../assets/css/main
+ 
+#lift 
+    position: absolute 
+    width: 100% 
+    height: 100% 
+    display: flex 
+    flex-direction: column 
+    align-items: center 
+    justify-content: center 
+    @include fluid("padding-top", 45)    
+    @include fluid("padding-bottom", 45) 
+    @include fluid("padding-left", 144) 
+    @include fluid("padding-right", 144) 
+    color: white 
+    font-family: "UniNeue" 
+    font-style: normal 
+    font-weight: bold 
+
+
+    .module_lift
+        background: rgba(27, 30, 40, 0.9)
+        @include fluid("border-radius", 6)
+        overflow: hidden
+        @include fluid("width", 346) 
+        @include fluid("height", 210) 
+
+        h1 
+            width: 100%
+            @include fluid("height", 57)
+            font-weight: bold
+            @include fluid("font-size", 24)
+            display: flex
+            @include fluid("margin-bottom", 22) 
+            align-items: center
+            justify-content: center
+            background: rgba(23, 25, 33, 0.9)
+
+        .flex 
+            display: flex
+            justify-content: center
+
+        .button.up
+            @include fluid("margin-right", 22)
+
+        .button
+            display: flex
+            align-items: center
+            @include fluid("width", 140) 
+            @include fluid("height", 109) 
+            justify-content: space-between
+            flex-direction: column
+            #btn-down:after
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0)'%3e%3cpath d='M12.4512 26.5684L2.70034 16.8178C2.422 16.5394 2.26923 16.1685 2.26923 15.7729C2.26923 15.3769 2.42222 15.0062 2.70034 14.7278L3.58585 13.8425C3.86375 13.5644 4.23494 13.4112 4.63072 13.4112C5.02628 13.4112 5.40998 13.5644 5.68788 13.8425L11.3888 19.5309L11.3888 1.45865C11.3888 0.643824 12.0267 4.26512e-07 12.8417 4.62139e-07L14.0936 5.1686e-07C14.9086 5.52486e-07 15.6108 0.643824 15.6108 1.45865L15.6108 19.5955L21.3436 13.8428C21.6219 13.5646 21.983 13.4114 22.3788 13.4114C22.7741 13.4114 23.1405 13.5646 23.4186 13.8428L24.3013 14.728C24.5796 15.0064 24.7313 15.3771 24.7313 15.7731C24.7313 16.1687 24.5776 16.5397 24.2993 16.818L14.5486 26.5686C14.2694 26.8476 13.8967 27.0011 13.5005 27C13.1029 27.0008 12.73 26.8476 12.4512 26.5684Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0'%3e%3crect width='27' height='27' transform='matrix(-4.37114e-08 1 1 4.37114e-08 0 0)' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ")
+            #btn-up:after
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0)'%3e%3cpath d='M14.5488 0.431585L24.2997 10.1822C24.578 10.4606 24.7308 10.8315 24.7308 11.2271C24.7308 11.6231 24.5778 11.9938 24.2997 12.2722L23.4142 13.1575C23.1363 13.4356 22.7651 13.5888 22.3693 13.5888C21.9737 13.5888 21.59 13.4356 21.3121 13.1575L15.6112 7.46908L15.6112 25.5414C15.6112 26.3562 14.9733 27 14.1583 27L12.9064 27C12.0914 27 11.3892 26.3562 11.3892 25.5414L11.3892 7.40455L5.65642 13.1572C5.37808 13.4354 5.01698 13.5886 4.6212 13.5886C4.22587 13.5886 3.8595 13.4354 3.58138 13.1572L2.69873 12.272C2.4204 11.9936 2.26871 11.6229 2.26871 11.2269C2.26871 10.8313 2.42237 10.4603 2.70071 10.182L12.4514 0.431366C12.7306 0.152368 13.1033 -0.00106825 13.4995 3.03836e-05C13.8971 -0.000848899 14.27 0.152368 14.5488 0.431585Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0'%3e%3crect width='27' height='27' transform='matrix(1.19249e-08 -1 -1 -1.19249e-08 27 27)' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ")
+            
+            #btn-stop 
+                background: #D33437
+            #btn-stop:hover
+                background: #CC1E21
+            #btn-start 
+                background: #27AE60
+            #btn-start:hover
+                background: #01A948
+
+            .btn.arrow:after
+                content: ""
+                @include fluid("width", 27)
+                @include fluid("height", 27)
+                background-size: 100%
+                position: absolute
+                background-repeat: no-repeat
+                left: 0
+                right: 0
+                top: 0
+                bottom: 0
+                margin: auto
+
+            .btn.arrow:hover
+                background: #4B5573
+
+
+            .btn.arrow
+                position: relative
+                background: #303648
+                transition: background ease .1s
+                @include fluid("border-radius", 50)   
+                @include fluid("width", 48)
+                @include fluid("height", 48)
+
+            .btn.set
+                width: 100%
+                font-weight: bold
+                transition: background ease .1s
+                @include fluid("font-size", 18)
+                @include fluid("border-radius", 2)
+                @include fluid("height", 39)
+                align-items: center
+                justify-content: center
+                display: flex

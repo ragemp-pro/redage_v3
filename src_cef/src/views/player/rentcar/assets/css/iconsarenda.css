@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'arendaicon';
+  src:  url('../fonts/arenda.eot?2ev9vr');
+  src:  url('../fonts/arenda.eot?2ev9vr#iefix') format('embedded-opentype'),
+    url('../fonts/arenda.ttf?2ev9vr') format('truetype'),
+    url('../fonts/arenda.woff?2ev9vr') format('woff'),
+    url('../fonts/arenda.svg?2ev9vr#arenda') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="arendaicon-"], [class*=" arendaicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'arendaicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.arendaicon-money:before {
+  content: "\e900";
+}
+.arendaicon-off:before {
+  content: "\e901";
+}

@@ -1,0 +1,242 @@
+export default {
+    weapData: [
+        [ 
+            ["Pistol",1,0, true], // Название / Цена / Категория патрон index массив ammo / Покупка разрешена (true/false)
+            ["CombatPistol",2,0, true],
+            ["Revolver",3,0, true],
+            ["HeavyPistol",4,0, true],
+            [false,0,0],
+            [false,0,0]
+        ],
+        [ 
+            ["BullpupShotgun",11,4, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0]
+        ],
+        [ 
+            ["CombatPDW",111, 1, true],
+            ["MachinePistol",112, 1, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0]
+        ],
+        [ 
+            ["AssaultRifle",111, 2, false],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0]
+        ],
+        [ 
+            ["SniperRifle",112, 3, false],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0]
+        ],
+    ],
+    matsGang: [
+        [
+            ["Pistol",1, 0, true],
+            ["SNSPistol",1, 0, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0]
+        ],
+        [
+            ["DoubleBarrelShotgun",1, 1, true],
+            ["SawnoffShotgun",1, 1, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0]
+        ],
+        [
+            ["MicroSMG",1, 2, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+    ],
+    matsNonGov: [
+        [
+            ["Pistol",1, 0, true],
+            ["HeavyPistol",4, 0, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["PumpShotgun",1, 1, true],
+            ["BullpupShotgun",11, 1, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["SMG", 1, 2, true],
+            ["CombatPDW",111, 2, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["AdvancedRifle",1, 3, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+    ],
+	matsOrganization: [
+        [
+            ["Pistol",1, 0, true],
+            ["Pistol50",1, 0, true],
+            ["HeavyPistol",4, 0, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["PumpShotgun",1, 1, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["MiniSMG", 1, 2, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["CompactRifle",1, 3, true],
+            ["AssaultRifle",1, 3, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+    ],
+    matsBikers: [
+        [
+            ["Pistol",1, 0, true],
+            ["CombatPistol",2, 0, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["PumpShotgun",1, 1, true],
+            ["SawnoffShotgun",1, 1, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["MachinePistol",112, 2, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["CompactRifle",1, 3, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+    ],
+    matsMafia: [
+        [
+            ["Pistol",1, 0, true],
+            ["Pistol50",1, 0, true],
+            ["VintagePistol",1, 0, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["PumpShotgun",1, 1, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["MiniSMG", 1, 2, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+        [
+            ["AssaultRifle",1, 3, true],
+            ["CompactRifle",1, 3, true],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+            [false,0,0],
+        ],
+    ],
+    gangAmmo: [
+        ["Pistol Ammo", 0, 100, 1, 0],
+        ["Shotgun Ammo", 0, 50, 4, 0],
+        ["SMG Ammo", 0, 100, 2, 0],
+    ],
+    nongovAmmo: [
+        ["Pistol Ammo", 0, 100, 1, 0],
+        ["Shotgun Ammo", 0, 50, 4, 0],
+        ["SMG Ammo", 0, 300, 2, 0],
+        ["Rifles Ammo", 0, 250, 4, 0],
+    ],
+	organizationsAmmo: [
+        ["Pistol Ammo", 0, 100, 1, 0],
+        ["Shotgun Ammo", 0, 50, 4, 0],
+        ["SMG Ammo", 0, 300, 2, 0],
+        ["Rifles Ammo", 0, 100, 4, 0],
+    ],
+    bikersAmmo: [
+        ["Pistol Ammo", 0, 100, 1, 0],
+        ["Shotgun Ammo", 0, 50, 4, 0],
+        ["SMG Ammo", 0, 300, 2, 0],
+        ["Rifles Ammo", 0, 250, 4, 0],
+    ],
+    mafiaAmmo: [
+        ["Pistol Ammo", 0, 100, 1, 0],
+        ["Shotgun Ammo", 0, 50, 4, 0],
+        ["SMG Ammo", 0, 300, 2, 0],
+        ["Rifles Ammo", 0, 250, 4, 0],
+    ],
+    ammo: [
+        ["Pistol Ammo",0,100,2,0],
+        ["SMG Ammo",0,300,2,0],
+        ["Rifles Ammo",0,250,2,0],
+        ["SniperRifles Ammo",0,20,2,0],
+        ["Shotguns Ammo",0,50,2,0],
+    ]
+}

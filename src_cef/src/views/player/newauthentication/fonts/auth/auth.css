@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'auth';
+  src:
+    url('./auth.ttf?w611ft') format('truetype'),
+    url('./auth.woff?w611ft') format('woff'),
+    url('./auth.svg?w611ft#auth') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="auth-"], [class*=" auth-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'auth' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.auth-mother:before {
+  content: "\e900";
+}
+.auth-withdrow:before {
+  content: "\e901";
+}
+.auth-ban:before {
+  content: "\e902";
+}
+.auth-back:before {
+  content: "\e903";
+}
+.auth-shirt:before {
+  content: "\e904";
+}
+.auth-brush:before {
+  content: "\e905";
+}
+.auth-smile:before {
+  content: "\e906";
+}
+.auth-hzcheeto:before {
+  content: "\e907";
+}
+.auth-father:before {
+  content: "\e908";
+}
+.auth-locked:before {
+  content: "\e909";
+}
+.auth-female:before {
+  content: "\e90a";
+}
+.auth-man:before {
+  content: "\e90b";
+}
+.auth-warning:before {
+  content: "\e90c";
+}
+.auth-person:before {
+  content: "\e90d";
+}
+.auth-name:before {
+  content: "\e90e";
+}
+.auth-exitplace:before {
+  content: "\e90f";
+}
+.auth-fraction:before {
+  content: "\e910";
+}
+.auth-home:before {
+  content: "\e911";
+}
+.auth-dollar:before {
+  content: "\e912";
+}
+.auth-plus:before {
+  content: "\e913";
+}
+.auth-logout:before {
+  content: "\e914";
+}
+.auth-pass-repeat:before {
+  content: "\e915";
+}
+.auth-done:before {
+  content: "\e916";
+}
+.auth-gift:before {
+  content: "\e917";
+}
+.auth-unvisible:before {
+  content: "\e918";
+}
+.auth-visible:before {
+  content: "\e919";
+}
+.auth-mail:before {
+  content: "\e91a";
+}
+.auth-user:before {
+  content: "\e91b";
+}
+.auth-close:before {
+  content: "\e91c";
+}
+.auth-arrow:before {
+  content: "\e91d";
+}
+.auth-lock:before {
+  content: "\e91e";
+}
+.auth-key:before {
+  content: "\e91f";
+}
+.auth-login-error:before {
+  content: "\e920";
+}
+.auth-arrow-left:before {
+  content: "\e921";
+}
+.auth-arrow-right:before {
+  content: "\e922";
+}
+.auth-arrow-up:before {
+  content: "\e923";
+}
+.auth-arrow-down:before {
+  content: "\e924";
+}
+.auth-random:before {
+  content: "\e925";
+}

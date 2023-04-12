@@ -1,0 +1,126 @@
+.pc{
+    font-family: 'UniNeue';
+    background-image: url('./../images/policepc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position: absolute;
+    width: 55em;
+    height: 45em;
+    bottom: 0;
+}
+.pc .screen{
+    background-color: black;
+    background-image: url('./../images/pcui.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 64%;
+    width: 78%;
+    max-height: 64%;
+    max-width: 78%;
+    margin-left: 11%;
+    margin-top: 7%;
+    color: white;
+}
+.pc .screen .left{
+    display: block;
+    float: left;
+    width: 50%;
+    height: 80%;
+    margin-top: 7%;
+    /*background-color: rgba(110,110,110,0.8);*/
+}
+.pc .screen .right{
+    display: block;
+    float: right;
+    width: 50%;
+    height: 80%;
+    margin-top: 7%;
+    text-align: center;
+    /*background-color: rgba(210,210,210,0.8);*/
+}
+.pc menu{
+    margin: 6%;
+    margin-top: 20%;
+    font-size: 16pt;
+}
+.pc menu li{
+    cursor: pointer;
+    list-style-type: none;
+}
+.pc menu li:hover{list-style-type: square}
+.pc menu li{color: #ef5350}
+.pc .right h1{
+    font-weight: 400;
+    text-align: center;
+    font-size: 22pt;
+}
+.pc .elements{
+    height: 70%;
+    margin: 15px;
+}
+.pc .elements input{
+    display: inline-block;
+    width: 70%;
+    height: 15%;
+    background: #091120;
+    color: white;
+    text-align: center;
+    border: 0;
+    font-size: 14pt;
+}
+.pc .elements .button{
+    text-align: center;
+    padding: 5%;
+    background: #091120;
+    display: inline-block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.pc .elements .button:hover{background-color: #000000}
+.pc .elements ol{
+    margin: 0;
+    text-align: left;
+    background: #091120;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    max-height: 90%;
+    height: 90%;
+    list-style-type: none;
+    counter-reset: num;
+    overflow-y: auto;
+}
+
+.pc .elements ol::-webkit-scrollbar {
+    width: 3px;
+}
+.pc .elements ol::-webkit-scrollbar-track {
+    background: #131924; 
+    border-radius: 10px;
+
+}
+.pc .elements ol::-webkit-scrollbar-thumb {
+    background: #D33437;
+    border-radius: 10px;
+}
+.pc .elements ol li::before{
+    color: orange;
+    content: counter(num) '. ';
+    counter-increment: num;
+}
+.pc p{
+    margin: 0;
+    color: orange;
+    text-align: left;
+}
+.pc p span{color: white}
+
+@media screen and (max-device-width: 800px) {
+    .pc{
+        width: 45em;
+        height: 35em;
+    }
+}

@@ -1,0 +1,405 @@
+.report-wrapper .report {
+    width: 400px;
+    height: 730px;
+    margin: left;
+    background: rgba(29, 29, 29, 0.9);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.report-wrapper .ticketfull {
+    font-family: 'UniNeue';
+    font-weight: normal;
+    font-size: 14px;
+    
+    color: #fff;
+    width: 1300px;
+    height: 800px;
+    background: rgba(36, 36, 36, 0.9);
+    border-radius: 4px;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.report-wrapper .imglogo {
+    position: absolute;
+    top: 0;
+    margin-top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.report-wrapper .swglogo {
+    margin-top: -10px;
+    margin-left: -35px;
+}
+
+.report-wrapper .buttonswgclose {
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 37px;
+    margin-left: -10px;
+}
+
+.report-wrapper #buttonswgclose{
+    background: transparent;
+    border: transparent;
+    margin-top: 25px;
+}
+
+.report-wrapper button:focus {
+    outline: none;
+}
+
+.report-wrapper .buttonone, .buttononek, #buttonclose {
+    cursor: pointer;
+}
+
+.report-wrapper button.buttonone:focus {
+    background: rgba(44, 126, 52, 0.9);
+}
+
+.report-wrapper button.buttononek:focus {
+    background: rgba(122, 45, 45, 0.9);
+}
+
+.report-wrapper button:hover svg {
+    transform: scale(1.1);
+}
+
+.report-wrapper button::-moz-focus-inner {
+    border: 0;
+}
+
+.report-wrapper svg {
+    outline: none;
+    transition: transform 0.3s linear;
+}
+
+.report-wrapper .ticketinside {
+    width: 1300px;
+    height: 730px;
+    margin-top: 70px;
+    background: rgba(36, 36, 36, 0.9);
+    border-radius: 0px 0px 4px 4px;
+    display: flex;
+}
+
+.report-wrapper p.reporttext {
+    text-align: center;
+    font-weight: bold;
+}
+
+.report-wrapper .onereport {
+    width: 392px;
+    height: 100px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 0px;
+    margin-bottom: 5px;
+}
+
+.report-wrapper .reportinfo {
+    position: absolute;
+    display: flex;
+    margin-left: 21px;
+}
+
+.report-wrapper .reportinfo p {
+    margin-right: 5px;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+}
+
+.report-wrapper p.tasknumber {
+    color: #BC3A3A;
+}
+
+.report-wrapper p.taskuser {
+    color: #80C57A;
+}
+
+.report-wrapper .reporttasks {
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 21px;
+    max-width: 352px;
+}
+
+.report-wrapper .reporttasks p {
+    text-align: left;
+    letter-spacing: 0.03em;
+}
+
+.report-wrapper .reportsadmin {
+    position: relative;
+    right: 8px;
+}
+
+.report-wrapper .adminname {
+    position: absolute;
+    right: 11px;
+    bottom: 12px;
+}
+
+.report-wrapper .adminname p {
+    color: #BCA73A;
+    font-weight: bold;
+    text-align: right;
+}
+
+.report-wrapper .blockadmins {
+    position: static;
+    margin-left: 391px;
+}
+
+.report-wrapper .boxes {
+    height: 633px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.report-wrapper .boxes ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.report-wrapper .boxes ::-webkit-scrollbar-track {
+    background: #131313; 
+    border-radius: 10px;
+}
+
+.report-wrapper .boxes ::-webkit-scrollbar-thumb {
+    background: #5a5a5a; 
+    border-radius: 10px;
+}
+
+.report-wrapper .boxreports {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px 0 0;
+    overflow-x: hidden;
+    overflow-y: initial;
+}
+
+.report-wrapper .answer {
+    width: 400px;
+    height: 730px;
+    margin-left: 50px;
+    background: rgba(29, 29, 29, 0.9);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.report-wrapper .answer p.reporttext {
+    text-align: center;
+    font-weight: bold;
+}
+
+.report-wrapper .answertoquestion {
+    width: 400px;
+    height: 329px;
+    position: absolute;
+    top: 471px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.report-wrapper .textquestion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-wrapper .user {
+    font-family: 'UniNeue';
+    border: none;
+}
+
+.report-wrapper textarea {
+    border-style: none;
+    background: rgba(58, 58, 58, 0.0);
+    width: 370px;
+    height: 204px;
+    resize: none;
+}
+
+.report-wrapper textarea:focus, input:focus {
+    outline: none;
+}
+
+.report-wrapper textarea.user {
+    color: white;
+}
+
+.report-wrapper .buttonquestion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.report-wrapper .buttonquestion .box-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.report-wrapper .buttonone {
+    font-family: 'UniNeue';
+    width: 191px;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    background: rgba(60, 175, 71, 0.9);
+}
+
+.report-wrapper .buttonone.min {
+    width: 70px;
+    height: 25px;
+    background: rgba(255, 127, 0, 0.9);
+}
+
+.report-wrapper .buttonone.sr {
+    width: 90px;
+    height: 25px;
+    background: rgba(255, 127, 0, 0.9);
+}
+
+.report-wrapper .buttononek {
+    font-family: 'UniNeue';
+    width: 191px;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    background: rgba(175, 60, 60, 0.9);
+}
+
+.report-wrapper .butabs {
+    position: absolute;
+    margin-left: 6px;
+    margin-top: -12px;
+}
+
+.report-wrapper .butabr {
+    position: absolute;
+    margin-left: 203px;
+    margin-top: -12px;
+}
+
+.report-wrapper .template {
+    width: 400px;
+    height: 730px;
+    margin-left: 50px;
+    background: rgba(29, 29, 29, 0.9);
+    border-radius: 0px 0px 4px 4px;
+    position: relative;
+    z-index: 10;
+}
+
+.report-wrapper .template p.reporttext {
+    text-align: center;
+    font-weight: bold;
+}
+
+.report-wrapper .templ {
+    width: 400px;
+    height: 30px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+
+.report-wrapper .boxestempl {
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.report-wrapper .boxtemplates {
+    width: 100%;
+    height: 100%;
+    padding: 0 25px 0 0;
+    overflow: auto;
+}
+
+.report-wrapper .templ {
+    display: flex;
+    align-items: center;
+}
+
+.report-wrapper .templ p {
+    text-align: center;
+}
+
+.report-wrapper .templtext {
+    width: 400px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report-wrapper .close p button {
+    width: 30px;
+    height: 30px;
+    background: #A33C3C url(./../images/cancel.png) no-repeat;
+    border: none;
+    background-size: 12px 12px;
+    background-position: center;
+    display: none;
+}
+
+.report-wrapper #buttonclose:focus {
+    background: rgba(122, 45, 45, 0.9) url(./../images/cancel.png) no-repeat;
+    background-size: 12px 12px;
+    background-position: center;
+}
+
+.report-wrapper .templ:hover .close p button {
+    display: block;
+}
+
+.report-wrapper .texttempl {
+    width: 400px;
+    height: 85px;
+    background: rgba(58, 58, 58, 0.9);
+    border-radius: 0px 0px 4px 4px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.report-wrapper .infotempltxt {
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    opacity: 0.2;
+}
+
+@media (max-width: 1600px) {
+    .report-wrapper .adaptive {
+        zoom: 84%
+    }
+
+    .report-wrapper{
+        width: 1600px;
+        height: 900px;
+    }
+}
+
+@media (min-width: 1601px) and (max-width: 1920px) {
+    .report-wrapper.adaptive {
+        zoom: 100%
+    }
+
+    .report-wrapper{
+        width: 1920px;
+        height: 1080px;
+    }
+}

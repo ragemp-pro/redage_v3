@@ -1,0 +1,72 @@
+$percent: 0.44
+
+@mixin fluid($funcionname, $size, $text: "")
+  #{$funcionname}: resize($size) #{$text}
+
+  @media (min-width: 800px) and (max-height: 1000px)
+    #{$funcionname}: resize($size, 1.07) #{$text}
+
+  @media (min-width: 1260px) and (max-height: 1200px)
+    #{$funcionname}: resize($size, 1.1) #{$text}
+
+  @media (min-width: 1260px) and (max-height: 800px)
+    #{$funcionname}: resize($size, 1) #{$text}
+
+  @media (min-width: 1346px) and (max-height: 800px)
+    #{$funcionname}: resize($size, 1) #{$text}
+
+  @media (min-width: 1420px) and (max-height: 1200px)
+    #{$funcionname}: resize($size, 1) #{$text}
+  
+  @media (min-width: 1580px) and (max-height: 800px)
+    #{$funcionname}: resize($size, 0.88) #{$text}
+  
+  @media (min-width: 1900px) and (max-height: 1080px)
+    #{$funcionname}: resize($size, 1) #{$text}
+
+  @media (min-width: 2540px) and (max-height: 1440px)
+    #{$funcionname}: resizemax($size, 1.15) #{$text}
+
+  @media (min-width: 2540px) and (max-height: 1080px)
+    #{$funcionname}: resizemax($size, 1.1) #{$text}
+
+  @media (min-width: 2540px) and (max-height: 1024px)
+    #{$funcionname}: resizemax($size, 1.05) #{$text}
+    
+  @media (min-width: 3420px) and (max-height: 1440px)
+    #{$funcionname}: resizemax($size, 1) #{$text}
+    
+  @media (min-width: 3420px) and (max-height: 1080px)
+    #{$funcionname}: resizemax($size, 0.85) #{$text}
+
+  @media (min-width: 3420px) and (min-height: 1080px)
+    #{$funcionname}: resizemax($size, 1.5) #{$text}
+
+  @media (min-width: 4096px)
+    #{$funcionname}: resize($size, 1.1) #{$text}
+
+@function resizemax($size, $test: 1)
+  $size: $size * $test
+  $v-max: 2560 * $test
+  $v-min: 1080 * $test
+  $f-min: ($size * $test) * $percent
+  $f-max: ($size * $test)
+
+  $k: ($f-max - $f-min)/($v-max - $v-min)
+  $b: $f-min - $k * $v-min
+
+  $b: $b * 1px
+  @return calc( #{$k} * 100vw + #{$b} )
+
+@function resize($size, $test: 1)
+  $size: $size * $test
+  $v-max: 1920 * $test
+  $v-min: 800 * $test
+  $f-min: ($size * $test) * $percent
+  $f-max: ($size * $test)
+
+  $k: ($f-max - $f-min)/($v-max - $v-min)
+  $b: $f-min - $k * $v-min
+
+  $b: $b * 1px
+  @return calc( #{$k} * 100vw + #{$b} )

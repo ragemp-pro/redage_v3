@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'circle';
+  src:  url('./fonts/circle.eot');
+  src:  url('./fonts/circle.eot') format('embedded-opentype'),
+    url('./fonts/circle.ttf') format('truetype'),
+    url('./fonts/circle.woff') format('woff'),
+    url('./fonts/circle.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="circle-"], [class*=" circle-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'circle' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.circle-aid2:before {
+  content: "\e93a";
+}
+.circle-aid:before {
+  content: "\e93b";
+}
+.circle-c-streetrace:before {
+  content: "\e900";
+}
+.circle-c-doors:before {
+  content: "\e901";
+}
+.circle-c-trunk:before {
+  content: "\e902";
+}
+.circle-c-hood:before {
+  content: "\e903";
+}
+.circle-c-carinv:before {
+  content: "\e904";
+}
+.circle-c-handshake:before {
+  content: "\e905";
+}
+.circle-c-heal:before {
+  content: "\e906";
+}
+.circle-c-house:before {
+  content: "\e907";
+}
+.circle-c-licenses:before {
+  content: "\e908";
+}
+.circle-c-passport:before {
+  content: "\e909";
+}
+.circle-c-fraction:before {
+  content: "\e90a";
+}
+.circle-c-family:before {
+  content: "\e90b";
+}
+.circle-c-offer:before {
+  content: "\e90c";
+}
+.circle-c-givemoney:before {
+  content: "\e90d";
+}
+.circle-c-acat5:before {
+  content: "\e90e";
+}
+.circle-c-socialnext1:before {
+  content: "\e90f";
+}
+.circle-c-acat3:before {
+  content: "\e910";
+}
+.circle-c-acancel:before {
+  content: "\e911";
+}
+.circle-c-acat1:before {
+  content: "\e912";
+}
+.circle-c-acat6:before {
+  content: "\e913";
+}
+.circle-c-tinter:before {
+  content: "\e914";
+}
+.circle-c-acat7:before {
+  content: "\e915";
+}
+.circle-c-sellcar:before {
+  content: "\e916";
+}
+.circle-c-sellhouse:before {
+  content: "\e917";
+}
+.circle-c-roommate:before {
+  content: "\e918";
+}
+.circle-c-leadaway:before {
+  content: "\e919";
+}
+.circle-c-takegun:before {
+  content: "\e91a";
+}
+.circle-c-takeillegal:before {
+  content: "\e91b";
+}
+.circle-c-takemask:before {
+  content: "\e91c";
+}
+.circle-c-search:before {
+  content: "\e91d";
+}
+.circle-c-acat2:before {
+  content: "\e91e";
+}
+.circle-c-acat4:before {
+  content: "\e91f";
+}
+.circle-c-handsup:before {
+  content: "\e920";
+}
+.circle-c-rob:before {
+  content: "\e921";
+}
+.circle-c-robguns:before {
+  content: "\e922";
+}
+.circle-c-offerheal:before {
+  content: "\e923";
+}
+.circle-c-ticket:before {
+  content: "\e924";
+}
+.circle-c-sellkit:before {
+  content: "\e925";
+}
+.circle-c-idcard:before {
+  content: "\e926";
+}
+.circle-c-invitehouse:before {
+  content: "\e927";
+}
+.circle-c-documents:before {
+  content: "\e928";
+}
+.circle-c-badge:before {
+  content: "\e929";
+}
+.circle-c-sell:before {
+  content: "\e92a";
+}
+.circle-c-tradehouse:before {
+  content: "\e92b";
+}
+.circle-c-tradecar:before {
+  content: "\e92c";
+}
+.circle-c-tradebiz:before {
+  content: "\e92d";
+}
+.circle-c-belt:before {
+  content: "\e92e";
+}
+.circle-c-intrunk:before {
+  content: "\e92f";
+}
+.circle-c-fromtrunk:before {
+  content: "\e930";
+}
+.circle-c-unmute:before {
+  content: "\e931";
+}
+.circle-c-mute:before {
+  content: "\e932";
+}
+.circle-c-breaking_trunk:before {
+  content: "\e933";
+}
+.circle-c-paired_animations:before {
+  content: "\e934";
+}
+.circle-c-veh_fix:before {
+  content: "\e935";
+}
+.circle-c-lspdbadge:before {
+  content: "\e936";
+}
+.circle-c-fibbadge:before {
+  content: "\e937";
+}
+.circle-c-use_hookah:before {
+  content: "\e938";
+}
+.circle-c-take_hookah:before {
+  content: "\e939";
+}

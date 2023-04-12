@@ -1,0 +1,579 @@
+@font-face {
+  font-family: 'inv-item';
+  src:  url('./inv-item.eot?756xtz');
+  src:  url('./inv-item.eot?756xtz#iefix') format('embedded-opentype'),
+    url('./inv-item.ttf?756xtz') format('truetype'),
+    url('./inv-item.woff?756xtz') format('woff'),
+    url('./inv-item.svg?756xtz#inv-item') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="inv-item-"], [class*=" inv-item-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'inv-item' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inv-item-diving-suit:before {
+  content: "\e900";
+}
+.inv-item-bracelet:before {
+  content: "\e901";
+}
+.inv-item-shorts:before {
+  content: "\e902";
+}
+.inv-item-clock:before {
+  content: "\e903";
+}
+.inv-item-jacket:before {
+  content: "\e904";
+}
+.inv-item-necklace:before {
+  content: "\e905";
+}
+.inv-item-glasses:before {
+  content: "\e906";
+}
+.inv-item-cap:before {
+  content: "\e907";
+}
+.inv-item-mask:before {
+  content: "\e908";
+}
+.inv-item-Flashlight:before {
+  content: "\e909";
+}
+.inv-item-Pool-Cue:before {
+  content: "\e90a";
+}
+.inv-item-Hammer:before {
+  content: "\e90b";
+}
+.inv-item-crowbar:before {
+  content: "\e90c";
+}
+.inv-item-Nightstick:before {
+  content: "\e90d";
+}
+.inv-item-Pipe-Wrench:before {
+  content: "\e90e";
+}
+.inv-item-Baseball-Bat:before {
+  content: "\e90f";
+}
+.inv-item-Broken-Bottle:before {
+  content: "\e910";
+}
+.inv-item-Knife:before {
+  content: "\e911";
+}
+.inv-item-Switchblade:before {
+  content: "\e912";
+}
+.inv-item-Antique-Cavalry-Dagger:before {
+  content: "\e913";
+}
+.inv-item-Machete:before {
+  content: "\e914";
+}
+.inv-item-Hatchet:before {
+  content: "\e915";
+}
+.inv-item-Battle-Axe:before {
+  content: "\e916";
+}
+.inv-item-Golf-Club:before {
+  content: "\e917";
+}
+.inv-item-SNS-Pistol-Mk-II:before {
+  content: "\e918";
+}
+.inv-item-SNS-Pistol:before {
+  content: "\e919";
+}
+.inv-item-Heavy-Pistol:before {
+  content: "\e91a";
+}
+.inv-item-Pistol:before {
+  content: "\e91b";
+}
+.inv-item-Vintage-Pistol:before {
+  content: "\e91c";
+}
+.inv-item-modifications:before {
+  content: "\e91d";
+}
+.inv-item-Pistol-50:before {
+  content: "\e91e";
+}
+.inv-item-Pistol-Mk-II:before {
+  content: "\e91f";
+}
+.inv-item-Combat-Pistol:before {
+  content: "\e920";
+}
+.inv-item-Stun-Gun:before {
+  content: "\e921";
+}
+.inv-item-AP-Pistol:before {
+  content: "\e922";
+}
+.inv-item-Double-Action-Revolver:before {
+  content: "\e923";
+}
+.inv-item-Heavy-Revolver-Mk-II:before {
+  content: "\e924";
+}
+.inv-item-Heavy-Revolver:before {
+  content: "\e925";
+}
+.inv-item-Machine-Pistol:before {
+  content: "\e926";
+}
+.inv-item-Flare-Gun:before {
+  content: "\e927";
+}
+.inv-item-SMG-Mk-II:before {
+  content: "\e928";
+}
+.inv-item-Micro-SMG:before {
+  content: "\e929";
+}
+.inv-item-SMG:before {
+  content: "\e92a";
+}
+.inv-item-Mini-SMG:before {
+  content: "\e92b";
+}
+.inv-item-Marksman-Pistol:before {
+  content: "\e92c";
+}
+.inv-item-Double-Barrel-Shotgun:before {
+  content: "\e92d";
+}
+.inv-item-Musket:before {
+  content: "\e92e";
+}
+.inv-item-Sawed-Off-Shotgun:before {
+  content: "\e92f";
+}
+.inv-item-Pump-Shotgun-Mk-II:before {
+  content: "\e930";
+}
+.inv-item-Pump-Shotgun:before {
+  content: "\e931";
+}
+.inv-item-Advanced-Rifle:before {
+  content: "\e932";
+}
+.inv-item-Assault-Rifle-Mk-II:before {
+  content: "\e933";
+}
+.inv-item-Assault-Rifle:before {
+  content: "\e934";
+}
+.inv-item-Assault-Shotgun:before {
+  content: "\e935";
+}
+.inv-item-Bullpup-Rifle-Mk-II:before {
+  content: "\e936";
+}
+.inv-item-Bullpup-Rifle:before {
+  content: "\e937";
+}
+.inv-item-Assault-SMG:before {
+  content: "\e938";
+}
+.inv-item-Bullpup-Shotgun:before {
+  content: "\e939";
+}
+.inv-item-Special-Carbine-Mk-II:before {
+  content: "\e93a";
+}
+.inv-item-Special-Carbine:before {
+  content: "\e93b";
+}
+.inv-item-Carbine-Rifle-Mk-II:before {
+  content: "\e93c";
+}
+.inv-item-Carbine-Rifle:before {
+  content: "\e93d";
+}
+.inv-item-Combat-MG-Mk-II:before {
+  content: "\e93e";
+}
+.inv-item-Combat-MG:before {
+  content: "\e93f";
+}
+.inv-item-Combat-PDW:before {
+  content: "\e940";
+}
+.inv-item-Compact-Rifle:before {
+  content: "\e941";
+}
+.inv-item-Heavy-Shotgun:before {
+  content: "\e942";
+}
+.inv-item-Gusenberg-Sweeper:before {
+  content: "\e943";
+}
+.inv-item-Marksman-Rifle:before {
+  content: "\e944";
+}
+.inv-item-Marksman-Rifle-Mk-II:before {
+  content: "\e945";
+}
+.inv-item-MG:before {
+  content: "\e946";
+}
+.inv-item-Sniper-Rifle:before {
+  content: "\e947";
+}
+.inv-item-Heavy-Sniper:before {
+  content: "\e948";
+}
+.inv-item-Heavy-Sniper-Mk-II:before {
+  content: "\e949";
+}
+.inv-item-Sweeper-Shotgun:before {
+  content: "\e94a";
+}
+.inv-item-Yamazaki:before {
+  content: "\e94b";
+}
+.inv-item-The-cranberries:before {
+  content: "\e94c";
+}
+.inv-item-alcohol:before {
+  content: "\e94d";
+}
+.inv-item-ararat:before {
+  content: "\e94e";
+}
+.inv-item-Asahi:before {
+  content: "\e94f";
+}
+.inv-item-Midori:before {
+  content: "\e950";
+}
+.inv-item-Noyan-Tapan:before {
+  content: "\e951";
+}
+.inv-item-On-lemon-peel:before {
+  content: "\e952";
+}
+.inv-item-beer:before {
+  content: "\e953";
+}
+.inv-item-Russian-standard:before {
+  content: "\e954";
+}
+.inv-item-Sambuca:before {
+  content: "\e955";
+}
+.inv-item-Campari:before {
+  content: "\e956";
+}
+.inv-item-Martini-Asti:before {
+  content: "\e957";
+}
+.inv-item-eCola:before {
+  content: "\e958";
+}
+.inv-item-Sprunk:before {
+  content: "\e959";
+}
+.inv-item-pizza:before {
+  content: "\e95a";
+}
+.inv-item-bag:before {
+  content: "\e95b";
+}
+.inv-item-hot-dog:before {
+  content: "\e95c";
+}
+.inv-item-Chips:before {
+  content: "\e95d";
+}
+.inv-item-burger:before {
+  content: "\e95e";
+}
+.inv-item-sandwich:before {
+  content: "\e95f";
+}
+.inv-item-Automatic-caliber:before {
+  content: "\e960";
+}
+.inv-item-fraction:before {
+  content: "\e961";
+}
+.inv-item-Pistol-caliber:before {
+  content: "\e962";
+}
+.inv-item-small-caliber:before {
+  content: "\e963";
+}
+.inv-item-Sniper-caliber:before {
+  content: "\e964";
+}
+.inv-item-armor:before {
+  content: "\e965";
+}
+.inv-item-backpack:before {
+  content: "\e966";
+}
+.inv-item-case:before {
+  content: "\e967";
+}
+.inv-item-briefcase:before {
+  content: "\e968";
+}
+.inv-item-medical-kit:before {
+  content: "\e969";
+}
+.inv-item-Bag-drill:before {
+  content: "\e96a";
+}
+.inv-item-Brass-Knuckles:before {
+  content: "\e96b";
+}
+.inv-item-gasoline:before {
+  content: "\e96c";
+}
+.inv-item-gift:before {
+  content: "\e96d";
+}
+.inv-item-headphones:before {
+  content: "\e96e";
+}
+.inv-item-shirt:before {
+  content: "\e96f";
+}
+.inv-item-glove:before {
+  content: "\e970";
+}
+.inv-item-sneakers:before {
+  content: "\e971";
+}
+.inv-item-key-2:before {
+  content: "\e972";
+}
+.inv-item-key:before {
+  content: "\e973";
+}
+.inv-item-marijuana:before {
+  content: "\e974";
+}
+.inv-item-stretching:before {
+  content: "\e975";
+}
+.inv-item-ears:before {
+  content: "\e976";
+}
+.inv-item-hand-left:before {
+  content: "\e977";
+}
+.inv-item-hand-right:before {
+  content: "\e978";
+}
+.inv-item-picklock:before {
+  content: "\e979";
+}
+.inv-item-snowflake:before {
+  content: "\e97a";
+}
+.inv-item-ammo-pistol:before {
+  content: "\e97b";
+}
+.inv-item-ammo-shotgun:before {
+  content: "\e97c";
+}
+.inv-item-ammo-sniper:before {
+  content: "\e97d";
+}
+.inv-item-ammo-small:before {
+  content: "\e97e";
+}
+.inv-item-ammo-average:before {
+  content: "\e97f";
+}
+.inv-item-Barrels:before {
+  content: "\e980";
+}
+.inv-item-Compensators:before {
+  content: "\e981";
+}
+.inv-item-Flashlights:before {
+  content: "\e982";
+}
+.inv-item-Muzzle-Brakes:before {
+  content: "\e983";
+}
+.inv-item-Grips:before {
+  content: "\e984";
+}
+.inv-item-Clips:before {
+  content: "\e985";
+}
+.inv-item-Scopes:before {
+  content: "\e986";
+}
+.inv-item-Suppressors:before {
+  content: "\e987";
+}
+.inv-item-Varmod:before {
+  content: "\e988";
+}
+.inv-item-EventCoin:before {
+  content: "\e989";
+}
+.inv-item-Firework1:before {
+  content: "\e98a";
+}
+.inv-item-Firework2:before {
+  content: "\e98b";
+}
+.inv-item-Firework3:before {
+  content: "\e98c";
+}
+.inv-item-Firework4:before {
+  content: "\e98d";
+}
+.inv-item-car:before {
+  content: "\e98e";
+}
+.inv-item-LoveNote:before {
+  content: "\e98f";
+}
+.inv-item-Note:before {
+  content: "\e990";
+}
+.inv-item-teddy-bear:before {
+  content: "\e991";
+}
+.inv-item-Vape:before {
+  content: "\e992";
+}
+.inv-item-bong:before {
+  content: "\e993";
+}
+.inv-item-barbell:before {
+  content: "\e994";
+}
+.inv-item-umbrella:before {
+  content: "\e995";
+}
+.inv-item-rose:before {
+  content: "\e996";
+}
+.inv-item-camera:before {
+  content: "\e997";
+}
+.inv-item-microphone:before {
+  content: "\e998";
+}
+.inv-item-guitar:before {
+  content: "\e999";
+}
+.inv-item-binoculars:before {
+  content: "\e99a";
+}
+.inv-item-pickaxe1:before {
+  content: "\e99b";
+}
+.inv-item-pickaxe2:before {
+  content: "\e99c";
+}
+.inv-item-pickaxe3:before {
+  content: "\e99d";
+}
+.inv-item-coal:before {
+  content: "\e99e";
+}
+.inv-item-iron:before {
+  content: "\e99f";
+}
+.inv-item-gold:before {
+  content: "\e9a0";
+}
+.inv-item-sulfur:before {
+  content: "\e9a1";
+}
+.inv-item-emerald:before {
+  content: "\e9a2";
+}
+.inv-item-ruby:before {
+  content: "\e9a3";
+}
+.inv-item-workaxe:before {
+  content: "\e9a4";
+}
+.inv-item-woodoak:before {
+  content: "\e9a5";
+}
+.inv-item-woodmaple:before {
+  content: "\e9a6";
+}
+.inv-item-woodpine:before {
+  content: "\e9a7";
+}
+.inv-item-boombox:before {
+  content: "\e9a8";
+}
+.inv-item-hookah:before {
+  content: "\e9a9";
+}
+.inv-item-case0:before {
+  content: "\e9aa";
+}
+.inv-item-case1:before {
+  content: "\e9ab";
+}
+.inv-item-case2:before {
+  content: "\e9ac";
+}
+.inv-item-case10:before {
+  content: "\e9ad";
+}
+.inv-item-case11:before {
+  content: "\e9ae";
+}
+.inv-item-case12:before {
+  content: "\e9af";
+}
+.inv-item-case3:before {
+  content: "\e9b0";
+}
+.inv-item-case4:before {
+  content: "\e9b1";
+}
+.inv-item-case5:before {
+  content: "\e9b2";
+}
+.inv-item-case6:before {
+  content: "\e9b3";
+}
+.inv-item-case7:before {
+  content: "\e9b4";
+}
+.inv-item-case8:before {
+  content: "\e9b5";
+}
+.inv-item-case9:before {
+  content: "\e9b6";
+}
+.inv-item-ball:before {
+  content: "\e9b7";
+}

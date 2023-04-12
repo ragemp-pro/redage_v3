@@ -1,0 +1,400 @@
+@import '@/views/assets/css/main.sass';
+
+
+#pageCard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: UniNeue;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;   
+}
+
+.cardGame {
+    display: flex;
+    @include fluid("width", 894)
+    @include fluid("height", 344)
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    .scratch {
+        display: flex;
+        position: absolute;
+        @include fluid("width", 60)
+        @include fluid("height", 60)
+    }
+    canvas {
+          @include fluid("border-radius", 100)
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+    }   
+
+    &.gold {
+        background-image: url('./images/gold.svg')
+
+        .title .color {
+            color: #FFB240;
+        }
+
+
+        & .star {
+            background-image: url("data:image/svg+xml,%3Csvg width='27' height='25' viewBox='0 0 27 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5 1.3708L16.4703 8.95327L16.587 9.25109L16.9063 9.27001L25.0356 9.75187L18.7421 14.9199L18.4949 15.1229L18.5756 15.4325L20.6294 23.3127L13.7694 18.9243L13.5 18.7519L13.2306 18.9243L6.37064 23.3127L8.42444 15.4325L8.50511 15.1229L8.25791 14.9199L1.96445 9.75187L10.0937 9.27001L10.413 9.25109L10.5297 8.95327L13.5 1.3708Z' fill='%23FFB340' stroke='%23B57A24'/%3E%3C/svg%3E%0A")
+            @include fluid("width", 27)
+            @include fluid("height", 27)
+            @include fluid("margin-right", 5)
+        }
+        .image {
+                background-image: url('./images/logo-gold.svg')
+                @include fluid("width", 388)
+                @include fluid("height", 389)
+                @include fluid("top", -30)
+                @include fluid("left", -25)
+        }
+    }
+    &.silver {
+        background-image: url('./images/silver.svg')
+
+        .title .color {
+            color: #B8CDD3;
+        }
+
+        .image {
+            background-image: url('./images/logo-silver.svg')
+            @include fluid("width", 388)
+            @include fluid("height", 389)
+            @include fluid("top", -25)
+            @include fluid("left", -20)
+        }
+
+        & .star {
+            background-image: url("data:image/svg+xml,%3Csvg width='27' height='25' viewBox='0 0 27 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5 1.3708L16.4703 8.95327L16.587 9.25109L16.9063 9.27001L25.0356 9.75187L18.7421 14.9199L18.4949 15.1229L18.5756 15.4325L20.6294 23.3127L13.7694 18.9243L13.5 18.7519L13.2306 18.9243L6.37064 23.3127L8.42444 15.4325L8.50511 15.1229L8.25791 14.9199L1.96445 9.75187L10.0937 9.27001L10.413 9.25109L10.5297 8.95327L13.5 1.3708Z' fill='white' stroke='%23B8CDD3'/%3E%3C/svg%3E%0A")
+            @include fluid("width", 27)
+            @include fluid("height", 27)
+            @include fluid("margin-right", 5)
+        }
+    }
+    .image {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+
+
+
+    .imgSett {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+    }
+
+    &.gold {
+        .awardsItems:not(.game) li {
+            box-shadow: 0px 0 0px rgba(255, 203, 68, 0.61)
+            &:hover {
+                box-shadow: 0px 0 25px rgba(255, 203, 68, 0.61)
+            }
+        }
+    }
+
+    &.silver {
+        .awardsItems:not(.game) li {
+            box-shadow: 0px 0 0px rgba(255, 255, 255, 0.61)
+            &:hover {
+                box-shadow: 0px 0 25px rgba(255, 255, 255, 0.61)
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        background: #1D1D1D;
+        @include fluid("border-radius", 56)
+        @include fluid("left", 63)
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        @include fluid("border-top-width", 6)
+        border-style: solid;
+        border-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+
+
+        &.s1 {
+            @include fluid("padding-top", 21)
+            @include fluid("padding-left", 229)
+            @include fluid("width", 576)
+            @include fluid("height", 220)
+
+            .title {
+                font-weight: bold;
+                align-items: center;
+                display: flex;
+                @include fluid("font-size", 30)
+    
+                .text {
+                    @include fluid("margin-right", 17)
+                }
+                .group {
+                    display: flex;
+                }
+    
+            }
+
+            p {
+                font-weight: 500;
+                @include fluid("font-size", 11)
+                @include fluid("margin-bottom", 10)
+                @include fluid("padding-right", 25)
+            }
+
+        }
+
+
+        &.s2 {
+            @include fluid("padding-top", 21)
+            @include fluid("width", 576)
+            @include fluid("height", 266)
+            text-align: center;
+
+
+            .winBox {
+                display: flex;
+                margin: auto;
+                @include fluid("margin-top", 20)
+                .prizeName {
+                    font-weight: bold;
+                    text-align: left;
+                    @include fluid("font-size", 48)
+                }
+
+                .l {
+                    position: relative;
+                    display: flex;
+                    @include fluid("margin-right", 40)
+                    align-items: center;
+                    @include fluid("width", 132)
+                    @include fluid("height", 132)
+                    justify-content: center;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        @include fluid("border-width", 4)
+                        @include fluid("border-radius", 100)
+                        border-color: #89D168;
+                        filter: drop-shadow(0px 0px 20px #89D168)
+                        border-style: solid;
+                    }
+                    .prize {
+                        @include fluid("width", 103)
+                        @include fluid("height", 82)
+                     
+                    }
+                }
+
+            }
+
+
+            .title {
+                font-weight: bold;
+                @include fluid("font-size", 24)
+            }
+            p {
+                color: #C1C1C1;
+                font-weight: 500;
+                @include fluid("font-size", 10)
+            }
+
+        }
+
+
+        .awardsItems {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            @include fluid("margin-top", 20)
+            @include fluid("width", 349)
+            li {
+                display: flex;
+                background: #E2E2E2;
+                align-items: center;
+                transition: all ease .2s;
+                @include fluid("margin-bottom", 16)
+                @include fluid("margin-right", 36)
+                justify-content: center;
+                @include fluid("border-width", 3)
+                @include fluid("border-radius", 56)
+                border-style: solid;
+                border-color: #A6A6A6;
+                @include fluid("width", 60)
+                @include fluid("height", 60)
+
+
+
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+
+                &:nth-last-child(-n+4) {
+                    margin-bottom: 0;
+                }
+    
+                img {
+                    @include fluid("width", 45)
+                    @include fluid("height", 36)
+                }
+
+            }
+        }
+
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            @include fluid("border-width", 1)
+            border-style: dotted;
+            border-color:  rgba(50, 50, 50, 0.95)
+        }
+        .tooltip .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%; /* At the bottom of the tooltip */
+            left: 50%;
+            @include fluid("margin-left", -10)
+            @include fluid("border-width", 10)
+            border-style: solid;
+            border-color:  rgba(50, 50, 50, 0.95) transparent transparent transparent;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            @include fluid("width", 158)
+            background: rgba(50, 50, 50, 0.95)
+            color: #fff;
+            text-align: left;
+            display: flex;
+            opacity: 0;
+            transition: opacity .2s;
+            flex-direction: column;
+            @include fluid("padding", 6)
+            @include fluid("padding-left", 17)
+            @include fluid("padding-right", 17)
+            @include fluid("top", -50)
+            @include fluid("border-radius", 4)
+            position: absolute;
+            z-index: 1;
+            & b {
+                font-weight: bold;
+                color: #FF5B5B;
+                @include fluid("font-size", 12)
+            }
+            & span {
+                font-weight: 500;
+                color: #C1C1C1;
+                @include fluid("font-size", 10)
+            }
+
+
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+
+        .button {
+            @include fluid("width", 197)
+            @include fluid("height", 47)
+            background: #FF5372;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            transition: ease all .2s;
+            align-items: center;
+            @include fluid("font-size", 24)
+            z-index: 2;
+            &:hover {
+                background: #e24360;
+            }
+        }
+
+
+
+    }
+
+    .nav {
+        width: 100%;
+        position: absolute;
+        @include fluid("bottom", -86)
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .mainBottom {
+            display: flex;
+            background: rgba(27, 30, 40, 0.9)
+            @include fluid("border-radius", 4)
+            @include fluid("height", 60)
+            align-items: center;
+            @include fluid("padding-left", 22)
+            @include fluid("padding-right", 17)
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include fluid("margin-right", 18)
+                &.btn {
+                    background: #D33437;
+                    @include fluid("border-radius", 4)
+                    font-weight: bold;
+                    @include fluid("font-size", 24)
+                }
+                &.sett-1 {
+                    @include fluid("height", 40)
+                    @include fluid("width", 62)
+                }
+                &.small {
+                    @include fluid("width", 40)
+                    @include fluid("height", 40)
+                }
+
+                &.placeholder {
+                    font-weight: bold;
+                    @include fluid("font-size", 14)
+                }
+
+            }
+        }
+    }
+
+    .leftArr {
+        span {   
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.048 9.312L5.016 10.32C4.856 10.512 4.688 10.52 4.512 10.344L0.456001 6.456C0.328001 6.296 0.264001 6.152 0.264001 6.024L0.264001 5.184C0.264001 5.056 0.328001 4.912 0.456001 4.752L4.512 0.671999C4.688 0.495999 4.856 0.495999 5.016 0.671999L6.048 1.68C6.224 1.856 6.224 2.024 6.048 2.184L3.648 4.44L13.584 4.44C13.824 4.44 13.944 4.56 13.944 4.8L13.944 6.408C13.944 6.648 13.824 6.768 13.584 6.768L3.72 6.768L6.024 8.808C6.216 8.968 6.224 9.136 6.048 9.312Z' fill='white'/%3E%3C/svg%3E%0A")
+            @include fluid("width", 14)
+            @include fluid("height", 11)
+            display: flex;
+        }
+     }
+    .rightArr {
+        span {
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.952 9.312L8.984 10.32C9.144 10.512 9.312 10.52 9.488 10.344L13.544 6.456C13.672 6.296 13.736 6.152 13.736 6.024L13.736 5.184C13.736 5.056 13.672 4.912 13.544 4.752L9.488 0.671999C9.312 0.495999 9.144 0.495999 8.984 0.671999L7.952 1.68C7.776 1.856 7.776 2.024 7.952 2.184L10.352 4.44L0.415999 4.44C0.175999 4.44 0.0559986 4.56 0.0559986 4.8L0.0559987 6.408C0.0559987 6.648 0.175999 6.768 0.415999 6.768L10.28 6.768L7.976 8.808C7.784 8.968 7.776 9.136 7.952 9.312Z' fill='white'/%3E%3C/svg%3E%0A")
+            @include fluid("width", 14)
+            @include fluid("height", 11)
+            display: flex;
+        }
+    }
+
+}   

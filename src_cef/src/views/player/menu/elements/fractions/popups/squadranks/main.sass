@@ -1,0 +1,118 @@
+@import @/views/assets/css/main.sass
+
+.popup__newhud_squadranks
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.27) 0%, rgba(1, 22, 39, 0.74) 100%)
+    z-index: 100    
+    @include fluid("font-size", 16)
+    @include fluid("line-height", 19)
+    font-family: 'TTNorms-Regular'
+    font-weight: 500
+    box-sizing: border-box
+    color: white
+    .popup__newhud_box
+        display: flex
+        flex-direction: column
+        background: rgba(30, 38, 47, 0.8)
+        @include fluid("border-radius", 8)
+        @include fluid("padding", 24)
+        &.w-782
+            @include fluid("width", 782)
+    .popup__newhud_esc
+        position: absolute
+        @include fluid("left", 50)
+        @include fluid("top", 42)
+        display: flex
+        align-items: center
+        font-family: 'Montserrat-Medium'
+        @include fluid("font-size", 20)
+        line-height: 100%
+        .popup__newhud_escbutton
+            @include fluid("width", 56)
+            @include fluid("height", 28)
+            background: #FFFFFF
+            @include fluid("border-radius", 3)
+            color: #1E262F
+            font-weight: 600
+            @include fluid("margin-right", 16)
+
+    .popup__newhud_title
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 28)
+        font-family: 'TTNorms-Medium'
+        font-weight: 500
+        @include fluid("line-height", 28)
+        display: flex
+        align-items: center
+        .popup__newhud_icon
+            @include fluid("margin-right", 10)
+            color:#869199
+    .popup__newhud_line
+        width: 100%
+        @include fluid("height", 1)
+        background: rgba(253,255,252,0.2)
+        @include fluid("width", 450)
+        @include fluid("margin-top", 15)
+        @include fluid("margin-bottom", 12)
+    .popup__newhud_text
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 25)
+        @include fluid("letter-spacing", 1)
+        @include fluid("width", 450)
+        text-align: center
+        font-weight: 500
+    .popup__newhud_subtitle
+        @include fluid("margin-top", 24)
+        color: #869199
+        font-weight: 500
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+    .popup__newhud_input
+        width: 100%
+        @include fluid("min-height", 52)
+        background: transparent
+        @include fluid("margin-top", 12)
+        @include fluid("padding-left", 28)
+        @include fluid("padding-right", 18)
+        background: rgba(255,255,255,0.12)
+        border-radius: 6px
+        color: #A6B1BA
+        font-family: 'TTNorms-Regular'
+        @include fluid("letter-spacing", 1)
+        @include fluid("font-size", 18)
+        text-align: left
+        &::placeholder
+            color: rgba(255, 255, 255, 0.5)
+            
+    .popup__newhud_textarea
+        @include fluid("padding-top", 8)
+        @include fluid("height", 134)
+        width: 100%
+        @include fluid("min-height", 52)
+        background: transparent
+        @include fluid("margin-top", 12)
+        @include fluid("padding-left", 28)
+        @include fluid("padding-right", 18)
+        background: rgba(255,255,255,0.12)
+        border-radius: 6px
+        color: #A6B1BA
+        font-family: 'TTNorms-Regular'
+        @include fluid("letter-spacing", 1)
+        @include fluid("font-size", 18)
+        text-align: left
+        resize: none
+        outline: none
+        border: none
+        &::placeholder
+            color: rgba(255, 255, 255, 0.5)
+    .align-startflex
+        align-items: flex-start !important

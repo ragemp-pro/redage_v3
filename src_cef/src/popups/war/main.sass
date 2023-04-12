@@ -1,0 +1,163 @@
+@import @/views/assets/css/main.sass
+
+.popup__war
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    display: flex
+    justify-content: space-between
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.27) 0%, rgba(1, 22, 39, 0.74) 100%)
+    z-index: 100    
+    @include fluid("font-size", 16)
+    @include fluid("line-height", 19)
+    font-family: 'TTNorms-Regular'
+    font-weight: 500
+    box-sizing: border-box
+    color: white
+    @include fluid("padding-left", 95)
+    @include fluid("padding-top", 50)
+    .popup__war_title
+        font-weight: 700
+        @include fluid("font-size", 32)
+        @include fluid("line-height", 38)
+        @include fluid("margin-bottom", 5)
+    .popup__war_subtitle
+        color: #869199
+        font-weight: 500
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+    .popup__war_smalltitle
+        @include fluid("margin-bottom", 5)
+        font-weight: 700
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 29)
+        @include fluid("margin-top", 20)
+    .mt-40
+        @include fluid("margin-top", 40)
+    .popup__war_icon
+        @include fluid("font-size", 32)
+        @include fluid("margin-right", 8)
+        @include fluid("margin-top", 6)
+    .popup__war_image
+        @include fluid("width", 605)
+        @include fluid("height", 1032)
+        background-image: url('./image.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        position: relative
+    .popup__war_iconsmall
+        @include fluid("font-size", 24)
+        @include fluid("margin-right", 9)
+        @include fluid("margin-top", 6)
+    .popup__war_headtitle
+        font-weight: 500
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 29)
+    .popup__war_headsubtitle
+        font-weight: 400
+        @include fluid("font-size", 16)
+        @include fluid("line-height", 19)
+        color: #A6B1BA
+        @include fluid("margin-top", 10)
+    .popup__war_smallbutton
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("width", 106)
+        @include fluid("height", 40)
+        background: rgba(255, 255, 255, 0.2)
+        @include fluid("border-radius", 8)
+        transition: all 0.5s ease
+        @include fluid("margin-left", 138)
+        &:hover
+            transition: all 0.5s ease
+            background: white
+            color: black
+    .box-between
+        display: flex
+        justify-content: space-between
+    .popup__element_title
+        font-weight: 500
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+        font-family: 'TTNorms-Medium'
+    .popup__element_subtitle
+        font-weight: 500
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 16)
+        @include fluid("margin-top", 6)
+        color: #A6B1BA
+    .popup__war_element
+        @include fluid("width", 720)
+        @include fluid("border-radius", 8)
+        @include fluid("padding-top", 12)
+        @include fluid("padding-bottom", 12)
+        @include fluid("padding-left", 24)
+        @include fluid("padding-right", 24)
+        background: rgba(255,255,255,0.1)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("margin-top", 10)
+    .mb-23
+        @include fluid("margin-bottom", 23)
+    .popup__element_button
+        @include fluid("width", 30)
+        @include fluid("height", 30)
+        align-items: center
+        display: flex
+        justify-content: center
+        background: rgba(255, 255, 255, 0.2)
+        @include fluid("border-radius", 4)
+        cursor: pointer
+        &:hover
+            background: white
+            color: black
+    .popup__war_selector
+        display: flex
+        justify-content: space-between
+        align-items: center
+        text-align: center
+        @include fluid("width", 230)
+        &.w-340
+            @include fluid("width", 280)
+        .box-flex
+            align-items: center
+    .popup__war_small
+        font-weight: 500
+        @include fluid("font-size", 12)
+        @include fluid("line-height", 16)
+        color: #A6B1BA
+    .popup__war_left
+        color: rgba(255, 255, 255, 0.25)
+        @include fluid("font-size", 18)
+        @include fluid("margin-right", 12)
+        &:hover
+            opacity: 0.7
+    .popup__war_right
+        color: rgba(255, 255, 255, 0.25)
+        @include fluid("font-size", 18)
+        @include fluid("margin-left", 12)
+        &:hover
+            opacity: 0.7
+    .mr-10
+        @include fluid("margin-right", 10)
+    .popup__war_button
+        @include fluid("width", 720)
+        @include fluid("height", 48)
+        display: flex
+        align-items: center
+        justify-content: center
+        background: white
+        @include fluid("border-radius", 8) 
+        @include fluid("margin-top", 10)
+        color: black
+        font-weight: 500
+        font-family: 'TTNorms-Medium'
+        &:hover
+            opacity: 0.9
+        

@@ -1,0 +1,100 @@
+@import @/views/assets/css/main.sass
+
+#wedding
+    z-index: 1000
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: rgba(1,22,39,0.8)
+    background-image: url('./images/wedding.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    font-family: TT Norms
+    color: white
+    font-weight: 500
+    @include fluid("font-size", 16)
+    @include fluid("line-height", 19)
+    @include fluid("padding-top", 300)
+    &.divorce
+            background-image: url('./images/divorce.png')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+    .wedding__header
+        font-style: normal
+        font-weight: bold
+        @include fluid("font-size", 48)
+        @include fluid("line-height", 57)
+        text-transform: uppercase
+        @include fluid("margin-bottom", 10)
+    .wedding__text
+        color: rgba(255,255,255,0.8)
+        @include fluid("max-width", 450)
+        text-align: center
+        @include fluid("margin-bottom", 10)
+    .wedding__subtitle
+        font-weight: bold
+        @include fluid("margin-top", 10)
+        @include fluid("margin-bottom", 12)
+        @include fluid("font-size", 24)
+        @include fluid("line-height", 28)
+        letter-spacing: 0.05em
+    .box-flex
+        @include fluid("width", 180)
+        justify-content: space-between
+        @include fluid("margin-bottom", 10)
+    .wedding__selector
+        color: rgba(255,255,255,0.6)
+        @include fluid("height", 36)
+        display: flex
+        justify-content: center
+        align-items: center
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 21)
+        &.active
+            color: white
+            background-image: url('./images/selector.png')
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            @include fluid("width", 100)
+            @include fluid("height", 48)
+        &.bad
+            &.active
+                background-image: url('./images/selector__bad.png')
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                @include fluid("width", 76)
+                @include fluid("height", 36)
+    .wedding__button
+        background: rgba(43, 182, 168, 0.1)
+        border: 1px solid #2BB6A8
+        box-sizing: border-box
+        border-radius: 4px
+        @include fluid("margin-top", 26) 
+        @include fluid("width", 240)
+        @include fluid("height", 40)
+        display: flex
+        align-items: center
+        justify-content: center
+    
+    .wedding__exit
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include fluid("width", 160)
+        @include fluid("margin-top", 60 ) 
+        .wedding__exit_button
+            color: black
+            background: #FDFFFC
+            border-radius: 6px
+            @include fluid("padding-left", 12)
+            @include fluid("padding-right", 12)
+            @include fluid("padding-top", 10)
+            @include fluid("padding-bottom", 10)

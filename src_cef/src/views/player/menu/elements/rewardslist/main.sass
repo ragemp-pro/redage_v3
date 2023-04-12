@@ -1,0 +1,238 @@
+@import @/views/assets/css/main.sass
+
+#rewardslist
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-weight: bold
+    @include fluid("font-size", 18)
+    @include fluid("line-height", 24)
+    color: #FFFFFF
+    font-family: 'TTNorms-Regular'
+    @include fluid("padding-left", 100)
+    @include fluid("padding-right", 100) 
+    .main__button_square
+        @include fluid("width", 62)
+        @include fluid("height", 62)
+        @include fluid("margin-left", 20)
+        @include fluid("border-radius", 2)
+        background-color: white
+        color: black
+    .rewardslist__header
+        @include fluid("height", 58)
+        display: flex
+        align-items: center
+        @include fluid("margin-bottom", 20)
+        .rewardslist__icon
+            @include fluid("margin-right", 13) 
+            @include fluid("width", 50)
+            @include fluid("height", 50)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+        .rewardslist__header_title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+        .rewardslist__header_subtitle
+                color: rgba(255,255,255,0.7)
+                @include fluid("margin-top", 14)
+                text-decoration: underline
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 19)
+                font-family: 'TTNorms-Regular'
+                font-weight: 300
+                &:hover
+                    color: rgba(255,255,255,0.4)
+    .rewardslist__nav
+        @include fluid("width", 300)
+        display: flex
+        flex-direction: column
+        @include fluid("height", 750)
+        .rewardslist__title
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 28)
+            color: white
+            @include fluid("margin-top", 30)
+            @include fluid("margin-bottom", 20)
+            font-weight: bold
+            font-family: 'TTNorms-Bold'
+            &:first-child
+                margin-top: 0
+                .tooltiptext
+                    bottom: 0%
+                    top: 125%
+
+        .rewardslist__subtitle
+            font-weight: bold
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)  
+            color: rgba(255,255,255,0.5)
+            @include fluid("margin-bottom", 10)
+            &.hover, &.active
+                color: white
+    .tooltiptext
+        visibility: hidden
+        width: 220px
+        background-color: #555
+        color: #fff
+        text-align: center
+        @include fluid("border-radius", 6)
+        padding: 5px
+        position: absolute
+        z-index: 99999
+        bottom: 125%
+        left: 50%
+        margin-left: -80px
+        opacity: 0
+        transition: opacity 0.3s
+        &::after
+            content: ""
+            position: absolute
+            top: 100%
+            left: 50%
+            margin-left: -5px
+            border-width: 5px
+            border-style: solid
+            border-color: #555 transparent transparent transparent            
+    .rewards
+        @include fluid("width", 880)
+        @include fluid("margin-left", 75)
+        display: flex
+        flex-direction: column
+        @include fluid("height", 750)
+        display: flex
+        flex-direction: column
+        .rewards__title
+            font-weight: 500
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 29)
+            @include fluid("margin-bottom", 10)
+        .rewards__subtitle
+            @include fluid("font-size", 16)
+            @include fluid("line-height", 19)
+            color: #A6B1BA
+        .rewards__elements
+            width: 100%
+            display: flex
+            flex-direction: column
+            @include fluid("max-height", 690)
+            @include fluid("margin-top", 10)
+            @include fluid("padding-right", 10)
+            overflow-y: auto
+            overflow-x: hidden
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+
+            &::-webkit-scrollbar-track
+                background: rgba(253,255,252,0.2)
+                @include fluid("border-radius", 2)
+
+            &::-webkit-scrollbar-thumb
+                background: #C6D1DA
+                @include fluid("border-radius", 6)
+            .reward__element
+                @include fluid("width", 790)
+                @include fluid("height", 96)
+                background: rgba(255,255,255,0.1)
+                @include fluid("border-radius", 8)
+                display: flex
+                align-items: center
+                @include fluid("padding", 24)
+                @include fluid("margin-bottom", 24)
+                position: relative
+                &:last-child
+                    margin-bottom: 0
+
+                .reward__element_title
+                    font-weight: 500
+                    @include fluid("margin-bottom", 8)
+                    @include fluid("font-size", 20)
+                    @include fluid("line-height", 24)
+                .reward__element_subtitle
+                    font-weight: 500
+                    @include fluid("font-size", 14)
+                    @include fluid("line-height", 16)
+                    color: #A6B1BA
+                    @include fluid("max-width", 300)
+                    @include fluid("width", 300)
+                    overflow: hidden
+                    white-space: nowrap
+                    text-overflow: ellipsis
+                .reward__element_box
+                    display: flex
+                    align-items: center
+                    @include fluid("width", 196)
+                    @include fluid("margin-left", 10)
+                .reward__element_reward
+                    border-radius: 4px
+                    @include fluid("width", 52)
+                    @include fluid("height", 52)
+                    background: rgba(4,19,30,0.3)
+                    @include fluid("margin-right", 20)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    position: relative
+                    &:hover
+                        .tooltiptext
+                            visibility: visible
+                            opacity: 1
+                    &:last-child
+                        margin: 0
+                    .reward__element_img
+                        @include fluid("width", 38)
+                        @include fluid("height", 38)
+                        background-image: url('./case.png')
+                        background-position: center
+                        background-repeat: no-repeat
+                        background-size: contain
+                .reward__element_button
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    @include fluid("width", 156)
+                    @include fluid("height", 48)
+                    background: #018A7C
+                    @include fluid("border-radius", 6)
+                    font-weight: 500
+                    @include fluid("font-size", 16)
+                    @include fluid("line-height", 16)
+                    cursor: pointer
+                    margin-left: auto
+                    &.time
+                        background: #375e80
+                        @include fluid("height", 32)
+                    &.taked
+                        background: #435768
+                        opacity: 0.6
+                        @include fluid("height", 32)
+                    &.missed
+                        background: #742222
+                        opacity: 0.6
+                        @include fluid("height", 32)
+        .reward__element_progress
+            display: flex
+            flex-direction: column
+            margin-left: auto
+            font-weight: 500
+            .reward__progress_count
+                text-align: right
+                font-weight: 500
+                @include fluid("font-size", 16)
+                @include fluid("line-height", 16)
+                сolor: #A6B1BA
+                @include fluid("margin-bottom", 12)
+            .reward__progressbar
+                background: #3C576A
+                @include fluid("border-radius", 6)
+                @include fluid("width", 100)
+                @include fluid("height", 4)
+                display: flex
+                .reward__progress
+                    @include fluid("width", 28)
+                    @include fluid("height", 4)
+                    background: #2BB6A8
+                    @include fluid("border-radius", 6)

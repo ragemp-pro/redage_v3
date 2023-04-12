@@ -1,0 +1,1235 @@
+@import ./fluid.sass
+
+#battlepass
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: white
+    font-family: 'TTNorms-Regular'
+    @include fluid("font-size", 20)
+    font-weight: 500
+    z-index: 1
+    background-image: url('./assets/background.png')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%    
+        background: linear-gradient(360deg, #000000 38.9%, rgba(0, 0, 0, 0) 76.99%)
+        opacity: 0.8
+        z-index: 4
+    .bgvideo
+        position: absolute
+        z-index: 2
+        left: 0
+        opacity: 0.04
+        top: 0
+        width: 100%
+        height: 100%
+        -o-object-fit: cover
+        object-fit: cover
+        &.fire
+            opacity: 0.2
+    .battlepass__person
+        position: absolute
+        z-index: 3
+        @include fluid("right",-50)
+        @include fluid("bottom",-50)
+        @include fluid("height",1080)
+        @include fluid("width",1145)
+        background-image: url('./assets/person.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+    .battlepass__content
+        z-index: 10
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        @include fluid("padding-bottom", 56)
+        @include fluid("padding-right", 118)     
+        @include fluid("padding-top", 40)   
+    .newproject__buttonblock
+        display: flex
+        align-items: center
+        @include fluid("margin-left", 118)
+        .newproject__button
+            cursor: pointer
+            @include fluid("padding-top", 4)
+            @include fluid("padding-bottom", 4)
+            @include fluid("padding-right", 8)     
+            @include fluid("margin-right", 16)                   
+            @include fluid("padding-left", 8)
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            background: #FFFFFF
+            @include fluid("border-radius", 3)
+            color: #1E262F
+            font-weight: 600
+            font-family: 'Montserrat-Medium'
+            @include fluid("font-size", 20)
+    .battlepass__header
+        @include fluid("margin-top", 30)
+        display: flex
+        flex-direction: column
+        @include fluid("margin-bottom", 46)
+        .battlepass__header_title
+            @include fluid("width", 976)
+            @include fluid("height", 130)
+            @include fluid("min-height", 130)
+            @include fluid("max-height", 130)
+            background-image: url('./assets/header.png')
+            background-size: cover
+            background-position: left
+            background-repeat: no-repeat
+            display: flex
+            align-items: center
+            justify-content: center
+
+        .battlepass__header_pages
+            display: flex          
+            @include fluid("padding-left", 113)
+            @include fluid("min-height", 73)
+            @include fluid("max-height", 73)
+            .battlepass__header_page
+                font-family: 'RF Dewi Extended'
+                @include fluid("padding-top", 24)
+                @include fluid("padding-bottom", 24)
+                @include fluid("padding-right", 25)     
+                @include fluid("padding-left", 25)
+                color: rgba(255,255,255,0.5)
+                letter-spacing: -0.03em
+                text-transform: uppercase
+                font-weight: 600
+                &.active
+                    @include fluid("border-bottom", 1, "solid #6495ED")
+                    color: white
+                    background: linear-gradient(180deg, rgba(38, 65, 218, 0) 0%, #6495ED 100%)
+    .battlepass__title
+        font-family: 'RF Dewi Extended'
+        font-weight: 800
+        @include fluid("font-size", 66)
+        display: flex
+        flex-direction: column
+        text-transform: uppercase
+        color:#6495ED
+        position: relative
+        &::after
+            content: 'БОЕВОЙ ПРОПУСК'
+            position: absolute
+            @include fluid("top", -6)
+            left: 0
+            background: linear-gradient(180deg, #FFFFFF 41.15%, #AFAFAF 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            display: flex
+            flex-direction: column
+            text-transform: uppercase
+        &.missions
+            &::after
+                content: 'СЕТЬ ЗАДАНИЙ'
+                position: absolute
+                @include fluid("top", -6)
+                left: 0
+                background: linear-gradient(180deg, #FFFFFF 41.15%, #AFAFAF 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                display: flex
+                flex-direction: column
+                text-transform: uppercase
+    .battlepass__text
+        @include fluid("margin-left", 118)
+        @include fluid("margin-top", 16)
+        font-weight: normal
+        @include fluid("width", 624)
+        @include fluid("font-size", 24)
+        line-height: 130%
+        letter-spacing: -0.03em
+        font-family: 'TTNorms-Regular'
+    .w-1
+        width: 100%
+    .box-between
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .battlepass__button
+        @include fluid("width", 383)
+        @include fluid("height", 76)
+        display: flex
+        align-items: center
+        justify-content: center
+        font-family: 'RF Dewi Extended'
+        font-weight: 600
+        background: #6495ED
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 11px #6495ED
+        @include fluid("border-radius", 8)
+        color: white
+        transition: background 0.5s ease
+        @include fluid("font-size", 28)
+        cursor: pointer
+        &.skip
+            @include fluid("font-size", 24)
+        &:hover
+            transition: background 0.5s ease
+            background: #6495ED
+        &.black
+            @include fluid("font-size", 24)
+            @include fluid("width", 324)
+            @include fluid("height", 64)
+            background: rgba(8, 12, 16, 0.6)
+            transition: background 0.5s ease
+            box-shadow: none
+            &:hover
+                transition: background 0.5s ease
+                background: rgba(8, 12, 16, 1)
+    .battlepass__level
+        @include fluid("margin-left", 118)
+        @include fluid("margin-right", 32)
+        @include fluid("width", 556)
+        display: flex
+        flex-direction: column
+        font-family: 'RF Dewi Extended'
+        font-weight: 600
+        @include fluid("font-size", 15)
+        letter-spacing: -0.03em
+        .battlepass__subtitle
+            font-weight: 800
+            @include fluid("font-size", 24)
+            letter-spacing: -0.03em
+            text-transform: uppercase
+        .box-between
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+        .battlepass__level_progress
+            @include fluid("margin-top", 16)
+            @include fluid("margin-bottom", 16)
+            @include fluid("width", 556)
+            @include fluid("height", 24)
+            background: rgba(96,104,109,0.4)
+            @include fluid("border-radius", 4)
+            .current__progress
+                width: 30%
+                height: 100%
+                background: linear-gradient(90deg, #6495ED 0%, #447eea 100%)
+                @include fluid("border-radius", 4)
+    .red
+        color: #6495ED
+    .gray
+        color: #869199
+
+    .battlepass__tasks
+        @include fluid("margin-left", 118)
+        @include fluid("min-width", 368)
+        width: 100%
+        @include fluid("height", 476)
+        display: flex
+        flex-direction: column
+        @include fluid("border", 1, "solid #60686D")
+        @include fluid("border-radius", 4)
+        @include fluid("padding-left", 24)
+        @include fluid("padding-right", 12)
+        @include fluid("padding-bottom", 24)
+        @include fluid("padding-top", 24)
+        background: rgba(54,54,54,0.65)
+        .battlepass__tasks__header
+            text-transform: uppercase
+            @include fluid("margin-bottom", 24)
+            @include fluid("font-size", 20)
+            font-weight: bold
+            font-family: 'RF Dewi Extended'
+            letter-spacing: -0.03em
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55)
+            background: linear-gradient(180deg, #FFFFFF 60%, #828282 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        .battlepass__tasks_element
+            @include fluid("font-size", 16)
+            width: 100%
+            @include fluid("padding", 12)
+            @include fluid("margin-bottom", 10)
+            display: flex
+            flex-direction: column
+            font-family: 'RF Dewi Extended'
+            font-weight: 600
+            background: #6495ED
+            @include fluid("border-radius", 4)
+            .gray
+                color: #A6B1BA
+            .b-11
+                @include fluid("margin-bottom", 11)
+                align-items: flex-start !important
+            .battlepass__tasks_height
+                width: 65%
+            .battlepass__tasks_exp
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("padding-top", 4)
+                @include fluid("padding-bottom", 4)
+                @include fluid("padding-left", 12)
+                @include fluid("padding-right", 12)
+                background: #000000
+                @include fluid("border-radius", 4)
+                @include fluid("font-size", 12)
+            .box-between
+                align-items: center
+                .small
+                    font-family: 'TTNorms-Regular'
+                    @include fluid("font-size", 12)
+                    line-height: 130%
+                    color: #fcfcfc
+            &.done
+                background: rgba(134,145,153,0.2)
+                color: #A6B1BA
+                .small
+                    color: #A6B1BA
+                .green
+                    color: #ffffff
+                .gray
+                    opacity: 0
+            &.week
+                background: #386ccc
+                .small
+                    color: #f5f5f5
+                .battlepass__tasks_exp
+                    background: #000000
+
+
+    .battlepass__main
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        @include fluid("margin-top", 28)
+        @include fluid("margin-bottom", 38)
+    .battlepass__tasks_block
+        @include fluid("max-height", 378)
+        overflow-x: hidden
+        overflow-y: auto
+        @include fluid("padding-right", 12)
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+
+        &::-webkit-scrollbar-track
+            background: rgba(253,255,252,0.4)
+            @include fluid("border-radius", 4)
+        &::-webkit-scrollbar-thumb
+            background: rgba(253,255,252,0.7)
+            @include fluid("border-radius", 6)
+    
+    .battlepass__blocks
+        display: flex
+        align-items: center
+        @include fluid("width", 1308) 
+        @include fluid("margin-left", 8)
+        position: relative
+        .battlepass__block_unpremium
+            position: absolute
+            top: 76%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 10
+        .battlepass__blocks_block
+            display: flex
+            flex-direction: column
+            align-items: center
+            @include fluid("width", 180)           
+            @include fluid("font-size", 20)
+            letter-spacing: -0.03em
+            font-family: 'RF Dewi Extended'
+            font-weight: 600
+            color: rgba(255,255,255,0.5)
+            @include fluid("margin-right", 8)
+            &:last-child
+                margin-right: 0
+            .battlepass__block_lvl            
+                background: rgba(94,94,94,0.65)
+                @include fluid("border-radius", 4)  
+                @include fluid("height", 60)
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("margin-bottom", 8)
+            .battlepass__block_prise
+                @include fluid("margin-bottom", 8)
+                background: rgba(94,94,94,0.65)
+                @include fluid("border-radius", 4)  
+                @include fluid("height", 200)
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                position: relative
+                &.taked
+                    opacity: 0.6
+                &.free-start
+                    background: rgba(94,94,94,0.65)
+                &.premium-start
+                    background: linear-gradient(180deg, #6495ED 0%, #2e59aa 100%)
+                &.dontpremium
+                    background: linear-gradient(180deg, #6495ED 0%, #2e59aa 100%)
+                    opacity: 0.3
+                    @include fluid("border", 2, "solid #6495ED")
+                .battlepass__block_status
+                    opacity: 1
+                    position: absolute
+                    cursor: pointer
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    @include fluid("width", 136)
+                    @include fluid("height", 40)
+                    @include fluid("font-size", 15)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    text-transform: uppercase
+                    background: rgba(8,12,16,0.65)
+                    @include fluid("border", 2, "solid #6495ED")
+                    &.donttaked
+                        background: #407ae4
+                        @include fluid("border", 2, "solid #6495ED")
+                .battlepass__prise_image
+                    @include fluid("width", 120)
+                    @include fluid("height", 120)
+                    @include fluid("margin-bottom", 11)
+                    background-size: contain
+                    background-position: center
+                    background-repeat: no-repeat
+                    @include fluid("padding-bottom", 12)
+                    &.free
+                        background-image: url('./assets/free.png')
+                        background-size: contain
+                        background-position: center
+                        background-repeat: no-repeat
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                    &.prime
+                        background-image: url('./assets/prime.png')
+                        background-size: contain
+                        background-position: center
+                        background-repeat: no-repeat
+                .battlepass__prise_count
+                    position: absolute
+                    @include fluid("right", 5)
+                    @include fluid("top", 5)
+                    @include fluid("font-size", 14)
+
+                .battlepass__prise_name
+                    text-align: center
+                    @include fluid("font-size", 15)
+                    &.bold
+                        text-transform: uppercase
+                        @include fluid("font-size", 16)
+                        font-weight: bold
+                        font-family: 'RF Dewi Extended'
+                        letter-spacing: -0.03em
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55)
+                        background: linear-gradient(180deg, #FFFFFF 60%, #828282 100%)
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: transparent
+                    &.big
+                        @include fluid("font-size", 20)
+            &.active
+                color: white
+                .battlepass__block_lvl  
+                    background: #6495ED
+                .free-start
+                    &.battlepass__block_prise
+                        background: #6495ED
+                        @include fluid("border", 2, "solid #6495ED")
+                .premium-start
+                    &.battlepass__block_prise
+                        background: linear-gradient(180deg, #6495ED 0%, #6495ED 100%)
+                        @include fluid("border", 2, "solid #6495ED")
+            &.dontactive
+                .free-start
+                    &.battlepass__block_prise
+                        background: #3C3C3C
+                        opacity: 0.65
+                        @include fluid("border", 2, "solid #696969")
+                .premium-start
+                    &.battlepass__block_prise
+                        background: linear-gradient(180deg, #6495ED 0%, #6495ED 100%)
+                        opacity: 0.5
+                        @include fluid("border", 2, "solid #6495ED")
+    .battlepass__image_info
+        @include fluid("width", 24)
+        @include fluid("height", 24)
+        @include fluid("margin-right", 18)
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        background-image: url('./assets/question.png')
+        @include fluid("margin-left", 118)
+        cursor: pointer
+    .battlepass__info_button
+        @include fluid("font-size", 24)
+        font-weight: 600
+        font-family: 'RF Dewi Extended'
+        letter-spacing: -0.03em
+        color: #6495ED
+        cursor: pointer
+    .battlepass__page_button
+        @include fluid("width", 28)
+        @include fluid("height", 28)
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("font-size", 30)
+        font-weight: bold
+        color: white
+        @include fluid("border", 1, solid #4581f1)
+        @include fluid("padding-bottom", 4)
+        position: relative
+        cursor: pointer
+        &:hover
+            background: #6495ED
+        &.left
+            &::after
+                content: ''
+                position: absolute
+                left: 30%
+                top: 50%
+                transform: translate(-50%, -50%)
+                @include fluid("border", 8, "solid transparent")
+                @include fluid("border-right", 8, "solid white")
+        &.right
+            &::after
+                content: ''
+                position: absolute
+                left: 70%
+                top: 50%
+                transform: translate(-50%, -50%)
+                @include fluid("border", 8, "solid transparent")
+                @include fluid("border-left", 8, "solid white")
+    .battlepass__info_text
+        @include fluid("font-size", 20)
+        font-weight: 400
+        font-family: 'RF Dewi Extended'
+        letter-spacing: -0.03em
+        @include fluid("margin-right", 20)
+        @include fluid("margin-left", 20)
+    .battlepass__popup_info
+        position: fixed
+        width: 100%
+        height: 100%
+        background: rgba(30,38,47,0.65)
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        z-index: 20
+        &.popupback
+            align-items: flex-start
+            justify-content: flex-start
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            background-image: url('./assets/popupback.png')
+            @include fluid("padding", 40)
+            @include fluid("padding-left", 118)
+            @include fluid("padding-right", 118)
+        .battlepass__popup_title
+            font-family: 'RF Dewi Extended'
+            font-weight: bold
+            text-transform: uppercase
+            @include fluid("font-size", 60)
+            @include fluid("margin-top", 56)
+        .newproject__buttonblock
+            margin: 0
+            @include fluid("margin-right", 586)
+        .battlepass__image_info
+            margin: 0
+        .battlepass__image_info
+            @include fluid("width", 40)
+            @include fluid("height", 40)
+        .battlepass__popup_block
+            @include fluid("width", 740)
+            @include fluid("padding", 28)
+            background: rgba(8,12,16,0.7)
+            @include fluid("border-radius", 20)
+            @include fluid("margin-top", 26)
+        .battlepass__popup_text
+            @include fluid("margin-top", 26)
+    .battlepass__buylevels_box
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100%
+        .battlepass__buylevels_element
+            display: flex
+            flex-direction: column
+            align-items: center
+            @include fluid("margin-top", 170)
+            &::after
+                position: absolute
+                content: ''
+                @include fluid("width", 452)
+                @include fluid("height", 452)
+                background: #6495ED
+                opacity: 0.4
+                filter: blur(134px)
+                border-radius: 50%
+                z-index: -1
+            .battlepass__buylevels_title
+                font-family: 'RF Dewi Extended'
+                font-weight: 900
+                @include fluid("font-size", 50)
+                display: flex
+                flex-direction: column
+                text-transform: uppercase
+                color: #295099
+                position: relative
+                @include fluid("margin-bottom", 48)
+
+                &::after
+                    content: attr(data-text)
+                    position: absolute
+                    @include fluid("top", -6)
+                    left: 0
+                    color: #6495ED
+                    display: flex
+                    flex-direction: column
+                    text-transform: uppercase
+
+                &.first
+                    &::after
+                        content: '1 УРОВЕНЬ'
+                        position: absolute
+                        @include fluid("top", -6)
+                        left: 0
+                        color: #6495ED
+                        display: flex
+                        flex-direction: column
+                        text-transform: uppercase
+                &.second
+                    position: relative
+                    &::after
+                        content: '5 УРОВНЕЙ'
+                        position: absolute
+                        @include fluid("top", -6)
+                        left: 0
+                        color: #6495ED
+                        display: flex
+                        flex-direction: column
+                        text-transform: uppercase
+                &.third
+                    position: relative
+                    &::after
+                        content: '25 УРОВНЕЙ'
+                        position: absolute
+                        @include fluid("top", -6)
+                        left: 0
+                        color: #6495ED
+                        display: flex
+                        flex-direction: column
+                        text-transform: uppercase
+            .battlepass__buylevels_content
+                @include fluid("width", 480)
+                @include fluid("height", 268)
+                background-image: url('./assets/popup_levels.png')
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                .battlepass__buylevels_price
+                    font-family: 'RF Dewi Extended'
+                    font-weight: 900
+                    @include fluid("font-size", 60)
+                    @include fluid("margin-bottom", 48)
+                .battlepass__button
+                    text-transform: uppercase
+    .battlepass__popup_maintitle
+        @include fluid("margin-top", 90)
+        font-family: 'RF Dewi Extended'
+        font-weight: 900
+        @include fluid("font-size", 60)
+        display: flex
+        flex-direction: column
+        text-transform: uppercase
+        color: #6495ED
+        position: relative
+        text-transform: uppercase
+        &::after
+            content: 'Разблокировать боевой пропуск'
+            position: absolute
+            @include fluid("top", -6)
+            left: 0
+            color: white
+            display: flex
+            flex-direction: column
+            text-transform: uppercase
+    .battlepass__popup_buytext
+        @include fluid("margin-top", 56)
+        @include fluid("margin-bottom", 48)
+        @include fluid("width", 1040)
+        font-family: 'TTNorms-Regular'
+        font-weight: 100
+        @include fluid("font-size", 28)
+        @include fluid("line-height", 40)
+    .battlepass__popup_pricetext
+        @include fluid("margin-right", 32)
+        font-family: 'RF Dewi Extended'
+        font-weight: bold
+        @include fluid("font-size", 60)
+    .battlepass__popup_heroes
+        position: absolute
+        @include fluid("right", 10)
+        bottom: 0
+        @include fluid("width", 988)
+        @include fluid("height", 773)
+        background-image: url('./assets/buy.png')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+    .battlepass__missions
+        position: relative
+        width: 100%
+        @include fluid("height", 659)
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+
+    .battlepass__missions_column
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        position: absolute
+        @include fluid("top", -124)
+        @include fluid("right", 0)
+        .box-flex
+            align-items: center
+        .battlepass__column_page
+            @include fluid("width", 80)
+            @include fluid("height", 80)
+            background-image: url('./assets/page.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+            @include fluid("margin-right", 20)
+            display: flex
+            align-items: center
+            justify-content: center
+            font-family: 'RF Dewi Extended'
+            font-weight: 600
+            @include fluid("font-size", 32)
+            &.first
+                @include fluid("margin-left", 20)
+            &.active
+                background-image: url('./assets/page-active.png')
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+    .battlepass__missions_level
+            font-family: 'RF Dewi Extended'
+            font-weight: bold
+            @include fluid("font-size", 28)
+            @include fluid("width", 328)
+            @include fluid("height", 48)
+            background: linear-gradient(270deg, #6495ED 45.31%, rgba(231, 29, 54, 0) 100%)
+            @include fluid("border-right", 4, solid #3272e8)
+            display: flex
+            align-items: center
+            justify-content: center
+            text-transform: uppercase
+            @include fluid("margin-top", 30)
+
+    .battlepass__missions_popup
+        position: absolute
+        pointer-events: none
+        @include fluid("width", 400)
+        @include fluid("height", 400)
+        @include fluid("border-radius", 6)
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: rgba(8,12,16,0.85)
+        color: #fff
+        text-align: center
+        z-index: 1
+        bottom: 50%
+        left: 90%
+        transition: opacity 0.3s
+        .battlepass__missions_descr
+            font-family: 'TTNorms-Regular'
+            font-weight: normal
+            align-self: flex-start
+            @include fluid("font-size", 14)
+            color: #869199
+            letter-spacing: -0.03em
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 16)
+            @include fluid("padding-top", 16)
+            @include fluid("margin-bottom", 20)
+            text-align: left
+        .battlepass__missions_text
+            font-family: 'TTNorms-Regular'
+            font-weight: 500
+            @include fluid("font-size", 14)
+            color: #869199
+            letter-spacing: -0.03em
+            @include fluid("margin-top", 8)
+            text-align: left
+            width: 100%
+            align-items: flex-start
+            @include fluid("padding-left", 16)
+        .battlepass__missions_prise
+            font-family: 'RF Dewi Extended'
+            font-weight: bold
+            align-items: flex-start
+            @include fluid("font-size", 28)
+            @include fluid("line-height", 34)
+            @include fluid("padding-left", 16)
+            text-align: left
+            width: 100%
+            @include fluid("margin-top", 32)
+            .red
+                color: #6495ED
+        .battlepass__missions_gray
+            font-family: 'TTNorms-Regular'
+            font-weight: normal
+            align-items: flex-start
+            color: #A6B1BA
+            @include fluid("font-size", 14)
+            @include fluid("margin-top", 6)
+            @include fluid("padding-left", 16)
+            text-align: left
+            width: 100%
+        .battlepass__missions_footer
+            background: linear-gradient(90deg, #2f6ddf 49.29%, rgba(166, 36, 53, 0) 102.87%)
+            @include fluid("width", 400)
+            @include fluid("height", 56)
+            display: flex
+            align-items: center
+            @include fluid("padding-left", 16)
+            @include fluid("padding-top", 12)
+            @include fluid("padding-bottom", 12)
+            @include fluid("border-bottom-left-radius", 12)
+            @include fluid("border-bottom-right-radius ", 12)
+            margin-top: auto
+            font-family: 'TTNorms-Regular'
+            font-weight: 500
+            letter-spacing: -0.03em
+            @include fluid("font-size", 14)
+            &.trans
+                background: transparent
+            .battlepass__missions_mouse
+                @include fluid("width", 32)
+                @include fluid("margin-right", 10)
+                @include fluid("height", 32)
+                background-image: url('./assets/mouse.png')
+                background-size: contain
+                background-position: center
+                background-repeat: no-repeat
+        .battlepass__missions_progress
+            @include fluid("width", 368)
+            @include fluid("height", 20)
+            @include fluid("border-radius", 2)
+            background: #3D444B
+            overflow: hidden
+            .battlepass__missions_currentprogress
+                height: 100%
+                @include fluid("border-radius", 2)
+                background: #3372e7
+                width: 0
+        .battlepass__missions_header
+            @include fluid("width", 400)
+            @include fluid("height", 80)
+            @include fluid("border-radius", 12)
+            @include fluid("padding-left", 16)
+            @include fluid("padding-right", 16)
+            @include fluid("padding-top", 16)
+            display: flex
+            flex-direction: column
+            background: #040308
+            background-image: url('./assets/tooltip.png')
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            align-items: flex-start
+            .battlepass__missions_name
+                @include fluid("margin-left", 12)
+            .battlepass__missions_subname
+                font-family: 'TTNorms-Regular'
+                font-style: italic
+                font-weight: normal
+                align-items: flex-start
+                @include fluid("font-size", 20)
+                color: #869199
+                letter-spacing: -0.03em
+            .box-flex
+                font-family: 'RF Dewi Extended'
+                font-weight: bold
+                align-items: center
+                @include fluid("font-size", 20)
+                .battlepass__missions_romb
+                    @include fluid("width", 12)
+                    @include fluid("height", 12)
+                    background: #6495ED
+                    box-shadow: 0px 0px 34px rgb(18, 124, 246)
+                    transform: rotate(45deg)
+
+    .battlepass__missions_element
+        @include fluid("width", 182)
+        @include fluid("height", 182)
+        position: relative
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .battlepass__missions_element_info
+            @include fluid("width", 100)
+            @include fluid("height", 100)
+
+        .battlepass__missions_element_progress
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            @include fluid("width", 125)
+            @include fluid("height", 125)
+            display: flex
+            align-items: center
+            justify-content: center
+            pointer-events: none
+
+        &.closed
+            background-image: url('./assets/blocked.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+        &.active
+            background-image: url('./assets/active.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+        &.done
+            background-image: url('./assets/done.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+        &.selected
+            background-image: url('./assets/selected.png')
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+
+            .battlepass__missions_element_info
+                @include fluid("width", 140)
+                @include fluid("height", 140)
+        &.position1
+            position: absolute
+            @include fluid("left", 56)
+            @include fluid("bottom", 285)
+        &.position2
+            position: absolute
+            @include fluid("left", 254)
+            @include fluid("bottom", 419)
+        &.position3
+            position: absolute
+            @include fluid("left", 305)
+            @include fluid("bottom", 223)
+        &.position4
+            position: absolute
+            @include fluid("left", 449)
+            @include fluid("bottom", 419)
+        &.position5
+            position: absolute
+            @include fluid("left", 644)
+            @include fluid("bottom", 419)
+        &.position6
+            position: absolute
+            @include fluid("left", 840)
+            @include fluid("bottom", 419)
+        &.position7
+            position: absolute
+            @include fluid("left", 502)
+            @include fluid("bottom", 223)
+        &.position8
+            position: absolute
+            @include fluid("left", 502)
+            @include fluid("bottom", 67)
+        &.position9
+            position: absolute
+            @include fluid("left", 305)
+            @include fluid("bottom", 67)
+        &.position10
+            position: absolute
+            @include fluid("left", 109)
+            @include fluid("bottom", 67)
+        &.position11
+            position: absolute
+            @include fluid("left", 698)
+            @include fluid("bottom", 223)
+        &.position12
+            position: absolute
+            @include fluid("left", 895)
+            @include fluid("bottom", 223)
+        &.position13
+            position: absolute
+            @include fluid("left", 1085)
+            @include fluid("bottom", 67)
+        &.position14
+            position: absolute
+            @include fluid("left", 1092)
+            @include fluid("bottom", 356)
+        &.position15
+            position: absolute
+            @include fluid("left", 1281)
+            @include fluid("bottom", 67)
+        &.position16
+            position: absolute
+            @include fluid("left", 1286)
+            @include fluid("bottom", 356)
+        &.position17
+            position: absolute
+            @include fluid("left", 1286)
+            @include fluid("bottom", 509)
+        &.position18
+            position: absolute
+            @include fluid("left", 1484)
+            @include fluid("bottom", 509)
+        &.position19
+            position: absolute
+            @include fluid("left", 1484)
+            @include fluid("bottom", 356)
+        &.position20
+            position: absolute
+            @include fluid("left", 1680)
+            @include fluid("bottom", 356)
+
+    .battlepass__line_1
+        position: absolute
+        @include fluid("left", 197)
+        @include fluid("bottom", 375)
+        @include fluid("font-size", 136)
+        z-index: -1
+        color: #c2b1b1
+        &.active
+            color: #6495ED
+    .battlepass__line_3
+        position: absolute
+        @include fluid("left", 197)
+        @include fluid("bottom", 312)
+        @include fluid("font-size", 64)
+        z-index: -1
+        color: #ffffff
+        &.active
+            color: #6495ED
+    .battlepass__line_2
+        position: absolute
+        @include fluid("left", 395)
+        @include fluid("bottom", 509)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_4
+        position: absolute
+        @include fluid("left", 589)
+        @include fluid("bottom", 509)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_5
+        position: absolute
+        @include fluid("left", 785)
+        @include fluid("bottom", 509)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_6
+        position: absolute
+        @include fluid("left", 446)
+        @include fluid("bottom", 312)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_7
+        position: absolute
+        @include fluid("left", 596)
+        @include fluid("bottom", 204)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 2)
+        @include fluid("height", 63)
+        &.active
+            background: #6495ED
+    .battlepass__line_8
+        position: absolute
+        @include fluid("left", 446)
+        @include fluid("bottom", 157)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_9
+        position: absolute
+        @include fluid("left", 250)
+        @include fluid("bottom", 157)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_10
+        position: absolute
+        @include fluid("left", 643)
+        @include fluid("bottom", 312)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_11
+        position: absolute
+        @include fluid("left", 840)
+        @include fluid("bottom", 312)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #2455b1
+    .battlepass__line_12
+        position: absolute
+        @include fluid("left", 1036)
+        @include fluid("bottom", 312)
+        @include fluid("font-size", 136)
+        z-index: -1
+        color: #6495ED
+        &.active
+            color: #1f4fa9
+    .battlepass__line_13
+        position: absolute
+        @include fluid("left", 1036)
+        @include fluid("bottom", 156)
+        @include fluid("font-size", 158)
+        z-index: -1
+        color: #60686D
+        &.active
+            color: #6495ED
+    .battlepass__line_14
+        position: absolute
+        @include fluid("left", 1226)
+        @include fluid("bottom", 157)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_15
+        position: absolute
+        @include fluid("left", 1232)
+        @include fluid("bottom", 446)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_16
+        position: absolute
+        @include fluid("left", 1380)
+        @include fluid("bottom", 491)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 2)
+        @include fluid("height", 63)
+        &.active
+            background: #6495ED
+    .battlepass__line_17
+        position: absolute
+        @include fluid("left", 1427)
+        @include fluid("bottom", 599)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__line_18
+        position: absolute
+        @include fluid("left", 1577)
+        @include fluid("bottom", 491)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 2)
+        @include fluid("height", 63)
+        &.active
+            background: #6495ED
+    .battlepass__line_19
+        position: absolute
+        @include fluid("left", 1625)
+        @include fluid("bottom", 446)
+        @include fluid("font-size", 64)
+        z-index: -1
+        background: #6495ED
+        @include fluid("width", 103)
+        @include fluid("height", 2)
+        &.active
+            background: #6495ED
+    .battlepass__missions_bot
+        display: flex
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        font-family: 'RF Dewi Extended'
+        font-weight: bold
+        align-items: center
+        letter-spacing: -0.03em
+        @include fluid("font-size", 28)
+        @include fluid("padding-left", 97)
+        .red
+            color: #6495ED

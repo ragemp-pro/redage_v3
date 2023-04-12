@@ -1,0 +1,1354 @@
+@import @/views/assets/css/main.sass
+
+.box-column
+    display: flex
+    flex-direction: column
+
+.box-flex
+    display: flex
+
+#box-menu
+    position: relative    
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    height: 100%
+    @include fluid("padding-top", 56)
+    @include fluid("padding-bottom", 40)
+    @include fluid("padding-left", 56)
+    @include fluid("padding-right", 56)
+    font-family: 'TTNorms-Regular'
+    font-style: normal
+    font-weight: 500
+    @include fluid("font-size", 18)
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.6) 0%, rgba(1, 22, 39, 0.74) 100%)
+    color: white
+    -webkit-user-select: none
+
+
+    &.events 
+        background: radial-gradient(50% 50% at 50% 50%, rgba(48, 212, 222, 0) 50.19%, rgba(31, 143, 179, 0.196) 100%)
+
+    .battlepaass__box
+        @include fluid("width", 457)
+        @include fluid("height", 40)
+        @include fluid("border-radius", 15)
+        background: white
+        color: white
+        @include fluid("font-size", 14)
+        @include fluid("margin-top", 20)
+        position: absolute
+        @include fluid("top", 820)
+        display: flex
+        align-items: center
+        font-weight: 500
+        @include fluid("padding-left", 60)
+        background-image: url(./img/battlepass.png)
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        cursor: pointer
+        &:hover
+            opacity: 0.9
+    .box-nav
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+        z-index: 1
+        @include fluid("min-height", 40)
+        @include fluid("max-height", 40)
+        .header
+            @include fluid("width", 138)
+            @include fluid("height", 26)
+            background-image: url(./img/logo.png)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+
+        .box-date
+            @include fluid("width", 138)
+            font-style: normal
+            font-weight: bold
+            display: flex
+            justify-content: flex-end
+            @include fluid("font-size", 10)
+            @include fluid("line-height", 10)
+            color: white
+
+            .box-time
+                display: flex
+                flex-direction: column
+                align-items: center
+                .time
+                    @include fluid("margin-bottom", 5)
+                    @include fluid("font-size", 24)
+                    @include fluid("line-height", 24)
+        .nav
+            display: flex
+            align-items: center
+            justify-content: center
+
+            .nav-lists
+                display: flex
+                align-items: center
+                justify-content: center
+                @include fluid("margin-left", 59)
+                @include fluid("margin-right", 59)
+
+                .item
+                    @include fluid("padding-top", 10)
+                    @include fluid("padding-bottom", 10)
+                    @include fluid("margin-left", 15)
+                    @include fluid("margin-right", 15)
+                    @include fluid("border-top", 1, "solid rgba(255, 255, 255, 0)")
+                    @include fluid("border-bottom", 1, "solid rgba(255, 255, 255, 0)")
+                    color: rgba(255,255,255,0.5)
+                    cursor: pointer
+                    position: relative
+
+                    &:hover, &.active
+                        color: white
+                        @include fluid("border-bottom", 2, "solid #E71D36")
+
+                .gamemenu__item_absolute
+                    @include fluid("font-size", 50)
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    opacity: 0.1
+                    z-index: 0
+    .inventory__title
+        @include fluid("font-size", 18)
+        color: white
+        @include fluid("line-height", 21)
+    .inventory__text
+        @include fluid("margin-bottom", 12)
+        @include fluid("margin-top", 6)
+        @include fluid("font-size", 12)
+        color: rgba(255, 255, 255, 0.4)
+        @include fluid("line-height", 14)
+        display: flex
+        align-items: center
+    .box-key
+        @include fluid("width", 40)
+        @include fluid("height", 40)
+        background: white
+        color: black
+        @include fluid("border-radius", 6)
+        @include fluid("font-size", 18)
+        box-sizing: border-box
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        font-family: 'TTNorms-Medium'
+        &:hover, &.active
+            @include fluid("font-size", 18)
+
+    .inventory_grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(4, 1fr)
+        @include fluid("grid-gap", 8)
+    .box-inventory
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin-top: auto
+        margin-bottom: auto
+        align-items: center
+        @include fluid("padding-top", 38)
+        .box-between
+            display: flex
+            justify-content: space-between
+
+        .box-align-center
+            display: flex
+            align-items: center
+            width: 100%
+            
+        .margin-top-25
+            @include fluid("margin-top", 25)
+
+        .margin-top-9
+            @include fluid("margin-top", 9)
+
+        .margin-top-8
+            @include fluid("margin-top", 8)
+
+        .margin-top-11
+            @include fluid("margin-top", 11)
+
+        .margin-top-12
+            @include fluid("margin-top", 12)
+
+
+        .margin-top-145
+            @include fluid("margin-top", 145)
+
+        .margin-top-93
+            @include fluid("margin-top", 93)
+
+        .box-width-126
+            @include fluid("width", 126)
+
+        .box-height-79
+            @include fluid("height", 79)
+        .fastslots
+            @include fluid("width", 80)
+            @include fluid("height", 80)
+            background: rgba(255,255,255,.0)
+            background-image: url(./img/fastslots.png)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            .id
+                pointer-events: none
+                position: absolute
+                @include fluid("top", -12)
+                @include fluid("left", 8)
+                @include fluid("font-size", 18)
+                font-weight: 'TTNorms-Bold'
+        .box-width-617
+            position: relative
+            @include fluid("width", 617)
+            display: flex
+            justify-content: center
+            align-items: center
+            @include fluid("margin-left", 40)
+            @include fluid("margin-right", 40)
+
+        .box-width-457
+            position: relative
+            @include fluid("width", 457)
+            display: flex
+
+            &.accessories
+                justify-content: flex-start
+        .inventory__accessories
+            @include fluid("margin-left", 90)
+            display: flex
+            flex-direction: column
+            @include fluid("width", 260)
+            align-items: center
+            .box-column
+                display: flex
+                flex-direction: column
+                align-items: center
+            .inventory__accessories_lines
+                @include fluid("width", 176)
+                @include fluid("height", 45)
+                background-image: url(./img/accs_top.svg)
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+            .inventory__accessories_line
+                @include fluid("width", 176)
+                @include fluid("height", 45)
+                background-image: url(./img/accs_bottom.svg)
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+        .box-width-356
+            @include fluid("width", 356)
+        
+        .box-footer
+            display: flex
+            align-items: flex-end
+
+            .box-quickuse
+                display: grid
+                grid-template-columns: repeat(5, 1fr)
+                grid-template-rows: repeat(1, 1fr)
+                @include fluid("grid-gap", 8)
+                @include fluid("padding", 8)
+                @include fluid("width", 520)
+                @include fluid("height", 91)
+                @include fluid("border-radius", 6)
+        .e-player
+            @include fluid("width", 617)
+            display: flex
+            flex-direction: column
+            @include fluid("margin-left", 40)
+            @include fluid("margin-right", 40)
+
+            .margin-top-10
+                @include fluid("margin-top", 10)
+        .box-player
+            display: grid
+            grid-template-columns: repeat(7, 1fr)
+            grid-template-rows: repeat(5, 1fr)
+            @include fluid("grid-gap", 8)
+            @include fluid("width", 617)
+            @include fluid("height", 443)
+            @include fluid("border-radius", 6)
+            @include fluid("margin-bottom", 20)
+            @include fluid("padding-right", 8)
+        .other
+            @include fluid("width", 344)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            @include fluid("margin-bottom", 20)
+            &:last-child
+                margin-bottom: 0
+            .box-between
+                width: 100%
+        .trade
+            display: flex
+            flex-direction: column
+            @include fluid("width", 344)
+            .inventory__text
+                @include fluid("margin-bottom", 4)
+            .title-name
+                display: flex
+                align-items: center
+                justify-content: center
+                font-style: normal
+                font-weight: bold
+                @include fluid("font-size", 14)
+                @include fluid("height", 40)
+                background: rgba(27, 30, 40, 0.9)
+                @include fluid("border-radius", 6)
+            
+            .box-input
+                display: flex
+                align-items: center
+                justify-content: space-between
+                font-style: normal
+                font-weight: bold
+                @include fluid("font-size", 14)
+                @include fluid("width", 344)
+                @include fluid("height", 40)
+                @include fluid("padding", 20)
+                @include fluid("padding-top", 11)
+                @include fluid("padding-bottom", 11)
+                @include fluid("margin-bottom", 24)
+                background: rgba(253, 255, 252, 0.1)
+                border: 1px solid rgba(255, 255, 255, 0.1)
+                @include fluid("border-radius", 6)
+                color: white
+                .input
+                    height: 100%
+                    width: 100%
+                    border: 0
+                    background: transparent
+                    @include fluid("border-radius", 6)
+                    color: white
+                    font-style: normal
+                    font-family: 'TTNorms-Regular'
+                    @include fluid("font-size", 14)
+                    text-align: left
+
+                .box-icon
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    @include fluid("width", 30)
+                    @include fluid("height", 30)
+                    @include fluid("border-radius", 6)
+                    @include fluid("margin-left", 8)
+                    span
+                        @include fluid("font-size", 17)
+                        color: #FFFFFF
+
+            .box-trade
+                display: flex
+                align-items: center
+                @include fluid("width", 343)
+                @include fluid("height", 182)
+                @include fluid("border-radius", 6)
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+                grid-template-rows: repeat(2, 1fr)
+                @include fluid("grid-gap", 8)
+        .height-box
+            height: max-content
+            @include fluid("min-height", 54)
+        .box-other
+            display: flex
+            align-items: center
+            @include fluid("border-radius", 6)
+            @include fluid("font-size", 16)
+            height: fit-content
+            flex-direction: column
+            
+            .box-info
+                display: flex
+                flex-direction: column
+                align-items: center
+                font-style: normal
+                font-weight: bold
+
+                .icon
+                    @include fluid("font-size", 44)
+                    @include fluid("margin-bottom", 8)
+
+            .box-list
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+                grid-template-rows: repeat(2, 1fr)
+                @include fluid("grid-gap", 8)
+                &.backpack
+                    grid-template-columns: repeat(7, 1fr)
+                    @include fluid("height", 170)
+                    overflow-y: auto
+                    @include fluid("padding-right", 10)
+                &::-webkit-scrollbar
+                    @include fluid("width", 3)
+                
+                &::-webkit-scrollbar-track
+                    background: #131924
+                    @include fluid("border-radius", 20)
+
+                &::-webkit-scrollbar-thumb
+                    background: white
+                    @include fluid("border-radius", 20)
+        .inventory__box_backpack
+            width: 100%
+            padding: 0
+            position: relative
+        .box-accessories
+            position: absolute
+            display: flex
+            flex-direction: column
+            align-items: flex-start 
+
+            .box-item
+                position: relative
+                @include fluid("width", 80)
+                @include fluid("height", 80)
+                @include fluid("min-width", 80)
+                @include fluid("min-height", 80)
+                background: rgba(255, 255, 255, 0.05)
+                
+                &.gray
+                    background: rgba(255, 255, 255, 0.15)
+                    .icon
+                        color: #838383
+
+                &.smoll
+                    @include fluid("width", 60)
+                    @include fluid("height", 60)
+
+                    .icon
+                        @include fluid("font-size", 20)
+
+                &.medium
+                    @include fluid("width", 45)
+                    @include fluid("height", 45)
+
+                    .icon
+                        @include fluid("font-size", 24)
+                    
+
+
+            .skin
+                position: absolute
+                left: 0
+                @include fluid("margin-top", 48)
+                @include fluid("width", 90)
+                @include fluid("height", 532)
+                background-image: url(./img/skin-man.svg)
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+
+                &.women
+                    background-image: url(./img/skin-women.svg)
+
+
+    .btn-box-trade
+        display: flex
+        justify-content: space-between
+        @include fluid("width", 343)
+        .btn-trade
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("width", 211)
+            @include fluid("height", 40)
+            @include fluid("border-radius", 9)
+            font-style: normal
+            font-weight: bold
+            @include fluid("font-size", 18)
+            color: #FFFFFF
+            cursor: pointer
+            background: rgba(43, 182, 168, 0.1)
+            border: 1px solid rgba(43, 182, 168, 0.7)
+            font-weight: bold
+            &.red
+                @include fluid("width", 126)
+                background: rgba(231, 29, 54, 0.1)
+                border: 1px solid rgba(231, 29, 54, 0.7)
+
+    .box-KeyInfo
+        position: absolute
+        @include fluid("left", 50)
+        @include fluid("bottom", 50)
+
+    .box-item-name
+        position: absolute
+        @include fluid("bottom", 6)
+        @include fluid("font-size", 12)
+        letter-spacing: 0.05em
+        color: rgba(255,255,255,0.4)
+        width: 100%
+        text-align: center
+    .box-item
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("width", 80)
+        @include fluid("height", 80)
+        background: rgba(255, 255, 255, 0.15)
+        @include fluid("border-radius", 6)
+        cursor: pointer
+
+        .item-png
+            width: 90%
+            height: 90%
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            filter: drop-shadow(0px 0px 2px black)
+            
+        &.anim
+            animation: item-info-active 2.5s
+        
+        &.noAnim
+            animation: none
+
+        &:hover, &.hover
+            background: white
+
+        &.clothesM
+            &:hover, &.hover
+                background: #41B0EF
+
+        &.clothesF
+            &:hover, &.hover
+                background: #FF68F0
+
+        &.noUse
+            background: transparent
+            border: 1px solid rgba(255, 255, 255, 0.15)
+            //pointer-events: none
+
+        &.active
+            background: rgba(42, 49, 73, 0.9)
+
+        .icon
+            pointer-events: none
+            color: white
+            @include fluid("font-size", 34)
+            pointer-events: none
+            
+        .border
+            width: 100%
+            position: absolute
+            bottom: 0
+            @include fluid("height", 6)
+            height: 5px
+
+        .count
+            color: white
+            pointer-events: none
+            position: absolute
+            @include fluid("bottom", 8)
+            @include fluid("right", 8)
+            @include fluid("font-size", 12)
+
+        &:hover, &.hover
+            &.count
+                color: black
+    @keyframes item-info-active
+        0% 
+            background: rgba(42, 49, 73, 0.8)
+        100% 
+            background: #364579
+
+    .box-use
+        position: absolute
+        @include fluid("padding-top", 8)
+        @include fluid("padding-bottom", 8)
+        @include fluid("border-bottom-left-radius", 9)
+        @include fluid("border-top-right-radius", 9)
+        @include fluid("border-bottom-right-radius", 9)
+        z-index: 1
+
+        .item
+            width: 100%
+            display: flex
+            align-items: center
+            @include fluid("font-size", 12)
+            @include fluid("height", 26)
+            @include fluid("width", 168)
+            @include fluid("margin-top", 6)
+            @include fluid("padding-left", 10)
+            @include fluid("border-radius", 4)
+            background: rgba(255,255,255,0.1)
+            cursor: pointer
+            .inventoryicon-use
+                @include fluid("margin-right", 10)
+            &:hover
+                background: white
+                color: black
+
+    .box-stack
+        position: absolute
+        @include fluid("width", 184)
+        @include fluid("padding-top", 8)
+        @include fluid("padding-bottom", 8)
+        @include fluid("border-bottom-left-radius", 9)
+        @include fluid("border-top-right-radius", 9)
+        @include fluid("border-bottom-right-radius", 9)
+        color: black
+        display: flex
+        align-items: center
+        flex-direction: column
+        z-index: 1
+
+        .box-text
+            text-align: center
+            justify-content: center
+            font-style: normal
+            font-weight: bold
+            @include fluid("font-size", 12)
+            display: flex
+            align-items: center
+            @include fluid("margin-bottom", 4)
+            background: white
+            @include fluid("border-radius", 9)
+            @include fluid("padding", 6)
+            width: 100%
+            .icon
+                @include fluid("font-size", 14)
+                @include fluid("margin-right", 6)
+
+        .box-number
+            background: white
+            color: black
+            @include fluid("height", 26)
+            @include fluid("padding-left", 15)
+            @include fluid("padding-right", 15)
+            @include fluid("font-size", 10)
+            @include fluid("margin-bottom", 4)
+            display: flex
+            align-items: center
+            width: 100%
+            box-sizing: border-box
+            background: white
+            @include fluid("border-radius", 9)
+            width: 100%
+            .box-number-input
+                border: 0
+                background: 0
+                color: gray
+                @include fluid("margin-left", 4)
+                font-family: 'TTNorms-Regular'
+                font-style: normal
+                font-weight: 500
+                @include fluid("font-size", 10)
+        
+        .box-slider
+            @include fluid("margin-bottom", 4)
+            width: 100%
+            @include fluid("height", 24)
+            display: flex
+            align-items: center
+            justify-content: center
+            @include fluid("padding-left", 15)
+            @include fluid("padding-right", 15)
+            box-sizing: border-box
+            background: white
+            @include fluid("border-radius", 9)
+            width: 100%
+        .slider
+            .rangeslider
+                @include fluid("height", 2)
+                background: white
+                
+            .rangeslider__fill
+                background: black
+
+            .rangeslider__handle 
+                border: none
+                background: black
+                @include fluid("top", 1)
+                @include fluid("width", 10)
+                @include fluid("height", 10)
+
+        .btn-slap
+            background: rgba(43, 182, 168, 0.7)
+            border: 1px solid rgba(43, 182, 168, 0.7)
+            @include fluid("width", 96)
+            text-align: center
+            @include fluid("height", 24)
+            display: flex
+            align-items: center
+            justify-content: center
+            font-style: normal
+            font-weight: 500
+            @include fluid("font-size", 12)
+            cursor: pointer
+            color: white
+            @include fluid("border-radius", 6)
+        .box-cancel
+            background: rgba(231, 29, 54, 0.7)
+            border: 1px solid rgba(231, 29, 54, 0.7)
+            @include fluid("width", 68)
+            text-align: center
+            @include fluid("height", 24)
+            display: flex
+            align-items: center
+            justify-content: center
+            font-style: normal
+            font-weight: 500
+            @include fluid("font-size", 12)
+            cursor: pointer
+            color: white
+            @include fluid("border-radius", 6)
+
+
+
+
+    .box-item-descr
+        @include fluid("width", 168)
+        background: #FFFFFF
+        @include fluid("border-radius", 12)
+        border-top-left-radius: 0
+        z-index: 99
+        pointer-events: none
+        position: relative
+        .bg-info
+            border-top-left-radius: 0
+    .box-item-weapon
+        @include fluid("width", 168)
+        background: #FFFFFF
+        @include fluid("border-radius", 12)
+        border-top-left-radius: 0
+        z-index: 99
+        pointer-events: none
+        position: relative
+        background-position: center
+        background-image: url(./img/weapon_block.png)
+        background-repeat: no-repeat
+        background-size: contain
+
+        .box-item-weapon__element
+            display: flex
+            justify-content: space-between
+            align-items: center
+            color: black
+            font-weight: bold
+            @include fluid("font-size", 10)
+            @include fluid("line-height", 12)
+            @include fluid("margin-top", 10) 
+            .weapon__progress
+                @include fluid("width", 80)
+                @include fluid("min-height", 2)
+                @include fluid("height", 2)
+                @include fluid("max-height", 2)
+                @include fluid("border-radius", 2)
+                background: #C4C4C4
+                display: flex
+                .weapon__progress-line
+                    @include fluid("min-height", 2)
+                    @include fluid("height", 2)
+                    @include fluid("max-height", 2)
+                    @include fluid("border-radius", 2)  
+                    background: black
+        .bg-info
+            border-top-left-radius: 0
+            .box-flex
+                align-items: center
+        .box-item-weapon__image
+            @include fluid("min-width", 100)
+            height: 100%
+            @include fluid("min-height", 100)
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            background-image: url(./img/weapon.png)
+            filter: drop-shadow(0px 0px 2px black)
+        .box-item-weapon__line
+            @include fluid("min-height", 2)
+            @include fluid("height", 2)
+            @include fluid("max-height", 2)
+            width: 100%
+            background: rgba(0,0,0,0.2)
+            @include fluid("margin-bottom", 8)
+            @include fluid("margin-top", 8)
+        .box-column
+            align-items: center
+        .weapon__star
+            @include fluid("width", 42)
+            @include fluid("height", 42)
+            background-position: center
+            background-image: url(./img/weapon_star.png)
+            background-repeat: no-repeat
+            background-size: contain
+    .box-item-info
+        position: absolute
+        width: auto
+        background: #FFFFFF
+        @include fluid("border-radius", 6)
+        z-index: 99
+        pointer-events: none
+        &::after
+            content: " "
+            position: absolute
+            top: 100%
+            left: 50%
+            margin-left: -5px
+            border-width: 5px
+            border-style: solid
+            border-color: white transparent transparent transparent
+    .box-item-weapon__serial
+        @include fluid("border-bottom-left-radius", 6)
+        @include fluid("border-bottom-right-radius", 6)
+        background: black
+        @include fluid("height", 50)
+        @include fluid("margin-top", 10)
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        .weapon__serial_title
+            @include fluid("font-size", 12)
+            font-family: 'TTNorms-Regular'
+            @include fluid("margin-bottom", 3)    
+            color: #FFFFFF
+            opacity: 0.5
+        .weapon__serial_subtitle
+            @include fluid("font-size", 14)
+            font-weight: 'TTNorms-Bold'
+            color: #FF9F1C
+
+    .bg-info
+        @include fluid("padding-top", 6)
+        @include fluid("padding-bottom", 6)
+        @include fluid("padding-right", 10)
+        @include fluid("padding-left", 10)
+        width: 100%
+        height: 100%
+        background: #FFFFFF
+        word-wrap: break-word
+        text-align: center
+        color: white
+        @include fluid("border-radius", 6)
+        .title
+            font-style: normal
+            font-weight: bold
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 17)
+            color: #000000
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            &.left
+                text-align: left
+                align-items: flex-start
+                @include fluid("margin-top", 10) 
+            span                    
+                @include fluid("margin-right", 6)
+
+        .type
+            font-style: normal
+            font-weight: 500
+            @include fluid("font-size", 11)
+            @include fluid("line-height", 9)
+            @include fluid("margin-top", 14)
+            color: orange
+        .desc
+            font-style: normal
+            font-weight: 500
+            @include fluid("font-size", 10)
+            @include fluid("line-height", 12)
+            @include fluid("margin-top", 6)
+            color: #C1C1C1
+            &.left
+                text-align: left
+
+        .icon
+            @include fluid("font-size", 32)
+
+
+    .box-news
+        @include fluid("width", 1277)
+        @include fluid("height", 830)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fluid("margin-top", 72)
+        color: #FFFFFF
+
+        .news-main
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            @include fluid("width", 535)
+            @include fluid("height", 830)
+            @include fluid("padding-top", 414)
+            @include fluid("padding-bottom", 24)
+            @include fluid("padding-right", 51)
+            @include fluid("padding-left", 51)
+            @include fluid("margin-right", 18)
+            background: linear-gradient(180deg, rgba(27, 30, 40, 0) 11.12%, rgba(27, 30, 40, 0.9) 46.74%), url(./img/1920.jpg)
+            background-repeat: no-repeat
+            background-size: cover
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            @include fluid("border-radius", 6)
+
+
+            .bot-desc
+                .title
+                    @include fluid("font-size", 36)
+                    @include fluid("line-height", 36)
+                    font-weight: 800
+                    font-style: normal
+
+                .desc
+                    @include fluid("margin-top", 40)
+                    @include fluid("font-size", 21)
+                    @include fluid("line-height", 21)
+            
+            .btn-next
+                @include fluid("font-size", 21)
+                @include fluid("line-height", 21)
+                font-weight: bold
+                font-style: normal
+                cursor: pointer
+
+        .news-list
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-rows: repeat(2, 1fr)
+            @include fluid("grid-gap", 18)
+            @include fluid("width", 724)
+            @include fluid("height", 830)
+            overflow: hidden
+            overflow-y: auto
+            @include fluid("padding-right", 35)
+
+            &::-webkit-scrollbar
+                @include fluid("width", 3)
+            
+            &::-webkit-scrollbar-track
+                background: #131924
+                @include fluid("border-radius", 20)
+
+            &::-webkit-scrollbar-thumb
+                background: white
+                @include fluid("border-radius", 20)
+
+            .news-box
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                justify-content: space-between
+                width: 100%
+                height: 100%
+                @include fluid("padding-top", 158)
+                @include fluid("padding-bottom", 16)
+                @include fluid("padding-right", 20)
+                @include fluid("padding-left", 20)
+                background-size: cover, contain
+                background-position: center, top
+                background-repeat: no-repeat, no-repeat
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                @include fluid("border-radius", 6)
+
+                .bot-desc
+                    .title
+                        @include fluid("font-size", 36)
+                        @include fluid("line-height", 36)
+                        font-weight: 800
+                        font-style: normal
+
+                    .desc
+                        @include fluid("margin-top", 40)
+                        @include fluid("font-size", 21)
+                        @include fluid("line-height", 21)
+
+                .data
+                    font-style: normal
+                    font-weight: 500
+                    @include fluid("font-size", 12)
+                    color: #C1C1C1
+
+
+    .box-select-news
+        display: flex
+        align-items: center
+        justify-content: center
+        @include fluid("margin-top", 72)
+
+        .news
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            @include fluid("width", 1260)
+            @include fluid("padding-top", 315)
+            @include fluid("padding-bottom", 52)
+            @include fluid("padding-right", 51)
+            @include fluid("padding-left", 51)
+            @include fluid("margin-left", 31)
+            @include fluid("margin-right", 31)
+            background: linear-gradient(180deg, rgba(27, 30, 40, 0) 11.12%, rgba(27, 30, 40, 0.9) 35.74%), url(./img/bg.png)
+            background-repeat: no-repeat
+            background-size: cover
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            @include fluid("border-radius", 6)
+
+            .close
+                position: absolute
+                @include fluid("top", 31)
+                @include fluid("right", 31)
+                @include fluid("font-size", 20)
+                cursor: pointer
+            .title
+                font-weight: 800
+                font-style: normal
+                @include fluid("font-size", 72)
+                @include fluid("line-height", 72)
+
+            .desc
+                font-weight: 500
+                font-style: normal
+                @include fluid("margin-top", 14)
+                @include fluid("font-size", 21)
+                @include fluid("line-height", 30)
+
+    .dragonDrop
+        position: absolute
+        width: resize(65)
+        height: resize(65)
+        grid-template-columns: repeat(1, 1fr)
+        grid-template-rows: repeat(1, 1fr)
+        grid-gap: 0
+        z-index: 99
+        pointer-events: none
+
+        .box-item
+            pointer-events: none
+    .width-120
+        @include fluid("min-width", 120)
+    .width-90
+        @include fluid("width", 126)
+    .align-right
+        text-align: right
+        color: white
+    .h-370
+        @include fluid("max-height", 370)
+        overflow-y: auto
+        overflow-x: hidden
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+        
+        &::-webkit-scrollbar-track
+            background: #131924
+            @include fluid("border-radius", 20)
+
+        &::-webkit-scrollbar-thumb
+            background: white
+            @include fluid("border-radius", 20)
+    .box-stats
+        display: flex
+        justify-content: space-between
+        &.margin-top-70
+            @include fluid("margin-top", 70)
+
+        .title
+            font-weight: bold
+            font-style: normal
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 24)
+            @include fluid("margin-top", 22)
+            @include fluid("margin-bottom", 7)
+            color: white
+
+        .font-size-24
+            @include fluid("font-size", 24)
+            @include fluid("line-height", 24)
+            color: white
+
+        .font-size-18
+            @include fluid("font-size", 18)
+            @include fluid("line-height", 18)
+            color: white
+
+        .box-desc
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 19)
+            letter-spacing: 0.05em
+
+        .margin-top-26
+            @include fluid("margin-top", 26)
+
+        .margin-top-18
+            @include fluid("margin-top", 18)
+
+        .margin-top-20
+            @include fluid("margin-top", 20)
+
+        .margin-right-20
+            @include fluid("margin-right", 20)
+
+        .margin-bottom-34
+            @include fluid("margin-bottom", 34)
+
+        .margin-bottom-32
+            @include fluid("margin-bottom", 32)
+
+        .box-width-352
+            @include fluid("width", 352)
+        .box-width-724
+            @include fluid("width", 724)
+
+
+        .box-height-466
+            justify-content: space-between
+            @include fluid("height", 466)
+
+        .box-height-321
+            @include fluid("height", 321)
+
+        .info-box
+        .stars-box
+            display: flex
+            align-items: center
+            position: relative
+            @include fluid("width", 92)
+            &:hover
+                .tooltiptext
+                    visibility: visible
+                    opacity: 1
+            .star
+                @include fluid("min-width", 16)
+                @include fluid("width", 16)
+                @include fluid("max-width", 16)
+                @include fluid("margin-right", 2)
+                @include fluid("height", 17)
+                background-image: url(./img/star.svg)
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                &:last-child
+                    margin-right: 0
+            .tooltiptext
+                visibility: hidden
+                width: 120px
+                background-color: #555
+                color: #fff
+                text-align: center
+                border-radius: 6px
+                padding: 5px 0
+                position: absolute
+                z-index: 1
+                bottom: 125%
+                left: 50%
+                margin-left: -60px
+                opacity: 0
+                transition: opacity 0.3s
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 100%
+                    left: 50%
+                    margin-left: -5px
+                    border-width: 5px
+                    border-style: solid
+                    border-color: #555 transparent transparent transparent
+        .stars-box-current
+            position: absolute
+            left: 0
+            top: 0
+            display: flex
+            align-items: center
+            width: 100%
+            overflow: hidden
+            .star
+                @include fluid("min-width", 16)
+                @include fluid("width", 16)
+                @include fluid("max-width", 16)
+                @include fluid("height", 17)
+                background-image: url(./img/star_red.svg)
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                @include fluid("margin-right", 2)
+                &:last-child
+                    margin-right: 0
+        .box-bg
+            background: rgba(255, 255, 255, 0.05)
+            @include fluid("border-radius", 6)
+            @include fluid("padding", 28)
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 14)
+            color: #C1C1C1
+            display: flex
+            flex-direction: column
+            white-space: nowrap
+
+            .box-icon
+                @include fluid("width", 90)
+                @include fluid("height", 90)
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
+                @include fluid("border-radius", 6)
+                display: flex
+                align-items: center
+                justify-content: center
+
+                span
+                    @include fluid("font-size", 50)
+                    color: white
+
+            .info-box
+                width: 100%
+                display: flex
+                align-items: flex-end
+                justify-content: space-between
+
+                .white
+                    color: white
+                    @include fluid("margin-left", 4)
+
+                .right
+                    @include fluid("margin-right", 4)
+
+                .info-line                    
+                    @include fluid("height", 1)
+                    width: 100%
+                    background: #4C4D55
+
+            .btn-select
+                @include fluid("width", 190)
+                @include fluid("height", 55)
+                background: white
+                @include fluid("border-radius", 6)
+                display: flex
+                align-items: center
+                justify-content: center
+                opacity: 0.6
+
+            .box-center
+                display: flex
+                justify-content: center
+                width: 100%
+
+            .icon-box
+                display: flex
+                flex-direction: column
+                align-items: center
+                @include fluid("margin-right", 25)
+
+                &:last-child
+                    margin-right: 0
+
+                span
+                    color: #C1C1C1
+                    @include fluid("font-size", 49)
+
+                .circle-icon
+                    @include fluid("margin-top", 16)
+                    @include fluid("min-width", 14)
+                    @include fluid("max-width", 14)
+                    @include fluid("min-height", 14)
+                    @include fluid("max-height", 14)
+                    @include fluid("border-radius", 14)
+                    background: #3A4156
+
+                &.active
+
+                    span
+                        color: #D33437
+
+                    .circle-icon
+                        background: #D33437
+    .inventory__icon
+        @include fluid("font-size", 14)
+        color: white
+        @include fluid("margin-right", 5)
+        &.carlock
+            margin: 0
+            @include fluid("margin-left", 5)
+    .smoll
+        @include fluid("width", 60)
+        @include fluid("height", 60)
+
+    .box-other-main
+        @include fluid("height", 750)
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        overflow-y: auto
+        justify-content: flex-start
+        @include fluid("padding-right", 16)
+        &::-webkit-scrollbar
+            @include fluid("width", 3)
+        
+        &::-webkit-scrollbar-track
+            background: #131924
+            @include fluid("border-radius", 20)
+
+        &::-webkit-scrollbar-thumb
+            background: white
+            @include fluid("border-radius", 20)
+    .box-control
+        align-items: flex-end
+        .inventory__text
+            @include fluid("margin-top", 13)
+            margin-bottom: 0
+        .inventoryicons-bottom
+            color: rgba(255,255,255,0.6)
+        .inventoryicons-open-box
+            color: rgba(255,255,255,0.6)
+
+    .stats__person_image
+        background-image: url('./img/person.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+    .box-other-trade
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        overflow-y: auto
+        justify-content: flex-start
+    
+    .trade-square
+        @include fluid("border-radius", 3)
+        @include fluid("width", 18)
+        @include fluid("height", 18)
+        @include fluid("margin-right", 10)
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #E71D36
+        &.active
+            background: #2BB6A8
+    .main__input_text
+        text-align: center
+    .m-0
+        margin: 0
+        @include fluid("width", 210)
+        @include fluid("font-size", 14)

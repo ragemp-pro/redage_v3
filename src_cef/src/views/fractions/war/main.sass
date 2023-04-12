@@ -1,0 +1,783 @@
+@import @/views/assets/css/main.sass
+
+
+#war
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    font-family: 'TTNorms-Regular'
+    background: rgba(1,22,39,0.9)
+    @include fluid("padding-left", 98)
+    @include fluid("padding-top", 56)
+    @include fluid("padding-right", 62)
+    @include fluid("padding-bottom", 60)
+    @include fluid("font-size", 12)
+    @include fluid("line-height", 14)
+    letter-spacing: 0.05em
+    font-weight: 500
+    color: white
+    display: flex
+    justify-content: space-between
+    z-index: 1000
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7)
+    .war__title
+        font-weight: 700
+        @include fluid("font-size", 32)
+        @include fluid("line-height", 38)
+        @include fluid("margin-bottom", 5)
+        pointer-events: none
+    .war__subtitle
+        color: #869199
+        font-weight: 500
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+        pointer-events: none
+        &.white
+            color: white
+    .war__notification
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include fluid("width", 780)
+        @include fluid("height", 53)
+        @include fluid("border-radius", 8)
+        background: rgba(0, 0, 0, 0.35)
+        @include fluid("padding", 12)
+        font-weight: 500
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+        @include fluid("margin-top", 13)
+        @include fluid("margin-bottom", 17)
+        pointer-events: none
+        .fractionsicon-warning
+            @include fluid("font-size", 34)
+            color: #DA2640
+            @include fluid("margin-right", 20)
+        .war__notification_text
+            font-weight: 500
+            @include fluid("font-size", 14)
+            @include fluid("line-height", 16)
+            color: #A6B1BA
+        &.small
+            @include fluid("min-width", 491)
+            @include fluid("max-width", 491)
+            align-items: center
+            justify-content: center
+            @include fluid("margin-bottom", 10)
+            @include fluid("font-size", 12)
+            &.atack
+                @include fluid("border-left", 2, "solid red")
+            &.protect
+                @include fluid("border-left", 2, "solid #30c620")
+        &.megasmall
+            @include fluid("min-width", 320)
+            @include fluid("max-width", 320)
+            align-items: center
+            justify-content: center
+            @include fluid("margin-bottom", 10)
+            @include fluid("font-size", 12)
+        div
+            display: flex
+            align-items: center
+    .mt-auto
+        margin-top: auto
+    .fl-end
+        align-items: flex-end
+    .war__text_subtitle
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7)
+        font-family: 'RF Dewi Extended'
+        font-style: normal
+        font-weight: 700
+        @include fluid("font-size", 14)
+        @include fluid("line-height", 17)
+        letter-spacing: -0.03em
+        color: #d6d7dd
+        @include fluid("margin-bottom", 7)
+        pointer-events: none
+    .war__text_title
+        font-family: 'RF Dewi Extended'
+        font-style: normal
+        font-weight: 400
+        @include fluid("font-size", 18)
+        @include fluid("line-height", 22)
+        letter-spacing: -0.03em
+        color: #FFFFFF
+        @include fluid("padding-top", 2)
+        @include fluid("padding-bottom", 2)
+        @include fluid("padding-right", 19)
+        @include fluid("padding-left", 73)
+        z-index: 2
+        position: relative
+        @include fluid("margin-bottom", 15)
+        pointer-events: none
+        &::after
+            position: absolute
+            left: 0
+            top: 0
+            content: ''
+            z-index: -1
+            border-width: 2px
+            border-top-style: solid
+            border-bottom-style: solid
+            border-image-slice: 1 !important
+            border-right-style: solid 
+            border-left-style: hidden 
+            background: linear-gradient(279deg, rgba(0, 0, 0, 0.6) -2.38%, rgba(0, 0, 0, 0) 99.89%) !important
+            border-image-source: linear-gradient(270.3deg, rgba(255, 255, 255, 0.6) 0.24%, rgba(255, 255, 255, 0) 99.74%) !important
+            width: 100%
+            height: 100%
+        &.big
+            font-weight: 700
+            @include fluid("font-size", 36) 
+            @include fluid("line-height", 43)
+            @include fluid("padding-bottom", 8)
+        &.green
+            color: #00ff08
+    .war__button
+        @include fluid("width", 211)
+        @include fluid("height", 40)
+        background: rgba(255, 255, 255, 0.15)
+        @include fluid("border-radius", 8)
+        display: flex
+        align-items: center
+        justify-content: center
+        font-weight: 500
+        @include fluid("font-size", 20)
+        @include fluid("line-height", 24)
+        color: rgba(255, 255, 255, 0.85)
+        cursor: pointer
+        &.active
+            background: white
+            color: black
+            &:hover
+                background: #dbdbdb
+    .zindex-10000
+        z-index: 10
+    .war__maps_wrapper
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+        .war__maps_container
+            position: relative
+
+            .war__maps_image
+                position: absolute
+                top: 0
+                left: 0
+                //background-image: url('./assets/images/rsz_1map.jpg')
+                width: 8192px
+                height: 8192px
+                background-repeat: no-repeat
+                background-position: top left
+
+    .war__maps_absoluteelement
+        z-index: 1
+        transition: all 4s ease
+
+        &.unEvents
+            pointer-events: none !important
+
+        &.airport1
+            position: absolute
+            left: 2440px
+            top: 6888px
+            width: 959px
+            height: 1006px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+        &.airport2
+            position: absolute
+            left: 4427px
+            top: 3301px
+            width: 550px
+            height: 264px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+        &.mech
+            position: absolute
+            left: 3986px
+            top: 6353px
+            width: 123px
+            height: 116px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+        &.buspark
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3998px
+            top: 5895px
+            width: 110px
+            height: 79px
+        &.theatre
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4126px
+            top: 5064px
+            width: 227px
+            height: 176px
+        &.bikerent
+            position: absolute
+            left: 2975px
+            top: 6609px
+            width: 70px
+            height: 73px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+        &.speedcarrent
+            position: absolute
+            left: 3551px
+            top: 6884px
+            width: 206px
+            height: 90px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+        &.boatrent
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2671px
+            top: 6237px
+            width: 82px
+            height: 91px
+        &.offroadrent
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2340px
+            top: 5571px
+            width: 121px
+            height: 69px
+        &.jobgason
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2821px
+            top: 5365px
+            width: 340px
+            height: 281px
+        &.rynok
+            position: absolute
+            left: 2609px
+            top: 5996px
+            width: 80px
+            height: 74px
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+        &.autorynok
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2609px
+            top: 6064px
+            width: 122px
+            height: 111px
+        &.gosshahta
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3307px
+            top: 4097px
+            width: 80px
+            height: 80px
+        &.shahta1
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4560px
+            top: 3516px
+            width: 106px
+            height: 59px
+        &.shahta2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4961px
+            top: 3343px
+            width: 94px
+            height: 62px
+        &.shahta3
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4925px
+            top: 3154px
+            width: 203px
+            height: 175px
+        &.shahta4
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5137px
+            top: 3378px
+            width: 132px
+            height: 133px
+        &.dalnoboi
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3938px
+            top: 3245px
+            width: 78px
+            height: 69px
+        &.sklad1
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3724px
+            top: 1267px
+            width: 182px
+            height: 147px
+        &.zavod
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5492px
+            top: 4386px
+            width: 168px
+            height: 274px
+        &.sklad2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5489px
+            top: 3184px
+            width: 120px
+            height: 98px
+        &.himlab
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5994px
+            top: 3003px
+            width: 169px
+            height: 161px
+        &.inkas
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2684px
+            top: 5829px
+            width: 152px
+            height: 123px
+        &.casino
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4332px
+            top: 5275px
+            width: 298px
+            height: 329px
+        &.forest1
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4566px
+            top: 7172px
+            width: 329px
+            height: 147px
+        &.forest2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5780px
+            top: 2166px
+            width: 326px
+            height: 246px
+        &.forest3
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2663px
+            top: 2537px
+            width: 269px
+            height: 137px
+        &.forest4
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2148px
+            top: 3680px
+            width: 407px
+            height: 270px
+        &.forest5
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3728px
+            top: 871px
+            width: 243px
+            height: 193px
+        &.arena
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3464px
+            top: 6736px
+            width: 195px
+            height: 188px
+        &.huntingshop
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3270px
+            top: 1656px
+            width: 85px
+            height: 112px
+        &.electric
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4160px
+            top: 5397px
+            width: 97px
+            height: 106px
+        &.rielt
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3227px
+            top: 5333px
+            width: 82px
+            height: 46px
+        &.observatorya 
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2187px
+            top: 5245px
+            width: 160px
+            height: 186px
+        &.taxi
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4295px
+            top: 5603px
+            width: 82px
+            height: 78px
+        &.drugs
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3720px
+            top: 3016px
+            width: 146px
+            height: 156px
+        &.drugs2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 6164px
+            top: 2494px
+            width: 131px
+            height: 158px
+        &.darkshop
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4194px
+            top: 6075px
+            width: 67px
+            height: 100px
+        &.port
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4039px
+            top: 7430px
+            width: 581px
+            height: 339px
+        &.zavod2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4002px
+            top: 6892px
+            width: 157px
+            height: 241px
+        &.sklad3
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3816px
+            top: 7284px
+            width: 199px
+            height: 453px
+        &.sklad4
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3373px
+            top: 7084px
+            width: 645px
+            height: 388px
+        &.sklad5
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4188px
+            top: 6896px
+            width: 67px
+            height: 270px
+        &.sklad6
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4253px
+            top: 6898px
+            width: 205px
+            height: 260px
+        &.oil
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4441px
+            top: 6891px
+            width: 191px
+            height: 328px
+        &.oil2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4538px
+            top: 6826px
+            width: 332px
+            height: 422px
+        &.oil3
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4540px
+            top: 6690px
+            width: 156px
+            height: 178px
+        &.oil4
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4641px
+            top: 6363px
+            width: 324px
+            height: 532px
+        &.landbar
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 2749px
+            top: 6448px
+            width: 63px
+            height: 94px
+            z-index: 51
+        &.theatre2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3831px
+            top: 4691px
+            width: 100px
+            height: 124px
+        &.vetryanaya1
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5111px
+            top: 4303px
+            width: 320px
+            height: 435px
+        &.vetryanaya2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5026px
+            top: 4087px
+            width: 404px
+            height: 332px
+            z-index: 54
+        &.vetryanaya3
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5024px
+            top: 3809px
+            width: 447px
+            height: 378px
+        &.sklad7
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5612px
+            top: 2600px
+            width: 109px
+            height: 155px
+        &.farm1
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5534px
+            top: 2280px
+            width: 187px
+            height: 334px
+        &.farm2
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5366px
+            top: 2379px
+            width: 185px
+            height: 317px
+        &.farm3
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5187px
+            top: 2135px
+            width: 324px
+            height: 352px
+        &.farm4
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 4890px
+            top: 2138px
+            width: 306px
+            height: 336px
+        &.farm5
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 5061px
+            top: 2089px
+            width: 283px
+            height: 202px
+        &.farm6
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3854px
+            top: 1206px
+            width: 409px
+            height: 107px
+        &.farm7
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3896px
+            top: 1123px
+            width: 142px
+            height: 70px
+        &.farm8
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3645px
+            top: 4214px
+            width: 110px
+            height: 92px
+        &.vokzal
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            position: absolute
+            left: 3546px
+            top: 1392px
+            width: 186px
+            height: 180px
+        &.active
+            opacity: 0.7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
