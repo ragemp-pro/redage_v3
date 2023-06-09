@@ -182,7 +182,11 @@ namespace NeptuneEvo.Core
                         RemoteEvent_carroomCancel(player);
                         return;
                     }
-                    if (UpdateData.CanIChange(player, prod.Price, true) != 255) return;
+                    if (UpdateData.CanIChange(player, prod.Price, true) != 255)
+                    {
+                        RemoteEvent_carroomCancel(player);
+                        return;
+                    }
                     var house = Houses.HouseManager.GetHouse(player, true);
                     if (house != null)
                     {
