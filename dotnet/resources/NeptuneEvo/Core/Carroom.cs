@@ -230,7 +230,11 @@ namespace NeptuneEvo.Core
                 }
                 else if (id == 2) // В организацию
                 {
-                    if (!player.IsOrganizationAccess(RankToAccess.OrgBuyCars)) return;
+                    if (!player.IsOrganizationAccess(RankToAccess.OrgBuyCars))
+                    {
+                        RemoteEvent_carroomCancel(player);
+                        return;
+                    }
                     var organizationData = player.GetOrganizationData();
                     if (organizationData == null) 
                         return;
