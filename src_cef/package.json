@@ -18,6 +18,7 @@
     "mini-css-extract-plugin": "^0.6.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss-loader": "^3.0.0",
+    "querystring": "^0.2.1",
     "sass": "^1.58.3",
     "serve": "^13.0.2",
     "style-loader": "^0.23.1",
