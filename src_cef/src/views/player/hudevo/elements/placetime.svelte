@@ -69,6 +69,11 @@
 </script>
 
 <div class="hudevo__placetime">
+    <div class="hudevo__placetime_image">
+        <div class="hudevo__placetime_cirlce"><div class="hudevoicon-person"></div></div>
+        <div class="hudevo__placetime_title">Онлайн</div>
+        <div class="hudevo__placetime_subtitle">{serverOnline} игроков</div>
+    </div>
     {#if isWorld}
     <div class="hudevo__placetime_image">
         <div class="hudevo__placetime_cirlce">{direction}</div>
