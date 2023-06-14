@@ -265,13 +265,6 @@ namespace NeptuneEvo.Chars
                         clothesData.Donate = item.Donate;
                         clothesData.Gender = item.Gender;
                         clothesComponentData[true][ClothesComponent.Masks].TryAdd(item.Id, clothesData);
-
-                        Log.Write($"ClothesMaleMasks [{item.Variation} -> {clothesData.Variation}]");
-
-                        /*db.ClothesMaleMasks
-                            .Where(clothes => clothes.Id == item.Id)
-                            .Set(clothes => clothes.Variation, clothesData.Variation)
-                            .Update();*/
                     }
                     OnSaveJsonClothes("Male_Masks", clothesComponentData[true][ClothesComponent.Masks], IsHair: true, IsHat: true, IsGlasses: true);
                     Log.Write($"Load Masks");
