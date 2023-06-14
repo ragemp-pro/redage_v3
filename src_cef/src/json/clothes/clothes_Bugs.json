@@ -31,6 +31,5 @@
 	"117": {"Id":117,"Variation":139,"TName":"","Textures":[0,1,2,3,4]},
 	"118": {"Id":118,"Variation":140,"TName":"","Textures":[0,1]},
 	"119": {"Id":119,"Variation":141,"TName":"","Textures":[0,1,2,3,4,5,6,7]},
-	"120": {"Id":120,"Variation":142,"TName":"","Textures":[0,1,2,3,4,5,6]},
-	"121": {"Id":121,"Variation":143,"TName":"","Textures":[0,1]}
+	"120": {"Id":120,"Variation":142,"TName":"","Textures":[0,1,2,3,4,5,6]}
 }

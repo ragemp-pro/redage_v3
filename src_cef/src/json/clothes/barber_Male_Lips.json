@@ -1,13 +1,13 @@
 ﻿{
-	"0": {"Id":0,"Variation":0,"Name":"Без помады","TName":"","Price":600,"Donate":0},
-	"1": {"Id":1,"Variation":1,"Name":"Цветная блестящая","TName":"","Price":600,"Donate":0},
-	"2": {"Id":2,"Variation":2,"Name":"Контур матовая","TName":"","Price":600,"Donate":0},
-	"3": {"Id":3,"Variation":3,"Name":"Контур блестящая","TName":"","Price":600,"Donate":0},
-	"4": {"Id":4,"Variation":4,"Name":"Жирный контур матовая","TName":"","Price":600,"Donate":0},
-	"5": {"Id":5,"Variation":5,"Name":"Жирный контур блестящая","TName":"","Price":600,"Donate":0},
-	"6": {"Id":6,"Variation":6,"Name":"Некрашенный матовая","TName":"","Price":600,"Donate":0},
-	"7": {"Id":7,"Variation":7,"Name":"Некрашенный блестящая","TName":"","Price":600,"Donate":0},
-	"8": {"Id":8,"Variation":8,"Name":"Размазанная","TName":"","Price":600,"Donate":0},
-	"9": {"Id":9,"Variation":9,"Name":"По центру","TName":"","Price":600,"Donate":0},
-	"10": {"Id":10,"Variation":10,"Name":"Цветная матовая","TName":"","Price":600,"Donate":0}
+	"0": {"Id":0,"Variation":0,"Name":"Без помады","TName":"","Price":1050,"Donate":0},
+	"1": {"Id":1,"Variation":1,"Name":"Цветная блестящая","TName":"","Price":1050,"Donate":0},
+	"2": {"Id":2,"Variation":2,"Name":"Контур матовая","TName":"","Price":1050,"Donate":0},
+	"3": {"Id":3,"Variation":3,"Name":"Контур блестящая","TName":"","Price":1050,"Donate":0},
+	"4": {"Id":4,"Variation":4,"Name":"Жирный контур матовая","TName":"","Price":1050,"Donate":0},
+	"5": {"Id":5,"Variation":5,"Name":"Жирный контур блестящая","TName":"","Price":1050,"Donate":0},
+	"6": {"Id":6,"Variation":6,"Name":"Некрашенный матовая","TName":"","Price":1050,"Donate":0},
+	"7": {"Id":7,"Variation":7,"Name":"Некрашенный блестящая","TName":"","Price":1050,"Donate":0},
+	"8": {"Id":8,"Variation":8,"Name":"Размазанная","TName":"","Price":1050,"Donate":0},
+	"9": {"Id":9,"Variation":9,"Name":"По центру","TName":"","Price":1050,"Donate":0},
+	"10": {"Id":10,"Variation":10,"Name":"Цветная матовая","TName":"","Price":1050,"Donate":0}
 }

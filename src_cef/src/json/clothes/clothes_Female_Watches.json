@@ -28,6 +28,6 @@
 	"26": {"Id":26,"Variation":26,"TName":"CLO_VWF_PW_7_","Textures":[0,1,2,3,4,5]},
 	"27": {"Id":27,"Variation":27,"TName":"CLO_VWF_PW_8_","Textures":[0,1,2]},
 	"28": {"Id":28,"Variation":28,"TName":"CLO_VWF_PW_9_","Textures":[0,1,2]},
-	"29": {"Id":29,"Variation":29,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10,11]},
-	"30": {"Id":30,"Variation":34,"TName":"","Textures":[0,1,2]}
+	"29": {"Id":29,"Variation":35,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10,11]},
+	"30": {"Id":30,"Variation":36,"TName":"","Textures":[0,1,2]}
 }

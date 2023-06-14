@@ -15,5 +15,5 @@
 	"13": {"Id":13,"Variation":13,"TName":"CLO_BIF_PRW_6_","Textures":[0]},
 	"14": {"Id":14,"Variation":14,"TName":"CLO_BIF_PRW_7_","Textures":[0,1,2,3]},
 	"15": {"Id":15,"Variation":15,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10,11]},
-	"16": {"Id":16,"Variation":29,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10]}
+	"16": {"Id":16,"Variation":20,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10]}
 }

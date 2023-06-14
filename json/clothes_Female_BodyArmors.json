@@ -23,8 +23,8 @@
 	"53": {"Id":53,"Variation":53,"TName":"","Textures":[0]},
 	"54": {"Id":54,"Variation":54,"TName":"","Textures":[0]},
 	"55": {"Id":55,"Variation":55,"TName":"","Textures":[0]},
-	"56": {"Id":56,"Variation":59,"TName":"","Textures":[0,1,2,3,4,5]},
-	"57": {"Id":57,"Variation":60,"TName":"","Textures":[0,1,2,3]},
-	"58": {"Id":58,"Variation":61,"TName":"","Textures":[0,1,2,3,4]},
-	"59": {"Id":59,"Variation":62,"TName":"","Textures":[0,1,2,3,4]}
+	"56": {"Id":56,"Variation":58,"TName":"","Textures":[0,1,2,3,4,5]},
+	"57": {"Id":57,"Variation":59,"TName":"","Textures":[0,1,2,3]},
+	"58": {"Id":58,"Variation":60,"TName":"","Textures":[0,1,2,3,4]},
+	"59": {"Id":59,"Variation":61,"TName":"","Textures":[0,1,2,3,4]}
 }

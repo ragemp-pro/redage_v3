@@ -8,5 +8,5 @@
 	"6": {"Id":6,"Variation":6,"TName":"CLO_BIM_PRW_6_","Textures":[0]},
 	"7": {"Id":7,"Variation":7,"TName":"CLO_BIM_PRW_7_","Textures":[0,1,2,3]},
 	"8": {"Id":8,"Variation":8,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10,11]},
-	"9": {"Id":9,"Variation":20,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10]}
+	"9": {"Id":9,"Variation":13,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9,10]}
 }

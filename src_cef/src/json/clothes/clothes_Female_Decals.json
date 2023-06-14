@@ -22,9 +22,9 @@
 	"31": {"Id":31,"Variation":31,"TName":"","Textures":[0,1,2,3,4,5,6,7,8,9]},
 	"53": {"Id":53,"Variation":53,"TName":"","Textures":[0]},
 	"54": {"Id":54,"Variation":54,"TName":"","Textures":[0]},
-	"55": {"Id":55,"Variation":56,"TName":"","Textures":[0]},
-	"56": {"Id":56,"Variation":57,"TName":"","Textures":[0,1,2,3,4,5]},
-	"57": {"Id":57,"Variation":58,"TName":"","Textures":[0,1,2,3]},
-	"58": {"Id":58,"Variation":59,"TName":"","Textures":[0,1,2,3,4]},
-	"59": {"Id":59,"Variation":60,"TName":"","Textures":[0,1,2,3,4]}
+	"55": {"Id":55,"Variation":55,"TName":"","Textures":[0]},
+	"56": {"Id":56,"Variation":58,"TName":"","Textures":[0,1,2,3,4,5]},
+	"57": {"Id":57,"Variation":59,"TName":"","Textures":[0,1,2,3]},
+	"58": {"Id":58,"Variation":60,"TName":"","Textures":[0,1,2,3,4]},
+	"59": {"Id":59,"Variation":61,"TName":"","Textures":[0,1,2,3,4]}
 }

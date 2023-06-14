@@ -315,6 +315,9 @@ export const ItemId = {
 	HeavyRifle: 387,
 	NeonStick: 388,
 	GlowStick: 389,
+	Giftcoin: 390,
+	CombatRifle: 391,
+	Glock: 392,
 	Bracelets: -15,
 	Watches: -14,
 	Glasses: -13,
@@ -650,5 +653,8 @@ export const itemsInfo = {
 	[ItemId.CombatShotgun]: {"Name":"Combat Shotgun","Description":"Усовершенствованный  дробовик, обойма вмещает в себя 10 патронов.","Icon":"inv-item-militaryrifle","Type":"Оружие","Stack":1,"functionType":2},
 	[ItemId.HeavyRifle]: {"Name":"Heavy Rifle","Description":"Усовершенствованная штурмовая винтовка, обойма вмещает в себя 30 патронов.","Icon":"inv-item-militaryrifle","Type":"Оружие","Stack":1,"functionType":2},
 	[ItemId.NeonStick]: {"Name":"Неоновые палочки","Description":"Палочки красного цвета, которые можно держать в руках.","Icon":"inv-item-Assault-Rifle","Type":"Особое","Stack":1,"functionType":0},
-	[ItemId.GlowStick]: {"Name":"Светящиеся палочки","Description":"Красивые светящиеся палочки, которые можно держать в руках.","Icon":"inv-item-Assault-Rifle","Type":"Особое","Stack":1,"functionType":0}
+	[ItemId.GlowStick]: {"Name":"Светящиеся палочки","Description":"Красивые светящиеся палочки, которые можно держать в руках.","Icon":"inv-item-Assault-Rifle","Type":"Особое","Stack":1,"functionType":0},
+	[ItemId.Giftcoin]: {"Name":"Подарок","Description":"Коробка с подарком, которую запрятал для тебя Санта!","Icon":"inv-item-Assault-Rifle","Type":"Особое","Stack":999,"functionType":0},
+	[ItemId.CombatRifle]: {"Name":"Combat Rifle","Description":"Сносящая все на своем пути винтовка","Icon":"inv-item-Carbine-Rifle","Type":"Оружие","Stack":1,"functionType":2},
+	[ItemId.Glock]: {"Name":"Banana Glock","Description":"Банана Глок топ","Icon":"inv-item-Carbine-Rifle","Type":"Оружие","Stack":1,"functionType":2}
 }

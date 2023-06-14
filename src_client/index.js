@@ -721,3 +721,87 @@ gm.events.add("test.test", () => {
 	});
 
 });
+
+mp.events.add("clothes.getOffsets", () => {
+	getOffsets();
+});
+
+function getOffsets() {
+    let data = {
+		male: {},
+		female: {}
+	}
+
+	/*set male model first */
+	mp.players.local.model = mp.game.joaat('mp_m_freemode_01')
+	mp.game.wait(500)
+
+	// clothes
+	let i = 0;
+	for (let key in clothesTypes) {
+		let type = clothesTypes[key]
+		data.male[key] = mp.players.local.getNumberOfDrawableVariations(type)
+		i++;
+	}
+
+	// props
+	i = 0;
+	for (let key in propsTypes) {
+		let type = propsTypes[key]
+		data.male[key] = mp.players.local.getNumberOfPropDrawableVariations(type)
+		i++;
+	}
+
+	/* set female model */
+	mp.players.local.model = mp.game.joaat('mp_f_freemode_01')
+	mp.game.wait(500)
+
+	// clothes
+	i = 0;
+	for (let key in clothesTypes) {
+		let type = clothesTypes[key]
+		data.female[key] = mp.players.local.getNumberOfDrawableVariations(type)
+		i++;
+	}
+
+	// props
+	i = 0;
+	for (let key in propsTypes) {
+		let type = propsTypes[key]
+		data.female[key] = mp.players.local.getNumberOfPropDrawableVariations(type)
+		i++;
+	}
+
+	mp.console.logInfo("MALE::", true)
+	for (let key in data.male) {
+		mp.console.logInfo(`{ ClothesCategory.ClothesType.${key} , ${data.male[key]},`, true)
+	}
+	mp.console.logInfo("FEMALE::", true)
+	for (let key in data.female) {
+		mp.console.logInfo(`{ ClothesCategory.ClothesType.${key} , ${data.female[key]},`, true)
+
+	}    
+}
+
+const clothesTypes = {
+	Head: 0,
+	Masks: 1,
+	HairStyles: 2,
+	Torsos: 3,
+	Legs: 4,
+	BagsAndParachutes: 5,
+	Shoes: 6,
+	Accessories: 7,
+	Undershirts: 8,
+	BodyArmors: 9,
+	Decals: 10,
+	Tops: 11
+}
+
+const propsTypes = {
+	Hats: 0,
+	Glasses: 1,
+	Ears: 2,
+	Watches: 6,
+	Bracelets: 7
+}
