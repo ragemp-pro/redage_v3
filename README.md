@@ -10,3 +10,8 @@ https://ragemp.pro/ - Everything for RageMP GTA 5, ready-made servers, articles,
 - and etc.
 
 Discord server - https://discord.gg/edAJjWN
+
+
+## How to install (Video tutorial)
+
+[![](https://i3.ytimg.com/vi/LzkXVzAZVKo/maxresdefault.jpg)](https://www.youtube.com/watch?v=LzkXVzAZVKo)
