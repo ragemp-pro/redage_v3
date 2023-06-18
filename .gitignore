@@ -3,6 +3,7 @@ install.txt
 mainDB.txt
 package-lock.json
 
+backups/*.sql
 database/serverconfigured.sql
 client_packages/game_resources/dlcpacks/*
 !client_packages/game_resources/dlcpacks/dlcpacks.txt
