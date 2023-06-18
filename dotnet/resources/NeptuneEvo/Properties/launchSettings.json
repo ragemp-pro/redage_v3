@@ -2,8 +2,8 @@
   "profiles": {
     "NeptuneEvo": {
       "commandName": "Executable",
-      "executablePath": "D:\\RAGEMP\\RedAgeServer\\ragemp-server.exe",
-      "workingDirectory": "D:\\RAGEMP\\RedAgeServer",
+      "executablePath": "$(MSBuildProjectDirectory)/../../../ragemp-server.exe",
+      "workingDirectory": "$(MSBuildProjectDirectory)../../../../",
       "environmentVariables": {
         "Ключ": "Значение"
       },
