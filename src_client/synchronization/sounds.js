@@ -1,12 +1,12 @@
 
-let soundApiBrowser = mp.browsers.new("https://cdn.redage.net/soundapi/index.html");
+let soundApiBrowser = mp.browsers.new("https://cdn-ra3.ragemp.su/soundapi/index.html");
 
 let isBrowserLoadingFailed = false;
 mp.events.add('browserLoadingFailed', (browser) => {
     if (browser == soundApiBrowser && !isBrowserLoadingFailed) {
         isBrowserLoadingFailed = true;
         soundApiBrowser.destroy();
-        soundApiBrowser = mp.browsers.new("https://redage.akamaized.net/soundapi/index.html");
+        soundApiBrowser = mp.browsers.new("https://cdn-ra3.ragemp.su/soundapi/index.html");
     }
 });
 

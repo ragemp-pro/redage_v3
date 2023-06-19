@@ -307,7 +307,7 @@ gm.events.add(clientName + "updateMissions", (id, missionDataTasks, missionsTask
     mp.gui.emmit(`window.listernEvent ('updateMissions');`);
 });
 
-const missionImage = "https://cloud.redage.net/cloud/inventoryItems/items/bp.png";
+const missionImage = "https://cdn-ra3.ragemp.su/cloud/inventoryItems/items/bp.png";
 
 gm.events.add(clientName + "missionComplite", (title, desc) => {
     mp.gui.emmit(`window.missionComplite ('${title}', '${desc}', '${translateText("Молодец, ты справился!")}', '${missionImage}');`);

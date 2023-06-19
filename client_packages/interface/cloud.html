@@ -39,12 +39,12 @@
 
 			console.log('Start')
 
-            onLoadRes('link', "https://cdn.ragemp.pro/build/bundle.css", () => {
-                    loadRes ("https://cdn.ragemp.pro")
+            onLoadRes('link', "https://cdn-ra3.ragemp.su/build/bundle.css", () => {
+                    loadRes ("https://cdn-ra3.ragemp.su")
                 }, (element) => {
 				    console.log('Fail Rus Cdn')
-                    onLoadRes('link', "https://redage.akamaized.net/build/bundle.css", () => {
-                            loadRes ("https://redage.akamaized.net")
+                    onLoadRes('link', "https://cdn-ra3.ragemp.su/build/bundle.css", () => {
+                            loadRes ("https://cdn-ra3.ragemp.su")
                         }, (element) => {
 				            console.log('Fail Global Cdn')
                         }

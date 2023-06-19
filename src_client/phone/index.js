@@ -114,24 +114,24 @@ gm.events.add(clientName + "close", () => {
 const defaultContacts = {
     112: {
         Name: translateText("Полиция"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/police.jpg",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/police.jpg",
         IsSystem: true
     },
     911: {
         Name: translateText("Больница"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/ems.jpg",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/ems.jpg",
         IsSystem: true
     },
     333: {
         Name: translateText("Механик"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/mech.jpg",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/mech.jpg",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
     },
     228: {
         Name: translateText("Такси"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/taxi.jpg",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/taxi.jpg",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -139,14 +139,14 @@ const defaultContacts = {
 
     101: {
         Name: "RedAge",
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/ra.jpg",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/ra.jpg",
         IsSystem: true,
         DefaultMessage: translateText("Привет! :cowboy_hat_face: Сюда ты можешь отправить найденный бонус-код или промо-код и сразу получить свои бонусы. Просто пришли его в ответном сообщении! :gift: :gift: :gift:")
     },
 
     4386: {
         Name: translateText("Банк"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/bank.jpg",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/bank.jpg",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -154,7 +154,7 @@ const defaultContacts = {
 
     99999999: {
         Name: translateText("Информатор"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/inform.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/inform.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -162,7 +162,7 @@ const defaultContacts = {
 
     99999998: {
         Name: translateText("Склад"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/sklad.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/sklad.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -170,7 +170,7 @@ const defaultContacts = {
 
     99999997: {
         Name: translateText("Аукцион"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/auc.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/auc.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -178,7 +178,7 @@ const defaultContacts = {
 
     99999996: {
         Name: "News",
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/news.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/news.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -186,7 +186,7 @@ const defaultContacts = {
 
     99999995: {
         Name: translateText("Арендатор"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/rent.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/rent.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -194,7 +194,7 @@ const defaultContacts = {
 
     99999994: {
         Name: translateText("Палатка"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/tent.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/tent.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -202,7 +202,7 @@ const defaultContacts = {
 
     99999993: {
         Name: translateText("Подсказки"),
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/help.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/help.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
@@ -210,14 +210,14 @@ const defaultContacts = {
 
     99999992: {
         Name: "Tinder",
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/tinder.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/tinder.png",
         IsSystem: true,
         IsNotShow: true,
         NoSend: true
     },
     99999991: {
         Name: "Прямой эфир",
-        Avatar: "https://cloud.redage.net/cloud/img/iphone/efir.png",
+        Avatar: "https://cdn-ra3.ragemp.su/cloud/img/iphone/efir.png",
         IsSystem: true,
         IsNotShow: false,
         NoSend: false
