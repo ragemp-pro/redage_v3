@@ -93,7 +93,7 @@ const onScreen = async () => {
     nameImg = Date.now() + ".jpg";
     mp.gui.takeScreenshot(nameImg, 0, 100, 0);
 
-    screenshotsBrowser = mp.browsers.new(`screenshots://${nameImg}`);
+    screenshotsBrowser = mp.browsers.new(`http://screenshots/${nameImg}`);
 
     onDestroy (true);
 

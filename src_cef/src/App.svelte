@@ -1,7 +1,7 @@
 <script>
 	let isMultiplayer = window.mp && window.mp.events;
 
-	document.api = "https://api.redage.net/";
+	document.imgurClientId = "ec243f05d2bc44b";
 
 	import 'lang/index'
 	//import '@/advertisement';

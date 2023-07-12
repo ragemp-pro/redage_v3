@@ -64,24 +64,41 @@ window.screenshot_getbase64 = async (url) => {
 }
 
 const getUrl = (dataURL) => {
-    axios.post(document.api + 'save', qs.stringify({
-        base64image: dataURL
-    }), config)
-    .then(function (response) {
-        if (response && response.data) {                
-            response = response.data;
+    uploadToImgur(dataURL)
+    .then(() => {
+        console.log("Image uploaded to Imgur successfully");
+    })
+    .catch((error) => {
+        console.error("Failed to upload image to Imgur:", error);
+        window.notificationAdd(4, 9, error.message, 3000);
+     });
+};
 
-            if (response.link) {
-                window.listernEvent ('cameraLink', response.link);
-            } else if (response.error) {
-                window.notificationAdd(4, 9, response.error, 3000);
+const uploadToImgur = async (base64Image) => {
+    try
+    {
+        const response = await axios.post(
+            "https://api.imgur.com/3/image",
+            {
+                image: base64Image,
+            },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Client-ID ${document.imgurClientId}`,
+                },
             }
+        );
+
+        if (response.status === 200)
+        {
+            const link = response.data.data.link;
+            window.listernEvent("cameraLink", link);
         }
-    })
-    axios.post(document.api + 'test')
-    .then(function (response) {
-        if (response && response.data) {                
-            response = response.data;
-        }
-    })
-}
+
+    }
+    catch (error)
+    {
+        console.error("Failed to upload image to Imgur:", error);
+    }
+};
