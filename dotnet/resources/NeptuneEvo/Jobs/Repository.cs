@@ -1,5 +1,4 @@
-﻿using System;
-using GTANetworkAPI;
+﻿using GTANetworkAPI;
 using Localization;
 using NeptuneEvo.Character;
 using NeptuneEvo.Core;
@@ -10,7 +9,6 @@ using NeptuneEvo.Players.Models;
 using NeptuneEvo.VehicleData.LocalData;
 using NeptuneEvo.VehicleData.LocalData.Models;
 using Redage.SDK;
-using Renci.SshNet.Common;
 
 namespace NeptuneEvo.Jobs
 {
