@@ -11,3 +11,4 @@ client_packages/game_resources/dlcpacks/*
 
 server_exceptions.txt
 server_logs.txt
+coords.txt
