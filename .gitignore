@@ -12,3 +12,10 @@ client_packages/game_resources/dlcpacks/*
 server_exceptions.txt
 server_logs.txt
 coords.txt
+settings/mainDB.json
+client_packages/interface/build/bundle.js.map
+client_packages/interface/build/bundle.js
+client_packages/interface/build/bundle.css.map
+client_packages/interface/build/bundle.css
+client_packages/interface/index.html
+client_packages/main.js
