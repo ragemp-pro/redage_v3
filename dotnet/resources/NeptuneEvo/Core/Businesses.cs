@@ -3089,21 +3089,25 @@ namespace NeptuneEvo.Core
                 cmd.Parameters.AddWithValue("@val10", taxes);
                 MySQL.Query(cmd);
 
-                Business biz = new Business(lastBizID, "Государство", govPrice, type, products_list, pos, new Vector3(), bankID, -1, new List<Order>(), taxes);
-                biz.UpdateLabel();
-                BizList.TryAdd(lastBizID, biz);
-
-                if (type == 6)
+                NAPI.Task.Run(() =>
                 {
-                    using MySqlCommand cmd1 = new MySqlCommand
+                    Business biz = new Business(lastBizID, "Государство", govPrice, type, products_list, pos, new Vector3(), bankID, -1, new List<Order>(), taxes);
+                    biz.UpdateLabel();
+                    BizList.TryAdd(lastBizID, biz);
+
+                    if (type == 6)
                     {
-                        CommandText = "INSERT INTO `weapons`(`id`,`lastserial`) VALUES(@val0,@val1)"
-                    };
-                    cmd1.Parameters.AddWithValue("@val0", biz.ID);
-                    cmd1.Parameters.AddWithValue("@val1", 0);
-                    MySQL.Query(cmd1);
-                }
-                Notify.Send(player, NotifyType.Info, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.BizCreated), 3000);
+                        using MySqlCommand cmd1 = new MySqlCommand
+                        {
+                            CommandText = "INSERT INTO `weapons`(`id`,`lastserial`) VALUES(@val0,@val1)"
+                        };
+                        cmd1.Parameters.AddWithValue("@val0", biz.ID);
+                        cmd1.Parameters.AddWithValue("@val1", 0);
+                        MySQL.Query(cmd1);
+                    }
+
+                    Notify.Send(player, NotifyType.Info, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.BizCreated, biz.ID), 3000);
+                });
             }
             catch (Exception e)
             {

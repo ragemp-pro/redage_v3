@@ -2718,11 +2718,15 @@ namespace NeptuneEvo.Houses
                 }
                 int bankId = await MoneySystem.Bank.Create(string.Empty, 2, 0);
                 DimensionID++;
-                House new_house = new House(GetUID(), string.Empty, type, player.Position - new Vector3(0, 0, 1.12), price, false, 0, bankId, new Dictionary<string, ResidentData>(), DimensionID, false, false);
-                new_house.Create();
-                FurnitureManager.Create(new_house.ID);
-                new_house.CreateInterior();
-                Houses.Add(new_house);
+
+                NAPI.Task.Run(() =>
+                {
+                    House new_house = new House(GetUID(), string.Empty, type, player.Position - new Vector3(0, 0, 1.12), price, false, 0, bankId, new Dictionary<string, ResidentData>(), DimensionID, false, false);
+                    new_house.Create();
+                    FurnitureManager.Create(new_house.ID);
+                    new_house.CreateInterior();
+                    Houses.Add(new_house);
+                });
             }
             catch (Exception e)
             {
