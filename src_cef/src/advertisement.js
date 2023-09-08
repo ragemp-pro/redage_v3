@@ -35,8 +35,8 @@ window.inAdvertisement = (event1, event2) => {
 import axios from 'axios';
 import { accountData } from 'store/account';
 
-const code = 'UA-138889592-2';
-const ec = 'ra_game';
+const code = '';
+const ec = '';
 
 let data = {};
 accountData.subscribe(value => {

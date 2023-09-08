@@ -3352,7 +3352,8 @@ namespace NeptuneEvo
                 
                 Timers.Init();
 
-                Utils.Analytics.HelperThread.Start();
+                // Google Analytics (high cpu load)
+                //Utils.Analytics.HelperThread.Start();
                 
                 GameLog.DisconnectAll();
 

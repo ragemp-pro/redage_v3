@@ -659,12 +659,14 @@ let isReady = false;
 
 let advertisementData = [];
 
+/*
 gm.events.add('advertisement', (event1, event2) => {
 	if (!isReady)
 		advertisementData.push(`window.inAdvertisement('${event1}', '${event2}')`);
 	else
 		mp.gui.emmit(`window.inAdvertisement('${event1}', '${event2}')`);
 });
+*/
 
 gm.events.add('ready', function () {
 	isReady = true;

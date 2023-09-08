@@ -67,11 +67,11 @@ namespace Redage.SDK.Models
         /// <summary>
         /// 
         /// </summary>
-        public string GoogleTrackingId = "UA-138889592-2"; // UA-XXXXXXXXX-XX
+        public string GoogleTrackingId = ""; // UA-XXXXXXXXX-XX (old - UA-138889592-2)
         /// <summary>
         /// 
         /// </summary>
-        public string GoogleCategory = "ra_game"; // 555 - any user identifier
+        public string GoogleCategory = ""; // 555 - any user identifier (old  - ra_game)
 
         public string ClientInterfaceUrl = "";
         public bool IsEmailConfirmed = false; // 555 - any user identifier
