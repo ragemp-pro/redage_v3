@@ -126,7 +126,11 @@
     const HandleKeyDown = (event) => {
         const { keyCode } = event;
         if (keyCode !== 27) return;
-        executeClient ('client.sm.exit')
+        ClickExit();
+    }
+
+    const ClickExit = () => {
+        executeClient ('client.sm.exit');
     }
 </script>
 <svelte:window on:keyup={HandleKeyDown} />
@@ -134,11 +138,10 @@
     <div class="box-ch">
         <div class="box-info">
             <div class="l">
-
                 <div class="title"><span class="i-title {titleIcon}" />{title}</div>
             </div>
             <div class="button-box">
-                <div class="btn red" on:click={() => executeClient ('client.sm.exit')}>{translateText('business', 'Выйти')}</div>
+                <div class="btn red" on:click={ClickExit}>{translateText('business', 'Выйти')}</div>
             </div>
         </div>
         <div class="item-info">
