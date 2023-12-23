@@ -900,15 +900,15 @@ namespace NeptuneEvo.Chars
         { 
             { true, new Dictionary<ClothesComponent, int>() 
                 {//Man 
-                    { ClothesComponent.Hat, 195 }, //+
+                    { ClothesComponent.Hat, 214 }, //+
                     { ClothesComponent.Torsos, 211 }, 
-                    { ClothesComponent.Legs, 177 },  //+
-                    { ClothesComponent.Shoes, 135 }, //+
-                    { ClothesComponent.Accessories, 175 }, //+
-                    { ClothesComponent.BodyArmors, 58 }, 
-                    { ClothesComponent.Tops, 495 }, // +
+                    { ClothesComponent.Legs, 193 },  //+
+                    { ClothesComponent.Shoes, 145 }, //+
+                    { ClothesComponent.Accessories, 178 }, //+
+                    { ClothesComponent.BodyArmors, 62 }, 
+                    { ClothesComponent.Tops, 524 }, // +
                     { ClothesComponent.Undershirts, 199 }, 
-                    { ClothesComponent.Masks, 226 },//+
+                    { ClothesComponent.Masks, 237 },//+
                     { ClothesComponent.Ears, 42 }, 
                     { ClothesComponent.Watches, 47}, //+
                     { ClothesComponent.Glasses, 53 }, 
@@ -922,18 +922,18 @@ namespace NeptuneEvo.Chars
             }, 
             { false, new Dictionary<ClothesComponent, int>() 
                 { 
-                    { ClothesComponent.Hat, 194 }, //+
+                    { ClothesComponent.Hat, 213 }, //+
                     { ClothesComponent.Torsos, 245 }, 
-                    { ClothesComponent.Legs, 191 },  //+
-                    { ClothesComponent.Shoes, 142 }, //+
-                    { ClothesComponent.Accessories, 145 }, //a
+                    { ClothesComponent.Legs, 207 },  //+
+                    { ClothesComponent.Shoes, 154 }, //+
+                    { ClothesComponent.Accessories, 148 }, //a
                     { ClothesComponent.BodyArmors, 58 }, 
-                    { ClothesComponent.Tops, 534 }, //+
+                    { ClothesComponent.Tops, 565 }, //+
                     { ClothesComponent.Undershirts, 245 }, 
-                    { ClothesComponent.Masks,  227}, //+
+                    { ClothesComponent.Masks,  238}, //+
                     { ClothesComponent.Ears, 22 }, 
                     { ClothesComponent.Watches, 36 }, //+
-                    { ClothesComponent.Glasses, 55 }, //+
+                    { ClothesComponent.Glasses, 58 }, //+
 
                     { ClothesComponent.Bugs, 111 },     
 
