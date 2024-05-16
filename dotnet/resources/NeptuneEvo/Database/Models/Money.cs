@@ -108,7 +108,7 @@ namespace NeptuneEvo.Database.Models
                 {
                     await db.Characters
                         .Where(v => v.Uuid == Convert.ToInt32(saveData[0]))
-                        .Set(v => v.Money, Convert.ToInt32(saveData[1]))
+                        .Set(v => v.Money, Convert.ToInt64(saveData[1]))
                         .UpdateAsync();
                 }
             }

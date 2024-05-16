@@ -117,7 +117,7 @@ namespace NeptuneEvo.Players.Models
         public bool IsInAirDropZone { get; set; } = false;
         public int CurrentBankTransferSumAccBankInfo { get; set; } = 0;
         public int CurrentBankTransferBankInfo { get; set; } = 0;
-        public int CurrentBankTransferSum { get; set; } = 0;
+        public long CurrentBankTransferSum { get; set; } = 0;
         public byte IsCalledGovMember { get; set; } = 0;
         public bool WasOnStartCapture { get; set; } = false;
         public int IsInBoomboxShape { get; set; } = -1;

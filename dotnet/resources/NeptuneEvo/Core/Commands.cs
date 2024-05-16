@@ -3662,7 +3662,7 @@ namespace NeptuneEvo.Core
             }
         }
         [Command(AdminCommands.Givemoney)]
-        public static void CMD_adminGiveMoney(ExtPlayer player, int id, int money)
+        public static void CMD_adminGiveMoney(ExtPlayer player, int id, long money)
         {
             try
             {
@@ -3676,7 +3676,7 @@ namespace NeptuneEvo.Core
             }
         }
         [Command(AdminCommands.Offgivemoney)]
-        public static void CMD_adminOffGiveMoney(ExtPlayer player, string name, int money)
+        public static void CMD_adminOffGiveMoney(ExtPlayer player, string name, long money)
         {
             try
             {
@@ -3878,12 +3878,12 @@ namespace NeptuneEvo.Core
 
                                     using DataTable data = MySQL.QueryRead(cmd2);
                                     List<int> ownerBizs = new List<int>();
-                                    int money = 0;
+                                    long money = 0;
 
                                     foreach (DataRow Row in data.Rows)
                                     {
                                         ownerBizs = JsonConvert.DeserializeObject<List<int>>(Row["biz"].ToString());
-                                        money = Convert.ToInt32(Row["money"]);
+                                        money = Convert.ToInt64(Row["money"]);
                                     }
 
                                     ownerBizs.Remove(biz.ID);

@@ -29,8 +29,8 @@
 	const onHandleInput = (value, num) => {
         value = Math.round(value.replace(/\D+/g, ""));
         if (value < 1) value = 1;
-        else if (num === 6 && value > 9999999) value = 9999999;
-        else if (num === 10 && value > 99999999) value = 99999999;
+        else if (num === 6 && value > 9999999999999999999) value = 9999999999999999999;
+        else if (num === 10 && value > 9999999999999999999) value = 9999999999999999999;
     }
 </script>
 
@@ -62,9 +62,9 @@
         <div class="inp_atm dollar">
             <div class="after {icon}" />
             {#if icon == "card"}
-            <input bind:value={value} type="text" on:input={(event) => onHandleInput (event.target.value, 10)} placeholder={placeholder} maxLength={10}/>
+            <input bind:value={value} type="text" on:input={(event) => onHandleInput (event.target.value, 10)} placeholder={placeholder} maxLength={20}/>
             {:else}
-            <input bind:value={value} type="text" on:input={(event) => onHandleInput (event.target.value, 6)} placeholder={placeholder} maxLength={8}/>
+            <input bind:value={value} type="text" on:input={(event) => onHandleInput (event.target.value, 6)} placeholder={placeholder} maxLength={18}/>
             {/if}
         </div>
 

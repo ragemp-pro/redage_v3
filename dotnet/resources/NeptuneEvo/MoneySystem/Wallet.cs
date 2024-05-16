@@ -17,13 +17,13 @@ namespace NeptuneEvo.MoneySystem
     {
         private static readonly nLog Log = new nLog("MoneySystem.Wallet");
 
-        public static bool Change(ExtPlayer player, int amount, bool isDisconnect = false)
+        public static bool Change(ExtPlayer player, long amount, bool isDisconnect = false)
         {
             try
             {
                 var characterData = player.GetCharacterData();
                 if (characterData == null) return false;
-                int temp = (int)characterData.Money + amount;
+                long temp = characterData.Money + amount;
                 if (temp < 0) return false;
                 if (amount < 0 && Admin.IsServerStoping) return false;
                 characterData.Money = temp;

@@ -1782,7 +1782,7 @@ namespace NeptuneEvo.Organizations
                     case "put_stock":
                         string item = sessionData.SelectData.SelectedStock;
                         int stockContains = 0;
-                        int playerHave = 0;
+                        long playerHave = 0;
                         if (item == "mats")
                         {
                             stockContains = organizationData.Materials;
@@ -1806,7 +1806,7 @@ namespace NeptuneEvo.Organizations
                         else if (item == "money")
                         {
                             stockContains = organizationData.Money;
-                            playerHave = (int)characterData.Money;
+                            playerHave = characterData.Money;
                         }
                         else if (item == "medkits")
                         {
@@ -1895,7 +1895,7 @@ namespace NeptuneEvo.Organizations
                         else if (item == "money")
                         {
                             stockContains = organizationData.Money;
-                            playerHave = (int)characterData.Money;
+                            playerHave = characterData.Money;
                         }
                         else if (item == "medkits")
                         {

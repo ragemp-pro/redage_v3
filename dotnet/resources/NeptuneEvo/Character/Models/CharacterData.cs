@@ -65,7 +65,7 @@ namespace NeptuneEvo.Character.Models
         /// <summary>
         /// 
         /// </summary>
-        public int BankMoney { get; set; } = 0;
+        public long BankMoney { get; set; } = 0;
         /// <summary>
         /// 
         /// </summary>

@@ -19,7 +19,7 @@ namespace Database
 	/// <summary>
 	/// Database       : ra3_main
 	/// Data Source    : 127.0.0.1
-	/// Server Version : 5.5.5-10.4.12-MariaDB-log
+	/// Server Version : 5.5.5-10.4.32-MariaDB
 	/// </summary>
 	public partial class ServerBD : LinqToDB.Data.DataConnection
 	{
@@ -327,8 +327,8 @@ namespace Database
 		[Column("armor"),           Nullable          ] public int?      Armor             { get; set; } // int(11)
 		[Column("lvl"),             Nullable          ] public int?      Lvl               { get; set; } // int(11)
 		[Column("exp"),             Nullable          ] public int?      Exp               { get; set; } // int(11)
-		[Column("money"),           Nullable          ] public int?      Money             { get; set; } // int(11)
-		[Column("bank"),            Nullable          ] public int?      Bank              { get; set; } // int(11)
+		[Column("money"),           Nullable          ] public long?      Money             { get; set; } // int(11)
+		[Column("bank"),            Nullable          ] public long?      Bank              { get; set; } // int(11)
 		[Column("work"),            Nullable          ] public int?      Work              { get; set; } // int(11)
 		[Column("fraction"),        Nullable          ] public int?      Fraction          { get; set; } // int(11)
 		[Column("fractionlvl"),     Nullable          ] public int?      Fractionlvl       { get; set; } // int(11)
@@ -562,6 +562,8 @@ namespace Database
 		[Column("rank"),        Nullable] public int?   Rank     { get; set; } // int(11)
 		[Column("payday"),   NotNull    ] public int    Payday   { get; set; } // int(11)
 		[Column("name"),     NotNull    ] public string Name     { get; set; } // varchar(50)
+		[Column("clothesm"), NotNull    ] public string Clothesm { get; set; } // text
+		[Column("clothesf"), NotNull    ] public string Clothesf { get; set; } // text
 		[Column("access"),   NotNull    ] public string Access   { get; set; } // text
 	}
 
@@ -735,7 +737,7 @@ namespace Database
 		[Column("id"),      PrimaryKey, Identity] public int    Id      { get; set; } // int(11)
 		[Column("type"),    NotNull             ] public sbyte  Type    { get; set; } // tinyint(4)
 		[Column("holder"),  NotNull             ] public string Holder  { get; set; } // varchar(256)
-		[Column("balance"), NotNull             ] public int    Balance { get; set; } // int(11)
+		[Column("balance"), NotNull             ] public long    Balance { get; set; } // int(11)
 	}
 
 	[Table("notes")]

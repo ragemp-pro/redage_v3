@@ -19,7 +19,7 @@ namespace Database
 	/// <summary>
 	/// Database       : ra3_mainconfig
 	/// Data Source    : 127.0.0.1
-	/// Server Version : 5.5.5-10.4.12-MariaDB-log
+	/// Server Version : 5.5.5-10.4.32-MariaDB
 	/// </summary>
 	public partial class ConfigBD : LinqToDB.Data.DataConnection
 	{

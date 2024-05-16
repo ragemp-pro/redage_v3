@@ -1063,7 +1063,7 @@ namespace NeptuneEvo.Core
             }
         }
 
-        public static void giveBankMoney(ExtPlayer player, int bankid, int amount)
+        public static void giveBankMoney(ExtPlayer player, int bankid, long amount)
         {
             try
             {
@@ -1113,7 +1113,7 @@ namespace NeptuneEvo.Core
                 Log.Write($"giveBankMoney Exception: {e.ToString()}");
             }
         }
-        public static void giveMoney(ExtPlayer player, ExtPlayer target, int amount)
+        public static void giveMoney(ExtPlayer player, ExtPlayer target, long amount)
         {
             try
             {
@@ -1137,7 +1137,7 @@ namespace NeptuneEvo.Core
                 Log.Write($"giveMoney Exception: {e.ToString()}");
             }
         }
-        public static void OffGiveMoney(ExtPlayer player, string name, int amount)
+        public static void OffGiveMoney(ExtPlayer player, string name, long amount)
         {
             try
             {
@@ -1185,7 +1185,7 @@ namespace NeptuneEvo.Core
                             return;
                         }
                         
-                        var money = Convert.ToInt32(character.Money) + amount;
+                        var money = character.Money + amount;
                         if (money < 0) 
                             money = 0;
                         
@@ -2574,9 +2574,9 @@ namespace NeptuneEvo.Core
                 
                 MoneySystem.Bank.Data bankAcc = MoneySystem.Bank.Get(Main.PlayerBankAccs[target.Name]);
                 
-                int bankMoney = 0;
+                long bankMoney = 0;
                 if (bankAcc != null) 
-                    bankMoney = (int)bankAcc.Balance;
+                    bankMoney = bankAcc.Balance;
                 
                 Notify.Send(player, NotifyType.Warning, NotifyPosition.BottomCenter, $"У {target.Name} {MoneySystem.Wallet.Format(targetCharacterData.Money)}$ | Bank: {MoneySystem.Wallet.Format(bankMoney)}", 3000);
                 Admin.AdminLog(characterData.AdminLVL, $"{player.Name} ({player.Value}) проверил денежные средства {target.Name} ({target.Value})");

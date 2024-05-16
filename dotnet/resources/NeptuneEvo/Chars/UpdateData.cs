@@ -42,7 +42,7 @@ namespace NeptuneEvo.Chars
                 Log.Write($"RedBucks Exception: {e.ToString()}");
             }
         }
-        public static byte CanIChange(ExtPlayer player, int value, bool errortext = false)
+        public static byte CanIChange(ExtPlayer player, long value, bool errortext = false)
         {
             try
             {

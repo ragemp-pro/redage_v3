@@ -175,8 +175,8 @@ namespace NeptuneEvo.Accounts.Merger
                     itemsData = new Dictionary<string, string>();
                     Trigger.ClientEvent(player, "client.merger.progress", num * 22);
                     List<int> BizIds = JsonConvert.DeserializeObject<List<int>>(character.Biz);
-                    int MoneyTo = 0;
-                    int MoneyToBiz = await MergerToBiz(db, serverId, character.Biz);
+                    long MoneyTo = 0;
+                    long MoneyToBiz = await MergerToBiz(db, serverId, character.Biz);
                     if (MoneyToBiz > 0)
                     {
                         MoneyTo += MoneyToBiz;
@@ -217,7 +217,7 @@ namespace NeptuneEvo.Accounts.Merger
                     string OldFirstname = character.Firstname;
                     string OldLastname = character.Lastname;
 
-                    MoneyTo += Convert.ToInt32(character.Money);
+                    MoneyTo += Convert.ToInt64(character.Money);
                     
                     var ch = new Characters
                     {
@@ -321,12 +321,12 @@ namespace NeptuneEvo.Accounts.Merger
                 Log.Write($"MergerAuntification Exception: {e.ToString()}");
             }
         }
-        public static async Task<int> MergerToBiz(ServerBD db, int serverId, string biz)
+        public static async Task<long> MergerToBiz(ServerBD db, int serverId, string biz)
         {
             try
             {
                 List<int> BizIds = JsonConvert.DeserializeObject<List<int>>(biz);
-                int MoneyTo = 0;
+                long MoneyTo = 0;
                 if (BizIds.Count > 0)
                 {
                     var businessesData = await db.Businesses
@@ -370,7 +370,7 @@ namespace NeptuneEvo.Accounts.Merger
                 return 0;
             }
         }
-        public static async Task<int> MergerToChar(ExtPlayer player, ServerBD db, ServerBD saveDB, int serverId, int MoneyTo, Characters character, int num)
+        public static async Task<int> MergerToChar(ExtPlayer player, ServerBD db, ServerBD saveDB, int serverId, long MoneyTo, Characters character, int num)
         {
             try
             {
@@ -416,7 +416,7 @@ namespace NeptuneEvo.Accounts.Merger
                 Trigger.ClientEvent(player, "client.merger.progress", num * 25);
                 if (character.Hotel != -1)
                 {
-                    MoneyTo += (int)(Main.HotelRent * character.Hotelleft);
+                    MoneyTo += (long)(Main.HotelRent * character.Hotelleft);
                 }
                 
                 int newsimint = Players.Phone.Sim.Repository.GenerateSimCard();
@@ -429,7 +429,7 @@ namespace NeptuneEvo.Accounts.Merger
                     Armor = character.Armor,
                     Lvl = character.Lvl,
                     Exp = character.Exp,
-                    Money = Convert.ToInt32(MoneyTo / 10),
+                    Money = Convert.ToInt64(MoneyTo / 10),
                     Bank = bankID,
                     Work = character.Work,
                     Drugaddi = character.Drugaddi,
@@ -577,7 +577,7 @@ namespace NeptuneEvo.Accounts.Merger
             }
         }
 
-        public static async Task<Dictionary<string, string>> MergerToOrganization(ExtPlayer player, ServerBD db, ServerBD saveDB, int serverId, string Name, int moneyTo, int charId, Characters character)
+        public static async Task<Dictionary<string, string>> MergerToOrganization(ExtPlayer player, ServerBD db, ServerBD saveDB, int serverId, string Name, long moneyTo, int charId, Characters character)
         {
             try
             {

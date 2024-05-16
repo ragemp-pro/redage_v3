@@ -178,7 +178,7 @@ namespace NeptuneEvo.MoneySystem
                     
                 var updateBank = db.Money
                     .Where(m => m.Id == bankId)
-                    .Set(m => m.Balance, Convert.ToInt32(bank.Balance));
+                    .Set(m => m.Balance, Convert.ToInt64(bank.Balance));
 
                 if (bank.IsSaveHolder)
                     updateBank = updateBank.Set(b => b.Holder, bank.Holder);
@@ -240,7 +240,7 @@ namespace NeptuneEvo.MoneySystem
                 {
                     Type = (sbyte)type,
                     Holder = holder,
-                    Balance = (int)balance,
+                    Balance = balance,
                 });
 
                 Data data = new Data();
@@ -386,6 +386,9 @@ namespace NeptuneEvo.MoneySystem
             new Vector3(-1285.7714, -572.65314, 30f),
             new Vector3(-433.14172, 265.18628, 83f),
             new Vector3(-717.572, -915.6549, 19f),//new
+            new Vector3(-1041.7776, -2778.1135, 21.36169f),//new аэропорт
+            new Vector3(-1070.887, -2761.4348, 21.361687f),//new аэропорт
+            new Vector3(-1080.6288, -2844.5415, 21.361637f),//new аэропорт
         };
         #endregion ATMs List
 
@@ -418,11 +421,6 @@ namespace NeptuneEvo.MoneySystem
                 if (characterData.WantedLVL != null && characterData.WantedLVL.Level > 0)
                 {
                     Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.WantedNOATM), 3000);
-                    return;
-                }
-                if (characterData.Bank == 0 || !Bank.Accounts.ContainsKey(characterData.Bank))
-                {
-                    Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.NoBanks), 3000);
                     return;
                 }
                 Trigger.ClientEvent(player, "setatm", characterData.Bank.ToString(), player.Name, Bank.GetBalance(characterData.Bank).ToString(), "");
@@ -484,16 +482,16 @@ namespace NeptuneEvo.MoneySystem
                 }
                 int type = sessionData.ATMData.Type;
                 string data = Convert.ToString(args[0]);
-                int amount;
-                int myamount;
-                if (!int.TryParse(data, out amount)) return;
+                long amount;
+                long myamount;
+                if (!long.TryParse(data, out amount)) return;
                 switch (type)
                 {
                     case 0:
                         Trigger.ClientEvent(player, "atmClose");
                         myamount = Math.Abs(amount);
                         if (myamount <= 0) return;
-                        if (myamount > characterData.Money) myamount = (int)characterData.Money;
+                        if (myamount > characterData.Money) myamount = characterData.Money;
                         if (myamount > 0)
                         {
                             if (Wallet.Change(player, -myamount))
@@ -665,7 +663,7 @@ namespace NeptuneEvo.MoneySystem
                         }
                         break;
                     case 4:
-                        if (!Bank.Accounts.ContainsKey(amount) || amount <= 0)
+                        if (!Bank.Accounts.ContainsKey((int)amount) || amount <= 0L)
                         {
                             Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.CantFindBankAccount), 3000);
                             Trigger.ClientEvent(player, "closeatm");
@@ -692,7 +690,7 @@ namespace NeptuneEvo.MoneySystem
                             Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.NextTransactionSoon), 3000);
                             return;
                         }
-                        int bank = sessionData.ATMData.Amount;
+                        int bank = (int)sessionData.ATMData.Amount;
                         if (!Bank.Accounts.ContainsKey(bank) || bank <= 0)
                         {
                             Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.CantFindBankAccount), 3000);

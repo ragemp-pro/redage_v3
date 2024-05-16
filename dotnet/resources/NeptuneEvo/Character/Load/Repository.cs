@@ -81,7 +81,7 @@ namespace NeptuneEvo.Character.Load
                         Armor = (int)character.Armor,
                         LVL = (int)character.Lvl,
                         EXP = (int)character.Exp,
-                        Money = (int)character.Money,
+                        Money = (long)character.Money,
                         Bank = (int)character.Bank,
                         WorkID = (int)character.Work,
                         DrugsAddiction = Convert.ToUInt16(character.Drugaddi),

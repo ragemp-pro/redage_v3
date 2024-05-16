@@ -6,8 +6,8 @@ namespace NeptuneEvo.Players.Phone.Forbes.Models
     {
         public List<ForbesList> List = new List<ForbesList>();
         public string Name = "";
-        public uint Money = 0;
-        public uint SumMoney = 0;
+        public long Money = 0;
+        public long SumMoney = 0;
         public int Lvl = 0;
         public bool IsShowForbes = false;
     }

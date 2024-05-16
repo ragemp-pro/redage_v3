@@ -4,6 +4,6 @@
     {
         public int Type { get; set; } = -1;
         public int BizID { get; set; } = -1;
-        public int Amount { get; set; } = 0;
+        public long Amount { get; set; } = 0;
     }
 }
