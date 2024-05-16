@@ -59,8 +59,8 @@ namespace NeptuneEvo.Fractions
         { 
             try 
             { 
-                //Main.CreateBlip(new Main.BlipData(526, "Sheriff", FirstPosition, 38, true)); 
-                //Main.CreateBlip(new Main.BlipData(526, "Sheriff", SecondPosition, 38, true)); 
+                Main.CreateBlip(new Main.BlipData(526, "Sheriff", FirstPosition, 38, true)); 
+                Main.CreateBlip(new Main.BlipData(526, "Sheriff", SecondPosition, 38, true)); 
  
                 CustomColShape.CreateCylinderColShape(FirstArrestPosition, 6, 3, 0, ColShapeEnums.FractionSheriffArrest, 1); 
                 CustomColShape.CreateCylinderColShape(SecondArrestPosition, 7, 3, 0, ColShapeEnums.FractionSheriffArrest, 2); 
