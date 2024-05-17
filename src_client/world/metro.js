@@ -182,7 +182,7 @@ gm.events.add("metroEnter", () => {
 
 gm.events.add("playerEnterColshape", (shape) => {
     try {
-        if (!global.loggedin || true) 
+        if (!global.loggedin) 
             return;
         if (metroData.enterColshapes.includes(shape)) {
             metroData.metroColshape = shape;
@@ -202,7 +202,7 @@ gm.events.add("playerEnterColshape", (shape) => {
 });
 gm.events.add("playerExitColshape", (shape) => {
     try {
-        if (!global.loggedin || true) 
+        if (!global.loggedin) 
             return;
 
         if (metroData.enterColshapes.includes(shape)) {
@@ -266,19 +266,28 @@ const StartMetro = async (stationData) => {
             metroData.isUsingMetro = false;
             return;
         }
+        
         global.isSartMetro = true;
-        //mp.api.setDiscordStatus(translateText("Едет на метро"));
+        gm.discord(translateText("Едет на метро"));
         mp.events.call("setTraffic", 3);
+        
         DestroyMetro ();
         Natives.DELETE_ALL_TRAINS ();
+
+        // Подгрузка нужных моделей
+        //await global.loadModel("s_m_m_lsmetro_01");
         await global.loadModel("metrotrain");
-        await global.loadModel("s_m_m_lsmetro_01");
-        metroTrain = mp.game.vehicle.createMissionTrain(24, stationData.position.x, stationData.position.y, stationData.position.z, true);
+
+        // Создание нужного состава поезда метро
+        //metroTrain = mp.game.vehicle.createMissionTrain(24, stationData.position.x, stationData.position.y, stationData.position.z, true);
+        metroTrain = mp.game.vehicle.createMissionTrain(27, stationData.position.x, stationData.position.y, stationData.position.z, true);
+
         global.localplayer.setIntoVehicle(metroTrain, 0);
         if (metroTrain) {
             Natives.SET_TRAIN_SPEED (metroTrain, 14.5);
             Natives.SET_TRAIN_CRUISE_SPEED (metroTrain, 14.5);
         }
+
         await global.wait(1000);
         isStart = true;
     }

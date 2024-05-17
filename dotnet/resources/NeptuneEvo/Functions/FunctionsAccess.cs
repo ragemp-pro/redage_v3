@@ -17,7 +17,7 @@ namespace NeptuneEvo.Functions
         private static Dictionary<string, bool> SystemState = new Dictionary<string, bool>()
         {
             { "DeleteCharacter", true },
-            { "metro", false },
+            //{ "metro", false },
             { "PayDayBonus", false },
             //{"ClothesShop", false }
         };
