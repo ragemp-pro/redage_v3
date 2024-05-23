@@ -603,17 +603,18 @@ namespace Database
 	[Table("fractionvehicles")]
 	public partial class Fractionvehicles
 	{
-		[Column("fraction"),    NotNull] public int    Fraction    { get; set; } // int(11)
-		[Column("number"),      NotNull] public string Number      { get; set; } // tinytext
-		[Column("model"),       NotNull] public string Model       { get; set; } // tinytext
-		[Column("position"),    NotNull] public string Position    { get; set; } // varchar(100)
-		[Column("rotation"),    NotNull] public string Rotation    { get; set; } // varchar(100)
-		[Column("rank"),        NotNull] public int    Rank        { get; set; } // int(11)
-		[Column("defaultrank"), NotNull] public int    Defaultrank { get; set; } // int(11)
-		[Column("colorprim"),   NotNull] public int    Colorprim   { get; set; } // int(11)
-		[Column("colorsec"),    NotNull] public int    Colorsec    { get; set; } // int(11)
-		[Column("components"),  NotNull] public string Components  { get; set; } // varchar(2048)
-		[Column("isDimension"), NotNull] public sbyte  IsDimension { get; set; } // tinyint(4)
+		[Column("id"),          PrimaryKey, Identity] public int    Id          { get; set; } // int(11)
+		[Column("fraction"),    NotNull             ] public int    Fraction    { get; set; } // int(11)
+		[Column("number"),      NotNull             ] public string Number      { get; set; } // tinytext
+		[Column("model"),       NotNull             ] public string Model       { get; set; } // tinytext
+		[Column("position"),    NotNull             ] public string Position    { get; set; } // varchar(100)
+		[Column("rotation"),    NotNull             ] public string Rotation    { get; set; } // varchar(100)
+		[Column("rank"),        NotNull             ] public int    Rank        { get; set; } // int(11)
+		[Column("defaultrank"), NotNull             ] public int    Defaultrank { get; set; } // int(11)
+		[Column("colorprim"),   NotNull             ] public int    Colorprim   { get; set; } // int(11)
+		[Column("colorsec"),    NotNull             ] public int    Colorsec    { get; set; } // int(11)
+		[Column("components"),  NotNull             ] public string Components  { get; set; } // varchar(2048)
+		[Column("isDimension"), NotNull             ] public sbyte  IsDimension { get; set; } // tinyint(4)
 	}
 
 	[Table("fractionvehiclesbackup")]
@@ -1202,6 +1203,12 @@ namespace Database
 		}
 
 		public static Fractions Find(this ITable<Fractions> table, int Id)
+		{
+			return table.FirstOrDefault(t =>
+				t.Id == Id);
+		}
+
+		public static Fractionvehicles Find(this ITable<Fractionvehicles> table, int Id)
 		{
 			return table.FirstOrDefault(t =>
 				t.Id == Id);
