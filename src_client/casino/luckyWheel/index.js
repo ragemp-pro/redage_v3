@@ -1,216 +1,147 @@
-const player = global.localplayer;
-let _lambo = null
-let _isShowCar = false
-let _wheelPos = new mp.Vector3(1109.76, 227.89, -49.64);
-
-let Keys = {
-	"ESC": 322, "BACKSPACE": 177, "E": 38, "ENTER": 18,	"LEFT": 174, "RIGHT": 175, "TOP": 27, "DOWN": 173
-}
-let _isRolling = false;
-
-let coordsWheel = new mp.Vector3(1111.052, 229.8579, -49.133);
-
-let model = mp.game.joaat('vw_prop_vw_luckywheel_02a')
-const _wheel = mp.objects.new(model,coordsWheel)
-mp.game.streaming.setModelAsNoLongerNeeded(model);
-_wheel.setHeading(0);
-
-function getDistAnim() {
-    return mp.game.joaat("MP_M_Freemode_01") === player.model ? 'anim_casino_a@amb@casino@games@lucky7wheel@male' :'anim_casino_a@amb@casino@games@lucky7wheel@female'
-}
-
-async function doRoll(){
-    if(!_isRolling){
-        _isRolling = true;
-        let lib = getDistAnim();
-        let anim = 'enter_right_to_baseidle';
-        loadtAnimDict(lib).then(async function(){
-            let pos = mp.game.ped.getAnimInitialOffsetPosition(lib, anim, 1111.052, 229.8492, -50.6409, 0, 0, 0, 0, 2)
-            let rotation =  mp.game.ped.getAnimInitialOffsetRotation(lib, anim, player.position, 0, 0, 0, 0, 2)
-            player.taskGoStraightToCoord(pos.x,  pos.y,  pos.z,  1.0,  5000,  rotation,  0.0)
-            let _isMoved = false
-            while (!_isMoved){
-                let coords = player.position;
-                if(coords.x >= (pos.x - 0.01) && coords.x <= (pos.x + 0.01) && coords.y >= (pos.y - 0.01) && coords.y <= (pos.y + 0.01) ){
-                    _isMoved = true
+const luckywheel = {
+    object: {
+        name: 'vw_prop_vw_luckywheel_02a',
+        pos: new mp.Vector3(1111.052, 229.8579, -49.133),
+        model: undefined,
+        isSpinning: false,
+        lastClickTime: 0,
+        animations: [
+            'Enter_to_ArmRaisedIDLE',
+            'ArmRaisedIDLE_to_SpinningIDLE_High',
+            'SpinningIDLE_High',
+            'Win_Big'
+        ],
+        getDictionary() {
+            return mp.players.local.getModel() == 1885233650 ? 'ANIM_CASINO_A@AMB@CASINO@GAMES@LUCKY7WHEEL@MALE' : 'ANIM_CASINO_A@AMB@CASINO@GAMES@LUCKY7WHEEL@FEMALE';
+        },
+        async spin(pos, isOwner) {
+            if (this.isSpinning) return;
+            this.isSpinning = true;
+            let spins = 320,
+                maxSpeed = 2.25;
+            const speed = maxSpeed / (spins * 2 + (pos + this.model.getRotation(1).y / 18) * 16 + 1);
+            mp.game.audio.playSoundFromCoord(1, 'Spin_Start', this.pos.x, this.pos.y, this.pos.z, 'dlc_vw_casino_lucky_wheel_sounds', true, 0, false);
+            while (true) {
+                if (spins <= 0) {
+                    maxSpeed -= speed;
+                    this.model.setRotation(0, this.model.getRotation(1).y - maxSpeed, 0, 2, true);
+                    if (maxSpeed <= 0) {
+                        this.model.setRotation(0, Math.round(this.model.getRotation(1).y), 0, 2, true);
+                        mp.game.audio.playSoundFromCoord(1, 'Win', this.pos.x, this.pos.y, this.pos.z, "dlc_vw_casino_lucky_wheel_sounds", true, 0, false);
+                        this.isSpinning = false;
+                        if (isOwner) {
+                            mp.events.callRemote('luckywheel.finishspin');
+                            mp.players.local.taskPlayAnim(this.getDictionary(), this.animations[3], 4, -1000, -1, 1048576, 0, false, true, false);
+                            while (true) {
+                                if (mp.players.local.isPlayingAnim(this.getDictionary(), this.animations[3], 3) && mp.players.local.getAnimCurrentTime(this.getDictionary(), this.animations[3]) > 0.75) {
+                                    mp.players.local.clearTasks();
+                                    break;
+                                }
+                                await mp.game.waitAsync(0);
+                            }
+                        }
+                        break;
+                    }
+                } else {
+                    spins--;
+                    this.model.setRotation(0, this.model.getRotation(1).y - maxSpeed, 0, 2, true);
                 }
-                await global.wait(1);
+                await mp.game.waitAsync(5);
             }
-            player.taskPlayAnim(lib, anim, 8.0, -8.0, -1, 0, 0, false, false, false)
-            while(player.isPlayingAnim(lib, anim, 3)){
-                mp.game.controls.disableAllControlActions(0)
-                await global.wait(1);
-            }
-            player.taskPlayAnim(lib, 'enter_to_armraisedidle', 8.0, -8.0, -1, 0, 0, false, false, false)
-            while(player.isPlayingAnim(lib, 'enter_to_armraisedidle', 3)){
-                mp.game.controls.disableAllControlActions(0)
-                await global.wait(1);
-            }
-            mp.events.callRemote("CASINO_LUCKYWHEEL:getLucky")
-            player.taskPlayAnim(lib, 'armraisedidle_to_spinningidle_high', 8.0, -8.0, -1, 0, 0, false, false, false)
-        })
-    }
-}
-
-
-gm.events.add({
-    // Menu Controls
-    'render': ()=>{
-		try 
-		{
-            if (!global.loggedin) return;
-			let coords = player.position;
-			if(mp.Vector3.Distance(coords, _wheelPos) < 1.5 && !_isRolling)  {
-				alert(translateText("Нажмите E, чтобы испытать свою удачу с вращением 1 раз 100,000$"))
-				if(mp.game.controls.isControlJustReleased(0, Keys['E'])){
-					doRoll()
-				}
-			}
-		}
-		catch (e) 
-		{
-			if(new Date().getTime() - global.trycatchtime["luckyWheel/index"] < 60000) return;
-			global.trycatchtime["luckyWheel/index"] = new Date().getTime();
-			mp.events.callRemote("client_trycatch", "luckyWheel/index", "render", e.toString());
-		}
+        }
     },
-    "CASINO_LUCKYWHEEL:rollFinished": function(){
-        _isRolling = false
+    interaction: {
+        pos: new mp.Vector3(1110.8710, 228.8737, -49.6358),
+        radius: 3,
+        sendNotify(text) {
+            mp.game.ui.setTextComponentFormat('STRING');
+            mp.game.ui.addTextComponentSubstringWebsite(text);
+            mp.game.ui.displayHelpTextFromStringLabel(0, true, true, 1000);
+        },
+        clearNotify() {
+            mp.game.ui.clearHelp(true);
+        },
+        isNear: false,
+        button: 0x45 // 'E'
     },
-    "CASINO_LUCKYWHEEL:doRoll": async function(_priceIndex){
-        try{
-            _isRolling = true;
+    onClick() {
+        if (luckywheel.object.isSpinning) {
+            mp.events.call('notify', 2, 9, 'Колесо удачи уже крутится!', 3000);
+            return;
+        }
 
-            _wheel.setHeading(-30.0);
-            _wheel.setRotation(0.0, 0.0, 0.0, 1, true)
-            let speedIntCnt = 1;
-            let rollspeed = 1.0;
-            let _winAngle = (_priceIndex - 1) * 18
-            let _rollAngle = _winAngle + (360 * 8)
-            let _midLength = (_rollAngle / 2)
-            let intCnt = 0
-            while(speedIntCnt > 0){
-                let retval = _wheel.getRotation(1)
-                if(_rollAngle > _midLength ){
-
-                    speedIntCnt = speedIntCnt + 1
+        if (new Date().getTime() - this.lastClickTime < 1000) return;
+        mp.events.callRemote('luckywheel.cometoluckywheel');
+        this.lastClickTime = new Date().getTime();
+    },
+    async comeToLuckyWheel(pos) {
+        const dict = this.object.getDictionary();
+        global.requestAnimDict(dict);
+        while (!mp.game.streaming.hasAnimDictLoaded(dict)) {
+            await mp.game.waitAsync(0);
+        }
+        if (mp.players.local.getScriptTaskStatus(2106541073) != 1 && mp.players.local.getScriptTaskStatus(2106541073) != 0) {
+            const offset = mp.game.ped.getAnimInitialOffsetPosition(dict, this.object.animations[0], 1111.052, 229.8492, -50.6409, 0, 0, 0, 0, 2);
+            mp.players.local.taskGoStraightToCoord(offset.x, offset.y, offset.z, 1, 8000, 317, 0.001);
+            while (!(mp.players.local.getScriptTaskStatus(2106541073) == 7 || mp.players.local.isAtCoord(offset.x, offset.y, offset.z, 0.1, 0.0, 0.0, false, true, 0))) {
+                await mp.game.waitAsync(0);
+            }
+            mp.players.local.taskPlayAnim(dict, this.object.animations[0], 4, -1000, -1, 1048576, 0, false, true, false);
+            let isGoing;
+            while (true) {
+                if (mp.players.local.isPlayingAnim(dict, this.object.animations[0], 3) && mp.players.local.getAnimCurrentTime(dict, this.object.animations[0]) > 0.97) {
+                    mp.players.local.taskPlayAnim(dict, this.object.animations[1], 4, -1000, -1, 1048576, 0, false, true, false);
                 }
-                else{
-                    speedIntCnt = speedIntCnt - 1
-                    if(speedIntCnt < 0) {
-                        speedIntCnt = 0
-                        
+                if (mp.players.local.isPlayingAnim(dict, this.object.animations[1], 3)) {
+                    if (!isGoing && mp.players.local.getAnimCurrentTime(dict, this.object.animations[1]) > 0.04) {
+                        isGoing = true;
+                        this.object.spin(pos, true);
+                        mp.events.callRemote('luckywheel.spin');
+                    }
+                    if (mp.players.local.getAnimCurrentTime(dict, this.object.animations[1]) > 0.8) {
+                        mp.players.local.taskPlayAnim(dict, this.object.animations[2], 8.0, 1.0, -1, 1, 1.0, false, false, false);
+                        break;
                     }
                 }
-                intCnt = intCnt + 1
-                rollspeed = speedIntCnt / 10
-                let _y = retval.y - rollspeed
-                _rollAngle -= rollspeed;
-                _wheel.setRotation( 0.0, _y, 0.0, 1, true)
-                await global.wait(0);
-                playSound(_priceIndex)
+                await mp.game.waitAsync(0);
             }
-            let lib = getDistAnim();
-            let animSpining = getAnimSpining(_priceIndex);
-            player.taskPlayAnim(lib, animSpining, 8.0, -8.0, -1, 0, 0, false, false, false)
-            while(player.isPlayingAnim(lib, animSpining, 3)){
-                mp.game.controls.disableAllControlActions(0)
-                await global.wait(1);
-            }
-            let animWin = getAnimWin(_priceIndex);
-            player.taskPlayAnim(lib, animWin, 8.0, -8.0, -1, 0, 0, false, false, false)
-            while(player.isPlayingAnim(lib, animWin, 3)){
-                mp.game.controls.disableAllControlActions(0)
-                await global.wait(0);
-            }
-
-        }catch(e){
-            chat(e)
         }
+    },
+    init() {
+        this.object.model = mp.objects.new(mp.game.joaat(this.object.name), this.object.pos);
     }
-})
+};
 
-function getAnimSpining(_priceIndex) {
-    // 'SpinningIDLE_Medium','SpinningIDLE_Low'
-    return 'SpinningIDLE_High';
-}
+luckywheel.init();
 
-function getAnimWin(_priceIndex) {
-    // 'Win_Big','Win'
-    return 'Win_Huge';
-}
+mp.events.add({
+    'render': () => {
 
-// todo в утилы
-function loadtAnimDict(dict) {
-    return new Promise((resolve, reject) => {
-        if(!mp.game.streaming.doesAnimDictExist(dict))return resolve('error does anim')
-        mp.game.streaming.requestAnimDict(dict);
-        const timer = setInterval(() => {
-            if(mp.game.streaming.hasAnimDictLoaded(dict)) {
-                clearInterval(timer);
-                resolve();
+        const data = luckywheel.interaction;
+        if (mp.game.gameplay.getDistanceBetweenCoords(mp.players.local.position.x, mp.players.local.position.y, mp.players.local.position.z, data.pos.x, data.pos.y, data.pos.z, true) < data.radius && !(
+                !loggedin || chatActive || global.menuOpened || cuffed || localplayer.getVariable('InDeath')
+            )) {
+            if (!data.isNear) {
+                data.isNear = true;
+                mp.keys.bind(luckywheel.interaction.button, false, luckywheel.onClick);
+
+                // Будем показывать что можно взаимодействовать пока рядом
+                mp.events.call('hud.oEnter');
             }
-        }, 100);
-    });
-}
+        } else if (data.isNear) {
+            data.isNear = false;
+            mp.keys.unbind(luckywheel.interaction.button, false, luckywheel.onClick);
 
-function getSound(id) {
-    let sound;
-    switch (id)
-    {
-        case 1:
-        case 17:
-        case 5:
-        case 9:
-        case 13:
-            sound = "Win_RP";
-            break;
-        
-        case 2:
-        case 6:
-        case 14:
-        case 4:
-            sound = "Win_Cash";
-            break;
-        
-        case 19:
-            sound = "Win_Cash";
-            break;
-        
-        case 3:
-        case 7:
-        case 10:
-            sound = "Win_Chips";
-            break;
-        
-        case 15:
-            sound = "Win_Chips";
-            break;
-        
-        case 11:
-            sound = "Win_Mystery";
-            break;
-        
-        case 18:
-            sound = "Win_Car";
-            break;
-        
-        default:
-            sound = "Win_Clothes";
-            break;
+            // Скроем подсказку взаимодействия
+            mp.events.call('hud.cEnter');
+        }
+    },
+    'luckywheel.cometoluckywheel': (pos) => {
+        luckywheel.comeToLuckyWheel(pos);
+    },
+    'luckywheel.spin': (pos) => {
+        luckywheel.object.spin(pos);
     }
-    return sound;
-}
+});
 
-const playSound =  function (idWin) {
-    let soundId = mp.game.invoke('0x430386FE9BF80B45')//getSoundId
-    let sound = getSound(idWin);
-    mp.game.audio.stopSound(soundId);
-    mp.game.audio.releaseSoundId(soundId)
-    mp.game.audio.playSoundFromCoord(1, sound, coordsWheel.x, coordsWheel.y, coordsWheel.z, "dlc_vw_casino_lucky_wheel_sounds", true, 0, false);
-}
-
-const animSpiningWheel = (id,max)=>{
-    let lib = getDistAnim();
-    _wheel.playAnim(getAnimWheel(id,max),lib,1000, false, true, false, 0, 2)
-} 
+require('./events.js');

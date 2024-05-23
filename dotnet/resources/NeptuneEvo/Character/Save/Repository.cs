@@ -96,6 +96,7 @@ namespace NeptuneEvo.Character.Save
                     .Set(v => v.SelectedQuest, characterData.SelectedQuest)
                     .Set(v => v.IsForbesShow, characterData.IsForbesShow)
                     .Set(v => v.FractionTasksData, JsonConvert.SerializeObject(player.FractionTasksData))
+                    .Set(v => v.IsLucky, characterData.IsLucky)
                     .UpdateAsync();
                 
                 if (Admin.IsServerStoping)
@@ -238,6 +239,14 @@ namespace NeptuneEvo.Character.Save
                     Debugs.Repository.Exception(e);
                 }
             });
+        }
+        public static async Task ResetLuckyWheel()
+        {
+            await using var db = new ServerBD("MainDB");
+
+            await db.Characters
+                .Set(c => c.IsLucky, false)
+                .UpdateAsync();
         }
     }
 }

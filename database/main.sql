@@ -600,6 +600,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `SelectedQuest` varchar(42) NOT NULL,
   `isForbesShow` tinyint(1) NOT NULL DEFAULT 0,
   `FractionTasksData` varchar(350) NOT NULL DEFAULT '[]',
+  `isLucky` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`uuid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 

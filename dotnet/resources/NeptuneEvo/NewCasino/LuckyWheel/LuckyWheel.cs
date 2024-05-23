@@ -1,167 +1,326 @@
-﻿using GTANetworkAPI;
-using NeptuneEvo.Handles;
+﻿using System;
+using GTANetworkAPI;
 using Redage.SDK;
-using System;
 using System.Collections.Generic;
+using NeptuneEvo.Handles;
+using Localization;
+using NeptuneEvo.Core;
+using NeptuneEvo.Chars.Models;
+using NeptuneEvo.Character;
+using NeptuneEvo.Players.Phone.Messages.Models;
 
 namespace NeptuneEvo.NewCasino
 {
-    class LuckyWheel
+    class LuckyWheel : Script
     {
-        /// <summary>
-        /// Состояние колеса (вращается / не вращается)
-        /// </summary>
-        private static bool IsRolling = false;
+        #region Modules
+        private static Random Rnd = new Random();
+        private static DateTime WaitFor { get; set; }
+        private static int BlockTimeSeconds { get; } = 21;
 
-        private static List<object> LastDrops = new List<object>();
-
-        private static Vector3 TakeWinVehPos = new Vector3(1114.74, 229.3, 80.46);
-
-        private static readonly nLog Log = new nLog("NewCasino.LuckyWheel");
-
-        private Dictionary<string, int> indexes = new Dictionary<string, int>
+        private static void ComeToLuckyWheel(ExtPlayer player)
         {
-            ["veh"] = 19,
-            ["exp"] = 1,
-            ["clothes"] = 20,
-            ["money"] = 16,
-            ["donate"] = 11
-        };
-
-        private static List<Present> Presents = new List<Present>
-        {
-            new Present("money_100", 13.07f),
-            new Present("money_200", 11.61f),
-            new Present("money_500", 7.74f),
-            new Present("money_10000", 0.1f),
-            new Present("money_50000", 0.03f),
-            // 32.55
-    
-            new Present("donate_45", 5.97f),
-            new Present("donate_100", 5.34f),
-            new Present("donate_500", 2f),
-
-            new Present("exp_50", 13.86f),
-            new Present("exp_100", 12.2f),
-            new Present("exp_200", 10.38f),
-            new Present("exp_300", 9.12f),
-            // 58.87
-            // 91.42
-    
-            new Present("veh_zorrusso", 0.05f),
-            new Present("veh_xa21", 0.08f),
-            new Present("veh_cheburek", 0.82f),
-            new Present("veh_btype", 0.25f),
-            new Present("veh_stafford", 0.25f),
-            // 1.45
-    
-            // Неновые кросовки
-            new Present("clothes_neon_shoes", 2.53f),
-            //Маска быка
-            new Present("clothes_mask_boll", 2.33f),
-            // космические штаны
-            new Present("clothes_cosmo_legs", 2.27f),
-            // 7.13
-        };
-
-        private static Dictionary<string, string> Names = new Dictionary<string, string>
-        {
-            ["money_100"] = "$100",
-            ["money_200"] = "$200",
-            ["money_500"] = "$500",
-            ["money_10000"] = "$10.000",
-            ["money_50000"] = "$50.000",
-
-            ["donate_45"] = "45 рублей",
-            ["donate_100"] = "100 рублей",
-            ["donate_500"] = "500 рублей",
-
-            ["exp_50"] = "50 EXP",
-            ["exp_100"] = "100 EXP",
-            ["exp_200"] = "200 EXP",
-            ["exp_300"] = "300 EXP",
-
-            ["veh_zorrusso"] = "Автомобиль zorrusso",
-            ["veh_xa21"] = "Автомобиль xa21",
-            ["veh_cheburek"] = "Автомобиль cheburek",
-            ["veh_btype"] = "Автомобиль btype",
-            ["veh_stafford"] = "Автомобиль stafford",
-
-            ["clothes_neon_shoes"] = "Неоновые кроссовки",
-            ["clothes_mask_boll"] = "Маска быка",
-            ["clothes_cosmo_legs"] = "Космические штаны"
-        };
-
-        private void StartWheel(ExtPlayer player, Action callback)
-        {
-            try
+            if (DateTime.Now < WaitFor)
             {
-                if (IsRolling)
-                {
-                    Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, "В данный момент кто-то вращает колесо удачи!", 3000);
-                    return;
-                }
-
-                NAPI.ClientEvent.TriggerClientEventForAll("CASINO_LUCKYWHEEL:rollFinished");
-                IsRolling = true;
-
-                string _randomPrice = randomWithWeight(Presents);
-
-                string itemType = _randomPrice.Split("_")[0];
-                int wheelIndex = indexes[itemType];
-
-                string winItemName = Names[_randomPrice];
-
-                callback();
-
-                Timers.StartOnce(4000, () =>
-                {
-                    IsRolling = false;
-                    NAPI.ClientEvent.TriggerClientEventForAll("CASINO_LUCKYWHEEL:rollFinished");
-
-                    // addLastDrop(itemType, winItemName);
-                    // TODO:: выдать приз челу
-                }, true);
+                // Ждем пока колесо остановится (Завязано на таймере)
+                player.SendNotification("Вам надо немного подождать");
+                return;
             }
-            catch (Exception e)
+            else if (player.CharacterData.IsLucky == true)
             {
-                Log.Write($"StartWheel Exception: {e.ToString()}");
+                Notify.Send(player, NotifyType.Error, NotifyPosition.BottomCenter, $"Крутить колесо можно раз в день!", 3000);
+                return;
+            }
+            else
+            {
+                // Присваимваем рандомное значение для колеса
+                WaitFor = DateTime.Now.AddSeconds(BlockTimeSeconds);
+                int value = Rnd.Next(0, 20);
+                player.SetSharedData("LUCKY_WHEEL_CALL", true);
+                player.SetSharedData("LUCKY_WHEEL_WIN", value);
+                player.PlayAnimation("rcmcollect_paperleadinout@", "kneeling_arrest_get_up", 33);
+                Main.OnAntiAnim(player);
+                Trigger.ClientEvent(player, "luckywheel.cometoluckywheel", value);
             }
         }
-
-        private string randomWithWeight(List<Present> presents)
+        private static void SpinLuckyWheel(ExtPlayer player)
         {
-            try
+            if (player.HasSharedData("LUCKY_WHEEL_WIN") && player.HasSharedData("LUCKY_WHEEL_CALL"))
             {
-                // Создаем переменные
-                float total = 0.0f;
-                float currentWeight = 0.0f;
-                float rndWeight = 0.0f;
-
-                // Вычисляем общий вес
-                foreach (Present item in presents)
-                    total += item.Weight;
-
-                // Находим случайный вес
-                Random random = new Random();
-                rndWeight = Convert.ToSingle(random.NextDouble()) * total;
-
-                // Перебираем все элементы, пока не достигнем нужного веса
-                foreach (Present item in presents)
-                {
-                    currentWeight += item.Weight; // Прибавляем вес текущего элемента массива к временной переменной
-
-                    if (currentWeight >= rndWeight) // Прерываем генерацию и возвращаем букву
-                        return item.Word;
-                }
-
-                return "";
-            }
-            catch (Exception e)
-            {
-                Log.Write($"randomWithWeight Exception: {e.ToString()}");
-                return "";
+                player.SetSharedData("LUCKY_WHEEL_CALL", true);
+                Trigger.ClientEventInRange(player.Position, 100, "luckywheel.spin", player.GetSharedData<int>("LUCKY_WHEEL_WIN"));
             }
         }
+        private static void FinishSpin(ExtPlayer player)
+        {
+            if (player.HasSharedData("LUCKY_WHEEL_WIN") && player.HasSharedData("LUCKY_WHEEL_CALL"))
+            {
+                string resultName = "Приз";
+                switch (player.GetSharedData<int>("LUCKY_WHEEL_WIN"))
+                {
+                    case 0:
+                    case 8:
+                    case 12:
+                    case 16:
+                        resultName = "Одежда";
+                        GiveOutPrizeClothes(player);
+                        break;
+                    case 2:
+                    case 6:
+                    case 14:
+                    case 19:
+                        int price = Rnd.Next(1780, 62742);
+                        resultName = $"Игровая валюта в размере {price}";
+                        MoneySystem.Wallet.Change(player, price);
+                        break;
+                    case 18:
+                        resultName = "Эксклюзивная машина";
+                        GiveOutPrizeVehicle(player);
+                        break;
+                    case 1:
+                    case 5:
+                    case 9:
+                    case 13:
+                    case 17:
+                        resultName = "Мистический предмет";
+                        GiveOutPrizeMysticItem(player);
+                        break;
+                    case 3:
+                    case 7:
+                    case 10:
+                    case 15:
+                        resultName = "Оружие";
+                        GiveOutPrizeWeapon(player);
+                        break;
+                    case 11:
+                        resultName = "Уникальный костюм";
+                        GiveOutPrizeCostume(player);
+                        break;
+                    case 4:
+                        int donateCoins = Rnd.Next(50, 100);
+                        resultName = $"Донат валюта в размере {donateCoins}";
+                        Chars.UpdateData.RedBucks(player, donateCoins, "Выдача коинов казино");
+                        break;
+                }
+                EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Выигрыш: {resultName}. Поздравляем!", "", 3000);
+                Main.OffAntiAnim(player);
+                player.ResetSharedData("LUCKY_WHEEL_CALL");
+                player.ResetSharedData("LUCKY_WHEEL_WIN");
+                player.CharacterData.IsLucky = true;
+            }
+        }
+        #region Compensations
+        // Выплачиваемые компенсации, при ошибке выдачи призов
+        private static Dictionary<string, int> amountCompensations = new Dictionary<string, int>()
+        {
+            { "weapon", 30000 },
+            { "mystic", 15000 },
+            { "vehicle", 50000 },
+            { "clothes", 20000 }
+        };
+        private static void GiveOutPrizeCostume(ExtPlayer player)
+        {
+            var characterData = player.GetCharacterData();
+
+            Chars.Repository.AddNewItem(player, $"char_{characterData.UUID}", "inventory", ItemId.Feet, 1, "55_0_1");
+            Chars.Repository.AddNewItem(player, $"char_{characterData.UUID}", "inventory", ItemId.Leg, 1, "77_0_1");
+            Chars.Repository.AddNewItem(player, $"char_{characterData.UUID}", "inventory", ItemId.Top, 1, "178_0_1");
+        }
+        private static void GiveOutPrizeWeapon(ExtPlayer player)
+        {
+            int amountCompensation = amountCompensations["weapon"];
+            int randomInt = Rnd.Next(0, 4);
+
+            switch (randomInt)
+            {
+                case 0:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.Bat) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.Bat, "LuckyWheel");
+                    break;
+                case 1:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.HeavyPistol) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.HeavyPistol, "LuckyWheel");
+                    break;
+                case 2:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.Musket) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.Musket, "LuckyWheel");
+                    break;
+                case 3:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.AdvancedRifle) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.AdvancedRifle, "LuckyWheel");
+                    break;
+            }
+        }
+        private static void GiveOutPrizeMysticItem(ExtPlayer player)
+        {
+            int amountCompensation = amountCompensations["mystic"];
+            int randomInt = Rnd.Next(0, 5);
+
+            switch (randomInt)
+            {
+                case 0:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.Flashlight) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.Flashlight, "LuckyWheel");
+                    break;
+                case 1:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.BattleAxe) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.BattleAxe, "LuckyWheel");
+                    break;
+                case 2:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.FlareGun) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.FlareGun, "LuckyWheel");
+                    break;
+                case 3:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.StunGun) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.StunGun, "LuckyWheel");
+                    break;
+                case 4:
+                    if (Chars.Repository.isFreeSlots(player, ItemId.MicroSMG) != 0)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                        MoneySystem.Wallet.Change(player, amountCompensation);
+                        return;
+                    }
+                    WeaponRepository.GiveWeapon(player, ItemId.MicroSMG, "LuckyWheel");
+                    break;
+            }
+        }
+        private static void GiveOutPrizeVehicle(ExtPlayer player)
+        {
+            int amountCompensation = amountCompensations["vehicle"];
+            int cars = new Random().Next(0, 4);
+            string model = null;
+            switch (cars)
+            {
+                case 0:
+                    model = "baller3";
+                    break;
+                case 1:
+                    model = "cheburek";
+                    break;
+                case 2:
+                    model = "furia";
+                    break;
+                case 3:
+                    model = "brioso";
+                    break;
+            }
+
+            var vehiclesCount = VehicleManager.GetVehiclesCarCountToPlayer(player.Name);
+            if (vehiclesCount >= Houses.GarageManager.MaxGarageCars)
+            {
+                MoneySystem.Wallet.Change(player, amountCompensation);
+                EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Вы получили компенсацию в размере {amountCompensation}$ так как у вас максимальное количество авто", "", 3000);
+            }
+            else
+            {
+                var house = Houses.HouseManager.GetHouse(player, true);
+                if (house != null)
+                {
+                    if (vehiclesCount >= Houses.GarageManager
+                        .GarageTypes[Houses.GarageManager.Garages[house.GarageID].Type].MaxCars)
+                    {
+                        EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"У Вас максимальное кол-во машин, которое поддерживает Ваше место жительства.", "", 3000);
+                        return;
+                    }
+                }
+
+                VehicleManager.Create(player, model, new GTANetworkAPI.Color(225, 225, 225), new GTANetworkAPI.Color(225, 225, 225));
+                Players.Phone.Messages.Repository.AddSystemMessage(player, (int)DefaultNumber.Bank, LangFunc.GetText(LangType.Ru, DataName.YouBuyCarV3, model), DateTime.Now);
+
+                EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Вы получили уникальный автомообиль {model}.", "", 3000);
+
+            }
+        }
+        private static void GiveOutPrizeClothes(ExtPlayer player)
+        {
+            int amountCompensation = amountCompensations["clothes"];
+
+            var characterData = player.GetCharacterData();
+            if (Chars.Repository.isFreeSlots(player, ItemId.Hat) != 0)
+            {
+                EventSys.SendPlayersToEvent("LuckyWheel", "Diamond Casino", $"Недостаточно места, вам выдана компенсация {amountCompensation}$", "", 3000);
+                MoneySystem.Wallet.Change(player, amountCompensation);
+                return;
+            }
+            int cloth = Rnd.Next(0, 4);
+            switch (cloth)
+            {
+                case 0:
+                    Chars.Repository.AddNewItem(player, $"char_{characterData.UUID}", "inventory", ItemId.Hat, 1, "77_0_1");
+                    break;
+                case 1:
+                    Chars.Repository.AddNewItem(player, $"char_{characterData.UUID}", "inventory", ItemId.Hat, 1, "40_0_1");
+                    break;
+                case 2:
+                    Chars.Repository.AddNewItem(player, $"char_{characterData.UUID}", "inventory", ItemId.Hat, 1, "22_0_1");
+                    break;
+                case 3:
+                    Chars.Repository.AddNewItem(player, $"char_{characterData.UUID}", "inventory", ItemId.Hat, 1, "42_0_1");
+                    break;
+            }
+        }
+        #endregion
+        #endregion
+
+        #region Events
+        [RemoteEvent("luckywheel.cometoluckywheel")]
+        public static void ComeToLuckyWheel_Event(ExtPlayer player)
+        {
+            ComeToLuckyWheel(player);
+        }
+
+        [RemoteEvent("luckywheel.spin")]
+        public static void SpinLuckyWheel_Event(ExtPlayer player)
+        {
+            SpinLuckyWheel(player);
+        }
+
+        [RemoteEvent("luckywheel.finishspin")]
+        public static void FinishSpin_Event(ExtPlayer player)
+        {
+            FinishSpin(player);
+        }
+        #endregion
     }
 }

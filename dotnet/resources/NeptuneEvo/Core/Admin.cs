@@ -424,7 +424,11 @@ namespace NeptuneEvo.Core
                     }
                     
                     Log.Write($"[{DateTime.Now - speedSave}] All players saved!", nLog.Type.Success);
-                    
+
+                    // Сброс участия в колесе удачи
+                    await Character.Save.Repository.ResetLuckyWheel();
+                    //
+
                     await Accounts.Email.Repository.VerificationsDelete();
                     
                     BusinessManager.SavingBusiness();

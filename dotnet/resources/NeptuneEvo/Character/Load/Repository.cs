@@ -1,4 +1,4 @@
-﻿using Database;
+using Database;
 using GTANetworkAPI;
 using NeptuneEvo.Handles;
 using LinqToDB;
@@ -112,7 +112,8 @@ namespace NeptuneEvo.Character.Load
                         IsBannedCrime = Convert.ToBoolean(character.IsBannedCrime),
                         BanCrimeReason = Convert.ToString(character.BanCrimeReason),
                         SelectedQuest = character.SelectedQuest,
-                        IsForbesShow = character.IsForbesShow
+                        IsForbesShow = character.IsForbesShow,
+                        IsLucky = character.IsLucky
                     };
                     try
                     {
