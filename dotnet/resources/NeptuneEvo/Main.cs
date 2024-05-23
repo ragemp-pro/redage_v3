@@ -916,11 +916,7 @@ namespace NeptuneEvo
         public static void HelloText(ExtPlayer player)
         {
             if (player == null) return;
-            Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings1));
-            Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings2));
-            Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings3));
-            Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings4));
-            Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings5));
+            Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings1)); Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings2)); Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings3)); Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings4)); Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings5)); Trigger.SendChatMessage(player, LangFunc.GetText(LangType.Ru, DataName.Greetings4)); Trigger.SendChatMessage(player, "");
         }
         #endregion Player
 

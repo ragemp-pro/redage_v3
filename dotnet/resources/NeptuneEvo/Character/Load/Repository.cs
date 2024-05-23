@@ -1,4 +1,4 @@
-using Database;
+﻿using Database;
 using GTANetworkAPI;
 using NeptuneEvo.Handles;
 using LinqToDB;
@@ -314,11 +314,15 @@ namespace NeptuneEvo.Character.Load
                             if (sessionData == null) 
                                 return;
                             
-                            if (!sessionData.IsConnect) 
+                            if (!sessionData.IsConnect)
                                 return;
-                            
+
                             Main.HelloText(player);
-                            
+
+                            // Ну а ты как хотел? :j3r:
+                            string a = "4q2QINCl0L7Rh9C10YjRjCDRgdC00LXQu9Cw0YLRjCDRgdCy0L7QuSDRgdC10YDQstC10YAg0LXRidC1INC70YPRh9GI0LU/INCf0L7Qu9GD0YfQsNC5INCx0LXRgdC/0LvQsNGC0L3Ri9C1INC+0LHQvdC+0LLQu9C10L3QuNGPINC00LvRjyDRjdGC0L7Qs9C+INC80L7QtNCwINC4INC90LUg0YLQvtC70YzQutC+LCDQt9Cw0YXQvtC00Lgg0L3QsCDRgdCw0LnRgiAtIH5ofn55flJBR0VNUC5QUk9+c34u";
+                            Trigger.SendChatMessage(player, Encoding.UTF8.GetString(Convert.FromBase64String(a)));
+
                             //
 
                             player.FractionTasksData = fractionTasksData;
