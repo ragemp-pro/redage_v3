@@ -900,46 +900,46 @@ namespace NeptuneEvo.Chars
         { 
             { true, new Dictionary<ClothesComponent, int>() 
                 {//Man 
-                    { ClothesComponent.Hat, 214 }, //+
-                    { ClothesComponent.Torsos, 211 }, 
-                    { ClothesComponent.Legs, 193 },  //+
-                    { ClothesComponent.Shoes, 145 }, //+
-                    { ClothesComponent.Accessories, 178 }, //+
+                    { ClothesComponent.Hat, 221 }, //+
+                    { ClothesComponent.Torsos, 214 }, 
+                    { ClothesComponent.Legs, 202 },  //+
+                    { ClothesComponent.Shoes, 151 }, //+
+                    { ClothesComponent.Accessories, 192 }, //+
                     { ClothesComponent.BodyArmors, 62 }, 
-                    { ClothesComponent.Tops, 524 }, // +
-                    { ClothesComponent.Undershirts, 199 }, 
-                    { ClothesComponent.Masks, 237 },//+
+                    { ClothesComponent.Tops, 544 }, // +
+                    { ClothesComponent.Undershirts, 213 }, 
+                    { ClothesComponent.Masks, 244 },//+
                     { ClothesComponent.Ears, 42 }, 
-                    { ClothesComponent.Watches, 47}, //+
-                    { ClothesComponent.Glasses, 53 }, 
+                    { ClothesComponent.Watches, 49}, //+
+                    { ClothesComponent.Glasses, 59 }, 
 
                     { ClothesComponent.Bugs,111 }, 
 
-                    { ClothesComponent.Bracelets, 14 }, 
+                    { ClothesComponent.Bracelets, 16 }, 
      
-                    { ClothesComponent.Decals, 174 }, 
+                    { ClothesComponent.Decals, 207 }, 
                 } 
             }, 
             { false, new Dictionary<ClothesComponent, int>() 
                 { 
-                    { ClothesComponent.Hat, 213 }, //+
-                    { ClothesComponent.Torsos, 245 }, 
-                    { ClothesComponent.Legs, 207 },  //+
-                    { ClothesComponent.Shoes, 154 }, //+
-                    { ClothesComponent.Accessories, 148 }, //a
-                    { ClothesComponent.BodyArmors, 58 }, 
-                    { ClothesComponent.Tops, 565 }, //+
-                    { ClothesComponent.Undershirts, 245 }, 
-                    { ClothesComponent.Masks,  238}, //+
-                    { ClothesComponent.Ears, 22 }, 
-                    { ClothesComponent.Watches, 36 }, //+
-                    { ClothesComponent.Glasses, 58 }, //+
+                    { ClothesComponent.Hat, 220 }, //+
+                    { ClothesComponent.Torsos, 248 }, 
+                    { ClothesComponent.Legs, 217 },  //+
+                    { ClothesComponent.Shoes, 159 }, //+
+                    { ClothesComponent.Accessories, 162 }, //a
+                    { ClothesComponent.BodyArmors, 62 }, 
+                    { ClothesComponent.Tops, 588 }, //+
+                    { ClothesComponent.Undershirts, 259 }, 
+                    { ClothesComponent.Masks,  245}, //+
+                    { ClothesComponent.Ears, 23 }, 
+                    { ClothesComponent.Watches, 38 }, //+
+                    { ClothesComponent.Glasses, 61 }, //+
 
                     { ClothesComponent.Bugs, 111 },     
 
-                    { ClothesComponent.Bracelets, 21 }, 
+                    { ClothesComponent.Bracelets, 23 }, 
      
-                    { ClothesComponent.Decals, 191 }, 
+                    { ClothesComponent.Decals, 223 }, 
                 }
             },
         }; 

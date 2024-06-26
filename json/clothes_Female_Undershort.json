@@ -48,5 +48,5 @@
 	"284": {"Id":284,"Variation":284,"TName":"CLO_BHF_U_20_","Textures":[0,1,2,3,4,5,6,7,8,9,10,11],"Torso":4},
 	"286": {"Id":286,"Variation":286,"TName":"CLO_AWF_U_1_","Textures":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],"Torso":14},
 	"421": {"Id":421,"Variation":377,"TName":"","Textures":[0,1,2,3,4,5],"Torso":14},
-	"506": {"Id":506,"Variation":691,"TName":"","Textures":[0],"Torso":14}
+	"506": {"Id":506,"Variation":714,"TName":"","Textures":[0],"Torso":14}
 }
