@@ -900,15 +900,15 @@ namespace NeptuneEvo.Chars
         { 
             { true, new Dictionary<ClothesComponent, int>() 
                 {//Man 
-                    { ClothesComponent.Hat, 221 }, //+
+                    { ClothesComponent.Hat, 238 }, //+
                     { ClothesComponent.Torsos, 214 }, 
-                    { ClothesComponent.Legs, 202 },  //+
-                    { ClothesComponent.Shoes, 151 }, //+
-                    { ClothesComponent.Accessories, 192 }, //+
+                    { ClothesComponent.Legs, 216 },  //+
+                    { ClothesComponent.Shoes, 156 }, //+
+                    { ClothesComponent.Accessories, 199 }, //+
                     { ClothesComponent.BodyArmors, 62 }, 
-                    { ClothesComponent.Tops, 544 }, // +
-                    { ClothesComponent.Undershirts, 213 }, 
-                    { ClothesComponent.Masks, 244 },//+
+                    { ClothesComponent.Tops, 575 }, // +
+                    { ClothesComponent.Undershirts, 215 }, 
+                    { ClothesComponent.Masks, 245 },//+
                     { ClothesComponent.Ears, 42 }, 
                     { ClothesComponent.Watches, 49}, //+
                     { ClothesComponent.Glasses, 59 }, 
@@ -917,20 +917,20 @@ namespace NeptuneEvo.Chars
 
                     { ClothesComponent.Bracelets, 16 }, 
      
-                    { ClothesComponent.Decals, 207 }, 
+                    { ClothesComponent.Decals, 245 }, 
                 } 
             }, 
             { false, new Dictionary<ClothesComponent, int>() 
                 { 
-                    { ClothesComponent.Hat, 220 }, //+
+                    { ClothesComponent.Hat, 237 }, //+
                     { ClothesComponent.Torsos, 248 }, 
-                    { ClothesComponent.Legs, 217 },  //+
-                    { ClothesComponent.Shoes, 159 }, //+
-                    { ClothesComponent.Accessories, 162 }, //a
+                    { ClothesComponent.Legs, 229 },  //+
+                    { ClothesComponent.Shoes, 164 }, //+
+                    { ClothesComponent.Accessories, 169 }, //a
                     { ClothesComponent.BodyArmors, 62 }, 
-                    { ClothesComponent.Tops, 588 }, //+
-                    { ClothesComponent.Undershirts, 259 }, 
-                    { ClothesComponent.Masks,  245}, //+
+                    { ClothesComponent.Tops, 618 }, //+
+                    { ClothesComponent.Undershirts, 261 }, 
+                    { ClothesComponent.Masks,  246}, //+
                     { ClothesComponent.Ears, 23 }, 
                     { ClothesComponent.Watches, 38 }, //+
                     { ClothesComponent.Glasses, 61 }, //+
@@ -939,7 +939,7 @@ namespace NeptuneEvo.Chars
 
                     { ClothesComponent.Bracelets, 23 }, 
      
-                    { ClothesComponent.Decals, 223 }, 
+                    { ClothesComponent.Decals, 261 }, 
                 }
             },
         }; 
@@ -1730,6 +1730,7 @@ namespace NeptuneEvo.Chars
                 }
             }
         };
+        
         public static ConcurrentDictionary<bool, ConcurrentDictionary<BarberComponent, ConcurrentDictionary<int, BarberData>>> BarberComponentData = new ConcurrentDictionary<bool, ConcurrentDictionary<BarberComponent, ConcurrentDictionary<int, BarberData>>>();
         public static ConcurrentDictionary<bool, Dictionary<string, List<List<object>>>> BarberComponentPriceData =
             new ConcurrentDictionary<bool, Dictionary<string, List<List<object>>>>();
