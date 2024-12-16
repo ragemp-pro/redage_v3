@@ -11,7 +11,7 @@
 
     if (!viewData) viewData = '[]';
 
-    let HourValue = 0;
+    let HourValue = 1;
 
     const VehicleArray = JSON.parse (viewData);
 
