@@ -929,10 +929,10 @@ class SitClass {
 	}
 }
 
-global.sitData = new SitClass ();
+const sitData = new SitClass ();
 
 gm.events.add(global.renderName ["500ms"], () => {
-    global.sitData.start ();
+    sitData.start ();
 });
 
 ///
@@ -1028,7 +1028,7 @@ let testfsd = [
     mp.game.joaat("lr_prop_clubstool_01")               ,
     mp.game.joaat("p_dinechair_01_s")                   ,
     mp.game.joaat("p_patio_lounger1_s")                 ,
-    mp.game.joaat("p_solooffchair_s")                   ,
+    //mp.game.joaat("p_solooffchair_s")                   , // ?
     mp.game.joaat("p_v_med_p_sofa_s")                   ,
     mp.game.joaat("p_yacht_chair_01_s")                 ,
     mp.game.joaat("p_yacht_sofa_01_s")                  ,
@@ -1062,9 +1062,9 @@ let testfsd = [
     mp.game.joaat("v_ilev_ph_bench")                    ,
     mp.game.joaat("v_res_fh_benchlong")                 ,
     mp.game.joaat("v_res_fh_benchshort")                ,
-    mp.game.joaat("v_res_fh_dineemesa")                 ,
-    mp.game.joaat("v_res_fh_dineemesb")                 ,
-    mp.game.joaat("v_res_fh_dineemesc")                 ,
+    //mp.game.joaat("v_res_fh_dineemesa")                 , // ?
+    //mp.game.joaat("v_res_fh_dineemesb")                 , // ?
+    //mp.game.joaat("v_res_fh_dineemesc")                 , // ?
     mp.game.joaat("v_res_fh_easychair")                 ,
     mp.game.joaat("v_res_fh_singleseat")                ,
     mp.game.joaat("v_res_j_dinechair")                  ,
@@ -1080,9 +1080,9 @@ let testfsd = [
     mp.game.joaat("v_res_study_chair")                  ,
     mp.game.joaat("v_res_tre_chair")                    ,
     mp.game.joaat("v_res_tre_officechair")              ,
-    mp.game.joaat("v_res_tre_sofa")                     ,
-    mp.game.joaat("v_res_tre_sofa_mess_b")              ,
-    mp.game.joaat("v_res_tre_sofa _s")                  ,
+    //mp.game.joaat("v_res_tre_sofa")                     , // ?
+    //mp.game.joaat("v_res_tre_sofa_mess_b")              , // ?
+    //mp.game.joaat("v_res_tre_sofa _s")                  , // ?
     mp.game.joaat("v_res_tre_stool")                    ,
     mp.game.joaat("v_res_tre_stool_leather")            ,
     mp.game.joaat("v_ret_chair")                        ,
@@ -1258,21 +1258,32 @@ let objdata = null
 let objdatap = null
 let objdatar = null
 
+async function RecreateObjectEditor() {
+    mp.events.call('client.dropinfo.close');
+
+    await global.loadModel(testfsd[selecttestfsd]);
+
+    //mp.console.logError(`[RedAge] Debug loadModel: ${selecttestfsd}`, true);
+
+    global.OnObjectEditor (testfsd[selecttestfsd], null, (pos, rot, _) => {
+        objdata = mp.objects.new(testfsd[selecttestfsd], pos, {
+            'rotation': new mp.Vector3(0, 0, rot),
+            'dimension': global.localplayer.dimension
+        });
+        objdatap = pos;
+        objdatar = rot;
+    })
+}
 
 gm.events.add('client.editor.sit', () => {
 	try
 	{
+        selecttestfsd = 0;
+
         if (objdata && mp.objects.exists(objdata))
             objdata.destroy();
 
-		global.OnObjectEditor (testfsd[selecttestfsd], null, (pos, rot, _) => {
-			objdata = mp.objects.new(testfsd[selecttestfsd], pos, {
-                'rotation': new mp.Vector3(0, 0, rot),
-                'dimension': global.localplayer.dimension
-            });
-            objdatap = pos;
-            objdatar = rot;
-		})
+		RecreateObjectEditor();
 	}
 	catch (e) 
 	{
@@ -1280,53 +1291,31 @@ gm.events.add('client.editor.sit', () => {
 	}
 });
 
-mp.keys.bind(global.Keys.VK_Q, true, function () { 
-    if (--selecttestfsd < 0)
-        selecttestfsd = 0;
+mp.keys.bind(global.Keys.VK_Q, true, function () {
+    if(!global.isEditor)
+        return;
 
-    if (objdata && mp.objects.exists(objdata))
-        objdata.destroy();
+    if (selecttestfsd > 0)
+        selecttestfsd--;
 
-    const zcoord = mp.game.gameplay.getGroundZFor3dCoord(objdatap.x, objdatap.y, objdatap.z + 50, 0, false);
-
-    objdatap.z = zcoord;
-
-    objdata = mp.objects.new(testfsd[selecttestfsd], objdatap, {
-        'rotation': new mp.Vector3(0, 0, objdatar),
-        'dimension': global.localplayer.dimension
-    });
-
-    
-    objdata.placeOnGroundProperly();
-    objdatap = objdata.getCoords(true);
-    objectEditor.entity.position = new mp.Vector3(objdatap.x, objdatap.y, objdatap.z);
+    RecreateObjectEditor();
 });
 
 mp.keys.bind(global.Keys.VK_E, true, function () { 
-    if (++selecttestfsd >= testfsd.length)
-        selecttestfsd = testfsd.length - 1;
+    if(!global.isEditor)
+        return;
 
-    if (objdata && mp.objects.exists(objdata))
-        objdata.destroy();
+    if (selecttestfsd < testfsd.length - 1)
+        selecttestfsd++;
         
-
-    const zcoord = mp.game.gameplay.getGroundZFor3dCoord(objdatap.x, objdatap.y, objdatap.z + 50, 0, false);
-
-    objdatap.z = zcoord;
-
-    objdata = mp.objects.new(testfsd[selecttestfsd], objdatap, {
-        'rotation': new mp.Vector3(0, 0, objdatar),
-        'dimension': global.localplayer.dimension
-    });
-
-    
-    objdata.placeOnGroundProperly();
-    objdatap = objdata.getCoords(true);
-    objectEditor.entity.position = new mp.Vector3(objdatap.x, objdatap.y, objdatap.z);
+    RecreateObjectEditor();
 });
 
-mp.keys.bind(global.Keys.VK_LEFT, true, function () { 
-    if (!sitData.objectsInfo[testfsd[selecttestfsd]].zOffset)
+mp.keys.bind(global.Keys.VK_LEFT, true, function () {
+    if(!sitData.objectsInfo[testfsd[selecttestfsd]])
+        return;
+
+    if (!sitData.objectsInfo[testfsd[selecttestfsd]] || !sitData.objectsInfo[testfsd[selecttestfsd]].zOffset)
         sitData.objectsInfo[testfsd[selecttestfsd]].zOffset = 0;
 
     sitData.objectsInfo[testfsd[selecttestfsd]].zOffset -= 0.1;
@@ -1335,6 +1324,9 @@ mp.keys.bind(global.Keys.VK_LEFT, true, function () {
 });
 
 mp.keys.bind(global.Keys.VK_RIGHT, true, function () { 
+    if(!sitData.objectsInfo[testfsd[selecttestfsd]])
+        return;
+
     if (!sitData.objectsInfo[testfsd[selecttestfsd]].zOffset)
         sitData.objectsInfo[testfsd[selecttestfsd]].zOffset = 0;
 
@@ -1345,7 +1337,10 @@ mp.keys.bind(global.Keys.VK_RIGHT, true, function () {
 
 
 let selectsda = 0;
-mp.keys.bind(global.Keys.VK_UP, true, function () { 
+mp.keys.bind(global.Keys.VK_UP, true, function () {
+    if(!global.isEditor)
+        return;
+
     selectsda--;
 
     switch (selectsda) {
@@ -1373,7 +1368,10 @@ mp.keys.bind(global.Keys.VK_UP, true, function () {
     }
 });
 
-mp.keys.bind(global.Keys.VK_DOWN, true, function () { 
+mp.keys.bind(global.Keys.VK_DOWN, true, function () {
+    if(!global.isEditor)
+        return;
+
     selectsda++;
 
     switch (selectsda) {

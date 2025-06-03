@@ -8,7 +8,7 @@ const editorType = {
 }
 
 
-let objectEditor = {
+global.objectEditor = {
     toggled: false,
     entity: null,
     prop: "",
@@ -39,25 +39,25 @@ let MouseRotSensitivity = 800.0;
 
 const objectCreate = async (type) => {           
             
-	if (objectEditor.entity)
-		objectEditor.entity.destroy(), objectEditor.entity = null;
+	if (global.objectEditor.entity)
+		global.objectEditor.entity.destroy(), global.objectEditor.entity = null;
 		
-	if (objectEditor.petModel) {
-		objectEditor.entity = mp.peds.new(objectEditor.petModel, global.localplayer.position, objectEditor.rot, global.localplayer.dimension);
+	if (global.objectEditor.petModel) {
+		global.objectEditor.entity = mp.peds.new(global.objectEditor.petModel, global.localplayer.position, global.objectEditor.rot, global.localplayer.dimension);
 	} else {
 		const position = global.localplayer.position;
 
 		position.x += 1;
 		position.y += 1;
 
-		await global.loadModel(objectEditor.prop);
+		await global.loadModel(global.objectEditor.prop);
 
-		objectEditor.entity = mp.objects.new(objectEditor.prop, position, {
+		global.objectEditor.entity = mp.objects.new(global.objectEditor.prop, position, {
 			'dimension': global.localplayer.dimension
 		});
 		
 		if (!type) {
-			objectEditor.marker = mp.markers.new(2, new mp.Vector3(position.x, position.y, position.z + 1.3), 0.3, {
+			global.objectEditor.marker = mp.markers.new(2, new mp.Vector3(position.x, position.y, position.z + 1.3), 0.3, {
 				'rotation': new mp.Vector3(180, 0, 0),
 				'color': [
 					255,
@@ -73,7 +73,7 @@ const objectCreate = async (type) => {
 
 
 	
-	objectEditor.entity.setCollision(false, false);
+	global.objectEditor.entity.setCollision(false, false);
 }
 
 let LastCursorPos = [0, 0];
@@ -82,9 +82,9 @@ gm.events.add("render", function () {
 	try 
 	{
         if (!global.loggedin) return;
-        if (!objectEditor.toggled) return;
+        if (!global.objectEditor.toggled) return;
 
-		if (objectEditor.type == editorType.free) {
+		if (global.objectEditor.type == editorType.free) {
 			mp.game.controls.disableControlAction(2, 24, true);
 			mp.game.controls.disableControlAction(2, 69, true);
 			mp.game.controls.disableControlAction(2, 70, true);
@@ -122,28 +122,28 @@ gm.events.add("render", function () {
 
 			position.z = zPos;
             
-            if (objectEditor.entity && objectEditor.entity.handle != 0) {
-				objectEditor.entity.placeOnGroundProperly();
-				position = objectEditor.entity.getCoords(true);
-				const rot = objectEditor.entity.getRotation(2);
-				objectEditor.entity.position = new mp.Vector3(position.x, position.y, position.z);
-				objectEditor.entity.rotation = new mp.Vector3(rot.x, rot.y, rot.z);
+            if (global.objectEditor.entity && global.objectEditor.entity.handle != 0) {
+				global.objectEditor.entity.placeOnGroundProperly();
+				position = global.objectEditor.entity.getCoords(true);
+				const rot = global.objectEditor.entity.getRotation(2);
+				global.objectEditor.entity.position = new mp.Vector3(position.x, position.y, position.z);
+				global.objectEditor.entity.rotation = new mp.Vector3(rot.x, rot.y, rot.z);
 
-                objectEditor.entity.setCollision(false, false);
+                global.objectEditor.entity.setCollision(false, false);
 
-				if (objectEditor.marker && objectEditor.marker.handle != 0) {
+				if (global.objectEditor.marker && global.objectEditor.marker.handle != 0) {
 
-					objectEditor.marker.position = new mp.Vector3(position.x, position.y, position.z + 1.3);
+					global.objectEditor.marker.position = new mp.Vector3(position.x, position.y, position.z + 1.3);
 				}
 			}            
-		} else if (objectEditor.entity != null && mp.objects.exists (objectEditor.entity) && objectEditor.entity.handle != 0) {
-			//if (!objectEditor.entity.hasLosTo)
+		} else if (global.objectEditor.entity != null && mp.objects.exists (global.objectEditor.entity) && global.objectEditor.entity.handle != 0) {
+			//if (!global.objectEditor.entity.hasLosTo)
 			//	return;
-			//if (!objectEditor.entity.isOnScreen())
+			//if (!global.objectEditor.entity.isOnScreen())
 			//	return;
 				
 			/*const playerPosition = global.localplayer.position;
-			const objectPosition = objectEditor.entity.position;
+			const objectPosition = global.objectEditor.entity.position;
 
 			let dist = mp.game.system.vdist(playerPosition.x, playerPosition.y, playerPosition.z, objectPosition.x, objectPosition.y, objectPosition.z);
 
@@ -155,7 +155,7 @@ gm.events.add("render", function () {
 				resX = activeResolution1.x,
 				resY = activeResolution1.y;
 	
-			const position = objectEditor.entity.position;
+			const position = global.objectEditor.entity.position;
 
 			const xStart = new mp.Vector3(position.x + (-0.85), position.y, position.z);
 			const xEnd = new mp.Vector3(position.x + (0.85), position.y, position.z);
@@ -177,7 +177,7 @@ gm.events.add("render", function () {
 	
 			mp.game.controls.enableControlAction(0, 237, true);
 					
-			if (objectEditor.entity.isOnScreen() && mp.game.controls.isControlPressed(0, 237)) {
+			if (global.objectEditor.entity.isOnScreen() && mp.game.controls.isControlPressed(0, 237)) {
 				if (!isDowned) {
 					
 					isDowned = true;
@@ -202,8 +202,8 @@ gm.events.add("render", function () {
 				const cursorDirX = (cursorPos[0] - LastCursorPos[0]) / resX;
 				const cursorDirY = (cursorPos[1] - LastCursorPos[1]) / resY;
 	
-				const position = objectEditor.entity.position;
-				const rotation = objectEditor.entity.rotation;
+				const position = global.objectEditor.entity.position;
+				const rotation = global.objectEditor.entity.rotation;
 				const screen = mp.game.graphics.world3dToScreen2d(position.x, position.y, position.z);
 	
 				const
@@ -235,8 +235,8 @@ gm.events.add("render", function () {
 					}
 				}
 
-				objectEditor.entity.position = position;
-				objectEditor.entity.rotation = rotation;
+				global.objectEditor.entity.position = position;
+				global.objectEditor.entity.rotation = rotation;
 			}
 
 			if (!mp.keys.isDown(global.Keys.VK_SPACE)) {
@@ -260,17 +260,17 @@ gm.events.add("render", function () {
 gm.events.add('click', (x, y, upOrDown, leftOrRight, relativeX, relativeY, worldPosition, hitEntity) => {
 	try
 	{
-		if (!objectEditor.toggled) return;
+		if (!global.objectEditor.toggled) return;
 		else if (leftOrRight !== 'left' && leftOrRight !== 'right') return;
 		if (leftOrRight == 'left' && global.localplayer.isInWater()) return mp.events.call('notify', 1, 9, translateText("Нельзя устанавливать объекты здесь"), 3000);
-		else if (objectEditor.type === editorType.exact) {
+		else if (global.objectEditor.type === editorType.exact) {
 			if (upOrDown == 'up' && leftOrRight === 'right') {
 				mp.events.call('client.dropinfo.mod');
 			}
 			return;
 		}
 		//if (global.isInSafeZone) return mp.events.call('notify', 1, 9, translateText("Нельзя ставить в зеленой зоне"), 3000);
-		if (leftOrRight == 'left' && mp.objects.exists(objectEditor.entity)) {
+		if (leftOrRight == 'left' && mp.objects.exists(global.objectEditor.entity)) {
 			mp.events.call('client.dropinfo.enter');
 			return;
 		}
@@ -285,37 +285,37 @@ gm.events.add('click', (x, y, upOrDown, leftOrRight, relativeX, relativeY, world
 });
 
 gm.events.add('client.dropinfo.enter', () => {
-	if (!objectEditor.toggled) 
+	if (!global.objectEditor.toggled) 
 		return;
 	
-	if (objectEditor.entity && mp.objects.exists (objectEditor.entity)) {
+	if (global.objectEditor.entity && mp.objects.exists (global.objectEditor.entity)) {
 		const
-			pos = objectEditor.entity.position,
-			rot = objectEditor.entity.rotation,
-			index = objectEditor.index;
+			pos = global.objectEditor.entity.position,
+			rot = global.objectEditor.entity.rotation,
+			index = global.objectEditor.index;
 
-		objectEditor.call (pos, rot, index)
+		global.objectEditor.call (pos, rot, index)
 	}
 	mp.events.call('client.dropinfo.close', true);
 });
 
 gm.events.add('client.dropinfo.close', (isEnter = false) => {
 
-	if (objectEditor.entity && mp.objects.exists(objectEditor.entity))
-		objectEditor.entity.destroy();
+	if (global.objectEditor.entity && mp.objects.exists(global.objectEditor.entity))
+		global.objectEditor.entity.destroy();
 
-	if (objectEditor.marker)
-		objectEditor.marker.destroy();
+	if (global.objectEditor.marker)
+		global.objectEditor.marker.destroy();
 
 	//if (global.isInSafeZone)
 	// mp.events.call('notify', 1, 9, translateText("Нельзя ставить в зеленой зоне"), 3000);
 
-	if (!isEnter && objectEditor.callEsq != null && typeof objectEditor.callEsq === "function")
-		objectEditor.callEsq ()
+	if (!isEnter && global.objectEditor.callEsq != null && typeof global.objectEditor.callEsq === "function")
+		global.objectEditor.callEsq ()
 
 	mp.gui.emmit(`window.router.setHud()`);
 	global.menuClose(); 
-	objectEditor = {
+	global.objectEditor = {
 		toggled: false,
 		entity: null,
 		prop: "",
@@ -332,16 +332,16 @@ gm.events.add('client.dropinfo.close', (isEnter = false) => {
 mp.keys.bind(global.Keys.VK_DOWN, true, () => {
 	try
 	{
-		if (!objectEditor.toggled) return;
-		if (objectEditor.entity && mp.objects.exists (objectEditor.entity)) {
-			let rot = objectEditor.entity.rotation.z;
+		if (!global.objectEditor.toggled) return;
+		if (global.objectEditor.entity && mp.objects.exists (global.objectEditor.entity)) {
+			let rot = global.objectEditor.entity.rotation.z;
 
 			rot  -= 5;
 
 			if (rot < 0)
 				rot = 180;
 
-			objectEditor.entity.rotation = new mp.Vector3(0, 0, rot);
+			global.objectEditor.entity.rotation = new mp.Vector3(0, 0, rot);
 		}
 	}
 	catch (e) 
@@ -353,16 +353,16 @@ mp.keys.bind(global.Keys.VK_DOWN, true, () => {
 mp.keys.bind(global.Keys.VK_UP, true, () => {
 	try
 	{
-		if (!objectEditor.toggled) return;
-		if (objectEditor.entity && mp.objects.exists (objectEditor.entity)) {
-			let rot = objectEditor.entity.rotation.z;
+		if (!global.objectEditor.toggled) return;
+		if (global.objectEditor.entity && mp.objects.exists (global.objectEditor.entity)) {
+			let rot = global.objectEditor.entity.rotation.z;
 
 			rot += 5;
 
 			if (rot > 180)
 				rot = 0;
 
-			objectEditor.entity.rotation = new mp.Vector3(0, 0, rot);
+			global.objectEditor.entity.rotation = new mp.Vector3(0, 0, rot);
 		}
 	}
 	catch (e) 
@@ -374,13 +374,13 @@ mp.keys.bind(global.Keys.VK_UP, true, () => {
 mp.keys.bind(global.Keys.VK_RIGHT, true, () => {
 	try
 	{
-		if (!objectEditor.toggled) return;
-		else if (!objectEditor.arrayObject || !objectEditor.arrayObject.length) return;
+		if (!global.objectEditor.toggled) return;
+		else if (!global.objectEditor.arrayObject || !global.objectEditor.arrayObject.length) return;
 
-		if (++objectEditor.index === objectEditor.arrayObject.length)
-			objectEditor.index = 0;
+		if (++global.objectEditor.index === global.objectEditor.arrayObject.length)
+			global.objectEditor.index = 0;
 		
-		objectEditor.prop = mp.game.joaat (objectEditor.arrayObject [objectEditor.index]);
+		global.objectEditor.prop = mp.game.joaat (global.objectEditor.arrayObject [global.objectEditor.index]);
 	}
 	catch (e) 
 	{
@@ -391,13 +391,13 @@ mp.keys.bind(global.Keys.VK_RIGHT, true, () => {
 mp.keys.bind(global.Keys.VK_LEFT, true, () => {
 	try
 	{
-		if (!objectEditor.toggled) return;
-		else if (!objectEditor.arrayObject || !objectEditor.arrayObject.length) return;
+		if (!global.objectEditor.toggled) return;
+		else if (!global.objectEditor.arrayObject || !global.objectEditor.arrayObject.length) return;
 		
-		if (--objectEditor.index === -1)
-			objectEditor.index = objectEditor.arrayObject.length - 1;
+		if (--global.objectEditor.index === -1)
+			global.objectEditor.index = global.objectEditor.arrayObject.length - 1;
 		
-		objectEditor.prop = mp.game.joaat (objectEditor.arrayObject [objectEditor.index]);
+		global.objectEditor.prop = mp.game.joaat (global.objectEditor.arrayObject [global.objectEditor.index]);
 	}
 	catch (e) 
 	{
@@ -406,35 +406,35 @@ mp.keys.bind(global.Keys.VK_LEFT, true, () => {
 });
 
 mp.keys.bind(global.Keys.VK_OEM_3, false, function () { // ` key
-    if (!objectEditor.toggled) return;
-	if (objectEditor.petModel) 
+    if (!global.objectEditor.toggled) return;
+	if (global.objectEditor.petModel) 
 		return;
-	if (objectEditor.type !== editorType.exact) 
+	if (global.objectEditor.type !== editorType.exact) 
 		return;
 
     mp.gui.cursor.visible = !mp.gui.cursor.visible;
 });
 
 gm.events.add('client.dropinfo.updateType', (type) => {
-	if (!objectEditor.toggled) return;
-	if (objectEditor.petModel) return;
+	if (!global.objectEditor.toggled) return;
+	if (global.objectEditor.petModel) return;
 
-	objectEditor.type = type;
+	global.objectEditor.type = type;
 
-	if (objectEditor.type === editorType.exact) {
-		if (objectEditor.marker)
-			objectEditor.marker.destroy(), objectEditor.marker = null;
+	if (global.objectEditor.type === editorType.exact) {
+		if (global.objectEditor.marker)
+			global.objectEditor.marker.destroy(), global.objectEditor.marker = null;
 
 		mp.gui.cursor.visible = true;
 	} else {
 		mp.gui.cursor.visible = false;
-		if (objectEditor.marker)
-			objectEditor.marker.destroy(), objectEditor.marker = null;
+		if (global.objectEditor.marker)
+			global.objectEditor.marker.destroy(), global.objectEditor.marker = null;
 
-		if (objectEditor.entity && mp.objects.exists (objectEditor.entity)) {
-			const position = objectEditor.entity.position;
+		if (global.objectEditor.entity && mp.objects.exists (global.objectEditor.entity)) {
+			const position = global.objectEditor.entity.position;
 
-			objectEditor.marker = mp.markers.new(2, new mp.Vector3(position.x, position.y, position.z + 1.3), 0.3, {
+			global.objectEditor.marker = mp.markers.new(2, new mp.Vector3(position.x, position.y, position.z + 1.3), 0.3, {
 				'rotation': new mp.Vector3(180, 0, 0),
 				'color': [
 					255,
@@ -450,11 +450,11 @@ gm.events.add('client.dropinfo.updateType', (type) => {
 });
 
 gm.events.add('client.dropinfo.mod', () => {
-	if (!objectEditor.toggled) 
+	if (!global.objectEditor.toggled) 
 		return;
-	if (objectEditor.petModel) 
+	if (global.objectEditor.petModel) 
 		return;
-	if (objectEditor.type !== editorType.exact) 
+	if (global.objectEditor.type !== editorType.exact) 
 		return;
 	
 	selectedMod = !selectedMod;
@@ -465,7 +465,7 @@ global.OnPetEditor = (model, arrayObject = [], call = null, callEsq = null) => {
 	{
 		mp.gui.emmit(`window.router.setView('PlayerDropinfo')`);
 		global.menuOpened = true;
-		objectEditor = {
+		global.objectEditor = {
 			toggled: true,
 			entity: null,
 			marker: null,
@@ -492,7 +492,7 @@ global.OnObjectEditor = (prop, arrayObject = [], call = null, callEsq = null, ty
 		selectedMod = false;
 		isDowned = false;
 
-		objectEditor = {
+		global.objectEditor = {
 			toggled: true,
 			entity: null,
 			marker: null,
@@ -513,7 +513,7 @@ global.OnObjectEditor = (prop, arrayObject = [], call = null, callEsq = null, ty
 }
 /*
 mp.keys.bind(global.Keys.VK_7, true, () => {
-    if (objectEditor.toggled) return;
+    if (global.objectEditor.toggled) return;
     
     const data = [
         "p_stinger_03",
@@ -543,7 +543,7 @@ mp.keys.bind(global.Keys.VK_7, true, () => {
 });
 
 mp.keys.bind(global.Keys.VK_8, true, () => {
-    if (objectEditor.toggled) return;
+    if (global.objectEditor.toggled) return;
     
     const data = [
         "ind_prop_firework_01",
