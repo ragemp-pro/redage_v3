@@ -1158,7 +1158,7 @@ namespace Localization
             RuText[DataName.LeaveJobVeh] = "Покиньте транспортное средство";
             RuText[DataName.JobVehFar] = "Ваша рабочая машина находится слишком далеко от Вас";
             RuText[DataName.MailsLeft] = "У Вас осталось {0} посылок";
-            RuText[DataName.NoMails] = "У Вас не осталось посылок, возьмите новые";
+            RuText[DataName.NoMails] = "У Вас не осталось посылок, возьмите новые в отделении почты";
             RuText[DataName.NoPostman] = "Вы не работаете курьером. Устроиться можно в мэрии";
             RuText[DataName.YouGotJobVeh] = "Вы получили рабочий транспорт на 1 час.";
             RuText[DataName.NoElectrician] = "Вы не работаете электриком. Устроиться можно в мэрии";
