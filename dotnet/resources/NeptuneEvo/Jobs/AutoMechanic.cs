@@ -1,15 +1,11 @@
 ﻿using GTANetworkAPI;
 using NeptuneEvo.Handles;
-using System.Collections.Generic;
 using System;
 using NeptuneEvo.Core;
 using Redage.SDK;
-using System.Linq;
 using Localization;
-using NeptuneEvo.Accounts;
 using NeptuneEvo.Players.Models;
 using NeptuneEvo.Players;
-using NeptuneEvo.Character.Models;
 using NeptuneEvo.Character;
 using NeptuneEvo.Functions;
 using NeptuneEvo.Jobs.Models;
@@ -105,7 +101,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"mechanicRepair Exception: {e.ToString()}");
+                Log.Write($"mechanicRepair Exception: {e}");
             }
         }
 
@@ -218,7 +214,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"mechanicPay Exception: {e.ToString()}");
+                Log.Write($"mechanicPay Exception: {e}");
             }
         }
         
@@ -282,7 +278,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"buyFuel Exception: {e.ToString()}");
+                Log.Write($"buyFuel Exception: {e}");
             }
         }
 
@@ -373,7 +369,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"mechanicFuel Exception: {e.ToString()}");
+                Log.Write($"mechanicFuel Exception: {e}");
             }
         }
 
@@ -466,7 +462,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"mechanicPayFuel Exception: {e.ToString()}");
+                Log.Write($"mechanicPayFuel Exception: {e}");
             }
         }
     }
