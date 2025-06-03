@@ -56,9 +56,11 @@ namespace NeptuneEvo.Players.Queue
         {
             while (true)
             {
-                if (List.Count == 0) continue;
-                await CheckQueue();
-                Thread.Sleep(250);
+                if (List.Count > 0)
+                {
+                    await CheckQueue();
+                }
+                await Task.Delay(250);
             }
         }
 
