@@ -37,11 +37,11 @@ namespace NeptuneEvo.Fractions
         private static Vector3 CallingEmployeesPosition = new Vector3(-1289.8119, -572.5035, 30.573f);
 
         private static Vector3 JobPosition = new Vector3(-1298.496, -567.3785, 30.570717);
-        private static Vector3 JobPosition1 = new Vector3(727.5652, 132.56389, 80.956436);
+        //private static Vector3 JobPosition1 = new Vector3(727.5652, 132.56389, 80.956436);
         // private static Vector3 JobPosition2 = new Vector3(901.8491, -174.96883, 74.047905); 
         //private static Vector3 JobPosition3 = new Vector3(133.08955, 96.42902, 83.50762); 
-        private static Vector3 JobPosition4 = new Vector3(439.30258, -610.00684, 28.712679);
-        private static Vector3 JobPosition5 = new Vector3(-1331.7507, 44.325035, 53.5806);
+        private static Vector3 JobPosition4 = new Vector3(-116.56201, -604.71436, 36.28072);
+        //private static Vector3 JobPosition5 = new Vector3(-1331.7507, 44.325035, 53.5806);
         //private static Vector3 JobPosition6 = new Vector3(324.63855, 3425.9546, 36.49877); 
         //  private static Vector3 JobPosition7 = new Vector3(-1464.0969, -500.23605, 32.961685); 
         //private static Vector3 JobPosition8 = new Vector3(472.15143, -1282.2974, 29.554743);
@@ -140,11 +140,11 @@ namespace NeptuneEvo.Fractions
                 PedSystem.Repository.CreateQuest("s_m_y_devinsec_01", GiveGunPosition, -139.39449f, title: "~y~NPC~w~ Энтони Янг\nВыдача оружия", colShapeEnums: ColShapeEnums.FractionCityhallGunMenu);
                 PedSystem.Repository.CreateQuest("s_m_y_devinsec_01", SecondGiveGunPosition, -129.7344f, title: "~y~NPC~w~ Джонни Ганз\nВыдача оружия", colShapeEnums: ColShapeEnums.FractionCityhallGunMenu); 
                 PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition, -112.454f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);
-                PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition1, -50.89626f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);
+                //PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition1, -50.89626f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);
                 //  PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition2, -159.75824f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect); 
                 // PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition3, -81.50282f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect); 
-                PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition4, 86.65183f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);
-                PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition5, -90.612854f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);
+                PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition4, -111.755f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);
+                //PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition5, -90.612854f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);
                 //PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition6, -96.25076f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect); 
                 //PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition7, -9.802892f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect); 
                 //PedSystem.Repository.CreateQuest("mp_f_execpa_02", JobPosition8, -87.92568f, title: "~y~NPC~w~ Эмма Смит\nУстройство на работу", colShapeEnums: ColShapeEnums.JobSelect);

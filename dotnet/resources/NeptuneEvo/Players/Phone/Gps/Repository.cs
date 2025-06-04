@@ -281,7 +281,7 @@ namespace NeptuneEvo.Players.Phone.Gps
             licensesCategory.Icon = "licenses";
             licensesCategory.Items = new List<GpsItem>();
 
-            licensesCategory.Items.Add(new GpsItem("Центр занятости", 418.70874f, -624.9391f));
+            licensesCategory.Items.Add(new GpsItem("Центр занятости", -116.56201f, -604.71436f));
             licensesCategory.Items.Add(new GpsItem("Электростанция", 724.9625f, 133.9959f));
             licensesCategory.Items.Add(new GpsItem("Отделение почты", 133.0764f, 96.67652f));
             licensesCategory.Items.Add(new GpsItem("Стоянка газонокосилок", -1330.482f, 42.12986f));
