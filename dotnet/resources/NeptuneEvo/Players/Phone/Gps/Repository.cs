@@ -14,6 +14,7 @@ using NeptuneEvo.Organizations.Player;
 using NeptuneEvo.Players.Phone.Gps.Models;
 using Newtonsoft.Json;
 using NeptuneEvo.Fractions.LSNews;
+using Localization;
 
 namespace NeptuneEvo.Players.Phone.Gps
 {
@@ -279,12 +280,20 @@ namespace NeptuneEvo.Players.Phone.Gps
             var licensesCategory = new GpsCategory();
             licensesCategory.Name = "Работы";
             licensesCategory.Icon = "licenses";
-            licensesCategory.Items = new List<GpsItem>();
+            licensesCategory.Items = new List<GpsItem>
+            {
+                new GpsItem("Центр занятости", -116.56201f, -604.71436f),
+                new GpsItem("Электростанция", 724.9625f, 133.9959f),
+                new GpsItem("Стоянка газонокосилок", -1330.482f, 42.12986f),
 
-            licensesCategory.Items.Add(new GpsItem("Центр занятости", -116.56201f, -604.71436f));
-            licensesCategory.Items.Add(new GpsItem("Электростанция", 724.9625f, 133.9959f));
-            licensesCategory.Items.Add(new GpsItem("Отделение почты", 133.0764f, 96.67652f));
-            licensesCategory.Items.Add(new GpsItem("Стоянка газонокосилок", -1330.482f, 42.12986f));
+                new GpsItem("Отделение почты", 133.0764f, 96.67652f),
+                new GpsItem(LangFunc.GetText(LangType.Ru, DataName.TaxiRent), 899.3858f, -172.74521f),
+                new GpsItem(LangFunc.GetText(LangType.Ru, DataName.BusRent), 435.23758f, -653.01117f),
+                new GpsItem(LangFunc.GetText(LangType.Ru, DataName.MechanikRent), -229.61082f, -1378.2086f),
+                new GpsItem(LangFunc.GetText(LangType.Ru, DataName.FuraRent), 1018.9361f, -2511.5688f),
+                new GpsItem(LangFunc.GetText(LangType.Ru, DataName.FurgonRent), -196.52617f, -830.6757f)
+
+            };
 
             gpsList.Add(licensesCategory);
             
