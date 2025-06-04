@@ -8,9 +8,7 @@ using NeptuneEvo.Core;
 using Redage.SDK;
 using NeptuneEvo.Functions;
 using NeptuneEvo.Accounts;
-using NeptuneEvo.Players.Models;
 using NeptuneEvo.Players;
-using NeptuneEvo.Character.Models;
 using NeptuneEvo.Character;
 using NeptuneEvo.Chars.Models;
 using NeptuneEvo.Jobs.Models;
@@ -84,7 +82,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"OnCancel Exception: {e.ToString()}");
+                Log.Write($"OnCancel Exception: {e}");
             }
         }
         public static void StartWork(ExtPlayer player)
@@ -100,7 +98,7 @@ namespace NeptuneEvo.Jobs
             sessionData.WorkData.OnWork = true;
             sessionData.OrderData.WayPoint = null;
             Notify.Send(player, NotifyType.Info, NotifyPosition.BottomCenter, LangFunc.GetText(LangType.Ru, DataName.GoToZagruz), 10000);
-            var pos = Truckers.GetNearestGetProduct(player.Position);
+            var pos = GetNearestGetProduct(player.Position);
             Trigger.ClientEvent(player, "createWaypoint", pos.X, pos.Y);
         }
         
@@ -194,7 +192,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"playerGotProducts1 Exception: {e.ToString()}");
+                Log.Write($"playerGotProducts1 Exception: {e}");
             }
         }
         [Interaction(ColShapeEnums.Trucker, In: true)]
@@ -294,7 +292,7 @@ namespace NeptuneEvo.Jobs
             }
             catch (Exception e)
             {
-                Log.Write($"onEntityEnterDropTrailer Exception: {e.ToString()}");
+                Log.Write($"onEntityEnterDropTrailer Exception: {e}");
             }
         }
     }
