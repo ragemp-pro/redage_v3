@@ -521,9 +521,10 @@ namespace NeptuneEvo.Core
             new RentCarSpawn(33, new Vector3(966.72253, -2493.0432, 28.875286), new Vector3(-0.29982027, 0.018019041, -95.18963)),
 
 
-            new RentCarSpawn(34, new Vector3(408.09454, -651.9381, 28.107466), new Vector3(0, 0, -90.16944)),
-            new RentCarSpawn(34, new Vector3(408.2031, -646.3877, 28.105696), new Vector3(0, 0, -89.16944)),
-            new RentCarSpawn(34, new Vector3(408.5927, -641.38855, 28.10735), new Vector3(0, 0, -89.16944)),
+            new RentCarSpawn(34, new Vector3(-251.7521, -800.73, 32.06821), new Vector3(-0.07124979, -0.6522369, 70.50944)),
+            new RentCarSpawn(34, new Vector3(-253.78963, -806.3217, 31.997648), new Vector3(-0.75878817, -1.0553579, 70.19326)),
+            new RentCarSpawn(34, new Vector3(-255.43657, -810.9291, 31.910107), new Vector3(-0.82312196, -1.3626906, 68.64489)),
+            new RentCarSpawn(34, new Vector3(-183.51378, -833.24915, 30.606346), new Vector3(-2.5574489, -0.053839557, 161.146)),
 
 
             new RentCarSpawn(35, new Vector3(-214.27658, -1396.4149, 31.479969), new Vector3(-0.0070513403, 0.24732511, -1.8451166)),
@@ -612,7 +613,7 @@ namespace NeptuneEvo.Core
             new RentZoneData(31, "a_m_y_genstreet_01", LangFunc.GetText(LangType.Ru, DataName.LandmowerRent), new Vector3(-1330.482, 42.12986, 53.48915), 0.0f, RentCarId.JobLawnmower),
             new RentZoneData(32, "a_m_y_genstreet_01", LangFunc.GetText(LangType.Ru, DataName.BusRent), new Vector3(435.23758, -653.01117, 28.730534), 78.42807f, RentCarId.JobBus),
             new RentZoneData(33, "a_m_y_genstreet_01", LangFunc.GetText(LangType.Ru, DataName.FuraRent), new Vector3(1018.9361, -2511.5688, 28.480877), 142.21999f, RentCarId.JobTrucker),
-  	        new RentZoneData(34, "a_m_y_genstreet_01", LangFunc.GetText(LangType.Ru, DataName.FurgonRent), new Vector3(438.951, -613.8331, 28.71138), 78.51024f, RentCarId.JobCollector),          
+  	        new RentZoneData(34, "a_m_y_genstreet_01", LangFunc.GetText(LangType.Ru, DataName.FurgonRent), new Vector3(-196.52617, -830.6757, 30.771637), -65.649086f, RentCarId.JobCollector),          
             new RentZoneData(35, "a_m_y_genstreet_01", LangFunc.GetText(LangType.Ru, DataName.MechanikRent), new Vector3(-229.61082, -1378.2086, 31.258224), 179.0f, RentCarId.JobMechanic),
 
          // new RentZoneData(36, "a_m_y_genstreet_01", LangFunc.GetText(LangType.Ru, DataName.CarRent), new Vector3(1024.0071, 2651.1096, 39.55115), 3.2891867f, RentCarId.Civilian),
