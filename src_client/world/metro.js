@@ -280,7 +280,7 @@ const StartMetro = async (stationData) => {
 
         // Создание нужного состава поезда метро
         //metroTrain = mp.game.vehicle.createMissionTrain(24, stationData.position.x, stationData.position.y, stationData.position.z, true);
-        metroTrain = mp.game.vehicle.createMissionTrain(27, stationData.position.x, stationData.position.y, stationData.position.z, true);
+        metroTrain = mp.game.vehicle.createMissionTrain(28, stationData.position.x, stationData.position.y, stationData.position.z, true);
 
         global.localplayer.setIntoVehicle(metroTrain, 0);
         if (metroTrain) {
